@@ -14,6 +14,7 @@ public partial class PresetPanel(
     ToolStateService ToolState) : IDisposable
 {
     private string _query = string.Empty;
+    private int _inputKey = 0;
     private List<Preset> _results = [];
     private Preset? _activePreset;
     private ElementReference _searchInput;
@@ -41,6 +42,7 @@ public partial class PresetPanel(
     {
         _results = [];
         _query = string.Empty;
+        _inputKey++;
         _activePreset = ResolveActivePreset();
         StateHasChanged();
     }
@@ -118,6 +120,7 @@ public partial class PresetPanel(
         _activePreset = preset;
         _query = string.Empty;
         _results = [];
+        _inputKey++;
     }
 
     /// <inheritdoc />

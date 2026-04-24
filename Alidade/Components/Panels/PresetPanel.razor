@@ -2,10 +2,10 @@
 
 <div class="preset-panel">
     <div class="preset-search-row">
-        <input @ref="_searchInput"
+        <input @key="_inputKey"
+               @ref="_searchInput"
                type="text"
                placeholder="Search presets…"
-               value="@_query"
                @oninput="OnQueryChanged"
                class="preset-search-input" />
     </div>

@@ -285,6 +285,7 @@ public partial class InspectorPanel(
         _query = string.Empty;
         _isSearching = false;
         _results = [];
+        _nsiResults = [];
     }
 
     private void PinCurrent()
