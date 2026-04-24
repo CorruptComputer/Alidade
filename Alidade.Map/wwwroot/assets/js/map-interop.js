@@ -149,6 +149,11 @@ window.mapInterop = (() => {
     // Active tool name, kept in sync by setActiveTool so cursor handlers can check it.
     let activeTool = 'select';
 
+    // Radius (px) within which normally-hidden way-nodes are revealed so they can be snapped to.
+    const PROXIMITY_PX = 20;
+    // Base filter for layer-nodes; restored on mouseleave after proximity overrides.
+    const BASE_NODE_FILTER = ['==', ['get', 'show'], 'yes'];
+
     // Vector helpers (matching iD's geoVec* conventions).
     function vecSubtract(a, b)
     {
@@ -1308,6 +1313,27 @@ window.mapInterop = (() => {
                 ).catch(console.error);
             });
 
+            // Proximity reveal: show normally-hidden way-nodes within PROXIMITY_PX of the cursor
+            // by temporarily widening the layer-nodes filter to include their IDs. Runs every
+            // mousemove (no debounce) so the reveal feels instant; map.setFilter is cheap.
+            map.on('mousemove', e => {
+                const hidden = (sourceCache['osm-nodes']?.features ?? [])
+                    .filter(f => f.properties?.show === 'no' && f.geometry?.type === 'Point');
+                const proximityIds = hidden
+                    .filter(f => {
+                        const px = map.project(f.geometry.coordinates);
+                        return Math.hypot(px.x - e.point.x, px.y - e.point.y) <= PROXIMITY_PX;
+                    })
+                    .map(f => f.properties.id);
+                const newFilter = proximityIds.length === 0
+                    ? BASE_NODE_FILTER
+                    : ['any', BASE_NODE_FILTER, ['in', ['get', 'id'], ['literal', proximityIds]]];
+                if (map.getLayer('layer-nodes'))
+                {
+                    map.setFilter('layer-nodes', newFilter);
+                }
+            });
+
             // Hover, debounced 16 ms. Only notifies .NET when the hovered element changes.
             // Also handles draw-preview-line hover locally (no C# round-trip needed).
             map.on('mousemove', e => {
@@ -1352,6 +1378,10 @@ window.mapInterop = (() => {
                 if (map.getLayer('layer-draw-preview-hover'))
                 {
                     map.setLayoutProperty('layer-draw-preview-hover', 'visibility', 'none');
+                }
+                if (map.getLayer('layer-nodes'))
+                {
+                    map.setFilter('layer-nodes', BASE_NODE_FILTER);
                 }
                 if (dotnetRef && lastHoveredId !== null) {
                     lastHoveredId = null;
