@@ -1,14 +1,22 @@
+using Alidade.Handlers.Auth;
+using Alidade.Handlers.Map;
+
 namespace Alidade.Components.Dialogs;
 
 /// <summary>
 ///   Dialog shown when the user attempts to switch accounts while the edit buffer is dirty.
 /// </summary>
-public partial class SwitchAccountDialog(AuthStateService authState, IMediator mediator) : IDisposable
+public partial class SwitchAccountDialog(AuthStateService authState, SettingsStateService settingsState, IMediator mediator)
+    : IDisposable
 {
+    private EndpointState ActiveEndpointState
+        => ApiEndpointCatalog.Endpoints[settingsState.State.ActiveEndpoint].State;
+
     /// <inheritdoc />
     protected override void OnInitialized()
     {
         authState.StateChanged += OnStateChanged;
+        settingsState.StateChanged += OnStateChanged;
     }
 
     private void OnStateChanged(object? sender, EventArgs e) => StateHasChanged();
@@ -16,18 +24,24 @@ public partial class SwitchAccountDialog(AuthStateService authState, IMediator m
     private void Upload()
     {
         // Open the upload dialog; once the buffer is clean the user can retry the switch.
-        _ = mediator.Send(new Handlers.Map.ToggleUploadDialog.Command());
+        _ = mediator.Send(new ToggleUploadDialog.Command());
+
+        // Cancel the pending account switch
+        _ = mediator.Send(new CancelAccountSwitch.Command());
     }
 
     private void Discard(StoredAccount pending)
     {
-        _ = mediator.Send(new Handlers.Auth.ConfirmAccountSwitch.Command(pending));
+        _ = mediator.Send(new ConfirmAccountSwitch.Command(pending));
     }
 
     private void Cancel()
-        => _ = mediator.Send(new Handlers.Auth.CancelAccountSwitch.Command());
+        => _ = mediator.Send(new CancelAccountSwitch.Command());
 
     /// <inheritdoc />
     public void Dispose()
-        => authState.StateChanged -= OnStateChanged;
+    {
+        authState.StateChanged -= OnStateChanged;
+        settingsState.StateChanged -= OnStateChanged;
+    }
 }

@@ -25,7 +25,37 @@ public class DeleteNode(EditBufferStateService editBufferState) : IRequestHandle
             ? state.Nodes.Remove(request.NodeId)
             : state.Nodes;
 
-        editBufferState.SetState(state with { Nodes = nodes, EditStates = es });
+        ImmutableDictionary<long, OsmWay> ways = state.Ways;
+        foreach (OsmWay way in state.Ways.Values)
+        {
+            if (!way.NodeIds.Contains(request.NodeId))
+            {
+                continue;
+            }
+
+            IReadOnlyList<long> cleaned = [.. way.NodeIds.Where(id => id != request.NodeId)];
+            OsmElementRef wayRef = way.Ref;
+            state.EditStates.TryGetValue(wayRef, out EditState wayState);
+
+            if (cleaned.Count < 2)
+            {
+                if (wayState == EditState.Created)
+                {
+                    ways = ways.Remove(way.Id);
+                    es = es.Remove(wayRef);
+                }
+                else
+                {
+                    es = es.SetItem(wayRef, EditState.Deleted);
+                }
+            }
+            else
+            {
+                ways = ways.SetItem(way.Id, way with { NodeIds = cleaned });
+            }
+        }
+
+        editBufferState.SetState(state with { Nodes = nodes, Ways = ways, EditStates = es });
         return Task.FromResult(CommandResult.Pass());
     }
 }

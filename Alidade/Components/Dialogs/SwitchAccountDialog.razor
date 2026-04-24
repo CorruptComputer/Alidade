@@ -14,7 +14,14 @@
                 </p>
             </div>
             <div class="dialog-actions">
-                <button class="btn btn-primary" @onclick="Upload">Upload Changes</button>
+                @if (ActiveEndpointState == EndpointState.Enabled)
+                {
+                    <button class="btn btn-primary" @onclick="Upload">Upload Changes</button>
+                }
+                else {
+                    <button class="btn btn-primary" disabled>Upload Changes</button>
+                }
+
                 <button class="btn btn-danger" @onclick="() => Discard(pending)">Discard Changes</button>
                 <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
             </div>

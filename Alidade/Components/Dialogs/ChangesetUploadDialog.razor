@@ -26,7 +26,7 @@
                         @foreach (int id in _uploadedChangesetIds)
                         {
                             <li>
-                                <a href="https://www.openstreetmap.org/changeset/@id" target="_blank">
+                                <a href="@ActiveOsmBaseUrl/changeset/@id" target="_blank">
                                     Changeset @id
                                 </a>
                             </li>

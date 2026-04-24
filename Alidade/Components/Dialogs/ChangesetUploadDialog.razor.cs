@@ -132,6 +132,9 @@ public partial class ChangesetUploadDialog(
         }
     }
 
+    private string ActiveOsmBaseUrl
+        => ApiEndpointCatalog.Endpoints[settingsState.State.ActiveEndpoint].OsmBaseUrl;
+
     private static IReadOnlyList<OsmElementRef> CollectRefs(OsmChange change)
     {
         List<OsmElementRef> refs = [];
