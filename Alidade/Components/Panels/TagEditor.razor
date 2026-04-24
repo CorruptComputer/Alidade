@@ -1,0 +1,59 @@
+@if (_element is not null)
+{
+    <div class="tag-editor">
+        <table class="tag-table">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    HashSet<string> deprecatedKeys = presetService.FindDeprecations(_tags)
+                        .SelectMany(r => r.Old.Keys)
+                        .ToHashSet();
+                }
+                @foreach (KeyValuePair<string, string> entry in _tags)
+                {
+                    string key = entry.Key;
+                    bool deprecated = deprecatedKeys.Contains(key);
+                    <tr class="@(deprecated ? "tag-deprecated" : null)">
+                        <td>
+                            <input type="text" value="@key"
+                                   @onchange="@(e => OnKeyChanged(key, ValueOrEmpty(e)))"
+                                   class="tag-key" />
+                            @if (deprecated)
+                            {
+                                <span class="tag-warning" title="Deprecated tag">⚠</span>
+                            }
+                        </td>
+                        <td class="tag-value-cell">
+                            <input type="text" value="@entry.Value"
+                                   @onchange="@(e => OnValueChanged(key, ValueOrEmpty(e)))"
+                                   @oninput="@(e => OnValueInput(key, ValueOrEmpty(e)))"
+                                   class="tag-value" />
+                            @if (_nsiKey == key && _nsiSuggestions.Count > 0)
+                            {
+                                <div class="nsi-dropdown">
+                                    @foreach (NsiItem suggestion in _nsiSuggestions)
+                                    {
+                                        NsiItem s = suggestion;
+                                        <div class="nsi-item" @onclick="() => ApplyNsiSuggestion(s)">
+                                            @s.DisplayName
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </td>
+                        <td>
+                            <button class="tag-delete" @onclick="@(() => OnDeleteTag(key))">X</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <button class="tag-add" @onclick="OnAddTag">+ Add tag</button>
+    </div>
+}

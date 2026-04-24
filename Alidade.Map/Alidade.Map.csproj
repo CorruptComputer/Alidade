@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alidade.Core\Alidade.Core.csproj" />
+  </ItemGroup>
+
+  <Target Name="NpmInstallMap" BeforeTargets="Build" Condition="!Exists('$(MSBuildThisFileDirectory)node_modules')">
+    <Exec Command="npm install" WorkingDirectory="$(MSBuildThisFileDirectory)" />
+  </Target>
+
+  <Target Name="CopyMapLibre" AfterTargets="NpmInstallMap" BeforeTargets="Build">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules/maplibre-gl/dist/maplibre-gl.js" DestinationFiles="$(MSBuildThisFileDirectory)wwwroot/assets/lib/maplibre-gl/maplibre-gl.bundle.js" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules/maplibre-gl/dist/maplibre-gl.css" DestinationFiles="$(MSBuildThisFileDirectory)wwwroot/assets/lib/maplibre-gl/maplibre-gl.css" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules/maplibre-gl/LICENSE.txt" DestinationFiles="$(MSBuildThisFileDirectory)wwwroot/assets/lib/maplibre-gl/LICENSE.txt" SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

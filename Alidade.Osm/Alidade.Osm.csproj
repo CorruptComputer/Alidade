@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alidade.Core\Alidade.Core.csproj" />
+  </ItemGroup>
+
+</Project>

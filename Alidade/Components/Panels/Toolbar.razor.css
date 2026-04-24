@@ -1,0 +1,132 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--toolbar-height);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px;
+    background: var(--color-toolbar);
+    z-index: 1000;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.toolbar-spacer {
+    flex: 1;
+}
+
+.toolbar-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    color: #e0e0e0;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.1s, border-color 0.1s;
+    white-space: nowrap;
+    position: relative;
+    gap: 2px;
+}
+
+    .toolbar-btn:hover {
+        background: var(--color-toolbar-hover);
+        border-color: #666;
+    }
+
+    .toolbar-btn.toolbar-btn-active {
+        background: var(--color-toolbar-active);
+        border-color: var(--color-toolbar-active);
+        color: #fff;
+    }
+
+    .toolbar-btn.toolbar-btn-primary {
+        background: var(--color-toolbar-primary);
+        border-color: var(--color-toolbar-primary);
+        color: #fff;
+    }
+
+        .toolbar-btn.toolbar-btn-primary:hover {
+            background: #1558b0;
+            border-color: #1558b0;
+        }
+
+        .toolbar-btn.toolbar-btn-primary:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+.toolbar-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.toolbar-auth-label {
+    color: #ccc;
+    font-size: 13px;
+    padding: 0 6px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.toolbar-label {
+    font-size: 10px;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.85;
+}
+
+.toolbar-btn-validation {
+    position: relative;
+}
+
+    .toolbar-btn-validation.toolbar-btn-has-errors {
+        color: #f87171;
+    }
+
+.toolbar-validation-badge {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    display: flex;
+    gap: 2px;
+}
+
+.validation-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 14px;
+    height: 14px;
+    padding: 0 3px;
+    border-radius: 7px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+}
+
+.validation-badge-error {
+    background: #dc2626;
+}
+
+.validation-badge-warn {
+    background: #d97706;
+}

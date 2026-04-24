@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {
+    "@openstreetmap/editor-layer-index": "github:osmlab/editor-layer-index#5febfce0d81471ab6a26463867ef5795b45ee4c6",
+    "@openstreetmap/id-tagging-schema": "github:openstreetmap/id-tagging-schema#245e730ec86de017ebce8512e8bdc60d26a93fe2",
+    "name-suggestion-index": "7.0.20260126"
+  }
+}

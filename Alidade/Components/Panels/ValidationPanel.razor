@@ -1,0 +1,48 @@
+@if (validationState.State.PanelVisible)
+{
+    <div class="validation-panel">
+        <div class="validation-header">
+            <span>Validation</span>
+            @if (validationState.State.IsRunning)
+            {
+                <span class="validation-spinner">…</span>
+            }
+            <button class="panel-close" @onclick="Close">X</button>
+        </div>
+
+        @if (!validationState.State.Issues.Any())
+        {
+            <div class="validation-empty">No issues found.</div>
+        }
+        else
+        {
+            foreach (ValidationSeverities severity in new[] { ValidationSeverities.Error, ValidationSeverities.Warning, ValidationSeverities.Info })
+            {
+                List<ValidationIssue> issues = validationState.State.Issues
+                    .Where(i => i.Severity == severity).ToList();
+                if (!issues.Any())
+                {
+                    continue;
+                }
+
+                <div class="validation-group">
+                    <div class="validation-group-header validation-@severity.ToString().ToLower()">
+                        @SeverityIcon(severity) @severity (@issues.Count)
+                    </div>
+                    @foreach (ValidationIssue issue in issues)
+                    {
+                        ValidationIssue iss = issue;
+                        <div class="validation-issue" @onclick="() => SelectIssueTarget(iss)">
+                            <span class="validation-issue-message">@iss.Message</span>
+                            @if (iss.HasAutoFix)
+                            {
+                                <button class="validation-fix" @onclick:stopPropagation="true"
+                                        @onclick="() => ApplyFix(iss)">Fix</button>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+}

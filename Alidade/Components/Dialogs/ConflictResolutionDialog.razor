@@ -1,0 +1,77 @@
+@using Alidade.Models.EditBuffer
+
+@if (_conflicts.Count > 0)
+{
+    <div class="dialog-backdrop">
+        <div class="dialog conflict-dialog">
+            <div class="dialog-header">
+                <span>Conflicts (@_conflicts.Count)</span>
+            </div>
+            <p class="conflict-intro">
+                The following elements have been modified on the server since you last fetched them.
+                Choose how to resolve each conflict.
+            </p>
+
+            @foreach (ConflictItem c in _conflicts)
+            {
+                ConflictItem conflict = c;
+                <div class="conflict-item">
+                    <div class="conflict-element-id">
+                        @conflict.ElementRef.Type @conflict.ElementRef.Id
+                    </div>
+                    <div class="conflict-columns">
+                        <div class="conflict-col">
+                            <div class="conflict-col-header">Mine</div>
+                            @foreach ((string k, string v) in conflict.LocalTags)
+                            {
+                                string key = k;
+                                string val = v;
+                                <div class="conflict-tag @(TagClass(key, val, conflict.ServerTags))">
+                                    <span class="tag-key">@key</span>
+                                    <span class="tag-val">@val</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="conflict-col">
+                            <div class="conflict-col-header">Server</div>
+                            @foreach ((string k, string v) in conflict.ServerTags)
+                            {
+                                string key = k;
+                                string val = v;
+                                <div class="conflict-tag @(TagClass(key, val, conflict.LocalTags))">
+                                    <span class="tag-key">@key</span>
+                                    <span class="tag-val">@val</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="conflict-col">
+                            <div class="conflict-col-header">Resolved</div>
+                            @foreach (string k in AllKeys(conflict))
+                            {
+                                string key = k;
+                                string resolvedVal = conflict.Resolved.GetValueOrDefault(key, string.Empty);
+                                <div class="conflict-tag">
+                                    <span class="tag-key">@key</span>
+                                    <input class="tag-val-input"
+                                           value="@resolvedVal"
+                                           @onchange="e => SetResolved(conflict, key, e.Value?.ToString() ?? string.Empty)" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="conflict-actions">
+                        <button class="btn-secondary" @onclick="() => UseLocal(conflict)">Keep Mine</button>
+                        <button class="btn-secondary" @onclick="() => UseServer(conflict)">Keep Theirs</button>
+                    </div>
+                </div>
+            }
+
+            <div class="dialog-actions">
+                <button class="btn-secondary" @onclick="Discard">Discard My Changes</button>
+                <button class="btn-primary"
+                        disabled="@(!AllResolved)"
+                        @onclick="ApplyResolutions">Apply Resolutions</button>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <!-- Build info -->
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+
+    <!-- Assembly info -->
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <VersionSuffix>$(SourceRevisionId)</VersionSuffix>
+    <Authors>Nickolas Gupton</Authors>
+    <RepositoryUrl>https://github.com/CorruptComputer/Alidade</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+    <SourceControlInformationFeatureSupported>true</SourceControlInformationFeatureSupported>
+    <SourceRevisionId>develop</SourceRevisionId>
+  </PropertyGroup>
+
+  <!-- In release builds, replace SourceRevisionId with the 8-character git commit hash -->
+  <Target Condition="'$(Configuration)' == 'Release'" Name="SetSourceRevisionId" BeforeTargets="InitializeSourceControlInformation">
+    <Exec Command="git describe --long --always --dirty --exclude=* --abbrev=8" ConsoleToMSBuild="True" IgnoreExitCode="False">
+      <Output PropertyName="SourceRevisionId" TaskParameter="ConsoleOutput" />
+    </Exec>
+  </Target>
+</Project>

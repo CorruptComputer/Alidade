@@ -1,0 +1,35 @@
+@page "/"
+
+<PageTitle>Alidade</PageTitle>
+
+@* Map canvas, fills the full viewport *@
+<MapViewport />
+
+@* Invisible data-push components *@
+<NotesLayer />
+<DrawPreviewLayer />
+
+@* Toolbar across the top *@
+<Toolbar />
+
+@* Side panels *@
+<ValidationPanel />
+<BackgroundPanel />
+<SettingsPanel />
+
+@* Active inspector, follows the current selection *@
+<InspectorPanel />
+
+@* Pinned inspectors, one per locked element, independently draggable *@
+@foreach (OsmElementRef pinned in mapState.State.PinnedInspectors)
+{
+    <InspectorPanel PinnedRef="pinned" />
+}
+
+@* Dialogs *@
+<GridifyDialog />
+<ChangesetUploadDialog />
+<SwitchEndpointDialog />
+<SwitchAccountDialog />
+<SelectAccountDialog />
+<RecoverDraftDialog />

@@ -1,0 +1,73 @@
+.preset-field {
+    padding: 5px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.preset-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+    .preset-field input,
+    .preset-field select,
+    .preset-field textarea {
+        width: 100%;
+        padding: 4px 6px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        font-size: 13px;
+    }
+
+.preset-field .preset-check-select {
+    width: auto;
+}
+
+.preset-radio {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.preset-field-hierarchy {
+    padding: 4px 0;
+}
+
+.preset-field-h1 {
+    padding: 6px 12px 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.preset-field-h2 {
+    padding: 4px 12px 2px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.preset-field-h3 {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+}
+
+.preset-field-h-item {
+    padding: 3px 12px 4px 20px;
+}
+
+.preset-field-hierarchy .preset-field-h-item input {
+    width: 100%;
+    padding: 4px 6px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 13px;
+}

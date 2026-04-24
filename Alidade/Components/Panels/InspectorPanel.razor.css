@@ -1,0 +1,268 @@
+.inspector-panel {
+    position: fixed;
+    top: calc(var(--toolbar-height) + 8px);
+    right: 8px;
+    width: var(--panel-width);
+    height: auto;
+    min-width: 260px;
+    min-height: 140px;
+    max-width: min(600px, calc(100vw - 16px));
+    max-height: calc(100vh - var(--toolbar-height) - 16px);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-panel);
+    z-index: 900;
+    overflow: hidden;
+    resize: both;
+}
+
+.inspector-panel-hidden {
+    display: none;
+}
+
+/* Pinned panels spawn on the left side so they don't overlap the active panel. */
+.inspector-panel--pinned {
+    right: auto;
+    left: 8px;
+    border-color: #c8a028;
+    box-shadow: 0 2px 8px rgba(200, 160, 40, 0.25);
+}
+
+.inspector-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px 8px 12px;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+    flex-shrink: 0;
+    cursor: move;
+    user-select: none;
+}
+
+.inspector-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.inspector-pin-icon {
+    font-size: 12px;
+    margin-right: 4px;
+    opacity: 0.7;
+}
+
+.inspector-pin-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    padding: 0 3px;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+    transition: opacity 0.1s;
+}
+
+    .inspector-pin-btn:hover {
+        opacity: 1;
+    }
+
+.inspector-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.inspector-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--color-text-muted);
+    padding: 0 2px;
+}
+
+    .inspector-close:hover {
+        color: var(--color-danger);
+    }
+
+.inspector-preset-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+}
+
+.inspector-preset-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inspector-change-preset {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+    .inspector-change-preset:hover {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+.inspector-cancel-search {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+    .inspector-cancel-search:hover {
+        border-color: var(--color-danger);
+        color: var(--color-danger);
+    }
+
+.inspector-search-input {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 13px;
+}
+
+    .inspector-search-input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+
+.inspector-preset-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 180px;
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+}
+
+.inspector-preset-result {
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    .inspector-preset-result:hover {
+        background: var(--color-surface);
+    }
+
+.inspector-preset-result-name {
+    flex: 1;
+}
+
+.inspector-preset-fields {
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+}
+
+.inspector-section-divider {
+    height: 1px;
+    background: var(--color-border);
+    flex-shrink: 0;
+}
+
+.inspector-tags-section {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.inspector-section-header {
+    padding: 6px 12px 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+}
+
+.inspector-preset-result-divider {
+    padding: 4px 12px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.inspector-preset-result--nsi {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.inspector-preset-result-tag {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.inspector-brand-warning {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #a06000;
+    background: #fff8e6;
+    border-bottom: 1px solid #f0d070;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .inspector-brand-warning span {
+        flex: 1;
+    }
+
+.inspector-brand-apply {
+    background: none;
+    border: 1px solid #c89020;
+    border-radius: var(--radius);
+    padding: 2px 8px;
+    font-size: 11px;
+    color: #a06000;
+    cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+    .inspector-brand-apply:hover {
+        background: #f0d070;
+    }

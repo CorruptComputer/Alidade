@@ -1,0 +1,93 @@
+@if (Field is not null && ElementRef is not null)
+{
+    @if (IsHierarchical)
+    {
+        <div class="preset-field-hierarchy">
+            @foreach (HierarchyL1 l1 in GetKeyHierarchy())
+            {
+                <div class="preset-field-h1">@l1.Label</div>
+                @foreach (HierarchyL2 l2 in l1.Children)
+                {
+                    @if (!string.IsNullOrEmpty(l2.Label))
+                    {
+                        <div class="preset-field-h2">@l2.Label</div>
+                    }
+                    @foreach (HierarchyLeaf leaf in l2.Leaves)
+                    {
+                        string fullKey = leaf.FullKey;
+                        <div class="preset-field-h-item">
+                            <div class="preset-field-h3">@leaf.Label</div>
+                            <input type="text"
+                                   value="@GetTagValue(fullKey)"
+                                   @onchange="@(e => SetTagValue(fullKey, e.Value?.ToString() ?? string.Empty))" />
+                        </div>
+                    }
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <div class="preset-field">
+            <label class="preset-field-label">@(Field.Label ?? Field.Key)</label>
+            @switch (Field.Type)
+            {
+                case "check":
+                    <select class="preset-check-select"
+                            @onchange="@(e => SetCheckValue(e.Value?.ToString() ?? string.Empty))">
+                        <option value="" selected="@(GetValue() == "")">(unset)</option>
+                        <option value="yes" selected="@(GetValue() == "yes")">Yes</option>
+                        <option value="no" selected="@(GetValue() == "no")">No</option>
+                    </select>
+                    break;
+                case "radio":
+                    @foreach (string opt in Field.Options)
+                    {
+                        string o = opt;
+                        <label class="preset-radio">
+                            <input type="radio"
+                                   name="@Field.Id"
+                                   value="@o"
+                                   checked="@(GetValue() == o)"
+                                   @onchange="@(() => SetValue(o))" />
+                            @o
+                        </label>
+                    }
+                    break;
+                case "combo":
+                case "typeCombo":
+                    @if (Field.Options.Count == 0)
+                    {
+                        <input type="text"
+                               value="@GetValue()"
+                               @onchange="@(e => SetValue(e.Value?.ToString() ?? string.Empty))" />
+                    }
+                    else
+                    {
+                        <!-- TODO: This needs to be a text box that shows these options as auto-complete options instead -->
+                        <select @onchange="@(e => SetValue(e.Value?.ToString() ?? string.Empty))">
+                            <option value="">(unset)</option>
+                            @foreach (string opt in Field.Options)
+                            {
+                                string o = opt;
+                                <option value="@o" selected="@(GetValue() == o)">@o</option>
+                            }
+                        </select>
+                    }
+                    break;
+                case "number":
+                    <input type="number"
+                           value="@GetValue()"
+                           min="@Field.MinValue"
+                           max="@Field.MaxValue"
+                           @onchange="@(e => SetValue(e.Value?.ToString() ?? string.Empty))" />
+                    break;
+                default:
+                    <input type="text"
+                           value="@GetValue()"
+                           @onchange="@(e => SetValue(e.Value?.ToString() ?? string.Empty))" />
+                    break;
+            }
+        </div>
+    }
+}

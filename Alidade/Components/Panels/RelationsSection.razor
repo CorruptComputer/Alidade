@@ -1,0 +1,109 @@
+@if (ElementRef is not null)
+{
+    <div class="relations-section">
+        <div class="relations-section-header" @onclick="ToggleCollapsed">
+            <span class="inspector-section-header">Relations</span>
+            @if (_containingRelations.Count > 0)
+            {
+                <span class="relations-count-badge">@_containingRelations.Count</span>
+            }
+            <span class="relations-collapse-icon">@(_collapsed ? "▸" : "▾")</span>
+        </div>
+
+        @if (!_collapsed)
+        {
+            <div class="relations-body">
+                <div class="relations-actions">
+                    <button class="relations-action-btn @(_showNearbyPanel ? "relations-action-btn--active" : "")"
+                            @onclick="ToggleNearbyPanel">
+                        + Add to existing
+                    </button>
+                    <button class="relations-action-btn @(_showNewRelationForm ? "relations-action-btn--active" : "")"
+                            @onclick="ToggleNewRelationForm">
+                        + New relation
+                    </button>
+                </div>
+
+                @* Nearby relation picker *@
+                @if (_showNearbyPanel)
+                {
+                    <div class="relations-nearby-panel">
+                        @if (_nearbyRelations.Count == 0)
+                        {
+                            <div class="relations-empty-nearby">No relations found within 300 m.</div>
+                        }
+                        else
+                        {
+                            @foreach (OsmRelation nearby in _nearbyRelations)
+                            {
+                                OsmRelation captured = nearby;
+                                <div class="relations-nearby-item">
+                                    <span class="relations-nearby-label" title="r@(captured.Id)">
+                                        @RelationLabel(captured)
+                                    </span>
+                                    <input class="relations-role-input"
+                                           type="text"
+                                           placeholder="role"
+                                           value="@_nearbyRoles.GetValueOrDefault(captured.Id, string.Empty)"
+                                           @onchange="e => _nearbyRoles[captured.Id] = e.Value?.ToString() ?? string.Empty" />
+                                    <button class="relations-add-btn" @onclick="() => AddToNearbyRelation(captured)">+</button>
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+
+                @* New relation inline form *@
+                @if (_showNewRelationForm)
+                {
+                    <div class="relations-new-form">
+                        <div class="relations-new-form-row">
+                            <label class="relations-new-form-label">type</label>
+                            <input class="relations-new-form-input"
+                                   type="text"
+                                   @bind="_newRelationType" />
+                        </div>
+                        <div class="relations-new-form-row">
+                            <label class="relations-new-form-label">role</label>
+                            <input class="relations-new-form-input"
+                                   type="text"
+                                   @bind="_newMemberRole" />
+                        </div>
+                        <div class="relations-new-form-btns">
+                            <button class="relations-confirm-btn" @onclick="ConfirmNewRelation">Create</button>
+                            <button class="relations-cancel-btn" @onclick="ToggleNewRelationForm">Cancel</button>
+                        </div>
+                    </div>
+                }
+
+                @* Containing relations *@
+                @foreach ((OsmRelation relation, OsmMember membership) in _containingRelations)
+                {
+                    OsmRelation capturedRelation = relation;
+                    OsmMember capturedMembership = membership;
+
+                    <div class="relations-item">
+                        <div class="relations-item-row" title="r@(capturedRelation.Id)"
+                             @onclick="() => GoToRelation(capturedRelation)">
+                            <span class="relations-item-type">@RelationTypeLabel(capturedRelation)</span>
+                            <span class="relations-item-label">@RelationLabel(capturedRelation)</span>
+                            @if (!string.IsNullOrEmpty(capturedMembership.Role))
+                            {
+                                <span class="relations-item-role">@capturedMembership.Role</span>
+                            }
+                            <div class="relations-item-actions">
+                                <button class="relations-icon-btn relations-icon-btn--danger"
+                                        title="Remove from relation"
+                                        @onclick:stopPropagation="true"
+                                        @onclick="() => RemoveFromRelation(capturedRelation.Id)">
+                                    &#x2715;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        }
+    </div>
+}

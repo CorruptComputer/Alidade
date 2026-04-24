@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- Run npm install before building so generators can read node_modules -->
+    <RunNpmInstall Condition="'$(RunNpmInstall)' == ''">true</RunNpmInstall>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.5" />
+  </ItemGroup>
+
+  <!-- npm install when package.json or package-lock.json changes -->
+  <Target Name="NpmInstall"
+          BeforeTargets="Build"
+          Condition="'$(RunNpmInstall)' == 'true'"
+          Inputs="package.json"
+          Outputs="node_modules/.package-lock.json">
+    <Exec Command="npm install" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+</Project>

@@ -1,0 +1,13 @@
+global using System.Collections.Immutable;
+global using Alidade.Core.Enums;
+global using Alidade.Core.Models.CQRS;
+global using Alidade.Core.Models.CQRS.Request;
+global using Alidade.Core.Models.CQRS.Response;
+global using Alidade.Core.ServiceInterface;
+global using Questy;
+global using Alidade.Osm.Models;
+global using Alidade.Osm.Models.EditBuffer;
+global using Alidade.Osm.Models.Validation;
+global using Alidade.Osm.Services;
+global using Alidade.Osm.Services.State;
+global using Alidade.Osm.Validators;

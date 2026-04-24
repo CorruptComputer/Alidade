@@ -1,0 +1,27 @@
+---
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      NuGet:
+        patterns:
+          - "*"
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      NPM:
+        patterns:
+          - "*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      Pipeline:
+        patterns:
+          - "*"

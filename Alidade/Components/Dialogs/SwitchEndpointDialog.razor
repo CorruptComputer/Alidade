@@ -1,0 +1,23 @@
+
+@if (settingsState.State.PendingEndpoint is ApiEndpoints pending)
+{
+    <div class="dialog-backdrop">
+        <div class="dialog">
+            <div class="dialog-header">
+                <span>Unsaved Changes</span>
+            </div>
+            <div class="panel-body">
+                <p>
+                    You have unsaved changes. Before switching to
+                    <strong>@ApiEndpointCatalog.Endpoints[pending].DisplayName</strong>
+                    you must either upload or discard them.
+                </p>
+            </div>
+            <div class="dialog-actions">
+                <button class="btn btn-primary" @onclick="Upload">Upload Changes</button>
+                <button class="btn btn-danger" @onclick="() => Discard(pending)">Discard Changes</button>
+                <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+}

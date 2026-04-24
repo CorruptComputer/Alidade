@@ -1,0 +1,112 @@
+<div class="inspector-panel @PanelClass" @ref="_panelEl">
+
+    @* Header is always in the DOM so the drag ref stays valid across selection changes. *@
+    <div class="inspector-header" @ref="_headerEl">
+        <span class="inspector-title">
+            @if (IsPinned) { <span class="inspector-pin-icon" title="Pinned">📌</span> }
+            @_elementLabel
+        </span>
+        <div class="inspector-header-actions">
+            @if (!IsPinned && _targetRef is not null)
+            {
+                <button class="inspector-pin-btn" title="Pin this panel" @onclick="PinCurrent">📌</button>
+            }
+            <button class="inspector-close"
+                    title="@(IsPinned ? "Unpin" : "Deselect (Escape)")"
+                    @onclick="OnClose">X</button>
+        </div>
+    </div>
+
+    @if (_targetRef is not null)
+    {
+        @* Preset search / active preset name *@
+        <div class="inspector-preset-row">
+            @if (_activePreset is not null && !_isSearching)
+            {
+                @if (_matchedNsiBrand is not null)
+                {
+                    @* Show brand name when we have a confirmed NSI match *@
+                    <span class="inspector-preset-name">@_matchedNsiBrand.DisplayName</span>
+                }
+                else
+                {
+                    <span class="inspector-preset-name">@PresetService.FormatTagLabel(_activePreset)</span>
+                }
+                @if (!IsPinned)
+                {
+                    <button class="inspector-change-preset" @onclick="StartPresetSearch">Change…</button>
+                }
+            }
+            else if (!IsPinned)
+            {
+                <input @ref="_searchInput"
+                       type="text"
+                       placeholder="Search presets…"
+                       value="@_query"
+                       @oninput="OnQueryChanged"
+                       @onkeydown="OnSearchKeyDown"
+                       class="inspector-search-input" />
+                <button class="inspector-cancel-search" @onclick="CancelSearch" title="Cancel search">✕</button>
+            }
+        </div>
+
+        @if (!IsPinned && (_results.Count > 0 || _nsiResults.Count > 0))
+        {
+            <ul class="inspector-preset-results">
+                @foreach (Preset p in _results)
+                {
+                    Preset captured = p;
+                    <li @onclick="() => ApplyPreset(captured)" class="inspector-preset-result">
+                        <span class="inspector-preset-result-name">@(captured.Name ?? captured.Id)</span>
+                    </li>
+                }
+                @if (_nsiResults.Count > 0)
+                {
+                    @if (_results.Count > 0)
+                    {
+                        <li class="inspector-preset-result-divider">Brands</li>
+                    }
+                    @foreach (NsiItem item in _nsiResults)
+                    {
+                        NsiItem captured = item;
+                        <li @onclick="() => ApplyNsiItem(captured)" class="inspector-preset-result inspector-preset-result--nsi">
+                            <span class="inspector-preset-result-name">@captured.DisplayName</span>
+                            <span class="inspector-preset-result-tag">@GetNsiPrimaryTag(captured)</span>
+                        </li>
+                    }
+                }
+            </ul>
+        }
+
+        @if (_matchedNsiBrand is not null && _nsiBrandIncomplete)
+        {
+            NsiItem brand = _matchedNsiBrand;
+            <div class="inspector-brand-warning">
+                <span>"@brand.DisplayName" is a known brand. Apply the brand preset to add standard tags.</span>
+                <button class="inspector-brand-apply" @onclick="() => ApplyNsiItem(brand)">Apply</button>
+            </div>
+        }
+
+        @if (_activePreset is not null && string.IsNullOrEmpty(_query) && _results.Count == 0)
+        {
+            IReadOnlyList<FieldDef> fields = presetService.ResolveFields(_activePreset);
+            @if (fields.Count > 0)
+            {
+                <div class="inspector-preset-fields">
+                    @foreach (FieldDef field in fields)
+                    {
+                        <PresetField Field="field" ElementRef="_targetRef" />
+                    }
+                </div>
+                <div class="inspector-section-divider"></div>
+            }
+        }
+
+        <div class="inspector-tags-section">
+            <div class="inspector-section-header">Tags</div>
+            <TagEditor ElementRef="_targetRef" />
+        </div>
+
+        <RelationsSection ElementRef="_targetRef" />
+    }
+</div>

@@ -1,0 +1,23 @@
+name: setup-env
+description: Setup Environment
+
+runs:
+  using: composite
+  steps:
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Print .NET version and SDKs
+      shell: bash
+      run: |
+        dotnet --version
+        dotnet --list-sdks
+
+    - name: Restore Tools
+      shell: bash
+      run: |
+        cd Alidade
+        dotnet workload restore
+        cd ..

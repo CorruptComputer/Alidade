@@ -1,0 +1,80 @@
+@using Alidade.Osm.Models.Imagery
+
+@if (mapState.State.BackgroundPanelVisible)
+{
+    <div class="panel background-panel">
+        <div class="panel-header">
+            <span>Background imagery</span>
+            <button class="panel-close"
+                    @onclick="Close"
+                    aria-label="Close background panel">X</button>
+        </div>
+
+        <div class="background-search-row">
+            <input class="background-search-input"
+                   type="search"
+                   placeholder="Search imagery…"
+                   @bind="_query"
+                   @bind:event="oninput" />
+        </div>
+
+        <div class="panel-body background-list">
+            @if (!imagery.IsLoaded)
+            {
+                <div class="background-loading">Loading imagery list…</div>
+            }
+            else if (imagery.LoadError is not null)
+            {
+                <div class="background-empty">Failed to load imagery: @imagery.LoadError</div>
+            }
+            else
+            {
+                @* Bing special entry, not in ELI TMS list *@
+                <button class="background-option @(_activeId == BingId ? "background-option-active" : "")"
+                        @onclick="SelectBing">
+                    <span class="background-best" title="Recommended">★</span>
+                    <span class="background-option-name">Bing Maps Aerial</span>
+                </button>
+
+                @* Custom URL entry *@
+                <div class="background-option background-option-custom @(_activeId == CustomId ? "background-option-active" : "")"
+                     @onclick="ExpandCustom">
+                    <span class="background-option-name">Custom</span>
+                </div>
+                @if (_customExpanded)
+                {
+                    <div class="background-custom-form">
+                        <input class="background-custom-input"
+                               type="url"
+                               placeholder="https://…/{z}/{x}/{y}.png"
+                               @bind="_customUrl"
+                               @bind:event="oninput"
+                               @onkeydown="OnCustomKeyDown" />
+                        <button class="background-custom-apply"
+                                disabled="@string.IsNullOrWhiteSpace(_customUrl)"
+                                @onclick="ApplyCustom">Apply</button>
+                    </div>
+                }
+
+                @foreach (ImageryEntry e in DisplayList)
+                {
+                    ImageryEntry entry = e;
+                    <button class="background-option @(_activeId == entry.Id ? "background-option-active" : "")"
+                            title="@entry.TermsText"
+                            @onclick="() => SelectImagery(entry)">
+                        @if (entry.Best)
+                        {
+                            <span class="background-best" title="Recommended for this area">★</span>
+                        }
+                        <span class="background-option-name">@entry.Name</span>
+                    </button>
+                }
+
+                @if (DisplayList.Count == 0 && !string.IsNullOrWhiteSpace(_query))
+                {
+                    <div class="background-empty">No results for "@_query"</div>
+                }
+            }
+        </div>
+    </div>
+}

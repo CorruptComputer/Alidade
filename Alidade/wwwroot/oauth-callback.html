@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alidade - OAuth Callback</title>
+    </head>
+    <body>
+        <script>
+            (function () {
+                const params = new URLSearchParams(window.location.search);
+                const code = params.get('code');
+                const error = params.get('error');
+                const state = params.get('state');
+
+                if (window.opener) {
+                    window.opener.postMessage({
+                        type: 'oauth_callback',
+                        code: code,
+                        error: error
+                    }, window.location.origin);
+                } else {
+                    if (code) {
+                        localStorage.setItem('oauth_callback_code', JSON.stringify({ code, state, ts: Date.now() }));
+                    }
+                }
+
+                setTimeout(() => window.close(), 500);
+            })();
+        </script>
+    </body>
+</html>

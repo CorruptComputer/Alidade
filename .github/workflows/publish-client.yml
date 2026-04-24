@@ -1,0 +1,31 @@
+name: Build Client Artifact
+
+on:
+  push:
+    branches:
+      - 'develop'
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  client:
+    name: Publish Client
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Environment
+        uses: ./.github/actions/setup-env
+
+      - name: Publish
+        run: |
+          dotnet publish Alidade/Alidade.csproj --configuration Release --property PublishDir=${{ github.workspace }}/publish
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: client-wasm
+          path: ./publish

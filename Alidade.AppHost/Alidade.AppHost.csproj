@@ -1,0 +1,10 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.2.3">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <UserSecretsId>453dcf52-98c0-439a-b464-4f576ce577f1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Alidade/Alidade.csproj" />
+  </ItemGroup>
+</Project>

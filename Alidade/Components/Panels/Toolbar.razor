@@ -1,0 +1,113 @@
+
+<div class="toolbar">
+    <div class="toolbar-group">
+        <button class="toolbar-btn @ActiveClass(ActiveTools.Select)"
+                title="Select (S)"
+                @onclick="() => SetTool(ActiveTools.Select)">
+            <span class="toolbar-icon">↖</span>
+            <span class="toolbar-label">Select</span>
+        </button>
+        <button class="toolbar-btn @ActiveClass(ActiveTools.DrawNode)"
+                title="Add node (A)"
+                @onclick="() => SetTool(ActiveTools.DrawNode)">
+            <span class="toolbar-icon">●</span>
+            <span class="toolbar-label">Point</span>
+        </button>
+        <button class="toolbar-btn @ActiveClass(ActiveTools.DrawWay)"
+                title="Draw way (W)"
+                @onclick="() => SetTool(ActiveTools.DrawWay)">
+            <span class="toolbar-icon">╱</span>
+            <span class="toolbar-label">Line</span>
+        </button>
+        <button class="toolbar-btn @ActiveClass(ActiveTools.DrawArea)"
+                title="Draw area (Shift+W)"
+                @onclick="() => SetTool(ActiveTools.DrawArea)">
+            <span class="toolbar-icon">▭</span>
+            <span class="toolbar-label">Area</span>
+        </button>
+    </div>
+
+    <div class="toolbar-spacer"></div>
+
+    @if (editBufferState.State.IsDirty)
+    {
+        <div class="toolbar-group">
+            @{
+                bool canUpload = authState.State.IsLoggedIn && ActiveEndpointState == EndpointState.Enabled;
+                string uploadTitle = ActiveEndpointState switch
+                {
+                    EndpointState.ReadOnly => "This endpoint is read-only; uploads are not allowed",
+                    EndpointState.Disabled => "This endpoint is disabled",
+                    _ => authState.State.IsLoggedIn ? "Upload changes (Ctrl+S)" : "Log in to upload changes"
+                };
+            }
+            <button class="toolbar-btn toolbar-btn-primary"
+                    title="@uploadTitle"
+                    disabled="@(!canUpload)"
+                    @onclick="OpenUpload">
+                ↑ Upload
+            </button>
+        </div>
+    }
+
+    <div class="toolbar-group">
+        <button class="toolbar-btn toolbar-btn-validation @(ErrorCount > 0 ? "toolbar-btn-has-errors" : "")"
+                title="Validation (V)"
+                @onclick="ToggleValidation">
+            <span class="toolbar-icon">⚠</span>
+            <span class="toolbar-label">Validation</span>
+            @if (ErrorCount > 0 || WarnCount > 0)
+            {
+                <span class="toolbar-validation-badge">
+                    @if (ErrorCount > 0)
+                    {
+                        <span class="validation-badge validation-badge-error">@ErrorCount</span>
+                    }
+                    @if (WarnCount > 0)
+                    {
+                        <span class="validation-badge validation-badge-warn">@WarnCount</span>
+                    }
+                </span>
+            }
+        </button>
+        <button class="toolbar-btn"
+                title="Background imagery (B)"
+                @onclick="ToggleBackground">
+            <span class="toolbar-icon">⬡</span>
+            <span class="toolbar-label">Background</span>
+        </button>
+        <button class="toolbar-btn"
+                title="Settings"
+                @onclick="ToggleSettings">
+            <span class="toolbar-icon">⚙</span>
+            <span class="toolbar-label">Settings</span>
+        </button>
+    </div>
+
+    <div class="toolbar-group">
+        @if (authState.State.IsLoading)
+        {
+            <span class="toolbar-auth-label">Logging in…</span>
+        }
+        else if (authState.State.IsLoggedIn)
+        {
+            <span class="toolbar-auth-label" title="Logged in as @authState.State.User!.UserName">
+                @authState.State.User!.UserName
+            </span>
+            <button class="toolbar-btn"
+                    title="Log out"
+                    @onclick="LogOut">
+                <span class="toolbar-icon">⏏</span>
+                <span class="toolbar-label">Logout</span>
+            </button>
+        }
+        else
+        {
+            <button class="toolbar-btn"
+                    title="Log in with OpenStreetMap"
+                    @onclick="LogIn">
+                Log in
+            </button>
+        }
+    </div>
+</div>
