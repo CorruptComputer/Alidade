@@ -33,6 +33,9 @@ public class EditBufferService : IDisposable
     private CancellationTokenSource? _saveCts;
     private bool _hadDirtyState;
 
+    // GeoJSON push debouncing
+    private int _geoJsonPushSeq;
+
     // Selection push debouncing and delta tracking
     private int _selectionPushSeq;
     private ImmutableHashSet<OsmElementRef> _lastPushedSelected = [];
@@ -81,7 +84,7 @@ public class EditBufferService : IDisposable
 
     private void OnEditBufferChanged(object? sender, EventArgs e)
     {
-        _ = _mediator.Publish(new GeoJsonPushRequested.Notification(_editState.State));
+        _ = _mediator.Publish(new GeoJsonPushRequested.Notification(_editState.State, ++_geoJsonPushSeq));
         _selectedNeedsRepush = true;
         RequestSelectionPush();
         _validation?.ScheduleValidation(_editState.State);
@@ -127,8 +130,20 @@ public class EditBufferService : IDisposable
         _ = _mediator.Publish(new SelectionPushRequested.Notification(seq));
     }
 
+    internal async Task RunPushGeoJsonNotificationAsync(EditBufferState state, int seq)
+    {
+        await Task.Yield();
+        if (_geoJsonPushSeq != seq)
+        {
+            return;
+        }
+
+        await RunPushGeoJsonAsync(state);
+    }
+
     internal async Task RunSelectionPushAsync(int seq)
     {
+        await Task.Yield();
         if (_selectionPushSeq != seq)
         {
             return;
@@ -306,7 +321,7 @@ public class EditBufferService : IDisposable
         await SetSourceAsync("osm-ways", ways);
     }
 
-    private async Task PushSelectionAsync(Models.Selection.SelectionState sel, EditBufferState buf, bool includeSelected)
+    private async Task PushSelectionAsync(SelectionState sel, EditBufferState buf, bool includeSelected)
     {
         IReadOnlyDictionary<long, OsmNode> liveNodes = buf.Nodes
             .Where(kv => buf.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Deleted)
@@ -395,7 +410,7 @@ public class EditBufferService : IDisposable
         await SetSourceAsync("osm-hover", hoverFeatures);
     }
 
-    private async Task SetSourceAsync(string sourceId, IReadOnlyList<NetTopologySuite.Features.IFeature> features)
+    private async Task SetSourceAsync(string sourceId, IReadOnlyList<IFeature> features)
     {
         if (features.Count == 0)
         {
