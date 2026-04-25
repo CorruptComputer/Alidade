@@ -16,6 +16,7 @@ namespace Alidade.Services;
 public class EditBufferService : IDisposable
 {
     private const double MinFetchZoom = 17.0;
+    private const double EvictionMultiplier = 2.0;
     private readonly IMediator _mediator;
     private readonly NsiService _nsi;
     private readonly IndexedDBService _storage;
@@ -96,6 +97,9 @@ public class EditBufferService : IDisposable
             _fetchCts.Cancel();
             _fetchCts.Dispose();
             _fetchCts = new CancellationTokenSource();
+
+            EvictOutOfViewportData(bounds);
+
             _ = _mediator.Publish(new FetchBboxRequested.Notification(bounds), _fetchCts.Token);
 
             if (bounds.Zoom >= MinFetchZoom)
@@ -417,6 +421,151 @@ public class EditBufferService : IDisposable
     #endregion
 
     #region Data fetch
+    private void EvictOutOfViewportData(MapBounds bounds)
+    {
+        EditBufferState state = _editState.State;
+
+        double latSpan = bounds.North - bounds.South;
+        double lonSpan = bounds.East - bounds.West;
+        double latPad = latSpan * (EvictionMultiplier - 1.0) / 2.0;
+        double lonPad = lonSpan * (EvictionMultiplier - 1.0) / 2.0;
+        double keepSouth = bounds.South - latPad;
+        double keepNorth = bounds.North + latPad;
+        double keepWest = bounds.West - lonPad;
+        double keepEast = bounds.East + lonPad;
+
+        // Pass 1: evict Fetched ways with no node inside keep-bounds.
+        List<long> wayIdsToEvict = [];
+        foreach (KeyValuePair<long, OsmWay> kv in state.Ways)
+        {
+            if (state.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Fetched)
+            {
+                continue;
+            }
+
+            bool hasNodeInBounds = false;
+            foreach (long nodeId in kv.Value.NodeIds)
+            {
+                if (state.Nodes.TryGetValue(nodeId, out OsmNode? n)
+                    && n.Lat <= keepNorth
+                    && n.Lon <= keepEast
+                    && n.Lat >= keepSouth
+                    && n.Lon >= keepWest)
+                {
+                    hasNodeInBounds = true;
+                    break;
+                }
+            }
+
+            if (!hasNodeInBounds)
+            {
+                wayIdsToEvict.Add(kv.Key);
+            }
+        }
+
+        // Node IDs still claimed by surviving ways must be retained.
+        HashSet<long> survivingWayNodeIds = [];
+        foreach (KeyValuePair<long, OsmWay> kv in state.Ways)
+        {
+            if (!wayIdsToEvict.Contains(kv.Key))
+            {
+                foreach (long nodeId in kv.Value.NodeIds)
+                {
+                    survivingWayNodeIds.Add(nodeId);
+                }
+            }
+        }
+
+        // Pass 2: evict Fetched nodes outside keep-bounds not claimed by a surviving way.
+        List<long> nodeIdsToEvict = [];
+        foreach (KeyValuePair<long, OsmNode> kv in state.Nodes)
+        {
+            if (state.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Fetched)
+            {
+                continue;
+            }
+
+            OsmNode node = kv.Value;
+            bool outsideBounds = node.Lat < keepSouth || node.Lat > keepNorth
+                              || node.Lon < keepWest  || node.Lon > keepEast;
+
+            if (outsideBounds && !survivingWayNodeIds.Contains(kv.Key))
+            {
+                nodeIdsToEvict.Add(kv.Key);
+            }
+        }
+
+        // Pass 3: evict Fetched relations with no surviving member remaining in the buffer.
+        HashSet<long> evictedNodeIds = [.. nodeIdsToEvict];
+        HashSet<long> evictedWayIds  = [.. wayIdsToEvict];
+
+        List<long> relIdsToEvict = [];
+        foreach (KeyValuePair<long, OsmRelation> kv in state.Relations)
+        {
+            if (state.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Fetched)
+            {
+                continue;
+            }
+
+            bool hasSurvivingMember = false;
+            foreach (OsmMember member in kv.Value.Members)
+            {
+                switch (member.Type)
+                {
+                    case OsmElementTypes.Node when state.Nodes.ContainsKey(member.Ref)
+                        && !evictedNodeIds.Contains(member.Ref):
+                        hasSurvivingMember = true;
+                        break;
+
+                    case OsmElementTypes.Way when state.Ways.ContainsKey(member.Ref)
+                        && !evictedWayIds.Contains(member.Ref):
+                        hasSurvivingMember = true;
+                        break;
+
+                    case OsmElementTypes.Relation when state.Relations.ContainsKey(member.Ref):
+                        hasSurvivingMember = true;
+                        break;
+                }
+
+                if (hasSurvivingMember)
+                {
+                    break;
+                }
+            }
+
+            if (!hasSurvivingMember)
+            {
+                relIdsToEvict.Add(kv.Key);
+            }
+        }
+
+        if (wayIdsToEvict.Count == 0 && nodeIdsToEvict.Count == 0 && relIdsToEvict.Count == 0)
+        {
+            return;
+        }
+
+        List<OsmElementRef> editStateKeysToEvict = [];
+        foreach (long id in nodeIdsToEvict)
+        {
+            editStateKeysToEvict.Add(new OsmElementRef(OsmElementTypes.Node, id));
+        }
+        foreach (long id in wayIdsToEvict)
+        {
+            editStateKeysToEvict.Add(new OsmElementRef(OsmElementTypes.Way, id));
+        }
+        foreach (long id in relIdsToEvict)
+        {
+            editStateKeysToEvict.Add(new OsmElementRef(OsmElementTypes.Relation, id));
+        }
+
+        _editState.SetState(state with
+        {
+            Nodes      = state.Nodes.RemoveRange(nodeIdsToEvict),
+            Ways       = state.Ways.RemoveRange(wayIdsToEvict),
+            Relations  = state.Relations.RemoveRange(relIdsToEvict),
+            EditStates = state.EditStates.RemoveRange(editStateKeysToEvict)
+        });
+    }
 
     internal async Task RunFetchBboxAsync(MapBounds bounds, IMediator mediator, CancellationToken ct)
     {
