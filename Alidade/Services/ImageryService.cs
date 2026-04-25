@@ -1,3 +1,4 @@
+using Alidade.Core.Consts;
 using Alidade.Osm.ImageryLayers;
 using Alidade.Osm.Models.Imagery;
 using NetTopologySuite.Geometries;
@@ -9,10 +10,9 @@ namespace Alidade.Services;
 ///   can surface only imagery sources that cover the current map viewport.
 ///   Data is sourced from the generated <see cref="ImageryData"/>.
 /// </summary>
-/// <remarks>
-///   Creates a new instance.
-/// </remarks>
-public class ImageryService(ILogger<ImageryService> log)
+/// <param name="log">Logger for reporting geometry building errors.</param>
+/// <param name="factory">The WGS 84 geometry factory used to construct NTS geometries.</param>
+public sealed class ImageryService(ILogger<ImageryService> log, GeometryFactory factory)
 {
     private IReadOnlyList<(ImageryEntry Entry, Geometry? Coverage)> _indexed = [];
     private bool _loaded;
@@ -46,7 +46,7 @@ public class ImageryService(ILogger<ImageryService> log)
                     Geometry? geom = null;
                     try
                     {
-                        geom = e.BuildCoverageGeometry();
+                        geom = e.BuildCoverageGeometry(factory);
                     }
                     catch (Exception gex)
                     {
@@ -77,17 +77,15 @@ public class ImageryService(ILogger<ImageryService> log)
     ///   Region-specific entries are included only when the centre falls inside
     ///   their coverage polygon.
     /// </summary>
-    public IReadOnlyList<ImageryEntry> GetForLocation(double lat, double lon)
+    public IReadOnlyList<ImageryEntry> GetForLocation(Coordinate location)
     {
-        Point centre = new(lon, lat) { SRID = 4326 };
+        Point centre = factory.CreatePoint(location);
 
-        ImageryEntry[] results = [.. _indexed
+        return [.. _indexed
             .Where(t => t.Coverage is null || t.Coverage.Contains(centre))
             .Select(t => t.Entry)
             .OrderByDescending(e => e.Best)
             .ThenBy(e => e.Name)];
-
-        return results;
     }
 
     /// <summary>
@@ -113,12 +111,10 @@ public class ImageryService(ILogger<ImageryService> log)
     /// <summary>
     ///   All usable imagery entries, regardless of location.
     /// </summary>
-    public IReadOnlyList<ImageryEntry> All
-        => ImageryData.All;
+    public IReadOnlyList<ImageryEntry> All => ImageryData.All;
 
     /// <summary>
     ///   Whether the imagery service has finished building coverage geometries.
     /// </summary>
-    public bool IsLoaded
-        => _loaded;
+    public bool IsLoaded => _loaded;
 }

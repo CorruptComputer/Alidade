@@ -1,16 +1,19 @@
+using Alidade.Handlers.Map;
 using Alidade.Map.Handlers;
 using Alidade.Osm.Models.Imagery;
 using Microsoft.AspNetCore.Components.Web;
+using NetTopologySuite.Geometries;
 
 namespace Alidade.Components.Panels;
 
 /// <summary>
 ///   Panel for selecting the background imagery layer displayed on the map.
 /// </summary>
-public partial class BackgroundPanel(
-    MapStateService mapState,
-    IMediator mediator,
-    ImageryService imagery) : IDisposable
+/// <param name="mapState">The map state service used to trigger location-aware filtering.</param>
+/// <param name="mediator">The mediator used to dispatch background imagery commands.</param>
+/// <param name="imagery">The imagery service providing the list of available imagery sources.</param>
+public sealed partial class BackgroundPanel(MapStateService mapState, IMediator mediator, ImageryService imagery)
+    : IDisposable
 {
     /// <inheritdoc />
     protected override void OnInitialized()
@@ -41,9 +44,9 @@ public partial class BackgroundPanel(
 
             MapBounds? bounds = mapState.State.CurrentBounds;
             IReadOnlyList<ImageryEntry> locationList = bounds is not null
-                ? imagery.GetForLocation(
+                ? imagery.GetForLocation(new Coordinate(
                     (bounds.South + bounds.North) / 2.0,
-                    (bounds.West + bounds.East) / 2.0)
+                    (bounds.West + bounds.East) / 2.0))
                 : imagery.All;
 
             if (string.IsNullOrWhiteSpace(_query))
@@ -52,9 +55,7 @@ public partial class BackgroundPanel(
             }
 
             string q = _query.Trim();
-            return locationList
-                .Where(e => e.Name.Contains(q, StringComparison.OrdinalIgnoreCase))
-                .ToList();
+            return [.. locationList.Where(e => e.Name.Contains(q, StringComparison.OrdinalIgnoreCase))];
         }
     }
 
@@ -80,7 +81,7 @@ public partial class BackgroundPanel(
         _activeId = CustomId;
         _customExpanded = false;
         await mediator.Send(new SetBackgroundImagery.Command([url], 256, null, false));
-        await mediator.Send(new Handlers.Map.ToggleBackgroundPanel.Command());
+        await mediator.Send(new ToggleBackgroundPanel.Command());
     }
 
     private async Task SelectImagery(ImageryEntry entry)
@@ -95,7 +96,7 @@ public partial class BackgroundPanel(
         _activeId = entry.Id;
         _customExpanded = false;
         await mediator.Send(new SetBackgroundImagery.Command(tiles, entry.TileSize ?? 256, entry.TermsText, isTms, entry.MaxZoom));
-        await mediator.Send(new Handlers.Map.ToggleBackgroundPanel.Command());
+        await mediator.Send(new ToggleBackgroundPanel.Command());
     }
 
     private async Task SelectBing()
@@ -103,9 +104,9 @@ public partial class BackgroundPanel(
         _activeId = BingId;
         _customExpanded = false;
         await mediator.Send(new SetBackgroundBing.Command());
-        await mediator.Send(new Handlers.Map.ToggleBackgroundPanel.Command());
+        await mediator.Send(new ToggleBackgroundPanel.Command());
     }
 
     private async Task Close()
-        => await mediator.Send(new Handlers.Map.ToggleBackgroundPanel.Command());
+        => await mediator.Send(new ToggleBackgroundPanel.Command());
 }

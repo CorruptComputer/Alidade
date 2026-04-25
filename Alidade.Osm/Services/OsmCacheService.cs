@@ -3,7 +3,7 @@ using NetTopologySuite.Geometries;
 namespace Alidade.Osm.Services;
 
 /// <inheritdoc />
-internal sealed class OsmCacheService : IOsmCacheService
+internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheService
 {
     // TODO: Replace the O(n) linear scans in GetGeometryFromBbox with three
     //       NTS Quadtree<long> spatial indexes (one per element type) if profiling
@@ -14,7 +14,7 @@ internal sealed class OsmCacheService : IOsmCacheService
     private readonly Dictionary<long, OsmWay> _ways = [];
     private readonly Dictionary<long, OsmRelation> _relations = [];
 
-    private static readonly GeometryFactory _geomFactory = new(new PrecisionModel(), 4326);
+    private readonly GeometryFactory _geomFactory = geomFactory;
 
     /// <inheritdoc />
     public List<CacheBounds> GetGeometryMissBboxes(CacheBounds request)
@@ -117,7 +117,7 @@ internal sealed class OsmCacheService : IOsmCacheService
         _relations.Clear();
     }
 
-    private static Geometry BoundsToGeometry(CacheBounds b)
+    private Geometry BoundsToGeometry(CacheBounds b)
         => _geomFactory.ToGeometry(new Envelope(b.West, b.East, b.South, b.North));
 
     private static CacheBounds EnvelopeToCacheBounds(Envelope env)
@@ -130,7 +130,7 @@ internal sealed class OsmCacheService : IOsmCacheService
     ///   intersection of the diff with that band yields one or more bboxes for that strip.
     ///   An L-shaped diff (typical single-pan case) produces exactly two bboxes.
     /// </summary>
-    private static List<CacheBounds> DecomposeToBboxes(Geometry diff)
+    private List<CacheBounds> DecomposeToBboxes(Geometry diff)
     {
         double[] ys = [.. diff.Coordinates
             .Select(c => c.Y)

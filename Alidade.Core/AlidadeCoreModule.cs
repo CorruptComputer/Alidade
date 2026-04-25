@@ -1,4 +1,6 @@
+using Alidade.Core.Consts;
 using Autofac;
+using NetTopologySuite.Geometries;
 
 namespace Alidade.Core;
 
@@ -11,5 +13,9 @@ public sealed class AlidadeCoreModule : Module
     protected override void Load(ContainerBuilder builder)
     {
         builder.RegisterType<SettingsStateService>().AsSelf().SingleInstance();
+
+        builder.RegisterInstance(new GeometryFactory(new PrecisionModel(), SpatialReferenceIDs.Wgs84))
+               .AsSelf()
+               .SingleInstance();
     }
 }

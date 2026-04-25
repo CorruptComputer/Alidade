@@ -6,11 +6,9 @@ using NetTopologySuite.Geometries;
 namespace Alidade.Handlers.Map;
 
 /// <inheritdoc />
-public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediator mediator, JsonSerializerOptions geoJsonOptions)
+public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediator mediator, JsonSerializerOptions geoJsonOptions, GeometryFactory geomFactory)
     : INotificationHandler<DrawPreviewPushRequested.Notification>
 {
-    private static readonly GeometryFactory _geomFactory = new(new PrecisionModel(), 4326);
-
     /// <summary>
     ///   Raised when the in-progress draw tool state changes and the rubber-band preview needs updating.
     /// </summary>
@@ -25,7 +23,7 @@ public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediat
         if (pts.Count >= 2)
         {
             Coordinate[] coords = [.. pts.Select(p => new Coordinate(p.Lon, p.Lat))];
-            fc.Add(new Feature(_geomFactory.CreateLineString(coords), new AttributesTable()));
+            fc.Add(new Feature(geomFactory.CreateLineString(coords), new AttributesTable()));
         }
 
         ActiveTools active = toolState.State.Active;
@@ -40,7 +38,7 @@ public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediat
                 attrs.Add("terminal", true);
             }
 
-            fc.Add(new Feature(_geomFactory.CreatePoint(new Coordinate(lon, lat)), attrs));
+            fc.Add(new Feature(geomFactory.CreatePoint(new Coordinate(lon, lat)), attrs));
         }
 
         string json = JsonSerializer.Serialize(fc, geoJsonOptions);

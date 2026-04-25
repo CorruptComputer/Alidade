@@ -2,6 +2,7 @@ using System.Text.Json;
 using Alidade.Map.Handlers;
 using Alidade.Osm.Models.Editing;
 using NetTopologySuite.Features;
+using NetTopologySuite.Geometries;
 
 namespace Alidade.Services;
 
@@ -24,6 +25,7 @@ public class EditBufferService : IDisposable
     private readonly SelectionStateService _selectionState;
     private readonly IOsmCacheService _osmCache;
     private readonly ValidationService? _validation;
+    private readonly GeometryFactory _geomFactory;
     private readonly ILogger<EditBufferService> _log;
 
     // Draft persistence
@@ -46,6 +48,7 @@ public class EditBufferService : IDisposable
         NsiService nsi,
         IndexedDBService storage,
         JsonSerializerOptions geoJsonOptions,
+        GeometryFactory geomFactory,
         EditBufferStateService editState,
         MapStateService mapState,
         SelectionStateService selectionState,
@@ -57,6 +60,7 @@ public class EditBufferService : IDisposable
         _nsi = nsi;
         _storage = storage;
         _geoJsonOptions = geoJsonOptions;
+        _geomFactory = geomFactory;
         _editState = editState;
         _mapState = mapState;
         _selectionState = selectionState;
@@ -261,7 +265,7 @@ public class EditBufferService : IDisposable
         List<Feature> nodes = [];
         foreach (OsmNode n in liveNodes.Values)
         {
-            Feature f = n.ToFeature();
+            Feature f = n.ToFeature(_geomFactory);
             bool hasTags = n.Tags.Count > 0;
             bool isJunction = nodeWayCount.GetValueOrDefault(n.Id) >= 2;
             (string fill, string stroke) = (hasTags, isJunction) switch
@@ -287,7 +291,7 @@ public class EditBufferService : IDisposable
                 continue;
             }
 
-            Feature? f = w.ToFeature(liveNodes);
+            Feature? f = w.ToFeature(liveNodes, _geomFactory);
             if (f is not null)
             {
                 ways.Add(f);
@@ -314,13 +318,13 @@ public class EditBufferService : IDisposable
                 switch (elemRef.Type)
                 {
                     case OsmElementTypes.Node when buf.Nodes.TryGetValue(elemRef.Id, out OsmNode? n):
-                        selectedFeatures.Add(n.ToFeature());
+                        selectedFeatures.Add(n.ToFeature(_geomFactory));
                         break;
 
                     case OsmElementTypes.Way when buf.Ways.TryGetValue(elemRef.Id, out OsmWay? w)
                         && buf.EditStates.GetValueOrDefault(w.Ref) != EditState.Deleted:
                         {
-                            Feature? wayFeature = w.ToFeature(liveNodes);
+                            Feature? wayFeature = w.ToFeature(liveNodes, _geomFactory);
                             if (wayFeature is not null)
                             {
                                 selectedFeatures.Add(wayFeature);
@@ -332,7 +336,7 @@ public class EditBufferService : IDisposable
                                 if (!seen.Add(nodeId)) continue;
                                 if (!buf.Nodes.TryGetValue(nodeId, out OsmNode? vn)) continue;
                                 if (buf.EditStates.GetValueOrDefault(vn.Ref) == EditState.Deleted) continue;
-                                Feature vf = vn.ToFeature();
+                                Feature vf = vn.ToFeature(_geomFactory);
                                 vf.Attributes.Add("vertex", "yes");
                                 vertexFeatures.Add(vf);
                             }
@@ -345,7 +349,7 @@ public class EditBufferService : IDisposable
                             {
                                 if (buf.Ways.TryGetValue(member.Ref, out OsmWay? mw))
                                 {
-                                    Feature? mf = mw.ToFeature(liveNodes);
+                                    Feature? mf = mw.ToFeature(liveNodes, _geomFactory);
                                     if (mf is not null) selectedFeatures.Add(mf);
                                 }
                             }
@@ -367,11 +371,11 @@ public class EditBufferService : IDisposable
             switch (currentHovered.Type)
             {
                 case OsmElementTypes.Node when buf.Nodes.TryGetValue(currentHovered.Id, out OsmNode? hn):
-                    hoverFeatures.Add(hn.ToFeature());
+                    hoverFeatures.Add(hn.ToFeature(_geomFactory));
                     break;
                 case OsmElementTypes.Way when buf.Ways.TryGetValue(currentHovered.Id, out OsmWay? hw):
                     {
-                        Feature? hf = hw.ToFeature(liveNodes);
+                        Feature? hf = hw.ToFeature(liveNodes, _geomFactory);
                         if (hf is not null)
                         {
                             hoverFeatures.Add(hf);

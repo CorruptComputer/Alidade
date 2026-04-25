@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
+using Alidade.Core.Consts;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
 
@@ -75,15 +76,12 @@ public partial record ImageryEntry(
     ///   Builds an NTS <see cref="Geometry"/> for the coverage polygons,
     ///   or returns null for worldwide sources.
     /// </summary>
-    public Geometry? BuildCoverageGeometry()
+    public Geometry? BuildCoverageGeometry(GeometryFactory factory)
     {
         if (Polygon is not { Length: > 0 })
         {
             return null;
         }
-
-        GeometryFactory factory = NtsGeometryServices.Instance
-            .CreateGeometryFactory(srid: 4326);
 
         Polygon[] polys = [.. Polygon.Select(ring =>
         {

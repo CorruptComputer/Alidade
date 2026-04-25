@@ -18,9 +18,9 @@ public partial class GridifyDialog(
     SelectionStateService selectionState,
     EditBufferStateService editBufferState,
     JsonSerializerOptions geoJsonOptions,
+    GeometryFactory geomFactory,
     IJSRuntime js) : IDisposable
 {
-    private static readonly GeometryFactory Gf = new(new PrecisionModel(), 4326);
 
     private ElementReference _panelEl;
     private ElementReference _headerEl;
@@ -180,7 +180,7 @@ public partial class GridifyDialog(
 
             if (valid && coords.Length >= 2)
             {
-                fc.Add(new Feature(Gf.CreateLineString(coords), new AttributesTable()));
+                fc.Add(new Feature(geomFactory.CreateLineString(coords), new AttributesTable()));
             }
         }
 

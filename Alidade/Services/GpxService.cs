@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.Json;
 using System.Xml.Linq;
 using Alidade.Map.Handlers;
@@ -19,9 +20,9 @@ namespace Alidade.Services;
 /// <param name="geoJsonOptions">
 ///   JSON serializer options that include the NTS <c>GeoJsonConverterFactory</c>.
 /// </param>
-public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions)
+/// <param name="geomFactory">The WGS 84 geometry factory used to construct NTS geometries.</param>
+public sealed class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions, GeometryFactory geomFactory)
 {
-    private static readonly GeometryFactory _gf = new(new PrecisionModel(), 4326);
     private readonly Dictionary<string, List<Feature>> _layers = [];
 
     /// <summary>
@@ -58,7 +59,7 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
 
     private async Task PushAsync()
     {
-        FeatureCollection fc = new();
+        FeatureCollection fc = [];
         foreach (List<Feature> features in _layers.Values)
         {
             foreach (Feature f in features)
@@ -71,7 +72,7 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
         await mediator.Send(new SetSourceData.Command("osm-gpx", json));
     }
 
-    private static List<Feature> ParseGpx(Stream stream)
+    private List<Feature> ParseGpx(Stream stream)
     {
         List<Feature> features = [];
         XDocument doc;
@@ -110,14 +111,14 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
                     continue;
                 }
 
-                AttributesTable attrs = new();
+                AttributesTable attrs = [];
                 if (name is not null)
                 {
                     attrs.Add("name", name);
                 }
 
                 attrs.Add("gpx_type", "track");
-                features.Add(new Feature(_gf.CreateLineString(pts), attrs));
+                features.Add(new Feature(geomFactory.CreateLineString(pts), attrs));
             }
         }
 
@@ -131,14 +132,14 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
 
             if (pts.Length >= 2)
             {
-                AttributesTable attrs = new();
+                AttributesTable attrs = [];
                 if (name is not null)
                 {
                     attrs.Add("name", name);
                 }
 
                 attrs.Add("gpx_type", "route");
-                features.Add(new Feature(_gf.CreateLineString(pts), attrs));
+                features.Add(new Feature(geomFactory.CreateLineString(pts), attrs));
             }
         }
 
@@ -150,7 +151,7 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
                 continue;
             }
 
-            AttributesTable attrs = new();
+            AttributesTable attrs = [];
             string? wptName = wpt.Element(ns + "name")?.Value;
             if (wptName is not null)
             {
@@ -158,7 +159,7 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
             }
 
             attrs.Add("gpx_type", "waypoint");
-            features.Add(new Feature(_gf.CreatePoint(coord), attrs));
+            features.Add(new Feature(geomFactory.CreatePoint(coord), attrs));
         }
 
         return features;
@@ -166,17 +167,13 @@ public class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions
 
     private static Coordinate? ParseCoordinate(XElement el)
     {
-        if (!double.TryParse(el.Attribute("lat")?.Value,
-                System.Globalization.NumberStyles.Float,
-                System.Globalization.CultureInfo.InvariantCulture,
+        if (!double.TryParse(el.Attribute("lat")?.Value, NumberStyles.Float, CultureInfo.InvariantCulture,
                 out double lat))
         {
             return null;
         }
 
-        if (!double.TryParse(el.Attribute("lon")?.Value,
-                System.Globalization.NumberStyles.Float,
-                System.Globalization.CultureInfo.InvariantCulture,
+        if (!double.TryParse(el.Attribute("lon")?.Value, NumberStyles.Float, CultureInfo.InvariantCulture,
                 out double lon))
         {
             return null;

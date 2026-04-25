@@ -7,10 +7,9 @@ using NetTopologySuite.Geometries;
 namespace Alidade.Handlers.Map;
 
 /// <inheritdoc />
-public class NotesFetchRequested(IMediator mediator, JsonSerializerOptions geoJsonOptions)
+public class NotesFetchRequested(IMediator mediator, JsonSerializerOptions geoJsonOptions, GeometryFactory geomFactory)
     : INotificationHandler<NotesFetchRequested.Notification>
 {
-    private static readonly GeometryFactory Gf = new(new PrecisionModel(), 4326);
 
     /// <summary>
     ///   Raised when the viewport enters a new area and OSM notes should be fetched and displayed.
@@ -43,7 +42,7 @@ public class NotesFetchRequested(IMediator mediator, JsonSerializerOptions geoJs
             {
                 attrs.Add("text", firstComment.Text);
             }
-            fc.Add(new Feature(Gf.CreatePoint(new Coordinate(note.Lon, note.Lat)), attrs));
+            fc.Add(new Feature(geomFactory.CreatePoint(new Coordinate(note.Lon, note.Lat)), attrs));
         }
 
         string json = JsonSerializer.Serialize(fc, geoJsonOptions);
