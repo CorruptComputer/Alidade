@@ -1,3 +1,5 @@
+using Alidade.Osm.Handlers.Editing;
+
 namespace Alidade.Services;
 
 /// <summary>

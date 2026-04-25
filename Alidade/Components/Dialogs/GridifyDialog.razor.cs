@@ -1,5 +1,8 @@
 using System.Text.Json;
+using Alidade.Handlers.Map;
+using Alidade.Handlers.Selection;
 using Alidade.Map.Handlers;
+using Alidade.Osm.Handlers.Editing;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using NetTopologySuite.Features;
@@ -10,7 +13,7 @@ namespace Alidade.Components.Dialogs;
 /// <summary>
 ///   Floating, draggable panel for splitting a selected closed way into a grid of equal
 ///   rectangular sub-areas. Shows a live orange dashed preview overlay while open.
-///   Follows the same always-in-DOM, CSS-visibility pattern as <see cref="Alidade.Components.Panels.InspectorPanel"/>.
+///   Follows the same always-in-DOM, CSS-visibility pattern as <see cref="Panels.InspectorPanel"/>.
 /// </summary>
 public partial class GridifyDialog(
     IMediator mediator,
@@ -153,7 +156,7 @@ public partial class GridifyDialog(
             return;
         }
 
-        FeatureCollection fc = new();
+        FeatureCollection fc = [];
 
         foreach (IReadOnlyList<GridifyNodeRef> cellRefs in result.CellNodeRefs)
         {
@@ -190,7 +193,7 @@ public partial class GridifyDialog(
 
     private async Task ClearPreviewAsync()
     {
-        FeatureCollection empty = new();
+        FeatureCollection empty = [];
         string json = JsonSerializer.Serialize(empty, geoJsonOptions);
         await mediator.Send(new SetSourceData.Command("osm-gridify-preview", json));
     }
@@ -204,14 +207,14 @@ public partial class GridifyDialog(
 
         await ClearPreviewAsync();
         await mediator.Send(new GridifyWay.Command(_wayId.Value, _rows, _cols, _rotation));
-        await mediator.Send(new Handlers.Map.ToggleGridifyDialog.Command());
-        await mediator.Send(new Handlers.Selection.ClearSelection.Command());
+        await mediator.Send(new ToggleGridifyDialog.Command());
+        await mediator.Send(new ClearSelection.Command());
     }
 
     private void Cancel()
     {
         _ = ClearPreviewAsync();
-        _ = mediator.Send(new Handlers.Map.ToggleGridifyDialog.Command());
+        _ = mediator.Send(new ToggleGridifyDialog.Command());
     }
 
     /// <inheritdoc />

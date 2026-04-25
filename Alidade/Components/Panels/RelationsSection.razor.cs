@@ -1,3 +1,4 @@
+using Alidade.Osm.Handlers.Editing;
 using Microsoft.AspNetCore.Components;
 
 namespace Alidade.Components.Panels;

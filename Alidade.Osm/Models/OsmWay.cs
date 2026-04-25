@@ -43,7 +43,7 @@ public sealed record OsmWay(
     public bool IsClosed => NodeIds.Count >= 2 && NodeIds[0] == NodeIds[^1];
 
     // Tag keys that make a closed way implicitly an area even without area=yes.
-    private static readonly HashSet<string> AreaImplyingKeys =
+    internal static readonly HashSet<string> AreaImplyingKeys =
     [
         "building", "building:part", "landuse", "leisure", "natural",
         "amenity", "shop", "place", "man_made", "military", "aeroway",

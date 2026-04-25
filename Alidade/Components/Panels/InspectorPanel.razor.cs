@@ -3,6 +3,10 @@ using Microsoft.JSInterop;
 using Alidade.Osm.Models.Nsi;
 using Alidade.Osm.Models.Tagging;
 using Microsoft.AspNetCore.Components.Web;
+using Alidade.Handlers.Map;
+using Alidade.Handlers.Selection;
+using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Handlers.Tagging;
 
 namespace Alidade.Components.Panels;
 
@@ -22,7 +26,8 @@ public partial class InspectorPanel(
     /// <summary>
     ///   When set, the panel is pinned to this element and does not follow selection changes.
     /// </summary>
-    [Parameter] public OsmElementRef? PinnedRef { get; set; }
+    [Parameter]
+    public OsmElementRef? PinnedRef { get; set; }
 
     private bool IsPinned => PinnedRef is not null;
 
@@ -259,9 +264,12 @@ public partial class InspectorPanel(
         RefreshPreset();
     }
 
-    private void ApplyPreset(Preset preset)
+    private async Task ApplyPreset(Preset preset)
     {
-        if (_targetRef is null) return;
+        if (_targetRef is null)
+        {
+            return;
+        }
 
         EditBufferState buf = editBufferState.State;
         IReadOnlyDictionary<string, string>? currentTags = _targetRef.Type switch
@@ -272,15 +280,18 @@ public partial class InspectorPanel(
             _ => null
         };
 
-        if (currentTags is null) return;
-
-        Dictionary<string, string> merged = new(currentTags);
-        foreach ((string k, string v) in preset.Tags)
+        if (currentTags is null)
         {
-            if (v != "*") merged[k] = v;
+            return;
         }
 
-        _ = mediator.Send(new UpdateTags.Command(_targetRef, currentTags, merged));
+        Dictionary<string, string>? merged = await mediator.Send(new MergePresetTags.Query(currentTags, preset));
+        if (merged is null)
+        {
+            return;
+        }
+
+        await mediator.Send(new UpdateTags.Command(_targetRef, currentTags, merged));
         _activePreset = preset;
         _query = string.Empty;
         _isSearching = false;
@@ -292,7 +303,7 @@ public partial class InspectorPanel(
     {
         if (_targetRef is not null)
         {
-            _ = mediator.Send(new Handlers.Map.PinInspector.Command(_targetRef));
+            _ = mediator.Send(new PinInspector.Command(_targetRef));
         }
     }
 
@@ -300,11 +311,11 @@ public partial class InspectorPanel(
     {
         if (IsPinned)
         {
-            _ = mediator.Send(new Handlers.Map.UnpinInspector.Command(PinnedRef!));
+            _ = mediator.Send(new UnpinInspector.Command(PinnedRef!));
         }
         else
         {
-            _ = mediator.Send(new Handlers.Selection.ClearSelection.Command());
+            _ = mediator.Send(new ClearSelection.Command());
         }
     }
 

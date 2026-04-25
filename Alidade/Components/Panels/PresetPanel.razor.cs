@@ -1,3 +1,5 @@
+using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Handlers.Tagging;
 using Alidade.Osm.Models.Tagging;
 using Microsoft.AspNetCore.Components;
 
@@ -106,14 +108,10 @@ public partial class PresetPanel(
             return;
         }
 
-        // Merge preset tags over existing tags and preserve unrelated tags
-        Dictionary<string, string> merged = new(currentTags);
-        foreach ((string k, string v) in preset.Tags)
+        Dictionary<string, string>? merged = await Mediator.Send(new MergePresetTags.Query(currentTags, preset));
+        if (merged is null)
         {
-            if (v != "*")
-            {
-                merged[k] = v;
-            }
+            return;
         }
 
         await Mediator.Send(new UpdateTags.Command(selected, currentTags, merged));

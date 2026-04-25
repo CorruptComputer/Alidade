@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Alidade.Map.Handlers;
+using Alidade.Osm.Handlers.Editing;
 using Alidade.Osm.Models.Editing;
 using NetTopologySuite.Features;
 using NetTopologySuite.Geometries;
