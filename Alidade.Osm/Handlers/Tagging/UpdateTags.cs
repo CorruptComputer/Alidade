@@ -1,7 +1,8 @@
-namespace Alidade.Osm.Handlers.Editing;
+namespace Alidade.Osm.Handlers.Tagging;
 
 /// <inheritdoc />
-public class UpdateTags(EditBufferStateService editBufferState) : IRequestHandler<UpdateTags.Command, CommandResult>
+public class UpdateTags(EditBufferStateService editBufferState)
+    : IRequestHandler<UpdateTags.Command, CommandResult>
 {
     static UpdateTags() => UndoDescriptions.Register<Command>("Edit tags");
 

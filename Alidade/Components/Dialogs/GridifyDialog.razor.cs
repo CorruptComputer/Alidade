@@ -206,9 +206,16 @@ public partial class GridifyDialog(
         }
 
         await ClearPreviewAsync();
-        await mediator.Send(new GridifyWay.Command(_wayId.Value, _rows, _cols, _rotation));
+
+        IReadOnlyList<OsmElementRef>? cellWays = (await mediator.Send(
+            new GridifyWay.Query(_wayId.Value, _rows, _cols, _rotation))).Result;
+
         await mediator.Send(new ToggleGridifyDialog.Command());
-        await mediator.Send(new ClearSelection.Command());
+
+        ImmutableHashSet<OsmElementRef> selection = cellWays is not null
+            ? [.. cellWays]
+            : [];
+        selectionState.SetState(selectionState.State with { Selected = selection });
     }
 
     private void Cancel()

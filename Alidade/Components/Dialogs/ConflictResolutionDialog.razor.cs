@@ -1,4 +1,5 @@
 using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Handlers.Tagging;
 
 namespace Alidade.Components.Dialogs;
 

@@ -1222,7 +1222,8 @@ window.mapInterop = (() => {
                 style: blankStyle,
                 center: saved ? [saved.lon, saved.lat] : [0, 20],
                 zoom:   saved ? saved.zoom              : 2,
-                attributionControl: false
+                attributionControl: false,
+                boxZoom: false
             });
 
             map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
@@ -1285,7 +1286,7 @@ window.mapInterop = (() => {
                     e.lngLat.lat, e.lngLat.lng,
                     e.point.x, e.point.y,
                     elementId,
-                    e.originalEvent?.shiftKey ?? false
+                    (e.originalEvent?.shiftKey || e.originalEvent?.ctrlKey || e.originalEvent?.metaKey) ?? false
                 ).catch(console.error);
             });
 

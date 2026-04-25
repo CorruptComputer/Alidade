@@ -1,3 +1,4 @@
+using Alidade.Handlers.Selection;
 using Alidade.Osm.Handlers.Editing;
 
 namespace Alidade.Services;
@@ -72,7 +73,7 @@ public class DrawingToolService(
     {
         if (elementId is null)
         {
-            await mediator.Send(new Handlers.Selection.SetHovered.Command(null));
+            await mediator.Send(new SetHovered.Command(null));
             return;
         }
 
@@ -95,7 +96,7 @@ public class DrawingToolService(
             return;
         }
 
-        await mediator.Send(new Handlers.Selection.SetHovered.Command(new OsmElementRef(type.Value, id)));
+        await mediator.Send(new SetHovered.Command(new OsmElementRef(type.Value, id)));
     }
 
     /// <summary>
@@ -124,7 +125,7 @@ public class DrawingToolService(
             && buf.Nodes.ContainsKey(snapTargetId))
         {
             await mediator.Send(new MergeNodes.Command(nodeId, snapTargetId));
-            await mediator.Send(new Handlers.Selection.Select.Command(
+            await mediator.Send(new Select.Command(
                 new OsmElementRef(OsmElementTypes.Node, snapTargetId), false));
             return;
         }
@@ -154,7 +155,7 @@ public class DrawingToolService(
     {
         if (e.ElementId is null)
         {
-            await mediator.Send(new Handlers.Selection.Select.Command(null, false));
+            await mediator.Send(new Select.Command(null, false));
             return;
         }
 
@@ -166,10 +167,10 @@ public class DrawingToolService(
 
         OsmElementTypes? type = parts[0] switch
         {
-            "node"     => OsmElementTypes.Node,
-            "way"      => OsmElementTypes.Way,
+            "node" => OsmElementTypes.Node,
+            "way" => OsmElementTypes.Way,
             "relation" => OsmElementTypes.Relation,
-            _          => null
+            _ => null
         };
 
         if (type is null)
@@ -179,7 +180,7 @@ public class DrawingToolService(
 
         OsmElementRef targetRef = new(type.Value, id);
 
-        if (!e.ShiftKey && type == OsmElementTypes.Way)
+        if (!e.AddToSelection && type == OsmElementTypes.Way)
         {
             EditBufferState buf = editBuffer.State;
             if (buf.Ways.TryGetValue(id, out OsmWay? clickedWay))
@@ -205,7 +206,7 @@ public class DrawingToolService(
             }
         }
 
-        await mediator.Send(new Handlers.Selection.Select.Command(targetRef, e.ShiftKey));
+        await mediator.Send(new Select.Command(targetRef, e.AddToSelection));
     }
 
     private async Task HandleDrawWayClickAsync(MapClickEvent e, bool isArea)

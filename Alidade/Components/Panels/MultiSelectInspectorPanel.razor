@@ -1,0 +1,103 @@
+<div class="inspector-panel @(_selected.Count <= 1 ? "inspector-panel-hidden" : string.Empty)">
+
+    <div class="inspector-header">
+        <span class="inspector-title">@_selected.Count Features</span>
+        <div class="inspector-header-actions">
+            <button class="inspector-close" title="Deselect (Escape)" @onclick="OnClose">✕</button>
+        </div>
+    </div>
+
+    @if (_selected.Count > 1)
+    {
+        @* Individual feature list with per-element deselect *@
+        <ul class="multi-inspector-features">
+            @foreach (FeatureItem feature in _features)
+            {
+                FeatureItem captured = feature;
+                <li class="multi-inspector-feature">
+                    <span class="multi-inspector-feature-name">@captured.Label</span>
+                    <button class="multi-inspector-feature-remove" title="Deselect"
+                            @onclick="() => OnDeselectFeature(captured.Ref)">✕</button>
+                </li>
+            }
+        </ul>
+
+        @* Feature Type row with optional preset search *@
+        <div class="inspector-preset-row">
+            @if (_isSearching)
+            {
+                <input @ref="_searchInput"
+                       type="text"
+                       placeholder="Search presets…"
+                       value="@_query"
+                       @oninput="OnQueryChanged"
+                       @onkeydown="OnSearchKeyDown"
+                       class="inspector-search-input" />
+                <button class="inspector-cancel-search" @onclick="CancelSearch" title="Cancel search">✕</button>
+            }
+            else
+            {
+                <span class="inspector-preset-name">@_featureTypeLabel</span>
+                @if (_commonGeometry is not null)
+                {
+                    <button class="inspector-change-preset" @onclick="StartPresetSearch">Change…</button>
+                }
+            }
+        </div>
+
+        @if (_results.Count > 0)
+        {
+            <ul class="inspector-preset-results">
+                @foreach (Preset p in _results)
+                {
+                    Preset captured = p;
+                    <li @onclick="() => ApplyPresetToAllAsync(captured)" class="inspector-preset-result">
+                        <span class="inspector-preset-result-name">@(captured.Name ?? captured.Id)</span>
+                    </li>
+                }
+            </ul>
+        }
+
+        @* Merged tag table *@
+        <div class="inspector-tags-section">
+            <div class="inspector-section-header">Tags (@_mergedTags.Count)</div>
+            <div class="tag-editor">
+                <table class="tag-table">
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (MergedTag tag in _mergedTags)
+                        {
+                            string key = tag.Key;
+                            string displayValue = tag.IsConsistent ? (tag.CommonValue ?? string.Empty) : string.Empty;
+                            string placeholder = tag.IsConsistent ? string.Empty : "*";
+                            <tr>
+                                <td class="tag-key">
+                                    <input type="text" value="@key"
+                                           @onchange="@(e => OnKeyChanged(key, e.Value?.ToString() ?? string.Empty))" />
+                                </td>
+                                <td class="tag-value-cell">
+                                    <input type="text"
+                                           value="@displayValue"
+                                           placeholder="@placeholder"
+                                           @onchange="@(e => OnValueChanged(key, e.Value?.ToString() ?? string.Empty))"
+                                           class="tag-value @(tag.IsConsistent ? string.Empty : "tag-value--multiple")" />
+                                </td>
+                                <td>
+                                    <button class="tag-delete" @onclick="@(() => OnDeleteTag(key))">✕</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button class="tag-add" @onclick="OnAddTag">+ Add tag</button>
+            </div>
+        </div>
+    }
+
+</div>

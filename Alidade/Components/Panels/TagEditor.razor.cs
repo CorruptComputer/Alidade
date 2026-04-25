@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Alidade.Osm.Models.Nsi;
-using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Handlers.Tagging;
 
 namespace Alidade.Components.Panels;
 

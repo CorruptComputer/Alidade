@@ -114,10 +114,10 @@ public sealed class MapInteropService(IJSRuntime js, IMediator mediator) : IAsyn
     /// <param name="screenX">Click X position in CSS pixels.</param>
     /// <param name="screenY">Click Y position in CSS pixels.</param>
     /// <param name="elementId">The feature ID string under the click, if any.</param>
-    /// <param name="shiftKey">Whether the Shift key was held during the click.</param>
+    /// <param name="addToSelection">Whether a modifier key (Shift, Ctrl, or Cmd) was held during the click.</param>
     [JSInvokable]
-    public void OnMapClick(double lat, double lon, double screenX, double screenY, string? elementId, bool shiftKey = false)
-        => _ = mediator.Publish(new MapClicked.Notification(new MapClickEvent(lat, lon, screenX, screenY, elementId, shiftKey)));
+    public void OnMapClick(double lat, double lon, double screenX, double screenY, string? elementId, bool addToSelection = false)
+        => _ = mediator.Publish(new MapClicked.Notification(new MapClickEvent(lat, lon, screenX, screenY, elementId, addToSelection)));
 
     /// <summary>
     ///   Called from JS when the user double-clicks the map canvas on an OSM feature.

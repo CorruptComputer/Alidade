@@ -11,5 +11,5 @@ namespace Alidade.Map.Models;
 ///   The feature ID of the topmost OSM element under the click (e.g. <c>"node/12345"</c>),
 ///   or null if the click landed on empty map space.
 /// </param>
-/// <param name="ShiftKey">Whether the Shift key was held at the time of the click (used for multi-select).</param>
-public record MapClickEvent(double Lat, double Lon, double ScreenX, double ScreenY, string? ElementId, bool ShiftKey = false);
+/// <param name="AddToSelection">Whether a modifier key (Shift, Ctrl, or Cmd) was held at the time of the click, adding the element to the current selection.</param>
+public record MapClickEvent(double Lat, double Lon, double ScreenX, double ScreenY, string? ElementId, bool AddToSelection = false);
