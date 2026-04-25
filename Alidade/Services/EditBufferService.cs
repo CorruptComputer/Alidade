@@ -1,7 +1,5 @@
 using System.Text.Json;
-using Alidade.Handlers.EditBuffer;
 using Alidade.Map.Handlers;
-using Alidade.Osm.Handlers.Editing;
 using Alidade.Osm.Models.Editing;
 using NetTopologySuite.Features;
 
@@ -24,6 +22,7 @@ public class EditBufferService : IDisposable
     private readonly EditBufferStateService _editState;
     private readonly MapStateService _mapState;
     private readonly SelectionStateService _selectionState;
+    private readonly IOsmCacheService _osmCache;
     private readonly ValidationService? _validation;
     private readonly ILogger<EditBufferService> _log;
 
@@ -50,6 +49,7 @@ public class EditBufferService : IDisposable
         EditBufferStateService editState,
         MapStateService mapState,
         SelectionStateService selectionState,
+        IOsmCacheService osmCache,
         ILogger<EditBufferService> log,
         ValidationService? validation = null)
     {
@@ -60,6 +60,7 @@ public class EditBufferService : IDisposable
         _editState = editState;
         _mapState = mapState;
         _selectionState = selectionState;
+        _osmCache = osmCache;
         _validation = validation;
         _log = log;
 
@@ -201,6 +202,7 @@ public class EditBufferService : IDisposable
         _fetchCts.Cancel();
         _fetchCts.Dispose();
         _fetchCts = new CancellationTokenSource();
+        _osmCache.Clear();
         _editState.SetState(new EditBufferState());
 
         MapBounds? bounds = _mapState.State.CurrentBounds;
@@ -421,20 +423,40 @@ public class EditBufferService : IDisposable
 
         try
         {
-            FetchBboxResult? fetched = await mediator.Send(
-                new FetchBbox.Query(bounds.West, bounds.South, bounds.East, bounds.North), ct);
+            CacheBounds cacheBounds = new(bounds.West, bounds.South, bounds.East, bounds.North);
+            List<CacheBounds> missBboxes = _osmCache.GetGeometryMissBboxes(cacheBounds);
+            bool allSucceeded = true;
 
-            if (fetched is not null)
+            foreach (CacheBounds miss in missBboxes)
             {
-                MergeFetchedData(
-                    (IReadOnlyList<OsmNode>)fetched.Nodes,
-                    (IReadOnlyList<OsmWay>)fetched.Ways,
-                    (IReadOnlyList<OsmRelation>)fetched.Relations);
+                FetchBboxResult? fetched = await mediator.Send(
+                    new FetchBbox.Query(miss.West, miss.South, miss.East, miss.North), ct);
+
+                if (fetched is not null)
+                {
+                    _osmCache.AddToCache(miss, new OsmCacheData(
+                        (IReadOnlyList<OsmNode>)fetched.Nodes,
+                        (IReadOnlyList<OsmWay>)fetched.Ways,
+                        (IReadOnlyList<OsmRelation>)fetched.Relations));
+                }
+                else
+                {
+                    allSucceeded = false;
+                }
+            }
+
+            // Merge from cache when the full viewport is available.
+            // allSucceeded remains true when missBboxes is empty (full cache hit),
+            // covering the case where the user navigates back to a previously visited area.
+            if (allSucceeded)
+            {
+                OsmCacheData viewportData = _osmCache.GetGeometryFromBbox(cacheBounds);
+                MergeFetchedData(viewportData.Nodes, viewportData.Ways, viewportData.Relations);
             }
         }
         catch (OperationCanceledException)
         {
-            // Fetch cancelled by Clear() during an endpoint switch
+            // Fetch cancelled by Clear() during an endpoint switch.
         }
     }
 

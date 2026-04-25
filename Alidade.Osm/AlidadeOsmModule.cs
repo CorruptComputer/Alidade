@@ -14,6 +14,7 @@ public class AlidadeOsmModule : Module
     protected override void Load(ContainerBuilder builder)
     {
         builder.RegisterType<EditBufferStateService>().AsSelf().SingleInstance();
+        builder.RegisterType<OsmCacheService>().As<IOsmCacheService>().SingleInstance();
 
         builder.RegisterType<PresetService>().AsSelf().InstancePerLifetimeScope();
         builder.RegisterType<NsiService>().AsSelf().InstancePerLifetimeScope();
