@@ -15,7 +15,12 @@
             {
                 FeatureItem captured = feature;
                 <li class="multi-inspector-feature">
-                    <span class="multi-inspector-feature-name">@captured.Label</span>
+                    <span class="multi-inspector-feature-name">
+                        @foreach (string part in captured.Label.Split('\n'))
+                        {
+                            @part <br />
+                        }
+                    </span>
                     <button class="multi-inspector-feature-remove" title="Deselect"
                             @onclick="() => OnDeselectFeature(captured.Ref)">✕</button>
                 </li>
@@ -37,7 +42,12 @@
             }
             else
             {
-                <span class="inspector-preset-name">@_featureTypeLabel</span>
+                <span class="inspector-preset-name">
+                    @foreach (string part in _featureTypeLabel.Split('\n'))
+                    {
+                        @part <br />
+                    }
+                </span>
                 @if (_commonGeometry is not null)
                 {
                     <button class="inspector-change-preset" @onclick="StartPresetSearch">Change…</button>
@@ -52,7 +62,12 @@
                 {
                     Preset captured = p;
                     <li @onclick="() => ApplyPresetToAllAsync(captured)" class="inspector-preset-result">
-                        <span class="inspector-preset-result-name">@(captured.Name ?? captured.Id)</span>
+                        <span class="inspector-preset-result-name">
+                            @foreach (string part in @PresetService.FormatTagLabel(captured).Split('\n'))
+                            {
+                                @part <br />
+                            }
+                        </span>
                     </li>
                 }
             </ul>

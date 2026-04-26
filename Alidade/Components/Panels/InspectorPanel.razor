@@ -3,7 +3,10 @@
     @* Header is always in the DOM so the drag ref stays valid across selection changes. *@
     <div class="inspector-header" @ref="_headerEl">
         <span class="inspector-title">
-            @if (IsPinned) { <span class="inspector-pin-icon" title="Pinned">📌</span> }
+            @if (IsPinned)
+            {
+                <span class="inspector-pin-icon" title="Pinned">📌</span>
+            }
             @_elementLabel
         </span>
         <div class="inspector-header-actions">
@@ -30,7 +33,12 @@
                 }
                 else
                 {
-                    <span class="inspector-preset-name">@PresetService.FormatTagLabel(_activePreset)</span>
+                    <span class="inspector-preset-name">
+                        @foreach (string part in @PresetService.FormatTagLabel(_activePreset).Split('\n'))
+                        {
+                            @part <br />
+                        }
+                    </span>
                 }
                 @if (!IsPinned)
                 {
@@ -57,15 +65,22 @@
                 {
                     Preset captured = p;
                     <li @onclick="() => ApplyPreset(captured)" class="inspector-preset-result">
-                        <span class="inspector-preset-result-name">@(captured.Name ?? captured.Id)</span>
+                        <span class="inspector-preset-result-name">
+                            @foreach (string part in @PresetService.FormatTagLabel(captured).Split('\n'))
+                            {
+                                @part <br />
+                            }
+                        </span>
                     </li>
                 }
+
                 @if (_nsiResults.Count > 0)
                 {
                     @if (_results.Count > 0)
                     {
                         <li class="inspector-preset-result-divider">Brands</li>
                     }
+
                     @foreach (NsiItem item in _nsiResults)
                     {
                         NsiItem captured = item;

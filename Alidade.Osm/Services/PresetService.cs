@@ -41,7 +41,7 @@ public class PresetService
 
     /// <summary>
     ///   Formats a preset's identifying tags as a human-readable label.
-    ///   Non-wildcard tags are joined as <c>key=value</c> pairs separated by <c> | </c>.
+    ///   Non-wildcard tags are joined as <c>key=value</c> pairs separated by newlines.
     ///   Falls back to the preset ID if all tag values are wildcards or the tag set is empty.
     /// </summary>
     /// <param name="preset">The preset to format.</param>
@@ -51,7 +51,7 @@ public class PresetService
     /// </returns>
     public static string FormatTagLabel(Preset preset)
     {
-        string label = string.Join(" | ", preset.Tags
+        string label = string.Join('\n', preset.Tags
             .Where(kv => kv.Value != "*")
             .Select(kv => $"{kv.Key}={kv.Value}"));
         return string.IsNullOrEmpty(label) ? preset.Id : label;
