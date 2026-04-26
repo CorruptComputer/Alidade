@@ -1,7 +1,8 @@
 namespace Alidade.Handlers.EditBuffer;
 
 /// <inheritdoc />
-public class RestoreDraft(EditBufferStateService editBufferState) : IRequestHandler<RestoreDraft.Command, CommandResult>
+public sealed class RestoreDraft(EditBufferStateService editBufferState)
+    : IRequestHandler<RestoreDraft.Command, CommandResult>
 {
     /// <summary>
     ///   Merges a saved draft back into the edit buffer.
@@ -33,9 +34,7 @@ public class RestoreDraft(EditBufferStateService editBufferState) : IRequestHand
 
         foreach (DraftRelation dr in request.Draft.Relations)
         {
-            IReadOnlyList<OsmMember> members = dr.Members
-                .Select(m => new OsmMember((OsmElementTypes)m.Type, m.Ref, m.Role))
-                .ToArray();
+            IReadOnlyList<OsmMember> members = [.. dr.Members.Select(m => new OsmMember((OsmElementTypes)m.Type, m.Ref, m.Role))];
             OsmRelation relation = new(dr.Id, dr.Version, dr.ChangesetId, null, null,
                 members, dr.Tags.ToImmutableDictionary());
             relations = relations.SetItem(dr.Id, relation);
@@ -53,7 +52,8 @@ public class RestoreDraft(EditBufferStateService editBufferState) : IRequestHand
             Ways = ways,
             Relations = relations,
             EditStates = editStates,
-            NextNegativeId = request.Draft.NextNegativeId
+            NextNegativeId = request.Draft.NextNegativeId,
+            ImageryUsed = [.. request.Draft.ImageryUsed]
         });
         return Task.FromResult(CommandResult.Pass());
     }

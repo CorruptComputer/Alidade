@@ -1,48 +1,47 @@
-namespace Alidade.Osm.Services;
+namespace Alidade.Osm.Handlers.Changeset;
 
-/// <summary>
-///   Splits a dirty edit buffer into one or more <see cref="OsmChange"/> objects that
-///   each fit within the OSM API element limit. The algorithm proceeds in six steps:
-///   <list type="number">
-///     <item>Collect all dirty elements (created, modified, or deleted).</item>
-///     <item>
-///       Build a dependency graph: ways depend on their member nodes; relations depend
-///       on all their members.
-///     </item>
-///     <item>Assign each element a spatial cluster via its zoom-14 slippy tile centroid.</item>
-///     <item>
-///       Merge clusters whose elements are co-required by a relation using a union-find
-///       structure, so that relations and all their members land in the same changeset.
-///     </item>
-///     <item>
-///       Pack merged clusters into changesets, respecting
-///       <c>maxElementsPerChangeset</c> (default 10,000).
-///     </item>
-///     <item>
-///       Within each changeset, produce elements in topological order:
-///       nodes → ways → relations.
-///     </item>
-///   </list>
-/// </summary>
-public static class ChangesetSplitter
+/// <inheritdoc />
+public sealed class BuildChangesets : IRequestHandler<BuildChangesets.Query, QueryResult<IReadOnlyList<OsmChange>>>
 {
     /// <summary>
-    ///   Splits the dirty elements in <paramref name="buffer"/> into as many
+    ///   Splits the dirty elements in <paramref name="Buffer"/> into as many
     ///   <see cref="OsmChange"/> objects as needed so that each contains at most
-    ///   <paramref name="maxElementsPerChangeset"/> elements.
+    ///   <paramref name="MaxElementsPerChangeset"/> elements. The algorithm proceeds in six steps:
+    ///   <list type="number">
+    ///     <item>Collect all dirty elements (created, modified, or deleted).</item>
+    ///     <item>
+    ///       Build a dependency graph: ways depend on their member nodes; relations depend
+    ///       on all their members.
+    ///     </item>
+    ///     <item>Assign each element a spatial cluster via its zoom-14 slippy tile centroid.</item>
+    ///     <item>
+    ///       Merge clusters whose elements are co-required by a relation using a union-find
+    ///       structure, so that relations and all their members land in the same changeset.
+    ///     </item>
+    ///     <item>
+    ///       Pack merged clusters into changesets, respecting
+    ///       <paramref name="MaxElementsPerChangeset"/> (default 10,000).
+    ///     </item>
+    ///     <item>
+    ///       Within each changeset, produce elements in topological order:
+    ///       nodes → ways → relations.
+    ///     </item>
+    ///   </list>
     /// </summary>
-    /// <param name="buffer">The current edit buffer state.</param>
-    /// <param name="maxElementsPerChangeset">
+    /// <param name="Buffer">The current edit buffer state.</param>
+    /// <param name="MaxElementsPerChangeset">
     ///   Maximum number of elements per changeset. Defaults to 10,000 (the OSM API limit).
     /// </param>
-    /// <returns>
-    ///   An ordered list of <see cref="OsmChange"/> objects ready for sequential upload,
-    ///   or an empty list when the buffer has no dirty elements.
-    /// </returns>
-    public static IReadOnlyList<OsmChange> Split(
-        EditBufferState buffer,
-        int maxElementsPerChangeset = 10_000)
+    public record Query(
+        EditBufferState Buffer,
+        int MaxElementsPerChangeset = 10_000) : IRequest<QueryResult<IReadOnlyList<OsmChange>>>;
+
+    /// <inheritdoc />
+    public Task<QueryResult<IReadOnlyList<OsmChange>>> Handle(Query request, CancellationToken cancellationToken)
     {
+        EditBufferState buffer = request.Buffer;
+        int maxElementsPerChangeset = request.MaxElementsPerChangeset;
+
         // Collect dirty elements
         List<OsmNode> dirtyNodes = [.. buffer.Nodes.Values.Where(n => buffer.EditStates.TryGetValue(n.Ref, out EditState s) && s != EditState.Fetched)];
         List<OsmWay> dirtyWays = [.. buffer.Ways.Values.Where(w => buffer.EditStates.TryGetValue(w.Ref, out EditState s) && s != EditState.Fetched)];
@@ -50,7 +49,7 @@ public static class ChangesetSplitter
 
         if (dirtyNodes.Count == 0 && dirtyWays.Count == 0 && dirtyRelations.Count == 0)
         {
-            return [];
+            return Task.FromResult(QueryResult<IReadOnlyList<OsmChange>>.Pass([]));
         }
 
         // Assign slippy tile cluster IDs (zoom 14)
@@ -129,7 +128,8 @@ public static class ChangesetSplitter
         }
 
         // Build OsmChange per changeset (topological order)
-        return [.. changeSets.Select(refs => BuildChange(refs, buffer))];
+        IReadOnlyList<OsmChange> result = [.. changeSets.Select(refs => BuildChange(refs, buffer))];
+        return Task.FromResult(QueryResult<IReadOnlyList<OsmChange>>.Pass(result));
     }
 
     #region Helpers
@@ -137,15 +137,15 @@ public static class ChangesetSplitter
     {
         List<OsmNode> createdNodes = [];
         List<OsmNode> modifiedNodes = [];
-        List<long> deletedNodeIds = [];
+        Dictionary<long, int> deletedNodeVersions = [];
 
         List<OsmWay> createdWays = [];
         List<OsmWay> modifiedWays = [];
-        List<long> deletedWayIds = [];
+        Dictionary<long, int> deletedWayVersions = [];
 
         List<OsmRelation> createdRelations = [];
         List<OsmRelation> modifiedRelations = [];
-        List<long> deletedRelationIds = [];
+        Dictionary<long, int> deletedRelationVersions = [];
 
         foreach (OsmElementRef r in refs)
         {
@@ -168,7 +168,7 @@ public static class ChangesetSplitter
                     }
                     else if (state == EditState.Deleted)
                     {
-                        deletedNodeIds.Add(r.Id);
+                        deletedNodeVersions[r.Id] = node.Version;
                     }
 
                     break;
@@ -189,7 +189,7 @@ public static class ChangesetSplitter
                     }
                     else if (state == EditState.Deleted)
                     {
-                        deletedWayIds.Add(r.Id);
+                        deletedWayVersions[r.Id] = way.Version;
                     }
 
                     break;
@@ -210,7 +210,7 @@ public static class ChangesetSplitter
                     }
                     else if (state == EditState.Deleted)
                     {
-                        deletedRelationIds.Add(r.Id);
+                        deletedRelationVersions[r.Id] = rel.Version;
                     }
 
                     break;
@@ -220,7 +220,9 @@ public static class ChangesetSplitter
         return new OsmChange(
             createdNodes, createdWays, createdRelations,
             modifiedNodes, modifiedWays, modifiedRelations,
-            deletedNodeIds, deletedWayIds, deletedRelationIds);
+            deletedNodeVersions.ToImmutableDictionary(),
+            deletedWayVersions.ToImmutableDictionary(),
+            deletedRelationVersions.ToImmutableDictionary());
     }
 
     private static (int X, int Y) LatLonToTile(double lat, double lon, int zoom)
@@ -289,18 +291,10 @@ public static class ChangesetSplitter
 
     #endregion
 
-    /// <summary>
-    ///   Simple union-find over arbitrary keys
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
     private sealed class UnionFind<T> where T : notnull
     {
         private readonly Dictionary<T, T> _parent = [];
 
-        /// <summary>
-        ///   Initializes the union-find with one singleton set per item.
-        /// </summary>
-        /// <param name="items">The initial set of elements.</param>
         public UnionFind(IEnumerable<T> items)
         {
             foreach (T i in items)
@@ -309,12 +303,6 @@ public static class ChangesetSplitter
             }
         }
 
-        /// <summary>
-        ///   Returns the canonical representative of the set containing <paramref name="x"/>,
-        ///   applying path compression.
-        /// </summary>
-        /// <param name="x">The element to find.</param>
-        /// <returns>The root representative of the set.</returns>
         public T Find(T x)
         {
             if (!_parent.TryGetValue(x, out T? p))
@@ -331,11 +319,6 @@ public static class ChangesetSplitter
             return _parent[x];
         }
 
-        /// <summary>
-        ///   Merges the sets containing <paramref name="a"/> and <paramref name="b"/>.
-        /// </summary>
-        /// <param name="a">The first element.</param>
-        /// <param name="b">The second element.</param>
         public void Union(T a, T b)
         {
             T ra = Find(a);

@@ -1,6 +1,6 @@
 using Alidade.Osm.Handlers.Parsing;
 
-namespace Alidade.Osm.Handlers.Editing;
+namespace Alidade.Osm.Handlers.Changeset;
 
 /// <inheritdoc />
 public class UploadChangeset(IOsmEditingService osm, ISender sender) : IRequestHandler<UploadChangeset.Query, QueryResult<DiffResult>>

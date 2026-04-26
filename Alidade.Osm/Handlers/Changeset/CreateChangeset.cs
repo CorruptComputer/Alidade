@@ -1,4 +1,4 @@
-namespace Alidade.Osm.Handlers.Editing;
+namespace Alidade.Osm.Handlers.Changeset;
 
 /// <inheritdoc />
 public class CreateChangeset(IOsmEditingService osm) : IRequestHandler<CreateChangeset.Query, QueryResult<int>>

@@ -1,4 +1,4 @@
-namespace Alidade.Osm.Handlers.Editing;
+namespace Alidade.Osm.Handlers.Changeset;
 
 /// <inheritdoc />
 public class CloseChangeset(IOsmEditingService osm) : IRequestHandler<CloseChangeset.Command, CommandResult>

@@ -96,6 +96,7 @@ public sealed partial class BackgroundPanel(MapStateService mapState, IMediator 
         _activeId = entry.Id;
         _customExpanded = false;
         await mediator.Send(new SetBackgroundImagery.Command(tiles, entry.TileSize ?? 256, entry.TermsText, isTms, entry.MaxZoom));
+        await mediator.Send(new RecordImageryUsed.Command(entry.Name));
         await mediator.Send(new ToggleBackgroundPanel.Command());
     }
 
@@ -104,6 +105,7 @@ public sealed partial class BackgroundPanel(MapStateService mapState, IMediator 
         _activeId = BingId;
         _customExpanded = false;
         await mediator.Send(new SetBackgroundBing.Command());
+        await mediator.Send(new RecordImageryUsed.Command("Bing Aerial Imagery"));
         await mediator.Send(new ToggleBackgroundPanel.Command());
     }
 

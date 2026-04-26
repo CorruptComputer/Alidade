@@ -57,11 +57,14 @@ public class BuildOsmChangeXml : IRequestHandler<BuildOsmChangeXml.Query, QueryR
                 change.ModifiedWays.Select(w => WayEl(w, csId)),
                 change.ModifiedRelations.Select(r => RelEl(r, csId))),
             new XElement("delete",
-                change.DeletedNodeIds.Select(id => new XElement("node",
-                    new XAttribute("id", id), new XAttribute("version", "1"),
+                change.DeletedRelationVersions.Select(kv => new XElement("relation",
+                    new XAttribute("id", kv.Key), new XAttribute("version", kv.Value),
                     new XAttribute("changeset", csId))),
-                change.DeletedWayIds.Select(id => new XElement("way",
-                    new XAttribute("id", id), new XAttribute("version", "1"),
+                change.DeletedWayVersions.Select(kv => new XElement("way",
+                    new XAttribute("id", kv.Key), new XAttribute("version", kv.Value),
+                    new XAttribute("changeset", csId))),
+                change.DeletedNodeVersions.Select(kv => new XElement("node",
+                    new XAttribute("id", kv.Key), new XAttribute("version", kv.Value),
                     new XAttribute("changeset", csId)))));
 
         string xml = new XDocument(doc).ToString();

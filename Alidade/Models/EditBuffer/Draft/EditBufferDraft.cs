@@ -43,4 +43,9 @@ public class EditBufferDraft
     ///   Edit states for dirty elements only (Fetched nodes supporting dirty ways are not included).
     /// </summary>
     public List<DraftEditState> EditStates { get; set; } = [];
+
+    /// <summary>
+    ///   Names of imagery sources used during the edit session, for the <c>imagery_used</c> changeset tag.
+    /// </summary>
+    public List<string> ImageryUsed { get; set; } = [];
 }

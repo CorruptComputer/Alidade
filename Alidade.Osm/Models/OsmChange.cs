@@ -3,8 +3,9 @@ namespace Alidade.Osm.Models;
 /// <summary>
 ///   An osmChange document grouping creates, modifies, and deletes to be uploaded in a single
 ///   changeset. Corresponds to the <c>&lt;osmChange&gt;</c> XML element in the OSM API v0.6 format.
-///   Elements must be ordered so that dependencies are satisfied: nodes before ways, ways before
-///   relations.
+///   Creates and modifies must be ordered nodes → ways → relations so that dependencies are
+///   satisfied. Deletes must use the reverse order (relations → ways → nodes) so that members
+///   are freed before their containers are removed.
 /// </summary>
 /// <param name="CreatedNodes">Nodes to be created; must have negative placeholder IDs.</param>
 /// <param name="CreatedWays">Ways to be created; must have negative placeholder IDs.</param>
@@ -12,9 +13,9 @@ namespace Alidade.Osm.Models;
 /// <param name="ModifiedNodes">Nodes that were fetched from the server and have been edited locally.</param>
 /// <param name="ModifiedWays">Ways that were fetched from the server and have been edited locally.</param>
 /// <param name="ModifiedRelations">Relations that were fetched from the server and have been edited locally.</param>
-/// <param name="DeletedNodeIds">IDs of nodes to delete.</param>
-/// <param name="DeletedWayIds">IDs of ways to delete.</param>
-/// <param name="DeletedRelationIds">IDs of relations to delete.</param>
+/// <param name="DeletedNodeVersions">IDs and server versions of nodes to delete.</param>
+/// <param name="DeletedWayVersions">IDs and server versions of ways to delete.</param>
+/// <param name="DeletedRelationVersions">IDs and server versions of relations to delete.</param>
 public record OsmChange(
     IReadOnlyList<OsmNode> CreatedNodes,
     IReadOnlyList<OsmWay> CreatedWays,
@@ -22,6 +23,6 @@ public record OsmChange(
     IReadOnlyList<OsmNode> ModifiedNodes,
     IReadOnlyList<OsmWay> ModifiedWays,
     IReadOnlyList<OsmRelation> ModifiedRelations,
-    IReadOnlyList<long> DeletedNodeIds,
-    IReadOnlyList<long> DeletedWayIds,
-    IReadOnlyList<long> DeletedRelationIds);
+    ImmutableDictionary<long, int> DeletedNodeVersions,
+    ImmutableDictionary<long, int> DeletedWayVersions,
+    ImmutableDictionary<long, int> DeletedRelationVersions);

@@ -1,4 +1,4 @@
-namespace Alidade.Osm.Models;
+namespace Alidade.Osm.Models.EditBuffer;
 
 /// <summary>
 ///   A lightweight, immutable snapshot of the edit buffer taken synchronously on the

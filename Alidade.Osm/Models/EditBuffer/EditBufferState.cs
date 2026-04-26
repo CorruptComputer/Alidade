@@ -60,6 +60,12 @@ public record EditBufferState
     public required long NextNegativeId { get; init; }
 
     /// <summary>
+    ///   Imagery sources used during this edit session, appended as the user switches layers.
+    ///   Persisted in the draft so that the tag survives a page refresh.
+    /// </summary>
+    public ImmutableList<string> ImageryUsed { get; init; } = [];
+
+    /// <summary>
     ///   Returns <see langword="true"/> when any element has been created, modified, or deleted.
     /// </summary>
     public bool IsDirty

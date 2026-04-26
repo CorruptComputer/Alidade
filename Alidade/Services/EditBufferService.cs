@@ -751,13 +751,14 @@ public class EditBufferService : IDisposable
 
         EditBufferDraft draft = new()
         {
-            SavedAt      = DateTimeOffset.UtcNow,
-            DirtyCount   = editStates.Count,
+            SavedAt = DateTimeOffset.UtcNow,
+            DirtyCount = editStates.Count,
             NextNegativeId = state.NextNegativeId,
-            Nodes        = nodes,
-            Ways         = ways,
-            Relations    = relations,
-            EditStates   = editStates
+            Nodes = nodes,
+            Ways = ways,
+            Relations = relations,
+            EditStates = editStates,
+            ImageryUsed = [.. state.ImageryUsed]
         };
 
         await _storage.SaveDraftAsync(draft);
