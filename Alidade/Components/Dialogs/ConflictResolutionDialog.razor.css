@@ -1,4 +1,4 @@
-.conflict-dialog {
+::deep .conflict-dialog {
     width: 640px;
 }
 

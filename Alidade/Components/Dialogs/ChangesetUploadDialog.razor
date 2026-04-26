@@ -1,76 +1,71 @@
 @if (mapState.State.UploadDialogVisible)
 {
-    <div class="dialog-backdrop" @onclick="Close">
-        <div class="dialog changeset-dialog" @onclick:stopPropagation="true">
-            <div class="dialog-header">
-                <span>Upload Changes</span>
-                <button class="panel-close" @onclick="Close">X</button>
+    <Dialog TDialog="ChangesetUploadDialog" OnClose="Close" Class="changeset-dialog">
+        @if (_uploading)
+        {
+            <div class="upload-progress">
+                <div class="upload-spinner">…</div>
+                <p>Uploading changeset @_currentChangeset of @_totalChangesets…</p>
+                @if (_error is not null)
+                {
+                    <div class="upload-error">@_error</div>
+                }
             </div>
-
-            @if (_uploading)
-            {
-                <div class="upload-progress">
-                    <div class="upload-spinner">…</div>
-                    <p>Uploading changeset @_currentChangeset of @_totalChangesets…</p>
-                    @if (_error is not null)
+        }
+        else if (_done)
+        {
+            <div class="upload-done">
+                <p>Upload complete. @_uploadedChangesetIds.Count changeset(s) created.</p>
+                <ul>
+                    @foreach (int id in _uploadedChangesetIds)
                     {
-                        <div class="upload-error">@_error</div>
+                        <li>
+                            <a href="@ActiveOsmBaseUrl/changeset/@id" target="_blank">
+                                Changeset @id
+                            </a>
+                        </li>
                     }
-                </div>
-            }
-            else if (_done)
-            {
-                <div class="upload-done">
-                    <p>Upload complete. @_uploadedChangesetIds.Count changeset(s) created.</p>
-                    <ul>
-                        @foreach (int id in _uploadedChangesetIds)
-                        {
-                            <li>
-                                <a href="@ActiveOsmBaseUrl/changeset/@id" target="_blank">
-                                    Changeset @id
-                                </a>
-                            </li>
-                        }
-                    </ul>
+                </ul>
+                <div class="dialog-actions">
                     <button class="btn-primary" @onclick="Close">Close</button>
                 </div>
-            }
-            else
-            {
-                <div class="upload-form">
-                    <div class="upload-summary">
-                        <strong>Summary:</strong>
-                        @_summary
-                    </div>
-
-                    <label>
-                        Comment <span class="required">*</span>
-                        <input type="text" @bind="_comment" placeholder="Describe your changes" maxlength="255" />
-                    </label>
-                    <label>
-                        Source
-                        <input type="text" @bind="_source" placeholder="e.g. survey, Bing imagery" maxlength="255" />
-                    </label>
-                    <label>
-                        Hashtags
-                        <input type="text" @bind="_hashtags" placeholder="#hotosm #mapathon" maxlength="255" />
-                    </label>
-
-                    @if (_error is not null)
-                    {
-                        <div class="upload-error">@_error</div>
-                    }
-
-                    <div class="dialog-actions">
-                        <button class="btn-secondary" @onclick="Close">Cancel</button>
-                        <button class="btn-primary"
-                                disabled="@(string.IsNullOrWhiteSpace(_comment) || _uploading)"
-                                @onclick="UploadAsync">
-                            Upload (@_changes.Count changeset@(_changes.Count == 1 ? "" : "s"))
-                        </button>
-                    </div>
+            </div>
+        }
+        else
+        {
+            <div class="upload-form">
+                <div class="upload-summary">
+                    <strong>Summary:</strong>
+                    @_summary
                 </div>
-            }
-        </div>
-    </div>
+
+                <label>
+                    Comment <span class="required">*</span>
+                    <input type="text" @bind="_comment" placeholder="Describe your changes" maxlength="255" />
+                </label>
+                <label>
+                    Source
+                    <input type="text" @bind="_source" placeholder="e.g. survey, Bing imagery" maxlength="255" />
+                </label>
+                <label>
+                    Hashtags
+                    <input type="text" @bind="_hashtags" placeholder="#hotosm #mapathon" maxlength="255" />
+                </label>
+
+                @if (_error is not null)
+                {
+                    <div class="upload-error">@_error</div>
+                }
+
+                <div class="dialog-actions">
+                    <button class="btn-secondary" @onclick="Close">Cancel</button>
+                    <button class="btn-primary"
+                            disabled="@(string.IsNullOrWhiteSpace(_comment) || _uploading)"
+                            @onclick="UploadAsync">
+                        Upload (@_changes.Count changeset@(_changes.Count == 1 ? "" : "s"))
+                    </button>
+                </div>
+            </div>
+        }
+    </Dialog>
 }

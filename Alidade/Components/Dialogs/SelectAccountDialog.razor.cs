@@ -7,8 +7,11 @@ namespace Alidade.Components.Dialogs;
 public partial class SelectAccountDialog(
     AuthStateService authState,
     EditBufferStateService editBufferState,
-    IMediator mediator) : IDisposable
+    IMediator mediator) : IDialog, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Switch Account";
+
     /// <inheritdoc />
     protected override void OnInitialized()
     {

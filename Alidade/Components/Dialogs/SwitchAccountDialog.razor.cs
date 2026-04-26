@@ -7,8 +7,11 @@ namespace Alidade.Components.Dialogs;
 ///   Dialog shown when the user attempts to switch accounts while the edit buffer is dirty.
 /// </summary>
 public partial class SwitchAccountDialog(AuthStateService authState, SettingsStateService settingsState, IMediator mediator)
-    : IDisposable
+    : IDialog, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Unsaved Changes";
+
     private EndpointState ActiveEndpointState
         => ApiEndpointCatalog.Endpoints[settingsState.State.ActiveEndpoint].State;
 

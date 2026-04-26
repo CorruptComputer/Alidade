@@ -12,8 +12,11 @@ public partial class ChangesetUploadDialog(
     EditBufferStateService editBufferState,
     MapStateService mapState,
     SettingsStateService settingsState,
-    NavigationManager navigationManager) : IDisposable
+    NavigationManager navigationManager) : IDialog, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Upload Changes";
+
     private bool _uploading;
     private bool _done;
     private string _comment = string.Empty;

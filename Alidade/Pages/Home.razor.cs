@@ -1,3 +1,5 @@
+using Alidade.Components.Dialogs;
+
 namespace Alidade.Pages;
 
 /// <summary>

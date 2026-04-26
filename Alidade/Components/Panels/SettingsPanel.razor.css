@@ -356,3 +356,12 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+.panel-footer {
+    padding: 6px 12px;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+    font-size: 11px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}

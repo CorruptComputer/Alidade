@@ -1,21 +1,16 @@
 
 @if (draftState.State.HasDraft)
 {
-    <div class="dialog-backdrop">
-        <div class="dialog">
-            <div class="dialog-header">
-                <span>Unsaved Changes Found</span>
-            </div>
-            <div class="panel-body">
-                <p>
-                    You have <strong>@draftState.State.DirtyCount unsaved @(draftState.State.DirtyCount == 1 ? "change" : "changes")</strong>
-                    from @FormatAge(draftState.State.SavedAt). Would you like to continue where you left off?
-                </p>
-            </div>
-            <div class="dialog-actions">
-                <button class="btn btn-primary" @onclick="Continue" disabled="@_busy">Continue Editing</button>
-                <button class="btn btn-danger" @onclick="Discard" disabled="@_busy">Discard Changes</button>
-            </div>
-        </div>
-    </div>
+    <Dialog TDialog="RecoverDraftDialog" CanClose="false">
+        <ChildContent>
+            <p>
+                You have <strong>@draftState.State.DirtyCount unsaved @(draftState.State.DirtyCount == 1 ? "change" : "changes")</strong>
+                from @FormatAge(draftState.State.SavedAt). Would you like to continue where you left off?
+            </p>
+        </ChildContent>
+        <Actions>
+            <button class="btn btn-primary" @onclick="Continue" disabled="@_busy">Continue Editing</button>
+            <button class="btn btn-danger" @onclick="Discard" disabled="@_busy">Discard Changes</button>
+        </Actions>
+    </Dialog>
 }

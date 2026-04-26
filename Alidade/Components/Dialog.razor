@@ -1,0 +1,22 @@
+@typeparam TDialog where TDialog : IDialog
+
+<div class="dialog-backdrop" @onclick="HandleBackdropClick">
+    <div class="dialog @Class" @onclick:stopPropagation="true">
+        <div class="dialog-header">
+            <span class="dialog-title">@DisplayTitle</span>
+            @if (CanClose)
+            {
+                <button class="dialog-close" @onclick="OnClose">✕</button>
+            }
+        </div>
+        <div class="dialog-body">
+            @ChildContent
+        </div>
+        @if (Actions is not null)
+        {
+            <div class="dialog-actions">
+                @Actions
+            </div>
+        }
+    </div>
+</div>

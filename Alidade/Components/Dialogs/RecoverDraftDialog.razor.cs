@@ -7,8 +7,11 @@ namespace Alidade.Components.Dialogs;
 public partial class RecoverDraftDialog(
     DraftStateService draftState,
     EditBufferService editBufferService,
-    IMediator mediator) : IDisposable
+    IMediator mediator) : IDialog, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Unsaved Changes Found";
+
     private bool _busy;
 
     /// <inheritdoc />

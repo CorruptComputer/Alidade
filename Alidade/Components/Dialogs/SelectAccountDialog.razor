@@ -1,13 +1,8 @@
 
 @if (authState.State.IsAccountSwitcherOpen)
 {
-    <div class="dialog-backdrop">
-        <div class="dialog account-dialog">
-            <div class="dialog-header">
-                <span>Switch Account</span>
-                <button class="panel-close" @onclick="Close" aria-label="Close">X</button>
-            </div>
-
+    <Dialog TDialog="SelectAccountDialog" OnClose="Close" Class="account-dialog">
+        <ChildContent>
             <div class="account-list">
                 @foreach (StoredAccount account in authState.State.StoredAccounts)
                 {
@@ -33,11 +28,10 @@
                     </button>
                 }
             </div>
-
-            <div class="dialog-actions">
-                <button class="btn btn-secondary" @onclick="Login">+ Login</button>
-                <button class="btn btn-secondary" @onclick="Close">Cancel</button>
-            </div>
-        </div>
-    </div>
+        </ChildContent>
+        <Actions>
+            <button class="btn btn-secondary" @onclick="Login">+ Login</button>
+            <button class="btn btn-secondary" @onclick="Close">Cancel</button>
+        </Actions>
+    </Dialog>
 }

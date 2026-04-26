@@ -6,8 +6,11 @@ namespace Alidade.Components.Dialogs;
 /// <summary>
 ///   Dialog for resolving merge conflicts.
 /// </summary>
-public partial class ConflictResolutionDialog(IMediator mediator)
+public partial class ConflictResolutionDialog(IMediator mediator) : IDialog
 {
+    /// <inheritdoc/>
+    public static string Title => "Conflicts";
+
     /// <summary>
     ///   True if there are any conflicts left to resolve.
     /// </summary>

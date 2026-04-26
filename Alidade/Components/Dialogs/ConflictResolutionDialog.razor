@@ -2,11 +2,11 @@
 
 @if (_conflicts.Count > 0)
 {
-    <div class="dialog-backdrop">
-        <div class="dialog conflict-dialog">
-            <div class="dialog-header">
-                <span>Conflicts (@_conflicts.Count)</span>
-            </div>
+    <Dialog TDialog="ConflictResolutionDialog"
+            CanClose="false"
+            Class="conflict-dialog"
+            Title="@($"Conflicts ({_conflicts.Count})")">
+        <ChildContent>
             <p class="conflict-intro">
                 The following elements have been modified on the server since you last fetched them.
                 Choose how to resolve each conflict.
@@ -65,13 +65,12 @@
                     </div>
                 </div>
             }
-
-            <div class="dialog-actions">
-                <button class="btn-secondary" @onclick="Discard">Discard My Changes</button>
-                <button class="btn-primary"
-                        disabled="@(!AllResolved)"
-                        @onclick="ApplyResolutions">Apply Resolutions</button>
-            </div>
-        </div>
-    </div>
+        </ChildContent>
+        <Actions>
+            <button class="btn-secondary" @onclick="Discard">Discard My Changes</button>
+            <button class="btn-primary"
+                    disabled="@(!AllResolved)"
+                    @onclick="ApplyResolutions">Apply Resolutions</button>
+        </Actions>
+    </Dialog>
 }

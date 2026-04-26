@@ -98,3 +98,9 @@
     .panel-close:hover {
         color: var(--color-danger);
     }
+
+.panel-body {
+    overflow-y: auto;
+    flex: 1;
+    padding: 8px 0;
+}

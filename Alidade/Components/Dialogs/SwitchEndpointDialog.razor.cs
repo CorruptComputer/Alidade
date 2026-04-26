@@ -6,8 +6,11 @@ namespace Alidade.Components.Dialogs;
 /// <summary>
 ///   Dialog shown when the user attempts to switch API endpoints with a non-empty edit buffer.
 /// </summary>
-public partial class SwitchEndpointDialog(SettingsStateService settingsState, IMediator mediator) : IDisposable
+public partial class SwitchEndpointDialog(SettingsStateService settingsState, IMediator mediator) : IDialog, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Unsaved Changes";
+
     private EndpointState ActiveEndpointState
         => ApiEndpointCatalog.Endpoints[settingsState.State.ActiveEndpoint].State;
 
