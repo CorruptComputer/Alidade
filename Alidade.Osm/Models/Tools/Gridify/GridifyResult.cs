@@ -1,7 +1,7 @@
-namespace Alidade.Osm.Models;
+namespace Alidade.Osm.Models.Tools.Gridify;
 
 /// <summary>
-///   The output of <see cref="Alidade.Osm.Services.GeometryService.Gridify"/>: positions for new nodes to create,
+///   The output of a gridify operation: positions for new nodes to create,
 ///   and per-cell closed rings that reference either new or existing (reused) nodes.
 /// </summary>
 public record GridifyResult(

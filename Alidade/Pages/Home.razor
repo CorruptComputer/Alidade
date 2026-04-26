@@ -12,23 +12,20 @@
 @* Toolbar across the top *@
 <Toolbar />
 
-@* Side panels *@
+@* Floating panels, in order from back to front *@
+@foreach (OsmElementRef pinned in mapState.State.PinnedInspectors)
+{
+    @* Pinned inspectors, one per locked element, independently draggable *@
+    <InspectorPanel PinnedRef="pinned" />
+}
+<InspectorPanel />
+<MultiSelectInspectorPanel />
 <ValidationPanel />
 <BackgroundPanel />
 <SettingsPanel />
-
-@* Active inspector, follows the current selection *@
-<InspectorPanel />
-<MultiSelectInspectorPanel />
-
-@* Pinned inspectors, one per locked element, independently draggable *@
-@foreach (OsmElementRef pinned in mapState.State.PinnedInspectors)
-{
-    <InspectorPanel PinnedRef="pinned" />
-}
+<GridifyPanel />
 
 @* Dialogs *@
-<GridifyDialog />
 <ChangesetUploadDialog />
 <SwitchEndpointDialog />
 <SwitchAccountDialog />

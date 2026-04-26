@@ -6,6 +6,7 @@ global using Alidade.Core.Models.CQRS.Response;
 global using Alidade.Core.ServiceInterface;
 global using Questy;
 global using Alidade.Osm.Models;
+global using Alidade.Osm.Models.Tools;
 global using Alidade.Osm.Models.EditBuffer;
 global using Alidade.Osm.Models.Validation;
 global using Alidade.Osm.Services;

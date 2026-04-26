@@ -1,36 +1,28 @@
-namespace Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Models.Tools.Gridify;
+
+namespace Alidade.Osm.Handlers.Tools.Gridify;
 
 /// <inheritdoc />
-public sealed class GridifyWay(EditBufferStateService editBufferState)
-    : IRequestHandler<GridifyWay.Query, QueryResult<IReadOnlyList<OsmElementRef>>>
+public sealed class CommitGridify(EditBufferStateService editBufferState)
+    : IRequestHandler<CommitGridify.Query, QueryResult<IReadOnlyList<OsmElementRef>>>
 {
-    static GridifyWay() => UndoDescriptions.Register<Query>("Gridify");
+    static CommitGridify() => UndoDescriptions.Register<Query>("Gridify");
 
     /// <summary>
-    ///   Splits a closed way into a grid of equal rectangular sub-areas.
-    ///   The grid is rotated by <see cref="RotationDeg"/> degrees (clockwise from east in
-    ///   the local flat-Earth projection). The original way is replaced by the new cell ways,
-    ///   whose refs are returned on success.
+    ///   Commits a pre-computed <see cref="GridifyResult"/> to the edit buffer, replacing the
+    ///   original way with the generated cell ways. The caller is responsible for computing the
+    ///   result (e.g. via <see cref="GridifyWay.Query"/>) and passing it in directly so the
+    ///   geometry is not recomputed on apply.
     /// </summary>
-    /// <param name="WayId">The ID of the closed way to gridify.</param>
-    /// <param name="Rows">Number of rows in the output grid.</param>
-    /// <param name="Cols">Number of columns in the output grid.</param>
-    /// <param name="RotationDeg">Grid rotation in degrees.</param>
-    public record Query(long WayId, int Rows, int Cols, double RotationDeg)
+    /// <param name="WayId">The ID of the original closed way to replace.</param>
+    /// <param name="Result">The pre-computed grid geometry to commit.</param>
+    public record Query(long WayId, GridifyResult Result)
         : IRequest<QueryResult<IReadOnlyList<OsmElementRef>>>, IUndoableCommand;
 
     /// <inheritdoc />
     public Task<QueryResult<IReadOnlyList<OsmElementRef>>> Handle(Query request, CancellationToken cancellationToken)
     {
-        GridifyResult result = GeometryService.Gridify(
-            request.WayId,
-            editBufferState.State.Ways,
-            editBufferState.State.Nodes,
-            request.Rows,
-            request.Cols,
-            request.RotationDeg);
-
-        if (result.CellNodeRefs.Count == 0)
+        if (request.Result.CellNodeRefs.Count == 0)
         {
             return Task.FromResult(QueryResult<IReadOnlyList<OsmElementRef>>.Fail("The selected way cannot be gridified. Select a single closed way."));
         }
@@ -46,10 +38,10 @@ public sealed class GridifyWay(EditBufferStateService editBufferState)
         ImmutableDictionary<OsmElementRef, EditState> editStates = state.EditStates;
         long nextId = state.NextNegativeId;
 
-        long[] newNodeIds = new long[result.NewNodes.Count];
-        for (int i = 0; i < result.NewNodes.Count; i++)
+        long[] newNodeIds = new long[request.Result.NewNodes.Count];
+        for (int i = 0; i < request.Result.NewNodes.Count; i++)
         {
-            (double lat, double lon) = result.NewNodes[i];
+            (double lat, double lon) = request.Result.NewNodes[i];
             OsmNode node = new(nextId, 1, null, null, null, lat, lon, ImmutableDictionary<string, string>.Empty);
             nodeDict = nodeDict.SetItem(nextId, node);
             editStates = editStates.SetItem(node.Ref, EditState.Created);
@@ -59,7 +51,7 @@ public sealed class GridifyWay(EditBufferStateService editBufferState)
 
         IReadOnlyDictionary<string, string> tags = originalWay.Tags;
         List<OsmElementRef> cellRefs = [];
-        foreach (IReadOnlyList<GridifyNodeRef> cellNodeRefs in result.CellNodeRefs)
+        foreach (IReadOnlyList<GridifyNodeRef> cellNodeRefs in request.Result.CellNodeRefs)
         {
             long[] cellNodeIds = [.. cellNodeRefs.Select(r =>
                 r.IsExisting ? r.ExistingNodeId : newNodeIds[r.NewNodeIndex])];

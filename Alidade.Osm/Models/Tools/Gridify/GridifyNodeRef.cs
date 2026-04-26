@@ -1,4 +1,4 @@
-namespace Alidade.Osm.Models;
+namespace Alidade.Osm.Models.Tools.Gridify;
 
 /// <summary>
 ///   A reference to a node within a <see cref="GridifyResult"/>: either a newly created node

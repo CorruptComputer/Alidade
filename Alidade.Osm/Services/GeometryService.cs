@@ -1,3 +1,5 @@
+using NetTopologySuite.Geometries;
+
 namespace Alidade.Osm.Services;
 
 /// <summary>
@@ -17,19 +19,23 @@ public static class GeometryService
         Math.Cos(DegThreshold * Math.PI / 180.0);
 
     #region  Projection helpers
-    // Project lat/lon to a local flat coordinate system (units: approximate meters)
-    private static (double X, double Y) Project(double lat, double lon, double latRef)
+    // Project a WGS-84 coordinate to a local flat system (units: approximate meters).
+    // latLon follows NTS convention: X = longitude, Y = latitude.
+    // Returns Coordinate(X = easting, Y = northing).
+    internal static Coordinate Project(Coordinate latLon, double latRef)
     {
         const double R = 6378137.0;
         double cosLat = Math.Cos(latRef * Math.PI / 180.0);
-        return (lon * Math.PI / 180.0 * R * cosLat, lat * Math.PI / 180.0 * R);
+        return new Coordinate(latLon.X * Math.PI / 180.0 * R * cosLat, latLon.Y * Math.PI / 180.0 * R);
     }
 
-    private static (double Lat, double Lon) Unproject(double x, double y, double latRef)
+    // Unproject a flat coordinate back to WGS-84.
+    // Returns Coordinate(X = longitude, Y = latitude).
+    internal static Coordinate Unproject(Coordinate xy, double latRef)
     {
         const double R = 6378137.0;
         double cosLat = Math.Cos(latRef * Math.PI / 180.0);
-        return (y / (Math.PI / 180.0 * R), x / (Math.PI / 180.0 * R * cosLat));
+        return new Coordinate(xy.X / (Math.PI / 180.0 * R * cosLat), xy.Y / (Math.PI / 180.0 * R));
     }
     #endregion
 
@@ -78,8 +84,8 @@ public static class GeometryService
         // Project to local flat space
         List<double[]> pts = [.. nodeList.Select(n =>
         {
-            (double x, double y) = Project(n.Lat, n.Lon, latRef);
-            return new double[] { x, y };
+            Coordinate flat = Project(new Coordinate(n.Lon, n.Lat), latRef);
+            return new double[] { flat.X, flat.Y };
         })];
 
         List<double[]> original = [.. pts.Select(p => new double[] { p[0], p[1] })];
@@ -152,8 +158,8 @@ public static class GeometryService
                 continue;
             }
 
-            (double newLat, double newLon) = Unproject(pts[i][0], pts[i][1], latRef);
-            moves.Add((node.Id, node.Lat, node.Lon, newLat, newLon));
+            Coordinate latLon = Unproject(new Coordinate(pts[i][0], pts[i][1]), latRef);
+            moves.Add((node.Id, node.Lat, node.Lon, latLon.Y, latLon.X));
         }
 
         return moves;
@@ -190,7 +196,7 @@ public static class GeometryService
         }
 
         double latRef = nodeList.Average(n => n.Lat);
-        List<(double X, double Y)> pts = [.. nodeList.Select(n => Project(n.Lat, n.Lon, latRef))];
+        List<Coordinate> pts = [.. nodeList.Select(n => Project(new Coordinate(n.Lon, n.Lat), latRef))];
 
         // Compute centroid and average radius
         double cx = pts.Average(p => p.X);
@@ -203,8 +209,8 @@ public static class GeometryService
             double angle = Math.Atan2(pts[i].Y - cy, pts[i].X - cx);
             double newX = cx + r * Math.Cos(angle);
             double newY = cy + r * Math.Sin(angle);
-            (double newLat, double newLon) = Unproject(newX, newY, latRef);
-            moves.Add((nodeList[i].Id, nodeList[i].Lat, nodeList[i].Lon, newLat, newLon));
+            Coordinate latLon = Unproject(new Coordinate(newX, newY), latRef);
+            moves.Add((nodeList[i].Id, nodeList[i].Lat, nodeList[i].Lon, latLon.Y, latLon.X));
         }
 
         return moves;
@@ -373,326 +379,18 @@ public static class GeometryService
     }
     #endregion
 
-    #region Gridify
+    #region GridifyHelpers
     /// <summary>
-    ///   Computes the grid vertices and cell node rings needed to split a closed way into
-    ///   <paramref name="rows"/> × <paramref name="cols"/> equal rectangular sub-areas.
-    ///   The grid axes are rotated by <paramref name="rotationDeg"/> degrees (clockwise from east).
-    ///   Nodes on the outer boundary of the original way are reused rather than replaced, so
-    ///   connections to adjacent ways are preserved.
-    ///   Returns <see cref="GridifyResult.Empty"/> when the way cannot be gridified.
-    /// </summary>
-    /// <param name="wayId">The ID of the closed way to split.</param>
-    /// <param name="ways">The current way dictionary from the edit buffer.</param>
-    /// <param name="nodes">The current node dictionary from the edit buffer.</param>
-    /// <param name="rows">Number of rows in the output grid.</param>
-    /// <param name="cols">Number of columns in the output grid.</param>
-    /// <param name="rotationDeg">Grid rotation in degrees (clockwise from east in projected space).</param>
-    /// <returns>
-    ///   A <see cref="GridifyResult"/> with new node positions and per-cell closed rings that
-    ///   reference either new or existing nodes. Returns <see cref="GridifyResult.Empty"/> on failure.
-    /// </returns>
-    public static GridifyResult Gridify(long wayId, ImmutableDictionary<long, OsmWay> ways, ImmutableDictionary<long, OsmNode> nodes, int rows, int cols, double rotationDeg)
-    {
-        if (rows < 1 || cols < 1)
-        {
-            return GridifyResult.Empty;
-        }
-
-        if (!ways.TryGetValue(wayId, out OsmWay? way) || !way.IsClosed)
-        {
-            return GridifyResult.Empty;
-        }
-
-        List<long> nodeIds = [.. way.NodeIds.Take(way.NodeIds.Count - 1)];
-        if (nodeIds.Count < 3)
-        {
-            return GridifyResult.Empty;
-        }
-
-        List<OsmNode> nodeList = [.. nodeIds.Where(nodes.ContainsKey).Select(id => nodes[id])];
-        if (nodeList.Count < 3)
-        {
-            return GridifyResult.Empty;
-        }
-
-        double latRef = nodeList.Average(n => n.Lat);
-        double rotRad = rotationDeg * Math.PI / 180.0;
-
-        // Project all original nodes into rotated flat space for OBB computation
-        List<(double X, double Y)> rotatedPts = [.. nodeList.Select(n =>
-        {
-            (double px, double py) = Project(n.Lat, n.Lon, latRef);
-            return RotateXY(px, py, -rotRad);
-        })];
-
-        double minX = rotatedPts.Min(p => p.X);
-        double maxX = rotatedPts.Max(p => p.X);
-        double minY = rotatedPts.Min(p => p.Y);
-        double maxY = rotatedPts.Max(p => p.Y);
-        double width = maxX - minX;
-        double height = maxY - minY;
-
-        if (width < 1e-6 || height < 1e-6)
-        {
-            return GridifyResult.Empty;
-        }
-
-        // TODO: for curved or non-convex ways, clip each cell polygon to the source way boundary
-        //       using NTS Intersection before returning cell node refs.
-
-        // Classify every original node onto the OBB edges it lies on (nodes can be on two edges at
-        // a corner). edgeEpsilon is 2% of the shorter extent, which handles floating-point imprecision
-        // on orthogonalized ways while avoiding false positives on interior nodes.
-        double edgeEpsilon = Math.Min(width, height) * 0.02;
-
-        // Each entry is (normalized position along edge [0..1], original node ID).
-        // Left/right edges are parameterized by ty = (ry - minY) / height.
-        // Top/bottom edges are parameterized by tx = (rx - minX) / width.
-        List<(double T, long NodeId)> leftEdge = [];
-        List<(double T, long NodeId)> rightEdge = [];
-        List<(double T, long NodeId)> topEdge = [];
-        List<(double T, long NodeId)> bottomEdge = [];
-
-        for (int i = 0; i < nodeList.Count; i++)
-        {
-            (double rx, double ry) = rotatedPts[i];
-            long nid = nodeList[i].Id;
-            double tx = (rx - minX) / width;
-            double ty = (ry - minY) / height;
-
-            if (Math.Abs(rx - minX) <= edgeEpsilon)
-            {
-                leftEdge.Add((ty, nid));
-            }
-
-            if (Math.Abs(rx - maxX) <= edgeEpsilon)
-            {
-                rightEdge.Add((ty, nid));
-            }
-
-            if (Math.Abs(ry - minY) <= edgeEpsilon)
-            {
-                topEdge.Add((tx, nid));
-            }
-
-            if (Math.Abs(ry - maxY) <= edgeEpsilon)
-            {
-                bottomEdge.Add((tx, nid));
-            }
-        }
-
-        leftEdge.Sort((a, b)   => a.T.CompareTo(b.T));
-        rightEdge.Sort((a, b)  => a.T.CompareTo(b.T));
-        topEdge.Sort((a, b)    => a.T.CompareTo(b.T));
-        bottomEdge.Sort((a, b) => a.T.CompareTo(b.T));
-
-        // How close a grid vertex's normalized position must be to an original node to reuse it.
-        // 1e-4 in normalized space (0.01%) is tight enough to avoid false snapping.
-        const double SnapEpsilonT = 1e-4;
-
-        // Build the (rows+1) × (cols+1) grid of node references.
-        // Boundary vertices reuse original nodes where found; all others get new nodes.
-        int vRows = rows + 1;
-        int vCols = cols + 1;
-        GridifyNodeRef[,] gridRef  = new GridifyNodeRef[vRows, vCols];
-        List<(double Lat, double Lon)> newNodes = [];
-
-        for (int r = 0; r < vRows; r++)
-        {
-            double ty = (double)r / rows;
-            for (int c = 0; c < vCols; c++)
-            {
-                double tx = (double)c / cols;
-                long? existingId = FindGridVertexNode(
-                    r, c, rows, cols, tx, ty,
-                    leftEdge, rightEdge, topEdge, bottomEdge, SnapEpsilonT);
-
-                if (existingId.HasValue)
-                {
-                    gridRef[r, c] = GridifyNodeRef.Existing(existingId.Value);
-                }
-                else
-                {
-                    (double ux, double uy) = RotateXY(minX + tx * width, minY + ty * height, rotRad);
-                    (double lat, double lon) = Unproject(ux, uy, latRef);
-                    gridRef[r, c] = GridifyNodeRef.New(newNodes.Count);
-                    newNodes.Add((lat, lon));
-                }
-            }
-        }
-
-        // Build cell rings. Boundary cells also include any original edge nodes that fall strictly
-        // between the two grid vertex positions on that edge, preserving mid-edge connections.
-        List<IReadOnlyList<GridifyNodeRef>> cells = new List<IReadOnlyList<GridifyNodeRef>>(rows * cols);
-
-        for (int r = 0; r < rows; r++)
-        {
-            double ty0 = (double)r       / rows;
-            double ty1 = (double)(r + 1) / rows;
-
-            for (int c = 0; c < cols; c++)
-            {
-                double tx0 = (double)c       / cols;
-                double tx1 = (double)(c + 1) / cols;
-
-                List<GridifyNodeRef> ring =
-                [
-                    // TL corner → traverse top edge → TR corner
-                    gridRef[r, c],
-                ];
-
-                if (r == 0)
-                {
-                    AppendIntermediateEdgeNodes(ring, topEdge, tx0, tx1, SnapEpsilonT);
-                }
-                ring.Add(gridRef[r, c + 1]);
-
-                // TR corner → traverse right edge → BR corner
-                if (c == cols - 1)
-                {
-                    AppendIntermediateEdgeNodes(ring, rightEdge, ty0, ty1, SnapEpsilonT);
-                }
-                ring.Add(gridRef[r + 1, c + 1]);
-
-                // BR corner → traverse bottom edge (right-to-left) → BL corner
-                if (r == rows - 1)
-                {
-                    AppendIntermediateEdgeNodesReverse(ring, bottomEdge, tx0, tx1, SnapEpsilonT);
-                }
-                ring.Add(gridRef[r + 1, c]);
-
-                // BL corner → traverse left edge (bottom-to-top) → close at TL
-                if (c == 0)
-                {
-                    AppendIntermediateEdgeNodesReverse(ring, leftEdge, ty0, ty1, SnapEpsilonT);
-                }
-
-                ring.Add(ring[0]); // close ring
-                cells.Add(ring);
-            }
-        }
-
-        return new GridifyResult(newNodes, cells);
-    }
-
-    /// <summary>
-    ///   Returns the ID of an original way node that lies at the given normalised grid-vertex
-    ///   position <paramref name="tx"/>, <paramref name="ty"/>, or <see langword="null"/> if no
-    ///   original node is close enough to snap.
-    /// </summary>
-    /// <param name="r">Grid row index.</param>
-    /// <param name="c">Grid column index.</param>
-    /// <param name="rows">Total row count.</param>
-    /// <param name="cols">Total column count.</param>
-    /// <param name="tx">Normalised horizontal position [0, 1].</param>
-    /// <param name="ty">Normalised vertical position [0, 1].</param>
-    /// <param name="leftEdge">Original nodes on the left OBB edge, sorted by T.</param>
-    /// <param name="rightEdge">Original nodes on the right OBB edge, sorted by T.</param>
-    /// <param name="topEdge">Original nodes on the top OBB edge, sorted by T.</param>
-    /// <param name="bottomEdge">Original nodes on the bottom OBB edge, sorted by T.</param>
-    /// <param name="epsilon">Match tolerance in normalised [0, 1] space.</param>
-    /// <returns>The matching original node ID, or <see langword="null"/>.</returns>
-    private static long? FindGridVertexNode(
-        int r, int c, int rows, int cols, double tx, double ty,
-        List<(double T, long NodeId)> leftEdge,
-        List<(double T, long NodeId)> rightEdge,
-        List<(double T, long NodeId)> topEdge,
-        List<(double T, long NodeId)> bottomEdge,
-        double epsilon)
-    {
-        if (c == 0)
-        {
-            foreach ((double t, long id) in leftEdge)
-            {
-                if (Math.Abs(t - ty) < epsilon) return id;
-            }
-        }
-
-        if (c == cols)
-        {
-            foreach ((double t, long id) in rightEdge)
-            {
-                if (Math.Abs(t - ty) < epsilon) return id;
-            }
-        }
-
-        if (r == 0)
-        {
-            foreach ((double t, long id) in topEdge)
-            {
-                if (Math.Abs(t - tx) < epsilon) return id;
-            }
-        }
-
-        if (r == rows)
-        {
-            foreach ((double t, long id) in bottomEdge)
-            {
-                if (Math.Abs(t - tx) < epsilon) return id;
-            }
-        }
-
-        return null;
-    }
-
-    /// <summary>
-    ///   Appends original edge nodes whose normalised position is strictly between
-    ///   <paramref name="t0"/> and <paramref name="t1"/> (ascending order).
-    /// </summary>
-    /// <param name="ring">The cell ring being built.</param>
-    /// <param name="edgeList">Sorted edge node list.</param>
-    /// <param name="t0">Start of the range (exclusive).</param>
-    /// <param name="t1">End of the range (exclusive).</param>
-    /// <param name="epsilon">Exclusion tolerance at the endpoints.</param>
-    private static void AppendIntermediateEdgeNodes(
-        List<GridifyNodeRef> ring,
-        List<(double T, long NodeId)> edgeList,
-        double t0, double t1, double epsilon)
-    {
-        foreach ((double t, long nodeId) in edgeList)
-        {
-            if (t > t0 + epsilon && t < t1 - epsilon)
-            {
-                ring.Add(GridifyNodeRef.Existing(nodeId));
-            }
-        }
-    }
-
-    /// <summary>
-    ///   Appends original edge nodes whose normalised position is strictly between
-    ///   <paramref name="t0"/> and <paramref name="t1"/>, in descending order (for
-    ///   edges traversed right-to-left or bottom-to-top).
-    /// </summary>
-    /// <param name="ring">The cell ring being built.</param>
-    /// <param name="edgeList">Sorted edge node list.</param>
-    /// <param name="t0">Start of the range (exclusive).</param>
-    /// <param name="t1">End of the range (exclusive).</param>
-    /// <param name="epsilon">Exclusion tolerance at the endpoints.</param>
-    private static void AppendIntermediateEdgeNodesReverse(
-        List<GridifyNodeRef> ring,
-        List<(double T, long NodeId)> edgeList,
-        double t0, double t1, double epsilon)
-    {
-        for (int i = edgeList.Count - 1; i >= 0; i--)
-        {
-            (double t, long nodeId) = edgeList[i];
-            if (t > t0 + epsilon && t < t1 - epsilon)
-            {
-                ring.Add(GridifyNodeRef.Existing(nodeId));
-            }
-        }
-    }
-
-    /// <summary>
-    ///   Computes the angle (in degrees, 0–360 clockwise from east) of the longest edge of a way.
-    ///   Useful for pre-populating the rotation field in the gridify dialog.
+    ///   Computes the angle (in degrees, 0–360 counter-clockwise from east) of the longest
+    ///   edge of a way. Useful for pre-populating the rotation fields in the gridify panel.
     ///   Returns 0.0 when the way cannot be resolved.
     /// </summary>
     /// <param name="wayId">The ID of the way to inspect.</param>
     /// <param name="ways">The current way dictionary from the edit buffer.</param>
     /// <param name="nodes">The current node dictionary from the edit buffer.</param>
-    /// <returns>The longest-edge angle in degrees, normalized to [0, 360).</returns>
+    /// <returns>
+    ///   The longest-edge angle in degrees, normalized to [0, 360).
+    /// </returns>
     public static double ComputeLongestEdgeAngleDeg(
         long wayId,
         ImmutableDictionary<long, OsmWay> ways,
@@ -734,10 +432,10 @@ public static class GeometryService
                 continue;
             }
 
-            (double ax, double ay) = Project(a.Lat, a.Lon, latRef);
-            (double bx, double by) = Project(b.Lat, b.Lon, latRef);
-            double dx = bx - ax;
-            double dy = by - ay;
+            Coordinate aFlat = Project(new Coordinate(a.Lon, a.Lat), latRef);
+            Coordinate bFlat = Project(new Coordinate(b.Lon, b.Lat), latRef);
+            double dx = bFlat.X - aFlat.X;
+            double dy = bFlat.Y - aFlat.Y;
             double len = Math.Sqrt(dx * dx + dy * dy);
 
             if (len > longestLen)
@@ -750,11 +448,84 @@ public static class GeometryService
         return ((longestAngle % 360.0) + 360.0) % 360.0;
     }
 
-    private static (double X, double Y) RotateXY(double x, double y, double rad)
+    /// <summary>
+    ///   Computes the natural column and row extension angles (the direction each column/row
+    ///   itself runs, not the stacking axis) for gridifying a closed quadrilateral way.
+    ///   For a quadrilateral, opposite edge pairs are averaged: the pair closer to N-S becomes
+    ///   the column extension angle, the pair closer to E-W becomes the row extension angle.
+    ///   Falls back to (90°, 180°) for ways that are not exactly 4-sided.
+    /// </summary>
+    /// <param name="wayId">The ID of the closed way to inspect.</param>
+    /// <param name="ways">The current way dictionary from the edit buffer.</param>
+    /// <param name="nodes">The current node dictionary from the edit buffer.</param>
+    /// <returns>
+    ///   <c>ColRotationDeg</c>: angle (°) the column cells extend.
+    ///   <c>RowRotationDeg</c>: angle (°) the row cells extend.
+    /// </returns>
+    public static (double ColRotationDeg, double RowRotationDeg) ComputeGridifyRotations(
+        long wayId,
+        ImmutableDictionary<long, OsmWay> ways,
+        ImmutableDictionary<long, OsmNode> nodes)
     {
-        double cos = Math.Cos(rad);
-        double sin = Math.Sin(rad);
-        return (x * cos - y * sin, x * sin + y * cos);
+        const double defaultCol = 90.0;
+        const double defaultRow = 180.0;
+
+        if (!ways.TryGetValue(wayId, out OsmWay? way) || !way.IsClosed)
+        {
+            return (defaultCol, defaultRow);
+        }
+
+        List<long> nodeIds = [.. way.NodeIds.Take(way.NodeIds.Count - 1)];
+        if (nodeIds.Count != 4)
+        {
+            return (defaultCol, defaultRow);
+        }
+
+        List<OsmNode> nodeList = [.. nodeIds.Where(nodes.ContainsKey).Select(id => nodes[id])];
+        if (nodeList.Count != 4)
+        {
+            return (defaultCol, defaultRow);
+        }
+
+        double latRef = nodeList.Average(n => n.Lat);
+
+        // Angle of each edge, normalised to [0°, 180°) so opposite directions map to the same line.
+        double[] a = new double[4];
+        for (int i = 0; i < 4; i++)
+        {
+            int j = (i + 1) % 4;
+            Coordinate pFlat = Project(new Coordinate(nodeList[i].Lon, nodeList[i].Lat), latRef);
+            Coordinate qFlat = Project(new Coordinate(nodeList[j].Lon, nodeList[j].Lat), latRef);
+            double angle = Math.Atan2(qFlat.Y - pFlat.Y, qFlat.X - pFlat.X) * 180.0 / Math.PI;
+            a[i] = ((angle % 180.0) + 180.0) % 180.0;
+        }
+
+        // Average opposite edge pairs (edges 0&2 and edges 1&3).
+        double avg02 = HalfCircleMean(a[0], a[2]);
+        double avg13 = HalfCircleMean(a[1], a[3]);
+
+        // The pair closer to N-S (|sin| ≥ |cos|) is the column extension direction.
+        double rad02 = avg02 * Math.PI / 180.0;
+        return Math.Abs(Math.Sin(rad02)) >= Math.Abs(Math.Cos(rad02))
+            ? (avg02, avg13)
+            : (avg13, avg02);
+    }
+
+    /// <summary>
+    ///   Returns the circular mean of two undirected line angles, each in [0°, 180°),
+    ///   handling wrap-around at the 0°/180° boundary.
+    /// </summary>
+    /// <param name="a">First angle in [0°, 180°).</param>
+    /// <param name="b">Second angle in [0°, 180°).</param>
+    /// <returns>
+    ///   Mean angle in [0°, 180°).
+    /// </returns>
+    private static double HalfCircleMean(double a, double b)
+    {
+        double diff = b - a;
+        if (diff > 90.0) diff -= 180.0;
+        if (diff < -90.0) diff += 180.0;
+        return ((a + diff * 0.5) % 180.0 + 180.0) % 180.0;
     }
     #endregion
 }

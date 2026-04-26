@@ -1,0 +1,54 @@
+<div class="gridify-panel @(_visible ? "" : "gridify-panel--hidden")" @ref="_panelEl">
+    <div class="gridify-header" @ref="_headerEl">
+        <span>Gridify</span>
+        <button class="panel-close" @onclick="Cancel">X</button>
+    </div>
+
+    @if (_state.WayId is null)
+    {
+        <div class="gridify-no-selection">
+            Select a single closed way to gridify.
+        </div>
+        <div class="gridify-actions">
+            <button class="btn-secondary" @onclick="Cancel">Close</button>
+        </div>
+    }
+    else
+    {
+        <div class="gridify-table">
+            <span></span>
+            <span class="gridify-th">Count</span>
+            <span class="gridify-th">Rotation</span>
+            <span class="gridify-th">Dir</span>
+            <span class="gridify-th">Radius</span>
+
+            <span class="gridify-th">Rows</span>
+            <input type="number" min="1" max="99" value="@_state.Rows" @oninput="OnRowsInput" />
+            <div class="gridify-deg">
+                <input type="number" step="any" value="@_state.RowRotationDeg" @oninput="OnRowRotationInput" />
+                <span>°</span>
+            </div>
+            <span class="gridify-arrow" style="@ArrowStyle(_state.RowRotationDeg)">↑</span>
+            <div class="gridify-deg">
+                <input type="number" step="any" value="@_state.RowRadiusDeg" @oninput="OnRowRadiusInput" />
+                <span>°</span>
+            </div>
+
+            <span class="gridify-th">Columns</span>
+            <input type="number" min="1" max="99" value="@_state.Cols" @oninput="OnColsInput" />
+            <div class="gridify-deg">
+                <input type="number" step="any" value="@_state.ColRotationDeg" @oninput="OnColRotationInput" />
+                <span>°</span>
+            </div>
+            <span class="gridify-arrow" style="@ArrowStyle(_state.ColRotationDeg)">↑</span>
+            <div class="gridify-deg">
+                <input type="number" step="any" value="@_state.ColRadiusDeg" @oninput="OnColRadiusInput" />
+                <span>°</span>
+            </div>
+        </div>
+        <div class="gridify-actions">
+            <button class="btn-secondary" @onclick="Cancel">Cancel</button>
+            <button class="btn-primary" @onclick="ApplyAsync">Apply</button>
+        </div>
+    }
+</div>

@@ -1,21 +1,24 @@
+using System.Globalization;
 using System.Text.Json;
 using Alidade.Handlers.Map;
-using Alidade.Handlers.Selection;
 using Alidade.Map.Handlers;
-using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Handlers.Tools.Gridify;
+using Alidade.Osm.Models.Tools.Gridify;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using NetTopologySuite.Features;
 using NetTopologySuite.Geometries;
 
-namespace Alidade.Components.Dialogs;
+namespace Alidade.Components.Panels;
 
 /// <summary>
-///   Floating, draggable panel for splitting a selected closed way into a grid of equal
-///   rectangular sub-areas. Shows a live orange dashed preview overlay while open.
-///   Follows the same always-in-DOM, CSS-visibility pattern as <see cref="Panels.InspectorPanel"/>.
+///   Floating, draggable panel for splitting a selected closed way into a grid of sub-areas.
+///   Column and row extension angles can be set independently, with an optional radius field
+///   reserved for a future corner-rounding feature. Shows a live orange dashed preview overlay
+///   while open. Follows the same always-in-DOM, CSS-visibility pattern as
+///   <see cref="InspectorPanel"/>.
 /// </summary>
-public partial class GridifyDialog(
+public partial class GridifyPanel(
     IMediator mediator,
     MapStateService mapState,
     SelectionStateService selectionState,
@@ -30,10 +33,8 @@ public partial class GridifyDialog(
     private bool _dragInitialized;
 
     private bool _visible;
-    private long? _wayId;
-    private int _rows = 1;
-    private int _cols = 1;
-    private double _rotation;
+    private GridifyState _state = new();
+    private GridifyResult? _lastResult;
 
     /// <inheritdoc />
     protected override void OnInitialized()
@@ -92,18 +93,25 @@ public partial class GridifyDialog(
         OsmElementRef? single = selectionState.State.SingleSelected;
         if (single is { Type: OsmElementTypes.Way })
         {
-            if (_wayId != single.Id)
+            if (_state.WayId != single.Id)
             {
-                _wayId = single.Id;
-                _rotation = GeometryService.ComputeLongestEdgeAngleDeg(
+                (double colRot, double rowRot) = GeometryService.ComputeGridifyRotations(
                     single.Id,
                     editBufferState.State.Ways,
                     editBufferState.State.Nodes);
+                _state = new GridifyState
+                {
+                    WayId = single.Id,
+                    ColRotationDeg = colRot,
+                    RowRotationDeg = rowRot,
+                };
+                _lastResult = null;
             }
         }
         else
         {
-            _wayId = null;
+            _state = _state with { WayId = null };
+            _lastResult = null;
         }
     }
 
@@ -111,7 +119,7 @@ public partial class GridifyDialog(
     {
         if (int.TryParse(e.Value?.ToString(), out int v) && v >= 1 && v <= 99)
         {
-            _rows = v;
+            _state = _state with { Rows = v };
             _ = PushPreviewAsync();
         }
     }
@@ -120,45 +128,72 @@ public partial class GridifyDialog(
     {
         if (int.TryParse(e.Value?.ToString(), out int v) && v >= 1 && v <= 99)
         {
-            _cols = v;
+            _state = _state with { Cols = v };
             _ = PushPreviewAsync();
         }
     }
 
-    private void OnRotationInput(ChangeEventArgs e)
+    private void OnRowRotationInput(ChangeEventArgs e)
     {
-        if (double.TryParse(e.Value?.ToString(), out double v))
+        if (double.TryParse(e.Value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out double v))
         {
-            _rotation = v;
+            _state = _state with { RowRotationDeg = v };
             _ = PushPreviewAsync();
         }
     }
+
+    private void OnColRotationInput(ChangeEventArgs e)
+    {
+        if (double.TryParse(e.Value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out double v))
+        {
+            _state = _state with { ColRotationDeg = v };
+            _ = PushPreviewAsync();
+        }
+    }
+
+    private void OnRowRadiusInput(ChangeEventArgs e)
+    {
+        if (double.TryParse(e.Value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out double v))
+        {
+            _state = _state with { RowRadiusDeg = v };
+        }
+    }
+
+    private void OnColRadiusInput(ChangeEventArgs e)
+    {
+        if (double.TryParse(e.Value?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out double v))
+        {
+            _state = _state with { ColRadiusDeg = v };
+        }
+    }
+
+    // Returns a CSS transform style string that rotates the ↑ arrow to point along
+    // extensionDeg (geographic CCW-from-east). ↑ points north (90°) at 0 CSS rotation,
+    // so CSS rotation = -(extensionDeg - 90) = 90 - extensionDeg.
+    private static string ArrowStyle(double extensionDeg)
+        => $"transform: rotate({(90.0 - extensionDeg).ToString("F1", CultureInfo.InvariantCulture)}deg)";
 
     private async Task PushPreviewAsync()
     {
-        if (_wayId is null)
+        if (_state.WayId is null)
         {
             await ClearPreviewAsync();
             return;
         }
 
+        QueryResult<GridifyResult> queryResult = await mediator.Send(new GridifyWay.Query(_state));
+        if (queryResult.Result is not GridifyResult gridifyResult)
+        {
+            _lastResult = null;
+            await ClearPreviewAsync();
+            return;
+        }
+
+        _lastResult = gridifyResult;
         EditBufferState snapshot = editBufferState.State;
-
-        GridifyResult result = GeometryService.Gridify(
-            _wayId.Value,
-            snapshot.Ways,
-            snapshot.Nodes,
-            _rows, _cols, _rotation);
-
-        if (result.CellNodeRefs.Count == 0)
-        {
-            await ClearPreviewAsync();
-            return;
-        }
-
         FeatureCollection fc = [];
 
-        foreach (IReadOnlyList<GridifyNodeRef> cellRefs in result.CellNodeRefs)
+        foreach (IReadOnlyList<GridifyNodeRef> cellRefs in gridifyResult.CellNodeRefs)
         {
             Coordinate[] coords = new Coordinate[cellRefs.Count];
             bool valid = true;
@@ -176,7 +211,7 @@ public partial class GridifyDialog(
                 }
                 else
                 {
-                    (double lat, double lon) = result.NewNodes[nodeRef.NewNodeIndex];
+                    (double lat, double lon) = gridifyResult.NewNodes[nodeRef.NewNodeIndex];
                     coords[i] = new Coordinate(lon, lat);
                 }
             }
@@ -200,15 +235,27 @@ public partial class GridifyDialog(
 
     private async Task ApplyAsync()
     {
-        if (_wayId is null)
+        if (_state.WayId is not long wayId)
         {
             return;
+        }
+
+        // Reuse the last computed result when available; recompute if stale.
+        GridifyResult? result = _lastResult;
+        if (result is null)
+        {
+            QueryResult<GridifyResult> queryResult = await mediator.Send(new GridifyWay.Query(_state));
+            if (queryResult.Result is not GridifyResult recomputed)
+            {
+                return;
+            }
+            result = recomputed;
         }
 
         await ClearPreviewAsync();
 
         IReadOnlyList<OsmElementRef>? cellWays = (await mediator.Send(
-            new GridifyWay.Query(_wayId.Value, _rows, _cols, _rotation))).Result;
+            new CommitGridify.Query(wayId, result))).Result;
 
         await mediator.Send(new ToggleGridifyDialog.Command());
 
