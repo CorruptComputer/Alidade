@@ -1,37 +1,7 @@
-.validation-panel {
-    position: fixed;
-    top: calc(var(--toolbar-height) + 8px);
-    left: 8px;
-    width: 300px;
-    max-height: calc(100vh - var(--toolbar-height) - 16px);
-    display: flex;
-    flex-direction: column;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-panel);
-    z-index: 900;
-    overflow: hidden;
-}
-
-.validation-header {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 12px;
-    border-bottom: 1px solid var(--color-border);
-    font-weight: 600;
-    font-size: 13px;
-    background: var(--color-surface);
-}
-
-    .validation-header span:first-child {
-        flex: 1;
-    }
-
 .validation-spinner {
     color: var(--color-text-muted);
     font-size: 12px;
+    margin-left: 4px;
 }
 
 .validation-empty {

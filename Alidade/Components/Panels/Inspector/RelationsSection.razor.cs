@@ -1,7 +1,7 @@
 using Alidade.Osm.Handlers.Editing;
 using Microsoft.AspNetCore.Components;
 
-namespace Alidade.Components.Panels;
+namespace Alidade.Components.Panels.Inspector;
 
 /// <summary>
 ///   Displays the relation memberships of the inspected element and provides controls to add the

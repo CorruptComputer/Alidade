@@ -15,8 +15,11 @@ public partial class SettingsPanel(
     SettingsStateService settingsState,
     EditBufferStateService editBufferState,
     IMediator mediator,
-    SettingsService settingsService) : IDisposable
+    SettingsService settingsService) : IPanel, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Settings";
+
     private string? _capturingActionId;
     private string? _conflictActionId;
 

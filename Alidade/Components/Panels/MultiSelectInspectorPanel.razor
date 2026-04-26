@@ -1,11 +1,7 @@
-<div class="inspector-panel @(_selected.Count <= 1 ? "inspector-panel-hidden" : string.Empty)">
-
-    <div class="inspector-header">
-        <span class="inspector-title">@_selected.Count Features</span>
-        <div class="inspector-header-actions">
-            <button class="inspector-close" title="Deselect (Escape)" @onclick="OnClose">✕</button>
-        </div>
-    </div>
+<Panel TPanel="MultiSelectInspectorPanel"
+       OnClose="OnClose"
+       Visible="@(_selected.Count > 1)"
+       Title="@($"{_selected.Count} Features")">
 
     @if (_selected.Count > 1)
     {
@@ -115,4 +111,4 @@
         </div>
     }
 
-</div>
+</Panel>

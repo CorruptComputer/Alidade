@@ -13,8 +13,11 @@ namespace Alidade.Components.Panels;
 /// <param name="mediator">The mediator used to dispatch background imagery commands.</param>
 /// <param name="imagery">The imagery service providing the list of available imagery sources.</param>
 public sealed partial class BackgroundPanel(MapStateService mapState, IMediator mediator, ImageryService imagery)
-    : IDisposable
+    : IPanel, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Background imagery";
+
     /// <inheritdoc />
     protected override void OnInitialized()
         => mapState.StateChanged += OnStateChanged;

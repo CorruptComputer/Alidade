@@ -1,39 +1,3 @@
-.gridify-panel {
-    position: fixed;
-    top: calc(var(--toolbar-height) + 8px);
-    left: 8px;
-    width: 360px;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-panel);
-    z-index: 900;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.gridify-panel--hidden {
-    display: none;
-}
-
-.gridify-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 10px 8px 12px;
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-surface);
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    flex-shrink: 0;
-    cursor: move;
-    user-select: none;
-}
-
 .gridify-no-selection {
     padding: 12px;
     font-size: 13px;

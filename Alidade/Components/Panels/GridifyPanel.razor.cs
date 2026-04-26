@@ -4,7 +4,6 @@ using Alidade.Map.Handlers;
 using Alidade.Osm.Handlers.Tools.Gridify;
 using Alidade.Osm.Models.Tools.Gridify;
 using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
 using NetTopologySuite.Features;
 using NetTopologySuite.Geometries;
 
@@ -22,13 +21,10 @@ public partial class GridifyPanel(
     MapStateService mapState,
     SelectionStateService selectionState,
     EditBufferStateService editBufferState,
-    GeometryFactory geomFactory,
-    IJSRuntime js) : IDisposable
+    GeometryFactory geomFactory) : IPanel, IDisposable
 {
-
-    private ElementReference _panelEl;
-    private ElementReference _headerEl;
-    private bool _dragInitialized;
+    /// <inheritdoc/>
+    public static string Title => "Gridify";
 
     private bool _visible;
     private GridifyState _state = new();
@@ -39,23 +35,6 @@ public partial class GridifyPanel(
     {
         mapState.StateChanged += OnMapStateChanged;
         selectionState.StateChanged += OnSelectionChanged;
-    }
-
-    /// <inheritdoc />
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (!_dragInitialized)
-        {
-            try
-            {
-                await js.InvokeVoidAsync("makePanelDraggable", _panelEl, _headerEl);
-                _dragInitialized = true;
-            }
-            catch (JSException)
-            {
-                // Map not yet initialized; will retry on next render.
-            }
-        }
     }
 
     private void OnMapStateChanged(object? sender, EventArgs e)

@@ -1,128 +1,120 @@
-
-@if (mapState.State.SettingsPanelVisible)
-{
-    <div class="panel settings-panel">
-        <div class="panel-header">
-            <span>Settings</span>
-            <button class="panel-close"
-                    @onclick="Close"
-                    aria-label="Close settings">X</button>
-        </div>
-
-        <div class="panel-body">
-            <section class="settings-section">
-                <label for="endpoint-select">API Endpoint</label>
-                <div class="endpoint-row">
-                    <select id="endpoint-select"
-                            value="@settingsState.State.ActiveEndpoint"
-                            @onchange="OnEndpointChanged">
-                        @foreach (KeyValuePair<ApiEndpoints, ApiEndpointInfo> entry in ApiEndpointCatalog.Endpoints)
-                        {
-                            <option value="@entry.Key"
-                                    disabled="@(entry.Value.State == EndpointState.Disabled)">
-                                @entry.Value.DisplayName @(entry.Value.State == EndpointState.ReadOnly
-                                                                ? "(readonly)"
-                                                                : entry.Value.State == EndpointState.Disabled
-                                                                    ? "(disabled)"
-                                                                    : null)
-                            </option>
-                        }
-                    </select>
-                    <button class="account-switcher-btn" @onclick="OpenAccountSwitcher" title="Switch account">
-                        @if (authState.State.IsLoggedIn)
-                        {
-                            @if (authState.State.User!.AvatarUrl is string avatarUrl)
-                            {
-                                <img class="account-switcher-avatar" src="@avatarUrl" alt="" />
-                            }
-                            <span>@authState.State.User!.UserName</span>
-                        }
-                        else
-                        {
-                            <span>Login</span>
-                        }
-                    </button>
-                </div>
-                <small class="settings-hint">
-                    @ApiEndpointCatalog.Endpoints[settingsState.State.ActiveEndpoint].ApiBase
-                </small>
-            </section>
-
-            @if (settingsState.State.RemoteConflict is KeyBindingsConfig remoteConflict)
-            {
-                <section class="settings-section settings-conflict">
-                    <div class="conflict-header">
-                        <span class="conflict-title">Server Settings Conflict</span>
-                        <span class="conflict-subtitle">
-                            Your keybindings differ from the settings stored on this server.
-                        </span>
-                    </div>
-                    <div class="conflict-diff">
-                        @foreach (KeyBinding def in KeyBindingCatalog.All)
-                        {
-                            string localCombo = settingsState.State.KeyBindings.GetCombo(def.ActionId);
-                            string remoteCombo = remoteConflict.GetCombo(def.ActionId);
-                            @if (localCombo != remoteCombo)
-                            {
-                                <div class="conflict-row">
-                                    <span class="conflict-action">@def.DisplayName</span>
-                                    <span class="conflict-local">@KeyBindingCatalog.FormatCombo(localCombo)</span>
-                                    <span class="conflict-arrow">→</span>
-                                    <span class="conflict-remote">@KeyBindingCatalog.FormatCombo(remoteCombo)</span>
-                                </div>
-                            }
-                        }
-                    </div>
-                    <div class="conflict-actions">
-                        <button class="btn btn-secondary" @onclick="AcceptLocal">Keep Local</button>
-                        <button class="btn btn-primary" @onclick="AcceptRemote">Use Server Settings</button>
-                    </div>
-                </section>
-            }
-
-            <section class="settings-section keybindings-section">
-                <div class="keybindings-header">
-                    <label>Keyboard Shortcuts</label>
-                    <button class="btn-link" @onclick="ResetAllBindings">Reset all</button>
-                </div>
-
-                @foreach (string category in new[] { "Tools", "Edit", "View" })
-                {
-                    <div class="keybinding-category">@category</div>
-
-                    @foreach (KeyBinding def in KeyBindingCatalog.All.Where(d => d.Category == category))
+<Panel TPanel="SettingsPanel"
+       Visible="@mapState.State.SettingsPanelVisible"
+       OnClose="Close">
+    <ChildContent>
+        <section class="settings-section">
+            <label for="endpoint-select">API Endpoint</label>
+            <div class="endpoint-row">
+                <select id="endpoint-select"
+                        value="@settingsState.State.ActiveEndpoint"
+                        @onchange="OnEndpointChanged">
+                    @foreach (KeyValuePair<ApiEndpoints, ApiEndpointInfo> entry in ApiEndpointCatalog.Endpoints)
                     {
-                        string effectiveCombo = settingsState.State.KeyBindings.GetCombo(def.ActionId);
-                        bool isCapturing = _capturingActionId == def.ActionId;
-                        bool isConflict = _conflictActionId == def.ActionId;
-
-                        <div class="keybinding-row @(isConflict ? "keybinding-conflict" : null)">
-                            <span class="keybinding-name">@def.DisplayName</span>
-                            <button class="keybinding-chip @(isCapturing ? "capturing" : null)"
-                                    @onclick="() => StartCapture(def.ActionId)"
-                                    @onkeydown="OnCaptureKeyDown"
-                                    @onblur="() => CancelCapture()">
-                                @if (isCapturing)
-                                {
-                                    <span>Press key…</span>
-                                }
-                                else
-                                {
-                                    <span>@KeyBindingCatalog.FormatCombo(effectiveCombo)</span>
-                                }
-                            </button>
-                            @if (settingsState.State.KeyBindings.Overrides.ContainsKey(def.ActionId))
-                            {
-                                <button class="keybinding-reset"
-                                        title="Reset to default (@KeyBindingCatalog.FormatCombo(def.DefaultCombo))"
-                                        @onclick="() => ResetBinding(def.ActionId)">↺</button>
-                            }
-                        </div>
+                        <option value="@entry.Key"
+                                disabled="@(entry.Value.State == EndpointState.Disabled)">
+                            @entry.Value.DisplayName @(entry.Value.State == EndpointState.ReadOnly
+                                                            ? "(readonly)"
+                                                            : entry.Value.State == EndpointState.Disabled
+                                                                ? "(disabled)"
+                                                                : null)
+                        </option>
                     }
-                }
-            </section>
-        </div>
+                </select>
+                <button class="account-switcher-btn" @onclick="OpenAccountSwitcher" title="Switch account">
+                    @if (authState.State.IsLoggedIn)
+                    {
+                        @if (authState.State.User!.AvatarUrl is string avatarUrl)
+                        {
+                            <img class="account-switcher-avatar" src="@avatarUrl" alt="" />
+                        }
+                        <span>@authState.State.User!.UserName</span>
+                    }
+                    else
+                    {
+                        <span>Login</span>
+                    }
+                </button>
+            </div>
+            <small class="settings-hint">
+                @ApiEndpointCatalog.Endpoints[settingsState.State.ActiveEndpoint].ApiBase
+            </small>
+        </section>
 
+        @if (settingsState.State.RemoteConflict is KeyBindingsConfig remoteConflict)
+        {
+            <section class="settings-section settings-conflict">
+                <div class="conflict-header">
+                    <span class="conflict-title">Server Settings Conflict</span>
+                    <span class="conflict-subtitle">
+                        Your keybindings differ from the settings stored on this server.
+                    </span>
+                </div>
+                <div class="conflict-diff">
+                    @foreach (KeyBinding def in KeyBindingCatalog.All)
+                    {
+                        string localCombo = settingsState.State.KeyBindings.GetCombo(def.ActionId);
+                        string remoteCombo = remoteConflict.GetCombo(def.ActionId);
+                        @if (localCombo != remoteCombo)
+                        {
+                            <div class="conflict-row">
+                                <span class="conflict-action">@def.DisplayName</span>
+                                <span class="conflict-local">@KeyBindingCatalog.FormatCombo(localCombo)</span>
+                                <span class="conflict-arrow">→</span>
+                                <span class="conflict-remote">@KeyBindingCatalog.FormatCombo(remoteCombo)</span>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="conflict-actions">
+                    <button class="btn btn-secondary" @onclick="AcceptLocal">Keep Local</button>
+                    <button class="btn btn-primary" @onclick="AcceptRemote">Use Server Settings</button>
+                </div>
+            </section>
+        }
+
+        <section class="settings-section keybindings-section">
+            <div class="keybindings-header">
+                <label>Keyboard Shortcuts</label>
+                <button class="btn-link" @onclick="ResetAllBindings">Reset all</button>
+            </div>
+
+            @foreach (string category in new[] { "Tools", "Edit", "View" })
+            {
+                <div class="keybinding-category">@category</div>
+
+                @foreach (KeyBinding def in KeyBindingCatalog.All.Where(d => d.Category == category))
+                {
+                    string effectiveCombo = settingsState.State.KeyBindings.GetCombo(def.ActionId);
+                    bool isCapturing = _capturingActionId == def.ActionId;
+                    bool isConflict = _conflictActionId == def.ActionId;
+
+                    <div class="keybinding-row @(isConflict ? "keybinding-conflict" : null)">
+                        <span class="keybinding-name">@def.DisplayName</span>
+                        <button class="keybinding-chip @(isCapturing ? "capturing" : null)"
+                                @onclick="() => StartCapture(def.ActionId)"
+                                @onkeydown="OnCaptureKeyDown"
+                                @onblur="() => CancelCapture()">
+                            @if (isCapturing)
+                            {
+                                <span>Press key…</span>
+                            }
+                            else
+                            {
+                                <span>@KeyBindingCatalog.FormatCombo(effectiveCombo)</span>
+                            }
+                        </button>
+                        @if (settingsState.State.KeyBindings.Overrides.ContainsKey(def.ActionId))
+                        {
+                            <button class="keybinding-reset"
+                                    title="Reset to default (@KeyBindingCatalog.FormatCombo(def.DefaultCombo))"
+                                    @onclick="() => ResetBinding(def.ActionId)">↺</button>
+                        }
+                    </div>
+                }
+            }
+        </section>
+    </ChildContent>
+    <Footer>
         <div class="panel-footer">
             <div class="settings-sync-status">
                 <span>Last updated: @(settingsService.LastSaved.HasValue
@@ -134,5 +126,5 @@
             </div>
             <span class="settings-version">@AppInfo.UserAgent</span>
         </div>
-    </div>
-}
+    </Footer>
+</Panel>

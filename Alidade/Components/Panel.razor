@@ -1,0 +1,37 @@
+@typeparam TPanel where TPanel : IPanel
+
+<div class="panel @Class @(Visible ? string.Empty : "panel--hidden")" @ref="_panelEl">
+    <div class="panel-header" @ref="_headerEl">
+        <span class="panel-title">
+            @if (PinnedRef is not null)
+            {
+                <span class="panel-pin-icon" title="Pinned">📌</span>
+            }
+            @DisplayTitle
+        </span>
+        <div class="panel-header-actions">
+            @if (CanPin && PinnedRef is null)
+            {
+                <button class="panel-pin-btn" title="Pin this panel" @onclick="OnPin">📌</button>
+            }
+            <button class="panel-close"
+                    title="@(PinnedRef is not null ? "Unpin" : "Close")"
+                    @onclick="OnClose">✕</button>
+        </div>
+    </div>
+    @if (TitleAddon is not null)
+    {
+        @TitleAddon
+    }
+    @if (PreBody is not null)
+    {
+        @PreBody
+    }
+    <div class="panel-body">
+        @ChildContent
+    </div>
+    @if (Footer is not null)
+    {
+        @Footer
+    }
+</div>

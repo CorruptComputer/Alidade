@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Alidade.Osm.Models.Nsi;
 using Alidade.Osm.Handlers.Tagging;
 
-namespace Alidade.Components.Panels;
+namespace Alidade.Components.Panels.Inspector;
 
 /// <summary>
 ///   Raw key/value tag editor for an OSM element. When <see cref="ElementRef"/> is set

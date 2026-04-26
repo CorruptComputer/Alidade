@@ -1,26 +1,25 @@
-@if (validationState.State.PanelVisible)
-{
-    <div class="validation-panel">
-        <div class="validation-header">
-            <span>Validation</span>
-            @if (validationState.State.IsRunning)
-            {
-                <span class="validation-spinner">…</span>
-            }
-            <button class="panel-close" @onclick="Close">X</button>
-        </div>
-
+<Panel TPanel="ValidationPanel"
+       Visible="@validationState.State.PanelVisible"
+       OnClose="Close"
+       Class="panel--left">
+    <TitleAddon>
+        @if (validationState.State.IsRunning)
+        {
+            <span class="validation-spinner">…</span>
+        }
+    </TitleAddon>
+    <ChildContent>
         @if (!validationState.State.Issues.Any())
         {
             <div class="validation-empty">No issues found.</div>
         }
         else
         {
-            foreach (ValidationSeverities severity in new[] { ValidationSeverities.Error, ValidationSeverities.Warning, ValidationSeverities.Info })
+            @foreach (ValidationSeverities severity in new[] { ValidationSeverities.Error, ValidationSeverities.Warning, ValidationSeverities.Info })
             {
                 List<ValidationIssue> issues = validationState.State.Issues
                     .Where(i => i.Severity == severity).ToList();
-                if (!issues.Any())
+                @if (!issues.Any())
                 {
                     continue;
                 }
@@ -44,5 +43,5 @@
                 </div>
             }
         }
-    </div>
-}
+    </ChildContent>
+</Panel>

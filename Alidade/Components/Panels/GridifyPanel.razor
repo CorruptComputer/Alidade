@@ -1,9 +1,7 @@
-<div class="gridify-panel @(_visible ? "" : "gridify-panel--hidden")" @ref="_panelEl">
-    <div class="gridify-header" @ref="_headerEl">
-        <span>Gridify</span>
-        <button class="panel-close" @onclick="Cancel">X</button>
-    </div>
-
+<Panel TPanel="GridifyPanel"
+       Visible="@_visible"
+       OnClose="Cancel"
+       Class="panel--left">
     @if (_state.WayId is null)
     {
         <div class="gridify-no-selection">
@@ -51,4 +49,4 @@
             <button class="btn-primary" @onclick="ApplyAsync">Apply</button>
         </div>
     }
-</div>
+</Panel>

@@ -15,8 +15,11 @@ public partial class MultiSelectInspectorPanel(
     PresetService presetService,
     IMediator mediator,
     SelectionStateService selectionState,
-    EditBufferStateService editBufferState) : IDisposable
+    EditBufferStateService editBufferState) : IPanel, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Inspector";
+
     private ImmutableHashSet<OsmElementRef> _selected = [];
     private string? _commonGeometry;
     private string _featureTypeLabel = string.Empty;

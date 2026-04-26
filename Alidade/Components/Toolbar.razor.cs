@@ -1,4 +1,4 @@
-namespace Alidade.Components.Panels;
+namespace Alidade.Components;
 
 /// <summary>
 ///   Main toolbar containing tool selection buttons, upload, and auth controls.

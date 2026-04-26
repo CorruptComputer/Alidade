@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
 using Alidade.Osm.Models.Nsi;
 using Alidade.Osm.Models.Tagging;
 using Microsoft.AspNetCore.Components.Web;
@@ -19,9 +18,11 @@ public partial class InspectorPanel(
     NsiService nsiService,
     IMediator mediator,
     SelectionStateService selectionState,
-    EditBufferStateService editBufferState,
-    IJSRuntime js) : IDisposable
+    EditBufferStateService editBufferState) : IPanel, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Inspector";
+
     /// <summary>
     ///   When set, the panel is pinned to this element and does not follow selection changes.
     /// </summary>
@@ -29,11 +30,6 @@ public partial class InspectorPanel(
     public OsmElementRef? PinnedRef { get; set; }
 
     private bool IsPinned => PinnedRef is not null;
-
-    private string PanelClass
-        => IsPinned
-            ? "inspector-panel--pinned"
-            : (_targetRef is null ? "inspector-panel-hidden" : string.Empty);
 
     private OsmElementRef? _targetRef;
     private ImmutableHashSet<OsmElementRef> _lastSelected = [];
@@ -48,10 +44,6 @@ public partial class InspectorPanel(
     private NsiItem? _matchedNsiBrand;
     private bool _nsiBrandIncomplete;
     private ElementReference _searchInput;
-
-    private ElementReference _panelEl;
-    private ElementReference _headerEl;
-    private bool _dragInitialized;
 
     /// <inheritdoc />
     protected override void OnInitialized()
@@ -71,23 +63,6 @@ public partial class InspectorPanel(
 
         RefreshLabel();
         RefreshPreset();
-    }
-
-    /// <inheritdoc />
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (!_dragInitialized)
-        {
-            try
-            {
-                await js.InvokeVoidAsync("makePanelDraggable", _panelEl, _headerEl);
-                _dragInitialized = true;
-            }
-            catch
-            {
-                // JS not ready yet
-            }
-        }
     }
 
     private void OnSelectionChanged(object? sender, EventArgs e)

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Alidade.Osm.Models.Tagging;
 using Alidade.Osm.Handlers.Tagging;
 
-namespace Alidade.Components.Panels;
+namespace Alidade.Components.Panels.Inspector;
 
 /// <summary>
 ///   Renders a single preset field (check, radio, combo, number, or text) and dispatches

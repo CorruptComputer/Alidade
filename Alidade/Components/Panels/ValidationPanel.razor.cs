@@ -5,8 +5,11 @@ namespace Alidade.Components.Panels;
 /// </summary>
 public partial class ValidationPanel(
     IMediator mediator,
-    ValidationStateService validationState) : IDisposable
+    ValidationStateService validationState) : IPanel, IDisposable
 {
+    /// <inheritdoc/>
+    public static string Title => "Validation";
+
     /// <inheritdoc />
     protected override void OnInitialized()
     {

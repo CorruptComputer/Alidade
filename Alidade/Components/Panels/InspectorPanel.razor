@@ -1,24 +1,13 @@
-<div class="inspector-panel @PanelClass" @ref="_panelEl">
+@using Alidade.Components.Panels.Inspector;
 
-    @* Header is always in the DOM so the drag ref stays valid across selection changes. *@
-    <div class="inspector-header" @ref="_headerEl">
-        <span class="inspector-title">
-            @if (IsPinned)
-            {
-                <span class="inspector-pin-icon" title="Pinned">📌</span>
-            }
-            @_elementLabel
-        </span>
-        <div class="inspector-header-actions">
-            @if (!IsPinned && _targetRef is not null)
-            {
-                <button class="inspector-pin-btn" title="Pin this panel" @onclick="PinCurrent">📌</button>
-            }
-            <button class="inspector-close"
-                    title="@(IsPinned ? "Unpin" : "Deselect (Escape)")"
-                    @onclick="OnClose">X</button>
-        </div>
-    </div>
+<Panel TPanel="InspectorPanel"
+       CanPin="@(!IsPinned)"
+       PinnedRef="PinnedRef"
+       OnClose="OnClose"
+       OnPin="PinCurrent"
+       Visible="@(_targetRef is not null || IsPinned)"
+       Class="@(IsPinned ? "panel--pinned" : null)"
+       Title="@_elementLabel">
 
     @if (_targetRef is not null)
     {
@@ -124,4 +113,5 @@
 
         <RelationsSection ElementRef="_targetRef" />
     }
-</div>
+
+</Panel>
