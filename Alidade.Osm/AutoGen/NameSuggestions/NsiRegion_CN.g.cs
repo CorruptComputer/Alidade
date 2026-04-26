@@ -842,17 +842,29 @@ public static class NsiRegion_CN
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"途虎", [@"brand:wikidata"] = @"Q114064893", [@"brand:zh"] = @"途虎", [@"name"] = @"途虎", [@"name:zh"] = @"途虎", },
             Terms: [@"途虎", @"途虎养车"]),
         new NsiItem(
+            DisplayName: @"南方电网",
+            Id: @"southernpowergrid-07dd34",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q209039", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"南方电网", [@"brand:en"] = @"Southern Power Grid", [@"brand:wikidata"] = @"Q209039", [@"brand:zh"] = @"南方电网", [@"name"] = @"南方电网", [@"name:en"] = @"Southern Power Grid", [@"name:zh"] = @"南方电网", [@"operator"] = @"南方电网有限公司", [@"operator:en"] = @"Southern Power Grid", [@"operator:wikidata"] = @"Q209039", [@"operator:zh"] = @"南方电网有限公司", },
+            Terms: [@"southern power grid", @"中国南方电网", @"南方电网", @"南方电网有限公司"]),
+        new NsiItem(
             DisplayName: @"国家电网",
             Id: @"stategrid-07dd34",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q209078", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"国家电网", [@"brand:en"] = @"State Grid", [@"brand:wikidata"] = @"Q209078", [@"brand:zh"] = @"国家电网", [@"name"] = @"国家电网", [@"name:en"] = @"State Grid", [@"name:zh"] = @"国家电网", [@"operator"] = @"国家电网有限公司", [@"operator:en"] = @"State Grid Corporation of China", [@"operator:wikidata"] = @"Q209078", [@"operator:zh"] = @"国家电网有限公司", },
-            Terms: [@"state grid", @"state grid corporation of china", @"国家电网", @"国家电网有限公司"]),
+            Terms: [@"state grid", @"state grid corporation of china", @"中国国家电网", @"国家电网", @"国家电网有限公司"]),
         new NsiItem(
             DisplayName: @"小鹏超充站",
             Id: @"xpengsupercharger-07dd34",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q63035278", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"小鹏", [@"brand:en"] = @"Xpeng", [@"brand:wikidata"] = @"Q63035278", [@"brand:zh"] = @"小鹏", [@"name"] = @"小鹏超充站", [@"name:en"] = @"Xpeng Supercharger", [@"name:zh"] = @"小鹏超充站", },
             Terms: [@"xpeng", @"xpeng supercharger", @"小鹏", @"小鹏超充站"]),
+        new NsiItem(
+            DisplayName: @"滴滴充电",
+            Id: @"didicharging-a352c2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q137999513", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"滴滴充电", [@"brand:en"] = @"DiDi Charging", [@"brand:wikidata"] = @"Q137999513", [@"brand:zh"] = @"滴滴充电", [@"name"] = @"滴滴充电", [@"name:en"] = @"DiDi Charging", [@"name:zh"] = @"滴滴充电", [@"old_name"] = @"小桔充电", [@"old_name:en"] = @"Orange Charging", [@"old_name:zh"] = @"小桔充电", },
+            Terms: [@"didi charging", @"orange charging", @"小桔充电", @"滴滴充电"]),
         new NsiItem(
             DisplayName: @"特来电",
             Id: @"teld-07dd34",
@@ -950,11 +962,11 @@ public static class NsiRegion_CN
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"临榆炸鸡腿", [@"brand:wikidata"] = @"Q136192743", [@"brand:zh-Hans"] = @"临榆炸鸡腿", [@"brand:zh-Hant"] = @"臨榆炸雞腿", [@"cuisine"] = @"fried_chicken", [@"delivery"] = @"yes", [@"name"] = @"临榆炸鸡腿", [@"name:zh"] = @"临榆炸鸡腿", [@"name:zh-Hans"] = @"临榆炸鸡腿", [@"name:zh-Hant"] = @"臨榆炸雞腿", [@"takeaway"] = @"yes", },
             Terms: [@"临榆炸鸡腿", @"臨榆炸雞腿"]),
         new NsiItem(
-            DisplayName: @"八方雲集 Bafang Dumpling",
-            Id: @"bafangdumpling-dd590e",
+            DisplayName: @"八方雲集",
+            Id: @"eightway-70aa35",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q28417381", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"八方雲集 Bafang Dumpling", [@"brand:en"] = @"Bafang Dumpling", [@"brand:wikidata"] = @"Q28417381", [@"brand:zh"] = @"八方雲集", [@"brand:zh-Hans"] = @"八方云集", [@"brand:zh-Hant"] = @"八方雲集", [@"cuisine"] = @"dumplings", [@"name"] = @"八方雲集 Bafang Dumpling", [@"name:en"] = @"Bafang Dumpling", [@"name:zh"] = @"八方雲集", [@"name:zh-Hans"] = @"八方云集", [@"name:zh-Hant"] = @"八方雲集", [@"takeaway"] = @"yes", },
-            Terms: [@"bafang dumpling", @"八方云集", @"八方雲集", @"八方雲集 bafang dumpling"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"八方雲集", [@"brand:en"] = @"Eight Way", [@"brand:wikidata"] = @"Q28417381", [@"brand:zh"] = @"八方雲集", [@"cuisine"] = @"dumplings", [@"name"] = @"八方雲集", [@"name:en"] = @"Eight Way", [@"name:zh"] = @"八方雲集", [@"takeaway"] = @"yes", },
+            Terms: [@"eight way", @"八方雲集"]),
         new NsiItem(
             DisplayName: @"华莱士",
             Id: @"wallace-65b4e8",
@@ -1323,7 +1335,7 @@ public static class NsiRegion_CN
             Terms: [@"sakura jp", @"桜にほんご", @"樱花日语"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -1510,8 +1522,8 @@ public static class NsiRegion_CN
         new NsiItem(
             DisplayName: @"十秒到云南过桥米线",
             Id: @"yuanshimiaodaoyunnanricenoodle-0a8e9b",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"十秒到云南过桥米线", [@"brand:en"] = @"Yuan Shi Miao Dao Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese", [@"name"] = @"十秒到云南过桥米线", [@"name:en"] = @"Yuan Shi Miao Dao Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese;noodle", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"十秒到云南过桥米线", [@"brand:en"] = @"Yuan Shi Miao Dao Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese;noodle", [@"name"] = @"十秒到云南过桥米线", [@"name:en"] = @"Yuan Shi Miao Dao Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
             Terms: [@"yuan shi miao dao yunnan rice noodle", @"十秒到云南过桥米线"]),
         new NsiItem(
             DisplayName: @"南京大牌档",
@@ -1826,17 +1838,29 @@ public static class NsiRegion_CN
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Topgolf", [@"brand:wikidata"] = @"Q7824379", [@"leisure"] = @"sports_centre", [@"name"] = @"Topgolf", [@"sport"] = @"golf", },
             Terms: [@"topgolf"]),
         new NsiItem(
+            DisplayName: @"南方电网",
+            Id: @"southernpowergrid-9ee13d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q209039", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"南方电网", [@"brand:en"] = @"Southern Power Grid", [@"brand:wikidata"] = @"Q209039", [@"brand:zh"] = @"南方电网", [@"man_made"] = @"charge_point", [@"operator"] = @"南方电网有限公司", [@"operator:en"] = @"Southern Power Grid", [@"operator:wikidata"] = @"Q209039", [@"operator:zh"] = @"南方电网有限公司", },
+            Terms: [@"southern power grid", @"中国南方电网", @"南方电网", @"南方电网有限公司"]),
+        new NsiItem(
             DisplayName: @"国家电网",
             Id: @"stategrid-9ee13d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q209078", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"国家电网", [@"brand:en"] = @"State Grid", [@"brand:wikidata"] = @"Q209078", [@"brand:zh"] = @"国家电网", [@"man_made"] = @"charge_point", [@"operator"] = @"国家电网有限公司", [@"operator:en"] = @"State Grid Corporation of China", [@"operator:wikidata"] = @"Q209078", [@"operator:zh"] = @"国家电网有限公司", },
-            Terms: [@"state grid", @"state grid corporation of china", @"国家电网", @"国家电网有限公司"]),
+            Terms: [@"state grid", @"state grid corporation of china", @"中国国家电网", @"国家电网", @"国家电网有限公司"]),
         new NsiItem(
             DisplayName: @"小鹏超充站",
             Id: @"xpeng-9ee13d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q63035278", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"小鹏", [@"brand:en"] = @"Xpeng", [@"brand:wikidata"] = @"Q63035278", [@"brand:zh"] = @"小鹏", [@"man_made"] = @"charge_point", },
             Terms: [@"小鹏超充站", @"xpeng", @"小鹏"]),
+        new NsiItem(
+            DisplayName: @"滴滴充电",
+            Id: @"didicharging-9bfece",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137999513", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"滴滴充电", [@"brand:en"] = @"DiDi Charging", [@"brand:wikidata"] = @"Q137999513", [@"brand:zh"] = @"滴滴充电", [@"man_made"] = @"charge_point", [@"old_name"] = @"小桔充电", [@"old_name:en"] = @"Orange Charging", [@"old_name:zh"] = @"小桔充电", },
+            Terms: [@"didi charging", @"orange charging", @"小桔充电", @"滴滴充电"]),
         new NsiItem(
             DisplayName: @"特来电",
             Id: @"teld-9ee13d",
@@ -2023,6 +2047,12 @@ public static class NsiRegion_CN
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62605260", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"巴黎贝甜", [@"brand:en"] = @"Paris Baguette", [@"brand:wikidata"] = @"Q62605260", [@"brand:zh"] = @"巴黎贝甜", [@"name"] = @"巴黎贝甜", [@"name:en"] = @"Paris Baguette", [@"name:zh"] = @"巴黎贝甜", [@"shop"] = @"bakery", },
             Terms: [@"巴黎贝甜 (中国)", @"paris baguette", @"paris baguette cafe", @"巴黎貝甜", @"巴黎贝甜"]),
+        new NsiItem(
+            DisplayName: @"爱达乐",
+            Id: @"addlove-c0ca1d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q20312234", [@"shop"] = @"bakery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"爱达乐", [@"brand:en"] = @"Addlove", [@"brand:wikidata"] = @"Q20312234", [@"brand:zh"] = @"爱达乐", [@"name"] = @"爱达乐", [@"name:en"] = @"Addlove", [@"name:zh"] = @"爱达乐", [@"shop"] = @"bakery", },
+            Terms: [@"addlove", @"爱达乐", @"爱达乐蛋糕", @"爱达乐食品"]),
         new NsiItem(
             DisplayName: @"面包新语",
             Id: @"breadtalk-4517b3",
@@ -3010,8 +3040,8 @@ public static class NsiRegion_CN
         new NsiItem(
             DisplayName: @"大润发",
             Id: @"rtmart-eda947",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7277802", [@"shop"] = @"supermarket", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"大润发", [@"brand:en"] = @"RT-Mart", [@"brand:wikidata"] = @"Q7277802", [@"brand:zh"] = @"大润发", [@"name"] = @"大润发", [@"name:en"] = @"RT-Mart", [@"name:zh"] = @"大润发", [@"shop"] = @"supermarket", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q135550746", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"大润发", [@"brand:en"] = @"RT-Mart", [@"brand:wikidata"] = @"Q135550746", [@"brand:zh"] = @"大润发", [@"name"] = @"大润发", [@"name:en"] = @"RT-Mart", [@"name:zh"] = @"大润发", [@"shop"] = @"supermarket", },
             Terms: [@"rt-mart", @"大润发", @"大润发超市"]),
         new NsiItem(
             DisplayName: @"家家悦",

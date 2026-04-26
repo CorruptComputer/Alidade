@@ -146,6 +146,12 @@ public static class NsiRegion_ID
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UOB", [@"brand:en"] = @"UOB", [@"brand:wikidata"] = @"Q2064074", [@"brand:zh"] = @"大华银行", [@"operator"] = @"UOB", [@"operator:wikidata"] = @"Q2064074", },
             Terms: [@"united overseas bank", @"uob", @"大华银行"]),
         new NsiItem(
+            DisplayName: @"하나은행",
+            Id: @"kebhanabank-a2e321",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q484047", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"하나은행", [@"brand:en"] = @"KEB Hana Bank", [@"brand:ko"] = @"하나은행", [@"brand:wikidata"] = @"Q484047", [@"operator"] = @"하나은행", [@"operator:wikidata"] = @"Q484047", },
+            Terms: [@"keb hana bank", @"keb하나은행", @"하나은행"]),
+        new NsiItem(
             DisplayName: @"Bank BJB",
             Id: @"bankbjb-aa7852",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q12474472", },
@@ -266,6 +272,12 @@ public static class NsiRegion_ID
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UOB", [@"brand:en"] = @"UOB", [@"brand:wikidata"] = @"Q2064074", [@"brand:zh"] = @"大华银行", [@"name"] = @"UOB", [@"name:en"] = @"UOB", [@"name:zh"] = @"大华银行", },
             Terms: [@"united overseas bank", @"uob", @"大华银行"]),
         new NsiItem(
+            DisplayName: @"하나은행",
+            Id: @"kebhanabank-f6aa18",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q484047", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"하나은행", [@"brand:en"] = @"KEB Hana Bank", [@"brand:ko"] = @"하나은행", [@"brand:wikidata"] = @"Q484047", [@"name"] = @"하나은행", [@"name:en"] = @"KEB Hana Bank", [@"name:ko"] = @"하나은행", },
+            Terms: [@"keb hana bank", @"keb하나은행", @"하나은행"]),
+        new NsiItem(
             DisplayName: @"BenGong's Tea",
             Id: @"bengongstea-27c575",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q124799096", [@"cuisine"] = @"bubble_tea", },
@@ -319,6 +331,12 @@ public static class NsiRegion_ID
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q97221992", [@"cuisine"] = @"coffee_shop", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Kopi Kenangan", [@"brand:wikidata"] = @"Q97221992", [@"cuisine"] = @"coffee_shop", [@"diet:halal"] = @"only", [@"name"] = @"Kopi Kenangan", [@"takeaway"] = @"yes", },
             Terms: [@"kopi kenangan"]),
+        new NsiItem(
+            DisplayName: @"Macao Imperial Tea",
+            Id: @"macaoimperialtea-5ac393",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q137921377", [@"cuisine"] = @"bubble_tea", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Macao Imperial Tea", [@"brand:en"] = @"Macao Imperial Tea", [@"brand:wikidata"] = @"Q137921377", [@"brand:zh"] = @"澳門皇茶", [@"cuisine"] = @"bubble_tea", [@"name"] = @"Macao Imperial Tea", [@"takeaway"] = @"yes", },
+            Terms: [@"macao imperial tea", @"澳門皇茶"]),
         new NsiItem(
             DisplayName: @"Maxx Coffee",
             Id: @"maxxcoffee-4ccab9",
@@ -423,7 +441,7 @@ public static class NsiRegion_ID
             Terms: [@"secret recipe"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -525,7 +543,7 @@ public static class NsiRegion_ID
             Terms: [@"california fried chicken"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -595,6 +613,18 @@ public static class NsiRegion_ID
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5057734", [@"leisure"] = @"fitness_centre", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Celebrity Fitness", [@"brand:wikidata"] = @"Q5057734", [@"leisure"] = @"fitness_centre", [@"name"] = @"Celebrity Fitness", },
             Terms: [@"celebrity fitness"]),
+        new NsiItem(
+            DisplayName: @"Fit Hub",
+            Id: @"fithub-5c610e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138671218", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Fit Hub", [@"brand:wikidata"] = @"Q138671218", [@"leisure"] = @"fitness_centre", [@"name"] = @"Fit Hub", },
+            Terms: [@"fit hub"]),
+        new NsiItem(
+            DisplayName: @"FTL Gym",
+            Id: @"ftlgym-5c610e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138670800", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"FTL Gym", [@"brand:wikidata"] = @"Q138670800", [@"leisure"] = @"fitness_centre", [@"name"] = @"FTL Gym", },
+            Terms: [@"ftl gym"]),
         new NsiItem(
             DisplayName: @"Snap Fitness",
             Id: @"snapfitness-551086",
@@ -889,6 +919,12 @@ public static class NsiRegion_ID
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12485604", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Hero Supermarket", [@"brand:wikidata"] = @"Q12485604", [@"name"] = @"Hero Supermarket", [@"shop"] = @"supermarket", },
             Terms: [@"hero supermarket"]),
+        new NsiItem(
+            DisplayName: @"Indomaret Fresh",
+            Id: @"indomaretfresh-9b33de",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138347581", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Indomaret Fresh", [@"brand:wikidata"] = @"Q138347581", [@"name"] = @"Indomaret Fresh", [@"shop"] = @"supermarket", },
+            Terms: [@"indomaret fresh"]),
         new NsiItem(
             DisplayName: @"Lotte Mart",
             Id: @"lottemart-9b33de",

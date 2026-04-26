@@ -56,6 +56,12 @@ public static class NsiRegion_SL
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mlinar", [@"brand:wikidata"] = @"Q62082464", [@"name"] = @"Mlinar", [@"shop"] = @"bakery", },
             Terms: [@"mlinar"]),
         new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
+        new NsiItem(
             DisplayName: @"PS Fashion",
             Id: @"psfashion-9cb936",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q30642228", [@"shop"] = @"clothes", },

@@ -30,7 +30,7 @@ public static class NsiRegion_DE_SN_GEOJSON
             Id: @"teilauto-c26449",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"brand:wikidata"] = @"Q2400658", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"brand"] = @"teilAuto", [@"brand:wikidata"] = @"Q2400658", [@"operator"] = @"teilAuto eG", [@"operator:type"] = @"private", },
-            Terms: [@"teilauto", @"teilauto eg"]),
+            Terms: [@"mobility center gmbh", @"teilauto", @"teilauto eg"]),
         new NsiItem(
             DisplayName: @"AOK Plus",
             Id: @"aokplus-6e8fbd",
@@ -55,12 +55,6 @@ public static class NsiRegion_DE_SN_GEOJSON
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q114193481", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"TTM", [@"brand:wikidata"] = @"Q114193481", [@"name"] = @"TTM", [@"shop"] = @"doityourself", },
             Terms: [@"ttm"]),
-        new NsiItem(
-            DisplayName: @"teilAuto eG",
-            Id: @"teilautoeg-0cbba8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q2400658", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"teilAuto eG", [@"operator:wikidata"] = @"Q2400658", },
-            Terms: [@"mobility center gmbh", @"teilauto eg"]),
         new NsiItem(
             DisplayName: @"DREWAG",
             Id: @"drewag-b8794d",
@@ -176,17 +170,11 @@ public static class NsiRegion_DE_SN_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Ferngas Netzgesellschaft", [@"operator:wikidata"] = @"Q108874442", [@"substance"] = @"gas", },
             Terms: [@"evg thüringen-sachsen", @"ferngas netzgesellschaft"]),
         new NsiItem(
-            DisplayName: @"SachsenEnergie",
-            Id: @"sachsenenergie-2bc2b4",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q104758900", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"SachsenEnergie", [@"operator:wikidata"] = @"Q104758900", },
-            Terms: [@"sachsenenergie"]),
-        new NsiItem(
             DisplayName: @"SachsenNetze",
             Id: @"sachsennetze-2bc2b4",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q124370321", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"SachsenNetze", [@"operator:wikidata"] = @"Q124370321", },
-            Terms: [@"sachsennetze"]),
+            Terms: [@"ensonetz", @"sachsenenergie", @"sachsennetze"]),
         new NsiItem(
             DisplayName: @"Stadtentwässerung Dresden",
             Id: @"stadtentwasserungdresden-2bc2b4",
@@ -224,17 +212,11 @@ public static class NsiRegion_DE_SN_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Ferngas Netzgesellschaft", [@"operator:wikidata"] = @"Q108874442", [@"pipeline"] = @"substation", [@"substance"] = @"gas", },
             Terms: [@"evg thüringen-sachsen", @"ferngas netzgesellschaft"]),
         new NsiItem(
-            DisplayName: @"SachsenEnergie",
-            Id: @"sachsenenergie-e6f7d6",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q104758900", [@"pipeline"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"SachsenEnergie", [@"operator:wikidata"] = @"Q104758900", [@"pipeline"] = @"substation", },
-            Terms: [@"sachsenenergie"]),
-        new NsiItem(
             DisplayName: @"SachsenNetze",
             Id: @"sachsennetze-e6f7d6",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124370321", [@"pipeline"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"SachsenNetze", [@"operator:wikidata"] = @"Q124370321", [@"pipeline"] = @"substation", },
-            Terms: [@"sachsennetze"]),
+            Terms: [@"ensonetz", @"sachsenenergie", @"sachsennetze"]),
         new NsiItem(
             DisplayName: @"Stadtentwässerung Dresden",
             Id: @"stadtentwasserungdresden-e6f7d6",
@@ -283,6 +265,12 @@ public static class NsiRegion_DE_SN_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2328555", [@"power"] = @"minor_line", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Leipzig", [@"operator:wikidata"] = @"Q2328555", [@"power"] = @"minor_line", },
             Terms: [@"stadtwerke leipzig"]),
+        new NsiItem(
+            DisplayName: @"SachsenEnergie",
+            Id: @"sachsenenergie-ccaacd",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q104758900", [@"power"] = @"plant", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"SachsenEnergie", [@"operator:wikidata"] = @"Q104758900", [@"power"] = @"plant", },
+            Terms: [@"sachsenenergie"]),
         new NsiItem(
             DisplayName: @"Mitnetz Strom",
             Id: @"mitnetzstrom-792d3b",

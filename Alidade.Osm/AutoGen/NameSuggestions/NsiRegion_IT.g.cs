@@ -314,10 +314,10 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparkasse - Cassa di Risparmio", [@"brand:wikidata"] = @"Q3661920", [@"operator"] = @"Sparkasse - Cassa di Risparmio", [@"operator:wikidata"] = @"Q3661920", },
             Terms: [@"cassa di risparmio di bolzano", @"cassa risp di bolzano spa", @"sparkasse", @"sparkasse - cassa di risparmio", @"sparkasse südtirol"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-3ecec5",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-4a82ee",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit Bank", [@"operator:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit", [@"operator:wikidata"] = @"Q45568", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"ViviBanca",
@@ -494,10 +494,10 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Sparkasse - Cassa di Risparmio", [@"brand:wikidata"] = @"Q3661920", [@"name"] = @"Sparkasse - Cassa di Risparmio", [@"name:de"] = @"Sparkasse", [@"name:it"] = @"Cassa di Risparmio", [@"official_name"] = @"Südtiroler Sparkasse – Cassa di Risparmio di Bolzano", },
             Terms: [@"cassa di risparmio", @"cassa di risparmio di bolzano", @"cassa risp di bolzano spa", @"sparkasse", @"sparkasse - cassa di risparmio", @"sparkasse südtirol", @"südtiroler sparkasse – cassa di risparmio di bolzano"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-ff6e1c",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-d887c4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit Bank", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"ViviBanca",
@@ -572,6 +572,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"casino", [@"brand"] = @"Olympic Casino", [@"brand:wikidata"] = @"Q11150186", [@"name"] = @"Olympic Casino", },
             Terms: [@"olympic casino"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-a1174d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q126913632", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"bike-energy",
             Id: @"bikeenergy-b97cbe",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q67770877", },
@@ -579,7 +585,7 @@ public static class NsiRegion_IT
             Terms: [@"bike-energy", @"bike-energy ladestation"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -607,6 +613,12 @@ public static class NsiRegion_IT
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q19935749", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Fastned", [@"brand:wikidata"] = @"Q19935749", [@"operator"] = @"Fastned", [@"operator:wikidata"] = @"Q19935749", },
             Terms: [@"fastned"]),
+        new NsiItem(
+            DisplayName: @"FastWay",
+            Id: @"fastway-0532c0",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q138795551", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"FastWay", [@"brand:wikidata"] = @"Q138795551", },
+            Terms: [@"fastway"]),
         new NsiItem(
             DisplayName: @"Milence",
             Id: @"milence-1903ef",
@@ -771,7 +783,7 @@ public static class NsiRegion_IT
             Terms: [@"Sushi Shop (Europe)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1088,6 +1100,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"blood:plasma"] = @"yes", [@"brand"] = @"AVIS", [@"brand:wikidata"] = @"Q3627251", [@"donation:compensation"] = @"no", [@"healthcare"] = @"blood_donation", [@"name"] = @"AVIS", },
             Terms: [@"avis"]),
         new NsiItem(
+            DisplayName: @"Fratres",
+            Id: @"fratres-749faf",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3752459", [@"healthcare"] = @"blood_donation", },
+            AddTags: new Dictionary<string, string> { [@"blood:plasma"] = @"yes", [@"brand"] = @"Fratres", [@"brand:wikidata"] = @"Q3752459", [@"donation:compensation"] = @"no", [@"healthcare"] = @"blood_donation", },
+            Terms: [@"fratres"]),
+        new NsiItem(
             DisplayName: @"Laser Game Evolution",
             Id: @"lasergameevolution-60da35",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q130214296", [@"leisure"] = @"amusement_arcade", },
@@ -1154,6 +1172,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"K1 Speed", [@"brand:wikidata"] = @"Q105615897", [@"leisure"] = @"sports_centre", [@"name"] = @"K1 Speed", [@"sport"] = @"karting", },
             Terms: [@"k1 speed"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-f43120",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"bike-energy",
             Id: @"bikeenergy-1491ca",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q67770877", [@"man_made"] = @"charge_point", },
@@ -1161,7 +1185,7 @@ public static class NsiRegion_IT
             Terms: [@"bike-energy", @"bike-energy ladestation"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -1189,6 +1213,12 @@ public static class NsiRegion_IT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19935749", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fastned", [@"brand:wikidata"] = @"Q19935749", [@"man_made"] = @"charge_point", [@"operator"] = @"Fastned", [@"operator:wikidata"] = @"Q19935749", },
             Terms: [@"fastned"]),
+        new NsiItem(
+            DisplayName: @"FastWay",
+            Id: @"fastway-ea8e7c",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138795551", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"FastWay", [@"brand:wikidata"] = @"Q138795551", [@"man_made"] = @"charge_point", },
+            Terms: [@"fastway"]),
         new NsiItem(
             DisplayName: @"Milence",
             Id: @"milence-05685b",
@@ -1441,6 +1471,12 @@ public static class NsiRegion_IT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q266572", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"dm", [@"brand:wikidata"] = @"Q266572", [@"name"] = @"dm", [@"shop"] = @"chemist", },
             Terms: [@"dm", @"dm drogerie markt", @"dm-drogerie markt deutschland"]),
+        new NsiItem(
+            DisplayName: @"Normal",
+            Id: @"normal-bae2a7",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
+            Terms: [@"normal"]),
         new NsiItem(
             DisplayName: @"Splendidi e Splendenti",
             Id: @"splendidiesplendenti-864e82",
@@ -1790,6 +1826,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Despar", [@"brand:wikidata"] = @"Q131344742", [@"name"] = @"Despar", [@"shop"] = @"convenience", },
             Terms: [@"despar"]),
         new NsiItem(
+            DisplayName: @"Doro Daily",
+            Id: @"dorodaily-1aaf3e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137801479", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Doro Supermercati", [@"brand:wikidata"] = @"Q137801479", [@"name"] = @"Doro Daily", [@"shop"] = @"convenience", },
+            Terms: [@"Doro Daily", @"doro supermercati"]),
+        new NsiItem(
             DisplayName: @"Eni Shop",
             Id: @"enishop-a98884",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q565594", [@"shop"] = @"convenience", },
@@ -1804,8 +1846,8 @@ public static class NsiRegion_IT
         new NsiItem(
             DisplayName: @"InCoop",
             Id: @"incoop-1aaf3e",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q131934414", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"InCoop", [@"brand:wikidata"] = @"Q131934414", [@"name"] = @"InCoop", [@"shop"] = @"convenience", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1129774", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"InCoop", [@"brand:wikidata"] = @"Q1129774", [@"name"] = @"InCoop", [@"shop"] = @"convenience", },
             Terms: [@"incoop"]),
         new NsiItem(
             DisplayName: @"Margherita Conad",
@@ -2078,6 +2120,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Kasanova", [@"brand:wikidata"] = @"Q116214505", [@"name"] = @"Kasanova", [@"shop"] = @"houseware", },
             Terms: [@"kasanova"]),
         new NsiItem(
+            DisplayName: @"Maury's",
+            Id: @"maurys-6a1c4e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138307558", [@"shop"] = @"houseware", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Maury's", [@"brand:wikidata"] = @"Q138307558", [@"name"] = @"Maury's", [@"shop"] = @"houseware", },
+            Terms: [@"maury's"]),
+        new NsiItem(
             DisplayName: @"Risparmio Casa",
             Id: @"risparmiocasa-6a1c4e",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q125936928", [@"shop"] = @"houseware", },
@@ -2342,6 +2390,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Ard Discount", [@"brand:wikidata"] = @"Q105102666", [@"name"] = @"Ard Discount", [@"shop"] = @"supermarket", },
             Terms: [@"ard discount"]),
         new NsiItem(
+            DisplayName: @"Basko",
+            Id: @"basko-0cb133",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q136464609", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Basko Supermercati", [@"brand:wikidata"] = @"Q136464609", [@"name"] = @"Basko", [@"shop"] = @"supermarket", },
+            Terms: [@"Basko", @"basko supermercati"]),
+        new NsiItem(
             DisplayName: @"Conad",
             Id: @"conad-06d4eb",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q639075", [@"shop"] = @"supermarket", },
@@ -2389,6 +2443,12 @@ public static class NsiRegion_IT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q131344742", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Despar", [@"brand:wikidata"] = @"Q131344742", [@"name"] = @"Despar", [@"shop"] = @"supermarket", },
             Terms: [@"despar"]),
+        new NsiItem(
+            DisplayName: @"Doro Supermercati",
+            Id: @"dorosupermercati-0cb133",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q136464598", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Doro Supermercati", [@"brand:wikidata"] = @"Q136464598", [@"name"] = @"Doro Supermercati", [@"shop"] = @"supermarket", [@"short_name"] = @"Doro", },
+            Terms: [@"doro", @"doro supermercati"]),
         new NsiItem(
             DisplayName: @"Dpiù",
             Id: @"dpiu-0cb133",
@@ -2461,6 +2521,12 @@ public static class NsiRegion_IT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q6064990", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Ipercoop", [@"brand:wikidata"] = @"Q6064990", [@"name"] = @"Ipercoop", [@"shop"] = @"supermarket", },
             Terms: [@"ipercoop"]),
+        new NsiItem(
+            DisplayName: @"Iperfresco Basko",
+            Id: @"iperfrescobasko-0cb133",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q136464623", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Iperfresco Basko", [@"brand:wikidata"] = @"Q136464623", [@"name"] = @"Iperfresco Basko", [@"shop"] = @"supermarket", },
+            Terms: [@"iperfresco basko"]),
         new NsiItem(
             DisplayName: @"Italmark",
             Id: @"italmark-0cb133",
@@ -2774,10 +2840,16 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Gamelife", [@"brand:wikidata"] = @"Q105713299", [@"name"] = @"Gamelife", [@"shop"] = @"video_games", },
             Terms: [@"gamelife", @"gamestop"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"GrosMarket",
+            Id: @"grosmarketcashandcarry-a8e84b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q136464559", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"GrosMarket", [@"brand:wikidata"] = @"Q136464559", [@"name"] = @"GrosMarket Cash & Carry", [@"shop"] = @"wholesale", },
+            Terms: [@"grosmarket"]),
+        new NsiItem(
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"A&O",
@@ -2877,7 +2949,7 @@ public static class NsiRegion_IT
             Terms: [@"logis", @"logis hotels"]),
         new NsiItem(
             DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
+            Id: @"mamashelter-876740",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
             Terms: [@"mama shelter"]),
@@ -2962,8 +3034,8 @@ public static class NsiRegion_IT
         new NsiItem(
             DisplayName: @"Share Now",
             Id: @"sharenow-663d52",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q62021602", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q62021602", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q131572664", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q131572664", },
             Terms: [@"share now"]),
         new NsiItem(
             DisplayName: @"a2a",
@@ -2986,8 +3058,8 @@ public static class NsiRegion_IT
         new NsiItem(
             DisplayName: @"Agsm Verona Spa",
             Id: @"agsmveronaspa-2c5517",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q17620223", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Agsm Verona Spa", [@"operator:wikidata"] = @"Q17620223", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q124713351", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Agsm Verona Spa", [@"operator:wikidata"] = @"Q124713351", },
             Terms: [@"agsm verona spa"]),
         new NsiItem(
             DisplayName: @"Aldi (Aldi Süd group)",
@@ -3226,8 +3298,8 @@ public static class NsiRegion_IT
         new NsiItem(
             DisplayName: @"Ministero dell'Istruzione, dell'Università e della Ricerca",
             Id: @"ministerodellistruzionedelluniversitaedellaricerca-5be443",
-            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q1307461", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Ministero dell'Istruzione, dell'Università e della Ricerca", [@"operator:short"] = @"MIUR", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q1307461", },
+            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q3858483", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Ministero dell'Istruzione, dell'Università e della Ricerca", [@"operator:short"] = @"MIUR", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q3858483", },
             Terms: [@"ministero dell'istruzione, dell'università e della ricerca", @"miur"]),
         new NsiItem(
             DisplayName: @"Korian",
@@ -3316,8 +3388,8 @@ public static class NsiRegion_IT
         new NsiItem(
             DisplayName: @"Agsm Verona Spa",
             Id: @"agsmveronaspa-60858d",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q17620223", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Agsm Verona Spa", [@"operator:wikidata"] = @"Q17620223", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q124713351", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Agsm Verona Spa", [@"operator:wikidata"] = @"Q124713351", },
             Terms: [@"agsm verona spa"]),
         new NsiItem(
             DisplayName: @"Aldi (Aldi Süd group)",
@@ -3434,17 +3506,23 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"Iliad", [@"operator:wikidata"] = @"Q55433734", },
             Terms: [@"iliad", @"iliad italia"]),
         new NsiItem(
+            DisplayName: @"Infrastrutture Wireless Italiane",
+            Id: @"infrastrutturewirelessitaliane-c21648",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q20756653", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"Infrastrutture Wireless Italiane", [@"operator:short"] = @"INWIT", [@"operator:wikidata"] = @"Q20756653", },
+            Terms: [@"infrastrutture wireless italiane", @"inwit"]),
+        new NsiItem(
             DisplayName: @"Rai Way",
             Id: @"raiway-c21648",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q3929528", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"Rai Way", [@"operator:wikidata"] = @"Q3929528", },
             Terms: [@"rai way"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-c21648",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-c21648",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q1060049", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"TIM",
             Id: @"tim-a8a470",
@@ -3500,6 +3578,18 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Trans Adriatic Pipeline AG", [@"operator:wikidata"] = @"Q29476714", },
             Terms: [@"trans adriatic pipeline ag"]),
         new NsiItem(
+            DisplayName: @"Gaia",
+            Id: @"gaia-4bf574",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pumping_station", [@"operator:wikidata"] = @"Q137808977", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pumping_station", [@"operator"] = @"Gaia", [@"operator:wikidata"] = @"Q137808977", },
+            Terms: [@"gaia", @"gaia s.p.a."]),
+        new NsiItem(
+            DisplayName: @"Gaia",
+            Id: @"gaia-3a1567",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"reservoir_covered", [@"operator:wikidata"] = @"Q137808977", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"reservoir_covered", [@"operator"] = @"Gaia", [@"operator:wikidata"] = @"Q137808977", },
+            Terms: [@"gaia", @"gaia s.p.a."]),
+        new NsiItem(
             DisplayName: @"Enel",
             Id: @"enel-7878e2",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q651222", },
@@ -3554,11 +3644,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"KiK", [@"operator:wikidata"] = @"Q883965", },
             Terms: [@"kik"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-00fbd3",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-00fbd3",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q1060049", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Sudtiroler Sparkasse",
             Id: @"sudtirolersparkasse-00fbd3",
@@ -3584,23 +3674,41 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"Iliad", [@"operator:wikidata"] = @"Q55433734", },
             Terms: [@"iliad", @"iliad italia"]),
         new NsiItem(
+            DisplayName: @"Infrastrutture Wireless Italiane",
+            Id: @"infrastrutturewirelessitaliane-089e09",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q20756653", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"Infrastrutture Wireless Italiane", [@"operator:short"] = @"INWIT", [@"operator:wikidata"] = @"Q20756653", },
+            Terms: [@"infrastrutture wireless italiane", @"inwit"]),
+        new NsiItem(
             DisplayName: @"Rai Way",
             Id: @"raiway-089e09",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q3929528", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"Rai Way", [@"operator:wikidata"] = @"Q3929528", },
             Terms: [@"rai way"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-089e09",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-089e09",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q1060049", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"TIM",
             Id: @"tim-7203dd",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q144617", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"TIM", [@"operator:wikidata"] = @"Q144617", },
             Terms: [@"tim"]),
+        new NsiItem(
+            DisplayName: @"Gaia",
+            Id: @"gaia-14660c",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"water_tower", [@"operator:wikidata"] = @"Q137808977", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"water_tower", [@"operator"] = @"Gaia", [@"operator:wikidata"] = @"Q137808977", },
+            Terms: [@"gaia", @"gaia s.p.a."]),
+        new NsiItem(
+            DisplayName: @"Gaia",
+            Id: @"gaia-cbe776",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"water_works", [@"operator:wikidata"] = @"Q137808977", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"water_works", [@"operator"] = @"Gaia", [@"operator:wikidata"] = @"Q137808977", },
+            Terms: [@"gaia", @"gaia s.p.a."]),
         new NsiItem(
             DisplayName: @"International Paper",
             Id: @"internationalpaper-db7d89",
@@ -3638,6 +3746,12 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"government"] = @"social_welfare", [@"name"] = @"INPS", [@"office"] = @"government", [@"operator"] = @"Istituto Nazionale della Previdenza Sociale", [@"operator:short"] = @"INPS", [@"operator:wikidata"] = @"Q1674860", },
             Terms: [@"INPS (Italy)", @"inps", @"istituto nazionale della previdenza sociale"]),
         new NsiItem(
+            DisplayName: @"Gaia",
+            Id: @"gaia-35ef3d",
+            Tags: new Dictionary<string, string> { [@"office"] = @"water_utility", [@"operator:wikidata"] = @"Q137808977", },
+            AddTags: new Dictionary<string, string> { [@"name"] = @"Gaia", [@"office"] = @"water_utility", [@"operator"] = @"Gaia", [@"operator:wikidata"] = @"Q137808977", },
+            Terms: [@"gaia", @"gaia s.p.a."]),
+        new NsiItem(
             DisplayName: @"ABC",
             Id: @"abc-bb421b",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q3601133", [@"pipeline"] = @"substation", },
@@ -3674,11 +3788,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Trans Adriatic Pipeline AG", [@"operator:wikidata"] = @"Q29476714", [@"pipeline"] = @"substation", },
             Terms: [@"trans adriatic pipeline ag"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-4b4a6a",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-4b4a6a",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"catenary_mast", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"catenary_mast", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"catenary_mast", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Ente Autonomo Volturno",
             Id: @"enteautonomovolturno-4b4a6a",
@@ -3722,11 +3836,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"FS", [@"operator:wikidata"] = @"Q83823", [@"power"] = @"line", },
             Terms: [@"fs"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-b6e02f",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-b6e02f",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"line", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"line", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Terna",
             Id: @"terna-ab3602",
@@ -3746,11 +3860,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"FS", [@"operator:wikidata"] = @"Q83823", [@"power"] = @"minor_line", },
             Terms: [@"fs"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-c74937",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-c74937",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"minor_line", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"minor_line", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Terna",
             Id: @"terna-cc99f0",
@@ -3782,11 +3896,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"FS", [@"operator:wikidata"] = @"Q83823", [@"power"] = @"pole", },
             Terms: [@"fs"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-db4d8e",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-db4d8e",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"pole", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"pole", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Terna",
             Id: @"terna-139558",
@@ -3854,11 +3968,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Iren Energia", [@"operator:wikidata"] = @"Q3801865", [@"power"] = @"substation", },
             Terms: [@"iren energia"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-5e9b52",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-5e9b52",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"substation", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"substation", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Terna",
             Id: @"terna-43c0c5",
@@ -3878,11 +3992,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"FS", [@"operator:wikidata"] = @"Q83823", [@"power"] = @"tower", },
             Terms: [@"fs"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-4a8556",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-4a8556",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"tower", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"tower", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Terna",
             Id: @"terna-9e7c20",
@@ -3950,11 +4064,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Iren Energia", [@"operator:wikidata"] = @"Q3801865", [@"power"] = @"transformer", },
             Terms: [@"iren energia"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-713962",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-713962",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"transformer", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"power"] = @"transformer", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"Terna",
             Id: @"terna-6818c7",
@@ -3968,23 +4082,17 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Terna", [@"operator:wikidata"] = @"Q936325", [@"route"] = @"power", [@"type"] = @"route", },
             Terms: [@"terna", @"terna s.p.a."]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-4ed8db",
+            DisplayName: @"Rete Ferroviaria Italiana",
+            Id: @"reteferroviariaitaliana-4ed8db",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1060049", [@"route"] = @"railway", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"route"] = @"railway", [@"type"] = @"route", },
-            Terms: [@"rfi"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Rete Ferroviaria Italiana", [@"operator:short"] = @"RFI", [@"operator:wikidata"] = @"Q1060049", [@"route"] = @"railway", [@"type"] = @"route", },
+            Terms: [@"rete ferroviaria italiana", @"rfi"]),
         new NsiItem(
             DisplayName: @"TIM",
             Id: @"tim-16a737",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q144617", [@"telecom"] = @"exchange", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"TIM", [@"operator:wikidata"] = @"Q144617", [@"telecom"] = @"exchange", },
             Terms: [@"telecom italia", @"tim"]),
-        new NsiItem(
-            DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
-            Terms: [@"arriva"]),
         new NsiItem(
             DisplayName: @"Big Bus Tours",
             Id: @"bigbustours-71d643",
@@ -4010,29 +4118,11 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"network"] = @"ÖBB Nightjet", [@"network:wikidata"] = @"Q28127371", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"öbb nightjet"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-d13656",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q1060049", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"RFI", [@"network:wikidata"] = @"Q1060049", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
-            Terms: [@"rfi"]),
-        new NsiItem(
             DisplayName: @"TGV",
             Id: @"tgv-6ad4d6",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q129337", [@"railway"] = @"station", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"TGV", [@"network:wikidata"] = @"Q129337", [@"operator"] = @"SNCF Voyageurs", [@"operator:wikidata"] = @"Q93090957", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"sncf voyageurs", @"tgv"]),
-        new NsiItem(
-            DisplayName: @"Trenitalia",
-            Id: @"trenitalia-d13656",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q286650", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Trenitalia", [@"network:short"] = @"TI", [@"network:wikidata"] = @"Q286650", [@"operator"] = @"Trenitalia", [@"operator:short"] = @"TI", [@"operator:wikidata"] = @"Q286650", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
-            Terms: [@"ti", @"trenitalia", @"trenitalia s.p.a"]),
-        new NsiItem(
-            DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
-            Terms: [@"arriva"]),
         new NsiItem(
             DisplayName: @"Big Bus Tours",
             Id: @"bigbustours-5f2e08",
@@ -4058,22 +4148,10 @@ public static class NsiRegion_IT
             AddTags: new Dictionary<string, string> { [@"network"] = @"ÖBB Nightjet", [@"network:wikidata"] = @"Q28127371", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"öbb nightjet"]),
         new NsiItem(
-            DisplayName: @"RFI",
-            Id: @"rfi-66b763",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q1060049", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"RFI", [@"network:wikidata"] = @"Q1060049", [@"route"] = @"train", [@"type"] = @"route", },
-            Terms: [@"rfi"]),
-        new NsiItem(
             DisplayName: @"TGV",
             Id: @"tgv-0fcd6a",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q129337", [@"route"] = @"train", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"TGV", [@"network:wikidata"] = @"Q129337", [@"operator"] = @"SNCF Voyageurs", [@"operator:wikidata"] = @"Q93090957", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"sncf voyageurs", @"tgv"]),
-        new NsiItem(
-            DisplayName: @"Trenitalia",
-            Id: @"trenitalia-66b763",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q286650", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Trenitalia", [@"network:short"] = @"TI", [@"network:wikidata"] = @"Q286650", [@"operator"] = @"Trenitalia", [@"operator:short"] = @"TI", [@"operator:wikidata"] = @"Q286650", [@"route"] = @"train", [@"type"] = @"route", },
-            Terms: [@"ti", @"trenitalia", @"trenitalia s.p.a"]),
     ];
 }

@@ -40,8 +40,8 @@ public static class NsiRegion_IT_45_GEOJSON
         new NsiItem(
             DisplayName: @"Provincia di Bologna",
             Id: @"provinciadibologna-85a6ed",
-            Tags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator:wikidata"] = @"Q16139", },
-            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"Provincia di Bologna", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q16139", },
+            Tags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator:wikidata"] = @"Q18288145", },
+            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"Provincia di Bologna", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q18288145", },
             Terms: [@"provincia di bologna"]),
         new NsiItem(
             DisplayName: @"Provincia di Modena",

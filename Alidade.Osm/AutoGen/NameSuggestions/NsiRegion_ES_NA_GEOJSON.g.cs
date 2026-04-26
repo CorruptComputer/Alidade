@@ -26,10 +26,22 @@ public static class NsiRegion_ES_NA_GEOJSON
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"NBus", [@"network:wikidata"] = @"Q74445218", [@"public_transport"] = @"platform", },
             Terms: [@"nbus"]),
         new NsiItem(
+            DisplayName: @"TUC-EHG Pamplona/Iruña",
+            Id: @"transporteurbanocomarcaldepamplona-9bd8ef",
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q7129449", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Transporte Urbano Comarcal de Pamplona", [@"network:eu"] = @"Iruñeko Eskualdeko Hiri Garraioa", [@"network:short"] = @"TUC-EHG", [@"network:wikidata"] = @"Q7129449", [@"public_transport"] = @"platform", },
+            Terms: [@"TUC-EHG Pamplona/Iruña", @"iruñeko eskualdeko hiri garraioa", @"transporte urbano comarcal de pamplona", @"tuc pamplona", @"tuc-ehg"]),
+        new NsiItem(
             DisplayName: @"NBus",
             Id: @"nbus-1fc942",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q74445218", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"NBus", [@"network:wikidata"] = @"Q74445218", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"nbus"]),
+        new NsiItem(
+            DisplayName: @"TUC-EHG Pamplona/Iruña",
+            Id: @"transporteurbanocomarcaldepamplona-1fc942",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7129449", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Transporte Urbano Comarcal de Pamplona", [@"network:eu"] = @"Iruñeko Eskualdeko Hiri Garraioa", [@"network:short"] = @"TUC-EHG", [@"network:wikidata"] = @"Q7129449", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"TUC-EHG Pamplona/Iruña", @"iruñeko eskualdeko hiri garraioa", @"transporte urbano comarcal de pamplona", @"tuc pamplona", @"tuc-ehg"]),
     ];
 }

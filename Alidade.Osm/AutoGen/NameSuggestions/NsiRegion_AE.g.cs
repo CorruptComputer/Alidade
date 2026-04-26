@@ -471,7 +471,7 @@ public static class NsiRegion_AE
             Terms: [@"Sushi Shop (Europe)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -730,8 +730,8 @@ public static class NsiRegion_AE
         new NsiItem(
             DisplayName: @"Unilabs",
             Id: @"unilabs-99f3b6",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q134885714", [@"healthcare"] = @"laboratory", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Unilabs", [@"brand:wikidata"] = @"Q134885714", [@"healthcare"] = @"laboratory", [@"name"] = @"Unilabs", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1602925", [@"healthcare"] = @"laboratory", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Unilabs", [@"brand:wikidata"] = @"Q1602925", [@"healthcare"] = @"laboratory", [@"name"] = @"Unilabs", },
             Terms: [@"unilabs"]),
         new NsiItem(
             DisplayName: @"Barry's",
@@ -1161,7 +1161,7 @@ public static class NsiRegion_AE
             Terms: [@"LXR Hotels & Resorts", @"lxr"]),
         new NsiItem(
             DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
+            Id: @"mamashelter-876740",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
             Terms: [@"mama shelter"]),

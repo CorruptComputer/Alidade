@@ -375,7 +375,7 @@ public static class NsiRegion_ZA
             Terms: [@"school of rock"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -1522,8 +1522,8 @@ public static class NsiRegion_ZA
         new NsiItem(
             DisplayName: @"Street Fever",
             Id: @"streetfever-067547",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116894504", [@"shop"] = @"shoes", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Street Fever", [@"brand:wikidata"] = @"Q116894504", [@"name"] = @"Street Fever", [@"shop"] = @"shoes", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24233996", [@"shop"] = @"shoes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Street Fever", [@"brand:wikidata"] = @"Q24233996", [@"name"] = @"Street Fever", [@"shop"] = @"shoes", },
             Terms: [@"street fever"]),
         new NsiItem(
             DisplayName: @"Tekkie Town",

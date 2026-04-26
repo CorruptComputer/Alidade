@@ -369,7 +369,7 @@ public static class NsiRegion_IE
             Terms: [@"supermac's"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -447,7 +447,7 @@ public static class NsiRegion_IE
             Terms: [@"school of rock"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -793,6 +793,12 @@ public static class NsiRegion_IE
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q6123139", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Boots", [@"brand:wikidata"] = @"Q6123139", [@"name"] = @"Boots", [@"shop"] = @"chemist", },
             Terms: [@"boots", @"boots the chemist"]),
+        new NsiItem(
+            DisplayName: @"Normal",
+            Id: @"normal-bae2a7",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
+            Terms: [@"normal"]),
         new NsiItem(
             DisplayName: @"Superdrug",
             Id: @"superdrug-b67e62",
@@ -2180,6 +2186,12 @@ public static class NsiRegion_IE
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Transport for Ireland", [@"network:wikidata"] = @"Q17100681", [@"public_transport"] = @"platform", },
             Terms: [@"transport for ireland"]),
         new NsiItem(
+            DisplayName: @"Commuter",
+            Id: @"commuter-6ba055",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q5155093", [@"railway"] = @"station", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Commuter", [@"network:wikidata"] = @"Q5155093", [@"operator"] = @"Iarnród Éireann", [@"operator:en"] = @"Irish Rail", [@"operator:ga"] = @"Iarnród Éireann", [@"operator:wikidata"] = @"Q73043", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            Terms: [@"commuter", @"dublin commuter", @"iarnród éireann", @"irish rail"]),
+        new NsiItem(
             DisplayName: @"InterCity",
             Id: @"intercity-6ba055",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q6044834", [@"railway"] = @"station", },
@@ -2221,6 +2233,12 @@ public static class NsiRegion_IE
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q17100681", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Transport for Ireland", [@"network:wikidata"] = @"Q17100681", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"transport for ireland"]),
+        new NsiItem(
+            DisplayName: @"Commuter",
+            Id: @"commuter-73b98a",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q5155093", [@"route"] = @"train", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Commuter", [@"network:wikidata"] = @"Q5155093", [@"operator"] = @"Iarnród Éireann", [@"operator:en"] = @"Irish Rail", [@"operator:ga"] = @"Iarnród Éireann", [@"operator:wikidata"] = @"Q73043", [@"route"] = @"train", [@"type"] = @"route", },
+            Terms: [@"commuter", @"dublin commuter", @"iarnród éireann", @"irish rail"]),
         new NsiItem(
             DisplayName: @"InterCity",
             Id: @"intercity-73b98a",

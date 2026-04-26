@@ -20,12 +20,6 @@ public static class NsiRegion_CA_SK_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Pizza Depot", [@"brand:wikidata"] = @"Q133254934", [@"cuisine"] = @"pizza", [@"name"] = @"Pizza Depot", [@"takeaway"] = @"yes", },
             Terms: [@"pizza depot"]),
         new NsiItem(
-            DisplayName: @"Rona+",
-            Id: @"rona-381944",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123688669", [@"shop"] = @"doityourself", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona+", [@"brand:wikidata"] = @"Q123688669", [@"name"] = @"Rona+", [@"shop"] = @"doityourself", },
-            Terms: [@"lowes", @"réno-dépôt", @"rona+"]),
-        new NsiItem(
             DisplayName: @"Pet Planet",
             Id: @"petplanet-852051",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133566481", [@"shop"] = @"pet", },

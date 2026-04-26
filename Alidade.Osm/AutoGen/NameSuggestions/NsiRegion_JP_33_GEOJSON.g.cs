@@ -14,6 +14,18 @@ public static class NsiRegion_JP_33_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"サンディ",
+            Id: @"sundi-3d6a22",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11305717", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"サンディ", [@"brand:en"] = @"Sundi", [@"brand:ja"] = @"サンディ", [@"brand:wikidata"] = @"Q11305717", [@"name"] = @"サンディ", [@"name:ja"] = @"サンディ", [@"shop"] = @"supermarket", },
+            Terms: [@"sundi", @"サンディ"]),
+        new NsiItem(
+            DisplayName: @"マルナカ",
+            Id: @"marunaka-24bb01",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11341399", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"マルナカ", [@"brand:en"] = @"Marunaka", [@"brand:ja"] = @"マルナカ", [@"brand:wikidata"] = @"Q11341399", [@"name"] = @"マルナカ", [@"name:en"] = @"Marunaka", [@"name:ja"] = @"マルナカ", [@"shop"] = @"supermarket", },
+            Terms: [@"marunaka", @"マルナカ"]),
+        new NsiItem(
             DisplayName: @"岡山市",
             Id: @"bf508b-98af9a",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q200078", },

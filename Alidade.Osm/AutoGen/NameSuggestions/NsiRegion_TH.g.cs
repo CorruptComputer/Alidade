@@ -303,7 +303,7 @@ public static class NsiRegion_TH
             Terms: [@"secret recipe"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -423,7 +423,7 @@ public static class NsiRegion_TH
             Terms: [@"burger & lobster"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -553,6 +553,12 @@ public static class NsiRegion_TH
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q127120", [@"leisure"] = @"fitness_centre", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fitness First", [@"brand:wikidata"] = @"Q127120", [@"leisure"] = @"fitness_centre", [@"name"] = @"Fitness First", },
             Terms: [@"fitness first"]),
+        new NsiItem(
+            DisplayName: @"Fitness24Seven",
+            Id: @"fitness24seven-46465b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Fitness24Seven", [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", [@"name"] = @"Fitness24Seven", },
+            Terms: [@"fitness24seven"]),
         new NsiItem(
             DisplayName: @"Jetts Fitness",
             Id: @"jettsfitness-8f2b5b",
@@ -901,6 +907,12 @@ public static class NsiRegion_TH
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7825140", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Tops", [@"brand:en"] = @"Tops", [@"brand:th"] = @"ท็อปส์", [@"brand:wikidata"] = @"Q7825140", [@"name"] = @"Tops", [@"name:en"] = @"Tops", [@"name:th"] = @"ท็อปส์", [@"shop"] = @"supermarket", },
             Terms: [@"Tops (Thailand)", @"tops", @"ท็อปส์"]),
+        new NsiItem(
+            DisplayName: @"ロピア",
+            Id: @"lopia-2268ad",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11350624", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ロピア", [@"brand:en"] = @"Lopia", [@"brand:ja"] = @"ロピア", [@"brand:wikidata"] = @"Q11350624", [@"name"] = @"ロピア", [@"name:en"] = @"Lopia", [@"name:ja"] = @"ロピア", [@"shop"] = @"supermarket", },
+            Terms: [@"lopia", @"ロピア"]),
         new NsiItem(
             DisplayName: @"Cha Payom",
             Id: @"chapayom-af1b20",

@@ -56,10 +56,10 @@ public static class NsiRegion_BA
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparkassen", [@"brand:wikidata"] = @"Q1555572", [@"operator"] = @"Sparkassen", [@"operator:wikidata"] = @"Q1555572", },
             Terms: [@"sparkassen"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-3ecec5",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-4a82ee",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit Bank", [@"operator:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit", [@"operator:wikidata"] = @"Q45568", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"НЛБ Комерцијална банка",
@@ -92,10 +92,10 @@ public static class NsiRegion_BA
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Sparkassen", [@"brand:wikidata"] = @"Q1555572", [@"name"] = @"Sparkassen", },
             Terms: [@"sparkassen"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-ff6e1c",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-d887c4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit Bank", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"НЛБ Комерцијална банка",
@@ -141,7 +141,7 @@ public static class NsiRegion_BA
             Terms: [@"cinestar"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -205,6 +205,12 @@ public static class NsiRegion_BA
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q127603433", [@"shop"] = @"beauty", },
             AddTags: new Dictionary<string, string> { [@"alt_name"] = @"Nomasvello", [@"beauty"] = @"hair_removal", [@"brand"] = @"No+vello", [@"brand:wikidata"] = @"Q127603433", [@"name"] = @"No+vello", [@"shop"] = @"beauty", },
             Terms: [@"no+vello", @"nomasvello"]),
+        new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
         new NsiItem(
             DisplayName: @"Inter Cars",
             Id: @"intercars-a4b6c1",

@@ -495,7 +495,7 @@ public static class NsiRegion_VN
             Terms: [@"mathnasium", @"mathnasium learning center"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -555,7 +555,7 @@ public static class NsiRegion_VN
             Terms: [@"suavinex"]),
         new NsiItem(
             DisplayName: @"Paris Baguette",
-            Id: @"parisbaguette-e1a226",
+            Id: @"parisbaguette-f87f10",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62605260", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Paris Baguette", [@"brand:wikidata"] = @"Q62605260", [@"name"] = @"Paris Baguette", [@"shop"] = @"bakery", },
             Terms: [@"paris baguette", @"paris baguette cafe"]),

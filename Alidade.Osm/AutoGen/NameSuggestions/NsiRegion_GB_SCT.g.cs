@@ -68,6 +68,12 @@ public static class NsiRegion_GB_SCT
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Kauai", [@"brand:wikidata"] = @"Q116498799", [@"cuisine"] = @"breakfast;burger;salad", [@"name"] = @"Kauai", },
             Terms: [@"kauai"]),
         new NsiItem(
+            DisplayName: @"Maki & Ramen",
+            Id: @"makiandramen-8c6ca4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q138685542", [@"cuisine"] = @"japanese", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Maki & Ramen", [@"brand:wikidata"] = @"Q138685542", [@"cuisine"] = @"japanese", [@"diet:vegan"] = @"yes", [@"diet:vegetarian"] = @"yes", [@"name"] = @"Maki & Ramen", },
+            Terms: [@"maki & ramen"]),
+        new NsiItem(
             DisplayName: @"Wahaca",
             Id: @"wahaca-2c96f3",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q21006829", [@"cuisine"] = @"mexican", },
@@ -116,6 +122,12 @@ public static class NsiRegion_GB_SCT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"One-O-One", [@"brand:wikidata"] = @"Q131863290", [@"name"] = @"One-O-One", [@"shop"] = @"convenience", },
             Terms: [@"one-o-one"]),
         new NsiItem(
+            DisplayName: @"Scotmid",
+            Id: @"scotmid-8978c5",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7435719", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Scotmid", [@"brand:wikidata"] = @"Q7435719", [@"name"] = @"Scotmid", [@"shop"] = @"convenience", },
+            Terms: [@"scotmid", @"scotmid co-operative"]),
+        new NsiItem(
             DisplayName: @"USave (UK)",
             Id: @"usave-8978c5",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q121435010", [@"shop"] = @"convenience", },
@@ -145,6 +157,12 @@ public static class NsiRegion_GB_SCT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5436342", [@"shop"] = @"paint", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Farrow & Ball", [@"brand:wikidata"] = @"Q5436342", [@"name"] = @"Farrow & Ball", [@"shop"] = @"paint", },
             Terms: [@"farrow & ball"]),
+        new NsiItem(
+            DisplayName: @"Scotmid",
+            Id: @"scotmid-0ed976",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7435719", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Scotmid", [@"brand:wikidata"] = @"Q7435719", [@"name"] = @"Scotmid", [@"shop"] = @"supermarket", },
+            Terms: [@"scotmid"]),
         new NsiItem(
             DisplayName: @"Hostelling Scotland",
             Id: @"hostellingscotland-c9551a",

@@ -76,8 +76,8 @@ public static class NsiRegion_IN
         new NsiItem(
             DisplayName: @"Allahabad Bank",
             Id: @"allahabadbank-ad0527",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2018840", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Allahabad Bank", [@"brand:wikidata"] = @"Q2018840", [@"operator"] = @"Allahabad Bank", [@"operator:wikidata"] = @"Q2018840", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2003789", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Allahabad Bank", [@"brand:wikidata"] = @"Q2003789", [@"operator"] = @"Allahabad Bank", [@"operator:wikidata"] = @"Q2003789", },
             Terms: [@"allahabad bank"]),
         new NsiItem(
             DisplayName: @"Almora Urban Cooperative Bank Limited",
@@ -412,8 +412,8 @@ public static class NsiRegion_IN
         new NsiItem(
             DisplayName: @"Allahabad Bank",
             Id: @"allahabadbank-34f411",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q2018840", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Allahabad Bank", [@"brand:wikidata"] = @"Q2018840", [@"name"] = @"Allahabad Bank", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q2003789", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Allahabad Bank", [@"brand:wikidata"] = @"Q2003789", [@"name"] = @"Allahabad Bank", },
             Terms: [@"allahabad bank"]),
         new NsiItem(
             DisplayName: @"Almora Urban Cooperative Bank Limited",
@@ -921,7 +921,7 @@ public static class NsiRegion_IN
             Terms: [@"southern fried chicken"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1173,7 +1173,7 @@ public static class NsiRegion_IN
             Terms: [@"chinita"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -1712,6 +1712,18 @@ public static class NsiRegion_IN
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Hobby Lobby", [@"brand:wikidata"] = @"Q5874938", [@"name"] = @"Hobby Lobby", [@"shop"] = @"craft", },
             Terms: [@"hobby lobby"]),
         new NsiItem(
+            DisplayName: @"Aavin",
+            Id: @"aavin-6e9671",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q4662814", [@"shop"] = @"dairy", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Aavin", [@"brand:wikidata"] = @"Q4662814", [@"name"] = @"Aavin", [@"shop"] = @"dairy", },
+            Terms: [@"aavin"]),
+        new NsiItem(
+            DisplayName: @"Amul",
+            Id: @"amul-6e9671",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2721482", [@"shop"] = @"dairy", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Amul", [@"brand:wikidata"] = @"Q2721482", [@"name"] = @"Amul", [@"shop"] = @"dairy", },
+            Terms: [@"amul"]),
+        new NsiItem(
             DisplayName: @"Milma",
             Id: @"milma-6e9671",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3532857", [@"shop"] = @"dairy", },
@@ -1772,6 +1784,12 @@ public static class NsiRegion_IN
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Cromā", [@"brand:wikidata"] = @"Q5187683", [@"name"] = @"Cromā", [@"shop"] = @"electronics", },
             Terms: [@"cromā"]),
         new NsiItem(
+            DisplayName: @"Poorvika",
+            Id: @"poorvika-91ea11",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126911161", [@"shop"] = @"electronics", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Poorvika", [@"brand:wikidata"] = @"Q126911161", [@"name"] = @"Poorvika", [@"shop"] = @"electronics", },
+            Terms: [@"poorvika"]),
+        new NsiItem(
             DisplayName: @"Reliance Digital",
             Id: @"reliancedigital-91ea11",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7311012", [@"shop"] = @"electronics", },
@@ -1795,6 +1813,12 @@ public static class NsiRegion_IN
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q54078", [@"shop"] = @"furniture", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"name"] = @"IKEA", [@"shop"] = @"furniture", },
             Terms: [@"ikea"]),
+        new NsiItem(
+            DisplayName: @"One Station One Product",
+            Id: @"onestationoneproduct-692176",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126935784", [@"shop"] = @"general", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"One Station One Product", [@"brand:wikidata"] = @"Q126935784", [@"name"] = @"One Station One Product", [@"shop"] = @"general", },
+            Terms: [@"one station one product"]),
         new NsiItem(
             DisplayName: @"Archies",
             Id: @"archies-66da3e",
@@ -2210,10 +2234,10 @@ public static class NsiRegion_IN
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Just Watches", [@"brand:wikidata"] = @"Q117822349", [@"name"] = @"Just Watches", [@"shop"] = @"watches", },
             Terms: [@"just watches"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Youth Hostels Association of India",
@@ -2564,6 +2588,12 @@ public static class NsiRegion_IN
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Power Grid Corporation of India Limited", [@"operator:short"] = @"PGCIL", [@"operator:wikidata"] = @"Q3400886", [@"power"] = @"pole", },
             Terms: [@"pgcil", @"power grid corporation of india limited", @"power grid corporation of india ltd", @"powergrid"]),
         new NsiItem(
+            DisplayName: @"GETCO",
+            Id: @"getco-487ae0",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5616984", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"GETCO", [@"operator:wikidata"] = @"Q5616984", [@"power"] = @"substation", },
+            Terms: [@"getco"]),
+        new NsiItem(
             DisplayName: @"Power Grid Corporation of India Limited",
             Id: @"powergridcorporationofindialimited-487ae0",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q3400886", [@"power"] = @"substation", },
@@ -2575,6 +2605,12 @@ public static class NsiRegion_IN
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q3400886", [@"power"] = @"tower", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Power Grid Corporation of India Limited", [@"operator:short"] = @"PGCIL", [@"operator:wikidata"] = @"Q3400886", [@"power"] = @"tower", },
             Terms: [@"pgcil", @"power grid corporation of india limited", @"power grid corporation of india ltd", @"powergrid"]),
+        new NsiItem(
+            DisplayName: @"GETCO",
+            Id: @"getco-1b8373",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5616984", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"GETCO", [@"operator:wikidata"] = @"Q5616984", [@"power"] = @"transformer", },
+            Terms: [@"getco"]),
         new NsiItem(
             DisplayName: @"Power Grid Corporation of India Limited",
             Id: @"powergridcorporationofindialimited-1b8373",

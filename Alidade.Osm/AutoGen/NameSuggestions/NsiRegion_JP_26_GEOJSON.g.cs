@@ -14,6 +14,18 @@ public static class NsiRegion_JP_26_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"あい薬局",
+            Id: @"aipharmacy-003bd0",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand:wikidata"] = @"Q11345601", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand"] = @"ドラッグユタカ", [@"brand:en"] = @"Drug Yutaka", [@"brand:ja"] = @"ドラッグユタカ", [@"brand:wikidata"] = @"Q11345601", [@"healthcare"] = @"pharmacy", [@"name"] = @"あい薬局", [@"name:en"] = @"Ai Pharmacy", [@"name:ja"] = @"あい薬局", },
+            Terms: [@"ai pharmacy", @"drug yutaka", @"あい薬局", @"ドラッグユタカ"]),
+        new NsiItem(
+            DisplayName: @"マツモト",
+            Id: @"matsumoto-3c404f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11340603", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"マツモト", [@"brand:en"] = @"Matsumoto", [@"brand:ja"] = @"マツモト", [@"brand:wikidata"] = @"Q11340603", [@"name"] = @"マツモト", [@"name:en"] = @"Matsumoto", [@"name:ja"] = @"マツモト", [@"shop"] = @"supermarket", },
+            Terms: [@"matsumoto", @"マツモト"]),
+        new NsiItem(
             DisplayName: @"京都市営バス",
             Id: @"kyotocitybus-4f348a",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q4858667", [@"public_transport"] = @"platform", },

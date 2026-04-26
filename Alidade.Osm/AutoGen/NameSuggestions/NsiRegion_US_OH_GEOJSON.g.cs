@@ -964,8 +964,8 @@ public static class NsiRegion_US_OH_GEOJSON
         new NsiItem(
             DisplayName: @"Ohio Power",
             Id: @"ohiopower-7dabf9",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q115902499", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Ohio Power", [@"operator:wikidata"] = @"Q115902499", [@"power"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q109015295", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Ohio Power", [@"operator:wikidata"] = @"Q109015295", [@"power"] = @"substation", },
             Terms: [@"ohio power"]),
         new NsiItem(
             DisplayName: @"Toledo Edison",
@@ -1030,8 +1030,8 @@ public static class NsiRegion_US_OH_GEOJSON
         new NsiItem(
             DisplayName: @"Ohio Power",
             Id: @"ohiopower-2f96e1",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q115902499", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Ohio Power", [@"operator:wikidata"] = @"Q115902499", [@"power"] = @"transformer", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q109015295", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Ohio Power", [@"operator:wikidata"] = @"Q109015295", [@"power"] = @"transformer", },
             Terms: [@"ohio power"]),
         new NsiItem(
             DisplayName: @"Toledo Edison",

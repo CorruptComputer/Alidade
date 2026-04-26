@@ -14,6 +14,24 @@ public static class NsiRegion_CZ_80_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"FCC Česká republika",
+            Id: @"fccceskarepublika-9f065e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q41567664", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"FCC Česká republika", [@"operator:wikidata"] = @"Q41567664", },
+            Terms: [@"fcc česká republika"]),
+        new NsiItem(
+            DisplayName: @"Technické služby Havířov",
+            Id: @"technickesluzbyhavirov-9f065e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q138356492", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Technické služby Havířov", [@"operator:wikidata"] = @"Q138356492", },
+            Terms: [@"technické služby havířov"]),
+        new NsiItem(
+            DisplayName: @"TS-technické služby",
+            Id: @"tstechnickesluzby-9f065e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q138356609", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"TS-technické služby", [@"operator:wikidata"] = @"Q138356609", },
+            Terms: [@"ts-technické služby"]),
+        new NsiItem(
             DisplayName: @"Moravskoslezský kraj",
             Id: @"moravskoslezskykraj-1c1d18",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q190550", },
@@ -103,6 +121,12 @@ public static class NsiRegion_CZ_80_GEOJSON
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q12043044", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"ODIS", [@"network:wikidata"] = @"Q12043044", [@"public_transport"] = @"platform", },
             Terms: [@"odis"]),
+        new NsiItem(
+            DisplayName: @"IDZK (Česko)",
+            Id: @"integrovanadopravazlinskehokraje-2741b9",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"halt", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaná doprava Zlínského kraje", [@"network:short"] = @"IDZK", [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"halt", [@"train"] = @"yes", },
+            Terms: [@"IDZK (Česko)", @"idzk", @"integrovaná doprava zlínského kraje"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-b03030",

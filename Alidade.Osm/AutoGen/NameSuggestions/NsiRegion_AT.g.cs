@@ -321,10 +321,16 @@ public static class NsiRegion_AT
             Terms: [@"bike-energy", @"bike-energy ladestation"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
+        new NsiItem(
+            DisplayName: @"eMotion",
+            Id: @"emotion-d44228",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q139071415", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"eMotion", [@"brand:wikidata"] = @"Q139071415", },
+            Terms: [@"emotion", @"omv emotion"]),
         new NsiItem(
             DisplayName: @"Mer",
             Id: @"mer-36d5f6",
@@ -533,19 +539,19 @@ public static class NsiRegion_AT
             DisplayName: @"AlzaBox",
             Id: @"alzabox-bee63b",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q115254158", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"AlzaBox", [@"brand:wikidata"] = @"Q115254158", [@"operator"] = @"Alza", [@"operator:wikidata"] = @"Q10786832", },
-            Terms: [@"alza", @"alzabox"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"AlzaBox", [@"brand:wikidata"] = @"Q115254158", [@"name"] = @"AlzaBox", },
+            Terms: [@"alzabox"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
         new NsiItem(
-            DisplayName: @"Myflexbox",
+            DisplayName: @"myflexbox",
             Id: @"myflexbox-4d2310",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q117313525", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"Myflexbox", [@"brand:wikidata"] = @"Q117313525", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"myflexbox", [@"brand:wikidata"] = @"Q117313525", },
             Terms: [@"myflexbox"]),
         new NsiItem(
             DisplayName: @"Post Abholstation",
@@ -643,6 +649,12 @@ public static class NsiRegion_AT
             Tags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"brand:wikidata"] = @"Q1618574", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"brand"] = @"Hilfswerk Österreich", [@"brand:wikidata"] = @"Q1618574", },
             Terms: [@"Hilfswerk", @"hilfswerk österreich"]),
+        new NsiItem(
+            DisplayName: @"ÖAMTC Fahrzeuginspektion",
+            Id: @"oamtc-584778",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"vehicle_inspection", [@"brand:wikidata"] = @"Q306057", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"vehicle_inspection", [@"brand"] = @"ÖAMTC", [@"brand:wikidata"] = @"Q306057", [@"name"] = @"ÖAMTC", },
+            Terms: [@"ÖAMTC Fahrzeuginspektion", @"öamtc"]),
         new NsiItem(
             DisplayName: @"belloo",
             Id: @"belloo-6ba58e",
@@ -765,10 +777,16 @@ public static class NsiRegion_AT
             Terms: [@"bike-energy", @"bike-energy ladestation"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
+        new NsiItem(
+            DisplayName: @"eMotion",
+            Id: @"emotion-4afda5",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q139071415", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"eMotion", [@"brand:wikidata"] = @"Q139071415", [@"man_made"] = @"charge_point", },
+            Terms: [@"emotion", @"omv emotion"]),
         new NsiItem(
             DisplayName: @"Mer",
             Id: @"mer-8d56aa",
@@ -781,6 +799,12 @@ public static class NsiRegion_AT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q131904416", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Milence", [@"brand:wikidata"] = @"Q131904416", [@"hgv"] = @"designated", [@"man_made"] = @"charge_point", [@"motorcar"] = @"no", [@"motorcycle"] = @"no", },
             Terms: [@"milence"]),
+        new NsiItem(
+            DisplayName: @"ÖAMTC Stützpunkt",
+            Id: @"oamtc-71b284",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q306057", [@"office"] = @"association", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ÖAMTC", [@"brand:wikidata"] = @"Q306057", [@"name"] = @"ÖAMTC", [@"office"] = @"association", },
+            Terms: [@"ÖAMTC Stützpunkt", @"öamtc"]),
         new NsiItem(
             DisplayName: @"Arbeitsmarktservice Österreich",
             Id: @"arbeitsmarktserviceosterreich-69b0ce",
@@ -1009,12 +1033,6 @@ public static class NsiRegion_AT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q132554064", [@"shop"] = @"car_repair", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Forstinger", [@"brand:wikidata"] = @"Q132554064", [@"name"] = @"Forstinger", [@"shop"] = @"car_repair", },
             Terms: [@"forstinger"]),
-        new NsiItem(
-            DisplayName: @"ÖAMTC",
-            Id: @"oamtc-d1144d",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q306057", [@"shop"] = @"car_repair", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"ÖAMTC", [@"brand:wikidata"] = @"Q306057", [@"name"] = @"ÖAMTC", [@"shop"] = @"car_repair", },
-            Terms: [@"öamtc"]),
         new NsiItem(
             DisplayName: @"Henry Laden",
             Id: @"henryladen-9c2239",
@@ -2138,10 +2156,10 @@ public static class NsiRegion_AT
             AddTags: new Dictionary<string, string> { [@"brand"] = @"TEDi", [@"brand:wikidata"] = @"Q1364603", [@"name"] = @"TEDi", [@"shop"] = @"variety_store", },
             Terms: [@"t€di", @"tedi"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Transgourmet",
@@ -2272,8 +2290,8 @@ public static class NsiRegion_AT
         new NsiItem(
             DisplayName: @"Share Now",
             Id: @"sharenow-663d52",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q62021602", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q62021602", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q131572664", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q131572664", },
             Terms: [@"share now"]),
         new NsiItem(
             DisplayName: @"Bauhaus",
@@ -2752,8 +2770,8 @@ public static class NsiRegion_AT
         new NsiItem(
             DisplayName: @"Federal Office for the Protection of the Constitution and Counterterrorism",
             Id: @"federalofficefortheprotectionoftheconstitutionandcounterterrorism-b9389d",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q443302", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Federal Office for the Protection of the Constitution and Counterterrorism", [@"operator:wikidata"] = @"Q443302", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q105967569", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Federal Office for the Protection of the Constitution and Counterterrorism", [@"operator:wikidata"] = @"Q105967569", },
             Terms: [@"federal office for the protection of the constitution and counterterrorism"]),
         new NsiItem(
             DisplayName: @"KiK",
@@ -3230,6 +3248,12 @@ public static class NsiRegion_AT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"ÖBB-Infrastruktur AG", [@"operator:short"] = @"ÖBB Infra", [@"operator:wikidata"] = @"Q56425426", [@"power"] = @"substation", },
             Terms: [@"öbb infra", @"öbb-infrastruktur ag"]),
         new NsiItem(
+            DisplayName: @"Stadtwerke Schwaz",
+            Id: @"stadtwerkeschwaz-3e6be9",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427430", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Schwaz", [@"operator:wikidata"] = @"Q138427430", [@"power"] = @"substation", },
+            Terms: [@"stadtwerke schwaz"]),
+        new NsiItem(
             DisplayName: @"TIWAG",
             Id: @"tiwag-3e6be9",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1271744", [@"power"] = @"substation", },
@@ -3361,6 +3385,12 @@ public static class NsiRegion_AT
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q56425426", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"ÖBB-Infrastruktur AG", [@"operator:short"] = @"ÖBB Infra", [@"operator:wikidata"] = @"Q56425426", [@"power"] = @"transformer", },
             Terms: [@"öbb infra", @"öbb-infrastruktur ag"]),
+        new NsiItem(
+            DisplayName: @"Stadtwerke Schwaz",
+            Id: @"stadtwerkeschwaz-c84cac",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427430", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Schwaz", [@"operator:wikidata"] = @"Q138427430", [@"power"] = @"transformer", },
+            Terms: [@"stadtwerke schwaz"]),
         new NsiItem(
             DisplayName: @"TIWAG",
             Id: @"tiwag-c84cac",

@@ -38,6 +38,24 @@ public static class NsiRegion_JP_27_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"関西みらい銀行", [@"brand:en"] = @"Kansai Mirai Bank", [@"brand:ja"] = @"関西みらい銀行", [@"brand:wikidata"] = @"Q62679053", [@"name"] = @"関西みらい銀行", [@"name:en"] = @"Kansai Mirai Bank", [@"name:ja"] = @"関西みらい銀行", },
             Terms: [@"kansai mirai bank", @"関西みらい銀行"]),
         new NsiItem(
+            DisplayName: @"コープこうべ",
+            Id: @"coopkobe-69d013",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5137453", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"alt_name:en"] = @"Co-op Kobe", [@"brand"] = @"コープこうべ", [@"brand:en"] = @"CO・OP Kobe", [@"brand:ja"] = @"コープこうべ", [@"brand:wikidata"] = @"Q5137453", [@"name"] = @"コープこうべ", [@"name:en"] = @"CO・OP Kobe", [@"name:ja"] = @"コープこうべ", [@"official_name"] = @"生活協同組合コープこうべ", [@"official_name:en"] = @"The Consumer Co-operative Kobe", [@"official_name:ja"] = @"生活協同組合コープこうべ", [@"shop"] = @"supermarket", },
+            Terms: [@"co-op kobe", @"co・op kobe", @"the consumer co-operative kobe", @"コープこうべ", @"生活協同組合コープこうべ"]),
+        new NsiItem(
+            DisplayName: @"マツモト",
+            Id: @"matsumoto-3c404f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11340603", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"マツモト", [@"brand:en"] = @"Matsumoto", [@"brand:ja"] = @"マツモト", [@"brand:wikidata"] = @"Q11340603", [@"name"] = @"マツモト", [@"name:en"] = @"Matsumoto", [@"name:ja"] = @"マツモト", [@"shop"] = @"supermarket", },
+            Terms: [@"matsumoto", @"マツモト"]),
+        new NsiItem(
+            DisplayName: @"肉のハナマサ",
+            Id: @"hanamasa-4344cc",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11326564", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"肉のハナマサ", [@"brand:en"] = @"Hanamasa", [@"brand:ja"] = @"肉のハナマサ", [@"brand:wikidata"] = @"Q11326564", [@"name"] = @"肉のハナマサ", [@"name:en"] = @"Hanamasa", [@"name:ja"] = @"肉のハナマサ", [@"shop"] = @"supermarket", },
+            Terms: [@"hanamasa", @"ハナマサ", @"ハナマサ肉", @"肉のハナマサ"]),
+        new NsiItem(
             DisplayName: @"吹田市",
             Id: @"8fe0b9-957678",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q653510", },

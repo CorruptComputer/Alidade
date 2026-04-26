@@ -14,6 +14,24 @@ public static class NsiRegion_DE_HE_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Frankfurter Sparkasse",
+            Id: @"frankfurtersparkasse-47fbe2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1445030", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Frankfurter Sparkasse", [@"brand:wikidata"] = @"Q1445030", [@"operator"] = @"Frankfurter Sparkasse", [@"operator:wikidata"] = @"Q1445030", },
+            Terms: [@"frankfurter sparkasse", @"sparkasse frankfurt"]),
+        new NsiItem(
+            DisplayName: @"Frankfurter Volksbank",
+            Id: @"frankfurtervolksbank-28eefa",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1445057", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Frankfurter Volksbank", [@"brand:wikidata"] = @"Q1445057", [@"operator"] = @"Frankfurter Volksbank", [@"operator:wikidata"] = @"Q1445057", },
+            Terms: [@"frankfurter volksbank", @"frankfurter volksbank rhein/main", @"volksbank frankfurt"]),
+        new NsiItem(
+            DisplayName: @"Nassauische Sparkasse",
+            Id: @"nassauischesparkasse-33c66d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1751833", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Nassauische Sparkasse", [@"brand:wikidata"] = @"Q1751833", [@"operator"] = @"Nassauische Sparkasse", [@"operator:wikidata"] = @"Q1751833", },
+            Terms: [@"nassauer sparkasse", @"nassauische sparkasse"]),
+        new NsiItem(
             DisplayName: @"ProCredit Bank",
             Id: @"procreditbank-5cd6db",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q567304", },
@@ -25,6 +43,24 @@ public static class NsiRegion_DE_HE_GEOJSON
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2307146", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank Hessen", [@"brand:wikidata"] = @"Q2307146", [@"operator"] = @"Sparda-Bank Hessen", [@"operator:wikidata"] = @"Q2307146", },
             Terms: [@"sparda-bank", @"sparda-bank hessen", @"sparda-bank hessen eg"]),
+        new NsiItem(
+            DisplayName: @"Frankfurter Sparkasse",
+            Id: @"frankfurtersparkasse-9ffcae",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1445030", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Frankfurter Sparkasse", [@"brand:wikidata"] = @"Q1445030", [@"name"] = @"Frankfurter Sparkasse", [@"short_name"] = @"Fraspa", },
+            Terms: [@"frankfurter sparkasse", @"fraspa", @"sparkasse frankfurt"]),
+        new NsiItem(
+            DisplayName: @"Frankfurter Volksbank",
+            Id: @"frankfurtervolksbank-e7a309",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1445057", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Frankfurter Volksbank", [@"brand:wikidata"] = @"Q1445057", [@"name"] = @"Frankfurter Volksbank", },
+            Terms: [@"frankfurter volksbank", @"frankfurter volksbank rhein/main", @"volksbank frankfurt"]),
+        new NsiItem(
+            DisplayName: @"Nassauische Sparkasse",
+            Id: @"nassauischesparkase-60f681",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1751833", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Nassauische Sparkasse", [@"brand:wikidata"] = @"Q1751833", [@"name"] = @"Nassauische Sparkase", [@"short_name"] = @"Naspa", },
+            Terms: [@"naspa", @"nassauer sparkasse", @"nassauische sparkasse"]),
         new NsiItem(
             DisplayName: @"ProCredit Bank",
             Id: @"procreditbank-f3fcbc",
@@ -458,6 +494,12 @@ public static class NsiRegion_DE_HE_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"K+S", [@"operator:wikidata"] = @"Q658173", },
             Terms: [@"k+s"]),
         new NsiItem(
+            DisplayName: @"Zweckverband Mittelhessische Wasserwerke",
+            Id: @"zweckverbandmittelhessischewasserwerke-2f5411",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q138455669", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Zweckverband Mittelhessische Wasserwerke", [@"operator:short"] = @"ZMW", [@"operator:wikidata"] = @"Q138455669", },
+            Terms: [@"zmw", @"zweckverband mittelhessische wasserwerke"]),
+        new NsiItem(
             DisplayName: @"Avacon Netz",
             Id: @"avaconnetz-a0bf00",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q124369334", },
@@ -506,6 +548,12 @@ public static class NsiRegion_DE_HE_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"ovag Netz", [@"operator:wikidata"] = @"Q128480682", },
             Terms: [@"ovag", @"ovag netz", @"ovag netz gmbh"]),
         new NsiItem(
+            DisplayName: @"Rhönenergie Fulda",
+            Id: @"rhonenergiefulda-73535a",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q15842334", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Rhönenergie Fulda", [@"operator:wikidata"] = @"Q15842334", },
+            Terms: [@"rhönenergie fulda", @"überlandwerk fulda"]),
+        new NsiItem(
             DisplayName: @"Städtische Werke Kassel",
             Id: @"stadtischewerkekassel-73535a",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q1380025", },
@@ -523,12 +571,6 @@ public static class NsiRegion_DE_HE_GEOJSON
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q133567138", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Stadtwerke Bebra", [@"operator:wikidata"] = @"Q133567138", },
             Terms: [@"stadtwerke bebra"]),
-        new NsiItem(
-            DisplayName: @"Überlandwerk Fulda",
-            Id: @"uberlandwerkfulda-73535a",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q332669", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Überlandwerk Fulda", [@"operator:wikidata"] = @"Q332669", },
-            Terms: [@"überlandwerk fulda"]),
         new NsiItem(
             DisplayName: @"Stadtwerke Gießen",
             Id: @"stadtwerkegiessen-011884",
@@ -559,6 +601,12 @@ public static class NsiRegion_DE_HE_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q658173", [@"pipeline"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"K+S", [@"operator:wikidata"] = @"Q658173", [@"pipeline"] = @"substation", },
             Terms: [@"k+s"]),
+        new NsiItem(
+            DisplayName: @"Zweckverband Mittelhessische Wasserwerke",
+            Id: @"zweckverbandmittelhessischewasserwerke-c6962b",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138455669", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Zweckverband Mittelhessische Wasserwerke", [@"operator:short"] = @"ZMW", [@"operator:wikidata"] = @"Q138455669", [@"pipeline"] = @"substation", },
+            Terms: [@"zmw", @"zweckverband mittelhessische wasserwerke"]),
         new NsiItem(
             DisplayName: @"Entega",
             Id: @"entega-57cee2",
@@ -624,7 +672,7 @@ public static class NsiRegion_DE_HE_GEOJSON
             Id: @"avaconnetz-6177b3",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"EAM Netz",
             Id: @"eamnetz-a64edc",
@@ -756,7 +804,7 @@ public static class NsiRegion_DE_HE_GEOJSON
             Id: @"avaconnetz-f46145",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"EAM Netz",
             Id: @"eamnetz-6cfcba",

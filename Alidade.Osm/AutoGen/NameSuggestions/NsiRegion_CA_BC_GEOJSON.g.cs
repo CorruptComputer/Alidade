@@ -62,12 +62,6 @@ public static class NsiRegion_CA_BC_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Canada Computers", [@"brand:wikidata"] = @"Q60763885", [@"name"] = @"Canada Computers", [@"shop"] = @"computer", },
             Terms: [@"canada computers", @"canada computers & electronics"]),
         new NsiItem(
-            DisplayName: @"Rona+",
-            Id: @"rona-381944",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123688669", [@"shop"] = @"doityourself", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona+", [@"brand:wikidata"] = @"Q123688669", [@"name"] = @"Rona+", [@"shop"] = @"doityourself", },
-            Terms: [@"lowes", @"réno-dépôt", @"rona+"]),
-        new NsiItem(
             DisplayName: @"Wellwise",
             Id: @"wellwise-a5f7a9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133255800", [@"shop"] = @"medical_supply", },

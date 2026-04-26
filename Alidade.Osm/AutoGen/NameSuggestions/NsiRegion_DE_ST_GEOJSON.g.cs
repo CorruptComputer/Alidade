@@ -30,7 +30,7 @@ public static class NsiRegion_DE_ST_GEOJSON
             Id: @"teilauto-c26449",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"brand:wikidata"] = @"Q2400658", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"brand"] = @"teilAuto", [@"brand:wikidata"] = @"Q2400658", [@"operator"] = @"teilAuto eG", [@"operator:type"] = @"private", },
-            Terms: [@"teilauto", @"teilauto eg"]),
+            Terms: [@"mobility center gmbh", @"teilauto", @"teilauto eg"]),
         new NsiItem(
             DisplayName: @"AOK Sachsen-Anhalt",
             Id: @"aoksachsenanhalt-dc3c84",
@@ -49,12 +49,6 @@ public static class NsiRegion_DE_ST_GEOJSON
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q114193481", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"TTM", [@"brand:wikidata"] = @"Q114193481", [@"name"] = @"TTM", [@"shop"] = @"doityourself", },
             Terms: [@"ttm"]),
-        new NsiItem(
-            DisplayName: @"teilAuto eG",
-            Id: @"teilautoeg-0cbba8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q2400658", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"teilAuto eG", [@"operator:wikidata"] = @"Q2400658", },
-            Terms: [@"mobility center gmbh", @"teilauto eg"]),
         new NsiItem(
             DisplayName: @"Stadtwerke Dessau",
             Id: @"stadtwerkedessau-b7b244",
@@ -164,6 +158,18 @@ public static class NsiRegion_DE_ST_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Kyffhäuser Abwasser- und Trinkwasserverband", [@"operator:short"] = @"KAT", [@"operator:wikidata"] = @"Q130387991", },
             Terms: [@"kat", @"kyffhäuser abwasser- und trinkwasserverband"]),
         new NsiItem(
+            DisplayName: @"Mitteldeutsche Netzgesellschaft Gas",
+            Id: @"mitteldeutschenetzgesellschaftgas-c878f8",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q138455477", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Mitteldeutsche Netzgesellschaft Gas", [@"operator:short"] = @"MITNETZ Gas", [@"operator:wikidata"] = @"Q138455477", },
+            Terms: [@"mitnetz gas", @"mitteldeutsche netzgesellschaft gas", @"mitteldeutsche netzgesellschaft gas gmbh"]),
+        new NsiItem(
+            DisplayName: @"Stadtwerke Schönebeck",
+            Id: @"stadtwerkeschonebeck-65c7fe",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q124540404", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Stadtwerke Schönebeck", [@"operator:short"] = @"SWS", [@"operator:wikidata"] = @"Q124540404", },
+            Terms: [@"stadtwerke schönebeck", @"sws"]),
+        new NsiItem(
             DisplayName: @"Avacon Netz",
             Id: @"avaconnetz-a0bf00",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q124369334", },
@@ -199,6 +205,18 @@ public static class NsiRegion_DE_ST_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130387991", [@"pipeline"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Kyffhäuser Abwasser- und Trinkwasserverband", [@"operator:short"] = @"KAT", [@"operator:wikidata"] = @"Q130387991", [@"pipeline"] = @"substation", },
             Terms: [@"kat", @"kyffhäuser abwasser- und trinkwasserverband"]),
+        new NsiItem(
+            DisplayName: @"Mitteldeutsche Netzgesellschaft Gas",
+            Id: @"mitteldeutschenetzgesellschaftgas-49c3f2",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138455477", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Mitteldeutsche Netzgesellschaft Gas", [@"operator:short"] = @"MITNETZ Gas", [@"operator:wikidata"] = @"Q138455477", [@"pipeline"] = @"substation", },
+            Terms: [@"mitnetz gas", @"mitteldeutsche netzgesellschaft gas", @"mitteldeutsche netzgesellschaft gas gmbh"]),
+        new NsiItem(
+            DisplayName: @"Stadtwerke Schönebeck",
+            Id: @"stadtwerkeschonebeck-462e6a",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124540404", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Schönebeck", [@"operator:short"] = @"SWS", [@"operator:wikidata"] = @"Q124540404", [@"pipeline"] = @"substation", },
+            Terms: [@"stadtwerke schönebeck", @"sws"]),
         new NsiItem(
             DisplayName: @"Repower AG",
             Id: @"repowerag-e3662a",
@@ -282,13 +300,19 @@ public static class NsiRegion_DE_ST_GEOJSON
             Id: @"avaconnetz-6177b3",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"Dessauer Versorgungs- und Verkehrsgesellschaft",
             Id: @"dessauerversorgungsundverkehrsgesellschaft-caeb06",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1200909", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Dessauer Versorgungs- und Verkehrsgesellschaft", [@"operator:short"] = @"DVV", [@"operator:wikidata"] = @"Q1200909", [@"power"] = @"substation", },
             Terms: [@"dessauer versorgungs- und verkehrsgesellschaft", @"dvv"]),
+        new NsiItem(
+            DisplayName: @"Halberstadtwerke",
+            Id: @"halberstadtwerke-caeb06",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q50282221", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Halberstadtwerke", [@"operator:short"] = @"HSW", [@"operator:wikidata"] = @"Q50282221", [@"power"] = @"substation", },
+            Terms: [@"halberstädter stadtwerke", @"halberstadtwerke", @"hsw"]),
         new NsiItem(
             DisplayName: @"Magdeburger Verkehrsbetriebe",
             Id: @"magdeburgerverkehrsbetriebe-caeb06",
@@ -348,13 +372,19 @@ public static class NsiRegion_DE_ST_GEOJSON
             Id: @"avaconnetz-f46145",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"Dessauer Versorgungs- und Verkehrsgesellschaft",
             Id: @"dessauerversorgungsundverkehrsgesellschaft-80fbfb",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1200909", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Dessauer Versorgungs- und Verkehrsgesellschaft", [@"operator:short"] = @"DVV", [@"operator:wikidata"] = @"Q1200909", [@"power"] = @"transformer", },
             Terms: [@"dessauer versorgungs- und verkehrsgesellschaft", @"dvv"]),
+        new NsiItem(
+            DisplayName: @"Halberstadtwerke",
+            Id: @"halberstadtwerke-80fbfb",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q50282221", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Halberstadtwerke", [@"operator:short"] = @"HSW", [@"operator:wikidata"] = @"Q50282221", [@"power"] = @"transformer", },
+            Terms: [@"halberstädter stadtwerke", @"halberstadtwerke", @"hsw"]),
         new NsiItem(
             DisplayName: @"Magdeburger Verkehrsbetriebe",
             Id: @"magdeburgerverkehrsbetriebe-80fbfb",

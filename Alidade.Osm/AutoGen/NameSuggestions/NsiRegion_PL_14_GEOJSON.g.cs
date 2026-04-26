@@ -314,11 +314,11 @@ public static class NsiRegion_PL_14_GEOJSON
             AddTags: new Dictionary<string, string> { [@"network"] = @"ZTM Warszawa", [@"network:wikidata"] = @"Q11777882", [@"operator"] = @"Metro Warszawskie", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"subway", [@"subway"] = @"yes", },
             Terms: [@"metro warszawskie", @"ztm warszawa"]),
         new NsiItem(
-            DisplayName: @"WKD",
-            Id: @"wkd-e1d48e",
+            DisplayName: @"Warszawska Kolej Dojazdowa",
+            Id: @"warszawskakolejdojazdowa-e1d48e",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q773832", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"WKD", [@"network:wikidata"] = @"Q773832", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
-            Terms: [@"wkd"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Warszawska Kolej Dojazdowa", [@"network:short"] = @"WKD", [@"network:wikidata"] = @"Q773832", [@"operator"] = @"Warszawska Kolej Dojazdowa", [@"operator:short"] = @"WKD", [@"operator:wikidata"] = @"Q137943194", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            Terms: [@"warszawska kolej dojazdowa", @"wkd"]),
         new NsiItem(
             DisplayName: @"ZTM Warszawa",
             Id: @"ztmwarszawa-e1d48e",
@@ -374,11 +374,11 @@ public static class NsiRegion_PL_14_GEOJSON
             AddTags: new Dictionary<string, string> { [@"network"] = @"ZTM Warszawa", [@"network:wikidata"] = @"Q11777882", [@"operator"] = @"Metro Warszawskie", [@"route"] = @"subway", [@"type"] = @"route", },
             Terms: [@"metro warszawskie", @"ztm warszawa"]),
         new NsiItem(
-            DisplayName: @"WKD",
-            Id: @"wkd-8d7802",
+            DisplayName: @"Warszawska Kolej Dojazdowa",
+            Id: @"warszawskakolejdojazdowa-8d7802",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q773832", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"WKD", [@"network:wikidata"] = @"Q773832", [@"route"] = @"train", [@"type"] = @"route", },
-            Terms: [@"wkd"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Warszawska Kolej Dojazdowa", [@"network:short"] = @"WKD", [@"network:wikidata"] = @"Q773832", [@"operator"] = @"Warszawska Kolej Dojazdowa", [@"operator:short"] = @"WKD", [@"operator:wikidata"] = @"Q137943194", [@"route"] = @"train", [@"type"] = @"route", },
+            Terms: [@"warszawska kolej dojazdowa", @"wkd"]),
         new NsiItem(
             DisplayName: @"ZTM Warszawa",
             Id: @"ztmwarszawa-8d7802",

@@ -340,8 +340,8 @@ public static class NsiRegion_US_AL_GEOJSON
         new NsiItem(
             DisplayName: @"ALLTEL Corporation",
             Id: @"alltelcorporation-a42e80",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q684083", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q684083", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q298594", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q298594", },
             Terms: [@"alltel corporation"]),
         new NsiItem(
             DisplayName: @"Verizon Wireless of the East LP",
@@ -370,8 +370,8 @@ public static class NsiRegion_US_AL_GEOJSON
         new NsiItem(
             DisplayName: @"ALLTEL Corporation",
             Id: @"alltelcorporation-a31d78",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q684083", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q684083", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q298594", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q298594", },
             Terms: [@"alltel corporation"]),
         new NsiItem(
             DisplayName: @"Verizon Wireless of the East LP",

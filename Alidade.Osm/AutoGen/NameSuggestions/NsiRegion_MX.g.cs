@@ -308,6 +308,12 @@ public static class NsiRegion_MX
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"cuisine"] = @"swedish", [@"name"] = @"IKEA Restaurant", [@"name:en"] = @"IKEA Restaurant", [@"name:ru"] = @"Ресторан ИКЕА", [@"takeaway"] = @"yes", },
             Terms: [@"ikea", @"ikea restaurant", @"ресторан икеа"]),
         new NsiItem(
+            DisplayName: @"Jersey Mike's Subs",
+            Id: @"jerseymikessubs-53d9d9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q6184897", [@"cuisine"] = @"sandwich", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Jersey Mike's Subs", [@"brand:wikidata"] = @"Q6184897", [@"cuisine"] = @"sandwich", [@"name"] = @"Jersey Mike's Subs", [@"short_name"] = @"Jersey Mike's", [@"takeaway"] = @"yes", },
+            Terms: [@"jersey mike's", @"jersey mike's subs"]),
+        new NsiItem(
             DisplayName: @"Krispy Krunchy Chicken",
             Id: @"krispykrunchychicken-bca76b",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q65087447", [@"cuisine"] = @"chicken", },
@@ -327,7 +333,7 @@ public static class NsiRegion_MX
             Terms: [@"pollo feliz"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -766,8 +772,8 @@ public static class NsiRegion_MX
         new NsiItem(
             DisplayName: @"Telecomm-Telégrafos",
             Id: @"telecommtelegrafos-66ddc0",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q9082442", [@"office"] = @"telecommunication", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Telecomm-Telégrafos", [@"brand:wikidata"] = @"Q9082442", [@"name"] = @"Telecomm-Telégrafos", [@"office"] = @"telecommunication", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q125290403", [@"office"] = @"telecommunication", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Telecomm-Telégrafos", [@"brand:wikidata"] = @"Q125290403", [@"name"] = @"Telecomm-Telégrafos", [@"office"] = @"telecommunication", },
             Terms: [@"telecomm", @"telecomm-telégrafos"]),
         new NsiItem(
             DisplayName: @"Telmex",
@@ -1462,8 +1468,8 @@ public static class NsiRegion_MX
         new NsiItem(
             DisplayName: @"Comercial Mexicana",
             Id: @"comercialmexicana-9b2dfb",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2985173", [@"shop"] = @"supermarket", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Comercial Mexicana", [@"brand:wikidata"] = @"Q2985173", [@"name"] = @"Comercial Mexicana", [@"shop"] = @"supermarket", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q26765126", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Comercial Mexicana", [@"brand:wikidata"] = @"Q26765126", [@"name"] = @"Comercial Mexicana", [@"shop"] = @"supermarket", },
             Terms: [@"comercial mexicana"]),
         new NsiItem(
             DisplayName: @"Fresko",
@@ -1765,6 +1771,12 @@ public static class NsiRegion_MX
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q6464734", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"La Quinta Inn", [@"brand:wikidata"] = @"Q6464734", [@"name"] = @"La Quinta Inn", [@"official_name"] = @"La Quinta Inn by Wyndham", [@"tourism"] = @"hotel", },
             Terms: [@"la quinta", @"la quinta by wyndham", @"la quinta inn", @"la quinta inn by wyndham"]),
+        new NsiItem(
+            DisplayName: @"Mama Shelter",
+            Id: @"mamashelter-876740",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
+            Terms: [@"mama shelter"]),
         new NsiItem(
             DisplayName: @"Microtel",
             Id: @"microtel-1638bb",

@@ -248,10 +248,10 @@ public static class NsiRegion_MD
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Top Shop", [@"brand:wikidata"] = @"Q116919675", [@"name"] = @"Top Shop", [@"shop"] = @"variety_store", },
             Terms: [@"top shop"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Clinica Sante",

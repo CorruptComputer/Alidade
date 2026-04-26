@@ -32,12 +32,6 @@ public static class NsiRegion_ES_BU_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Ayuntamiento de Villarcayo de Merindad de Castilla la Vieja", [@"operator:wikidata"] = @"Q60052649", },
             Terms: [@"ayto villarcayo mcv", @"ayuntamiento de villarcayo de merindad de castilla la vieja", @"ayuntamiento de villarcayo mcv"]),
         new NsiItem(
-            DisplayName: @"Consejería de Educación de la Junta de Castilla y León",
-            Id: @"consejeriadeeducaciondelajuntadecastillayleon-5f247a",
-            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q30297363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Consejería de Educación de la Junta de Castilla y León", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q30297363", },
-            Terms: [@"consejería de educación de la junta de castilla y león"]),
-        new NsiItem(
             DisplayName: @"Junta de Castilla y León",
             Id: @"juntadecastillayleon-5f247a",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q3314606", },

@@ -98,6 +98,12 @@ public static class NsiRegion_GB_ENG
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Change Please", [@"brand:wikidata"] = @"Q111964713", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Change Please", [@"takeaway"] = @"yes", },
             Terms: [@"change please"]),
         new NsiItem(
+            DisplayName: @"Coffee Lab",
+            Id: @"coffeelab-0c7853",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Lab", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Lab", [@"takeaway"] = @"yes", },
+            Terms: [@"coffee lab"]),
+        new NsiItem(
             DisplayName: @"FCB Coffee",
             Id: @"fcbcoffee-418c6b",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q114677883", [@"cuisine"] = @"coffee_shop", },
@@ -224,6 +230,12 @@ public static class NsiRegion_GB_ENG
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Poke House", [@"brand:wikidata"] = @"Q123399421", [@"cuisine"] = @"poke", [@"name"] = @"Poke House", [@"takeaway"] = @"yes", },
             Terms: [@"poke house"]),
         new NsiItem(
+            DisplayName: @"Raising Cane's",
+            Id: @"raisingcanes-e4cf42",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q7285144", [@"cuisine"] = @"chicken", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Raising Cane's", [@"brand:wikidata"] = @"Q7285144", [@"cuisine"] = @"chicken", [@"name"] = @"Raising Cane's", [@"official_name"] = @"Raising Cane's Chicken Fingers", [@"takeaway"] = @"yes", },
+            Terms: [@"raising cane's", @"raising cane's chicken fingers"]),
+        new NsiItem(
             DisplayName: @"Tops Pizza",
             Id: @"topspizza-1abd07",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q24439136", [@"cuisine"] = @"pizza", },
@@ -320,11 +332,23 @@ public static class NsiRegion_GB_ENG
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Lina Stores", [@"brand:wikidata"] = @"Q134825906", [@"cuisine"] = @"italian", [@"name"] = @"Lina Stores", },
             Terms: [@"lina stores"]),
         new NsiItem(
+            DisplayName: @"Maki & Ramen",
+            Id: @"makiandramen-8c6ca4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q138685542", [@"cuisine"] = @"japanese", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Maki & Ramen", [@"brand:wikidata"] = @"Q138685542", [@"cuisine"] = @"japanese", [@"diet:vegan"] = @"yes", [@"diet:vegetarian"] = @"yes", [@"name"] = @"Maki & Ramen", },
+            Terms: [@"maki & ramen"]),
+        new NsiItem(
             DisplayName: @"Meat Liquor",
             Id: @"meatliquor-37e076",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q115267761", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Meat Liquor", [@"brand:wikidata"] = @"Q115267761", [@"cuisine"] = @"burger", [@"name"] = @"Meat Liquor", },
             Terms: [@"meat liquor"]),
+        new NsiItem(
+            DisplayName: @"Patty & Bun",
+            Id: @"pattyandbun-37e076",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q110103854", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Patty & Bun", [@"brand:wikidata"] = @"Q110103854", [@"cuisine"] = @"burger", [@"diet:vegan"] = @"yes", [@"name"] = @"Patty & Bun", [@"takeaway"] = @"yes", },
+            Terms: [@"patty & bun"]),
         new NsiItem(
             DisplayName: @"Pizza Pilgrims",
             Id: @"pizzapilgrims-37e076",
@@ -620,12 +644,6 @@ public static class NsiRegion_GB_ENG
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fabb Furniture", [@"brand:wikidata"] = @"Q122241566", [@"name"] = @"Fabb Furniture", [@"shop"] = @"furniture", },
             Terms: [@"ahf", @"fabb furniture"]),
         new NsiItem(
-            DisplayName: @"Cards Direct",
-            Id: @"cardsdirect-53f2de",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q114826765", [@"shop"] = @"gift", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cards Direct", [@"brand:wikidata"] = @"Q114826765", [@"name"] = @"Cards Direct", [@"shop"] = @"gift", },
-            Terms: [@"cards direct"]),
-        new NsiItem(
             DisplayName: @"Headmasters",
             Id: @"headmasters-7aa40b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q113700332", [@"shop"] = @"hairdresser", },
@@ -649,6 +667,12 @@ public static class NsiRegion_GB_ENG
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q39045283", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Cubitts", [@"brand:wikidata"] = @"Q39045283", [@"name"] = @"Cubitts", [@"shop"] = @"optician", },
             Terms: [@"cubitts"]),
+        new NsiItem(
+            DisplayName: @"Optical Center",
+            Id: @"opticalcenter-efdbe9",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
+            Terms: [@"optical center"]),
         new NsiItem(
             DisplayName: @"Farrow & Ball",
             Id: @"farrowandball-15728f",
@@ -764,6 +788,12 @@ public static class NsiRegion_GB_ENG
             AddTags: new Dictionary<string, string> { [@"access"] = @"permit", [@"amenity"] = @"bicycle_parking", [@"bicycle_parking"] = @"lockers", [@"fee"] = @"yes", [@"operator"] = @"BikeAway", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q112136998", },
             Terms: [@"bikeaway"]),
         new NsiItem(
+            DisplayName: @"Family First",
+            Id: @"familyfirst-dc52df",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"childcare", [@"operator:wikidata"] = @"Q138847676", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"childcare", [@"operator"] = @"Family First", [@"operator:wikidata"] = @"Q138847676", },
+            Terms: [@"family first"]),
+        new NsiItem(
             DisplayName: @"Great Ormond Street Hospital for Children NHS Foundation Trust",
             Id: @"greatormondstreethospitalforchildrennhsfoundationtrust-87581d",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"operator:wikidata"] = @"Q19873658", },
@@ -847,6 +877,12 @@ public static class NsiRegion_GB_ENG
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q105555546", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Ambitions Academies Trust", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q105555546", },
             Terms: [@"ambitions academies trust"]),
+        new NsiItem(
+            DisplayName: @"Amplify Education",
+            Id: @"amplifyeducation-7a837c",
+            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q122684674", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Amplify Education", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q122684674", },
+            Terms: [@"amplify education"]),
         new NsiItem(
             DisplayName: @"Anglian Learning",
             Id: @"anglianlearning-7a837c",

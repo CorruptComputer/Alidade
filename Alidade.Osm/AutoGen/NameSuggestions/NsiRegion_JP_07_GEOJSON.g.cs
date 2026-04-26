@@ -14,6 +14,18 @@ public static class NsiRegion_JP_07_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"エコス",
+            Id: @"ecos-126132",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11289886", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"エコス", [@"brand:en"] = @"Ecos", [@"brand:ja"] = @"エコス", [@"brand:wikidata"] = @"Q11289886", [@"name"] = @"エコス", [@"name:en"] = @"Ecos", [@"name:ja"] = @"エコス", [@"shop"] = @"supermarket", },
+            Terms: [@"ecos", @"エコス"]),
+        new NsiItem(
+            DisplayName: @"ベイシア",
+            Id: @"beisia-92743a",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11336776", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ベイシア", [@"brand:en"] = @"Beisia", [@"brand:ja"] = @"ベイシア", [@"brand:wikidata"] = @"Q11336776", [@"name"] = @"ベイシア", [@"name:en"] = @"Beisia", [@"name:ja"] = @"ベイシア", [@"shop"] = @"supermarket", },
+            Terms: [@"beisia", @"ベイシア"]),
+        new NsiItem(
             DisplayName: @"いわき市",
             Id: @"cityofiwaki-e25c4a",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q274384", },

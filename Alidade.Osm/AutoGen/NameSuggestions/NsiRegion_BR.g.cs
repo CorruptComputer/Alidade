@@ -483,7 +483,7 @@ public static class NsiRegion_BR
             Terms: [@"spoleto"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -2242,8 +2242,8 @@ public static class NsiRegion_BR
         new NsiItem(
             DisplayName: @"Eletropaulo",
             Id: @"eletropaulo-ddc6a3",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"line", },
             Terms: [@"eletropaulo"]),
         new NsiItem(
             DisplayName: @"Eletrosul",
@@ -2428,8 +2428,8 @@ public static class NsiRegion_BR
         new NsiItem(
             DisplayName: @"Eletropaulo",
             Id: @"eletropaulo-241a4c",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"minor_line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"minor_line", },
             Terms: [@"eletropaulo"]),
         new NsiItem(
             DisplayName: @"Eletrosul",
@@ -2638,8 +2638,8 @@ public static class NsiRegion_BR
         new NsiItem(
             DisplayName: @"Eletropaulo",
             Id: @"eletropaulo-0aa22a",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"pole", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"pole", },
             Terms: [@"eletropaulo"]),
         new NsiItem(
             DisplayName: @"Eletrosul",
@@ -2830,8 +2830,8 @@ public static class NsiRegion_BR
         new NsiItem(
             DisplayName: @"Eletropaulo",
             Id: @"eletropaulo-acc4a0",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"substation", },
             Terms: [@"eletropaulo"]),
         new NsiItem(
             DisplayName: @"Eletrosul",
@@ -2998,8 +2998,8 @@ public static class NsiRegion_BR
         new NsiItem(
             DisplayName: @"Eletropaulo",
             Id: @"eletropaulo-3ce1ab",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"tower", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"tower", },
             Terms: [@"eletropaulo"]),
         new NsiItem(
             DisplayName: @"Eletrosul",
@@ -3190,8 +3190,8 @@ public static class NsiRegion_BR
         new NsiItem(
             DisplayName: @"Eletropaulo",
             Id: @"eletropaulo-dc5268",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q48854882", [@"power"] = @"transformer", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Eletropaulo", [@"operator:wikidata"] = @"Q23777954", [@"power"] = @"transformer", },
             Terms: [@"eletropaulo"]),
         new NsiItem(
             DisplayName: @"Eletrosul",

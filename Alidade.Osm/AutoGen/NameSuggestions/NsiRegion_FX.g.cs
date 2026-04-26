@@ -1180,8 +1180,8 @@ public static class NsiRegion_FX
         new NsiItem(
             DisplayName: @"Delko",
             Id: @"delko-46d04a",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24934757", [@"shop"] = @"car_repair", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Delko", [@"brand:wikidata"] = @"Q24934757", [@"name"] = @"Delko", [@"shop"] = @"car_repair", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q132021672", [@"shop"] = @"car_repair", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Delko", [@"brand:wikidata"] = @"Q132021672", [@"name"] = @"Delko", [@"shop"] = @"car_repair", },
             Terms: [@"delko"]),
         new NsiItem(
             DisplayName: @"Euromaster",
@@ -1221,7 +1221,7 @@ public static class NsiRegion_FX
             Terms: [@"Emmaüs", @"mouvement emmaüs"]),
         new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),
@@ -1946,11 +1946,23 @@ public static class NsiRegion_FX
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Castorama", [@"brand:wikidata"] = @"Q966971", [@"name"] = @"Castorama", [@"shop"] = @"doityourself", },
             Terms: [@"castorama"]),
         new NsiItem(
+            DisplayName: @"CEDEO",
+            Id: @"cedeo-f33b88",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137972079", [@"shop"] = @"doityourself", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"CEDEO", [@"brand:wikidata"] = @"Q137972079", [@"name"] = @"CEDEO", [@"shop"] = @"doityourself", },
+            Terms: [@"cedeo"]),
+        new NsiItem(
             DisplayName: @"Chausson Matériaux",
             Id: @"chaussonmateriaux-f33b88",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q100701530", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Chausson Matériaux", [@"brand:wikidata"] = @"Q100701530", [@"name"] = @"Chausson Matériaux", [@"shop"] = @"doityourself", },
             Terms: [@"chausson matériaux"]),
+        new NsiItem(
+            DisplayName: @"Frans Bonhomme",
+            Id: @"fransbonhomme-f33b88",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q124014148", [@"shop"] = @"doityourself", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Frans Bonhomme", [@"brand:wikidata"] = @"Q124014148", [@"name"] = @"Frans Bonhomme", [@"shop"] = @"doityourself", },
+            Terms: [@"frans bonhomme"]),
         new NsiItem(
             DisplayName: @"Hagebaumarkt",
             Id: @"hagebaumarkt-8202fe",
@@ -1958,11 +1970,29 @@ public static class NsiRegion_FX
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Hagebaumarkt", [@"brand:wikidata"] = @"Q1568279", [@"name"] = @"Hagebaumarkt", [@"shop"] = @"doityourself", },
             Terms: [@"hagebau", @"hagebaumarkt"]),
         new NsiItem(
+            DisplayName: @"La Plateforme du Bâtiment",
+            Id: @"laplateformedubatiment-f33b88",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137972122", [@"shop"] = @"doityourself", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"La Plateforme du Bâtiment", [@"brand:wikidata"] = @"Q137972122", [@"name"] = @"La Plateforme du Bâtiment", [@"shop"] = @"doityourself", },
+            Terms: [@"la plateforme du bâtiment"]),
+        new NsiItem(
             DisplayName: @"Point P",
             Id: @"pointp-f33b88",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62973104", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Point P", [@"brand:wikidata"] = @"Q62973104", [@"name"] = @"Point P", [@"shop"] = @"doityourself", },
             Terms: [@"point p"]),
+        new NsiItem(
+            DisplayName: @"Samse",
+            Id: @"samse-f33b88",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3470941", [@"shop"] = @"doityourself", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Samse", [@"brand:wikidata"] = @"Q3470941", [@"name"] = @"Samse", [@"shop"] = @"doityourself", },
+            Terms: [@"samse"]),
+        new NsiItem(
+            DisplayName: @"Screwfix",
+            Id: @"screwfix-553b50",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7439115", [@"shop"] = @"doityourself", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Screwfix", [@"brand:wikidata"] = @"Q7439115", [@"name"] = @"Screwfix", [@"shop"] = @"doityourself", },
+            Terms: [@"screwfix"]),
         new NsiItem(
             DisplayName: @"Toolstation",
             Id: @"toolstation-12fa86",
@@ -2667,7 +2697,7 @@ public static class NsiRegion_FX
             Terms: [@"lyf"]),
         new NsiItem(
             DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
+            Id: @"mamashelter-876740",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
             Terms: [@"mama shelter"]),
@@ -3178,8 +3208,8 @@ public static class NsiRegion_FX
         new NsiItem(
             DisplayName: @"Share Now",
             Id: @"sharenow-663d52",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q62021602", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q62021602", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q131572664", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q131572664", },
             Terms: [@"share now"]),
         new NsiItem(
             DisplayName: @"Ubeeqo",
@@ -3577,6 +3607,12 @@ public static class NsiRegion_FX
             Tags: new Dictionary<string, string> { [@"emergency"] = @"phone", [@"operator:wikidata"] = @"Q21605526", },
             AddTags: new Dictionary<string, string> { [@"emergency"] = @"phone", [@"operator"] = @"SNCF Réseau", [@"operator:wikidata"] = @"Q21605526", },
             Terms: [@"sncf réseau"]),
+        new NsiItem(
+            DisplayName: @"Société Internationale de Sauvetage du Léman",
+            Id: @"societeinternationaledesauvetageduleman-9c4f1b",
+            Tags: new Dictionary<string, string> { [@"emergency"] = @"water_rescue", [@"operator:wikidata"] = @"Q3488421", },
+            AddTags: new Dictionary<string, string> { [@"emergency"] = @"water_rescue", [@"operator"] = @"Société Internationale de Sauvetage du Léman", [@"operator:short"] = @"SISL", [@"operator:wikidata"] = @"Q3488421", },
+            Terms: [@"sisl", @"société internationale de sauvetage du léman"]),
         new NsiItem(
             DisplayName: @"Société nationale de sauvetage en mer",
             Id: @"societenationaledesauvetageenmer-04cc00",

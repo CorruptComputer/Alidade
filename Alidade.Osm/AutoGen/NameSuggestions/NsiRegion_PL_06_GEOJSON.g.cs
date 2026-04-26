@@ -118,8 +118,8 @@ public static class NsiRegion_PL_06_GEOJSON
         new NsiItem(
             DisplayName: @"Lublin",
             Id: @"lublin-e4f380",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q27686568", [@"route"] = @"trolleybus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Lublin", [@"network:wikidata"] = @"Q27686568", [@"operator"] = @"MPK Lublin", [@"operator:wikidata"] = @"Q11742137", [@"route"] = @"trolleybus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q126952443", [@"route"] = @"trolleybus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Lublin", [@"network:wikidata"] = @"Q126952443", [@"operator"] = @"MPK Lublin", [@"operator:wikidata"] = @"Q11742137", [@"route"] = @"trolleybus", [@"type"] = @"route", },
             Terms: [@"lublin", @"mpk lublin"]),
     ];
 }

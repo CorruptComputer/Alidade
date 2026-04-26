@@ -56,6 +56,12 @@ public static class NsiRegion_BN
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Gong Cha", [@"brand:wikidata"] = @"Q5581670", [@"brand:zh"] = @"貢茶", [@"cuisine"] = @"bubble_tea", [@"int_name"] = @"Gong Cha", [@"name"] = @"Gong Cha", [@"name:zh"] = @"貢茶", [@"takeaway"] = @"yes", },
             Terms: [@"gong cha", @"貢茶"]),
         new NsiItem(
+            DisplayName: @"Macao Imperial Tea",
+            Id: @"macaoimperialtea-5ac393",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q137921377", [@"cuisine"] = @"bubble_tea", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Macao Imperial Tea", [@"brand:en"] = @"Macao Imperial Tea", [@"brand:wikidata"] = @"Q137921377", [@"brand:zh"] = @"澳門皇茶", [@"cuisine"] = @"bubble_tea", [@"name"] = @"Macao Imperial Tea", [@"takeaway"] = @"yes", },
+            Terms: [@"macao imperial tea", @"澳門皇茶"]),
+        new NsiItem(
             DisplayName: @"ZUS Coffee",
             Id: @"zuscoffee-5f28be",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q110811473", [@"cuisine"] = @"coffee_shop", },

@@ -28,8 +28,8 @@ public static class NsiRegion_CZ
         new NsiItem(
             DisplayName: @"Benzina",
             Id: @"benzina-3a612c",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q11130894", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Benzina", [@"brand:wikidata"] = @"Q11130894", },
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q11878499", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Benzina", [@"brand:wikidata"] = @"Q11878499", },
             Terms: [@"benzina"]),
         new NsiItem(
             DisplayName: @"Bonett",
@@ -79,6 +79,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q58623408", },
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Kralupol", [@"brand:wikidata"] = @"Q58623408", },
             Terms: [@"kralupol"]),
+        new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-87a582",
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", },
+            Terms: [@"mol"]),
         new NsiItem(
             DisplayName: @"OMV",
             Id: @"omv-6733b8",
@@ -206,10 +212,10 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Raiffeisenbank", [@"brand:wikidata"] = @"Q24282825", [@"operator"] = @"Raiffeisenbank", [@"operator:wikidata"] = @"Q24282825", },
             Terms: [@"Raiffeisenbank (Česko)", @"raiffeisen", @"raiffeisenbank", @"raiffeisenkasse"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-3ecec5",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-4a82ee",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit Bank", [@"operator:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit", [@"operator:wikidata"] = @"Q45568", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"Air Bank",
@@ -284,10 +290,10 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Raiffeisenbank", [@"brand:wikidata"] = @"Q24282825", [@"name"] = @"Raiffeisenbank", },
             Terms: [@"Raiffeisenbank (Česko)", @"raiffeisen", @"raiffeisenbank", @"raiffeisenkasse"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-ff6e1c",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-d887c4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit Bank", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"BikeTower",
@@ -350,6 +356,12 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"Globus", [@"brand:wikidata"] = @"Q457503", [@"name"] = @"Globus", },
             Terms: [@"globus"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-edc9f9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
+            Terms: [@"mol", @"mol jetwash", @"mol wash"]),
+        new NsiItem(
             DisplayName: @"OMV",
             Id: @"omv-3df771",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q168238", },
@@ -374,6 +386,12 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"Slovnaft", [@"brand:wikidata"] = @"Q1587563", [@"name"] = @"Slovnaft", },
             Terms: [@"slovnaft"]),
         new NsiItem(
+            DisplayName: @"eMotion",
+            Id: @"emotion-d44228",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q139071415", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"eMotion", [@"brand:wikidata"] = @"Q139071415", },
+            Terms: [@"emotion", @"omv emotion"]),
+        new NsiItem(
             DisplayName: @"evmapa",
             Id: @"evmapa-391bca",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q136929506", },
@@ -391,6 +409,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q549181", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"MOL Plugee", [@"brand:wikidata"] = @"Q549181", [@"operator"] = @"MOL", [@"operator:wikidata"] = @"Q549181", },
             Terms: [@"mol", @"mol nyrt.", @"mol plugee"]),
+        new NsiItem(
+            DisplayName: @"Olife Energy",
+            Id: @"olifeenergy-52c83f",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q116895290", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Olife Energy", [@"brand:wikidata"] = @"Q116895290", },
+            Terms: [@"olife energy"]),
         new NsiItem(
             DisplayName: @"Powerbox.one",
             Id: @"powerboxone-52c83f",
@@ -484,8 +508,8 @@ public static class NsiRegion_CZ
         new NsiItem(
             DisplayName: @"Benzina",
             Id: @"benzina-5f489f",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q11130894", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Benzina", [@"brand:wikidata"] = @"Q11130894", [@"name"] = @"Benzina", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q11878499", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Benzina", [@"brand:wikidata"] = @"Q11878499", [@"name"] = @"Benzina", },
             Terms: [@"benzina"]),
         new NsiItem(
             DisplayName: @"Bonett",
@@ -535,6 +559,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q58623408", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Kralupol", [@"brand:wikidata"] = @"Q58623408", [@"name"] = @"Kralupol", },
             Terms: [@"kralupol"]),
+        new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-f55142",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
+            Terms: [@"mol"]),
         new NsiItem(
             DisplayName: @"OMV",
             Id: @"omv-af9909",
@@ -608,23 +638,17 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"ice_cream", [@"brand"] = @"Grom", [@"brand:wikidata"] = @"Q3776892", [@"name"] = @"Grom", [@"takeaway"] = @"yes", },
             Terms: [@"grom", @"grom gelaterie artigianali", @"grom gelato"]),
         new NsiItem(
-            DisplayName: @"Allegro One Box",
-            Id: @"allegroonebox-85cd80",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q110738715", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"Allegro One Box", [@"brand:wikidata"] = @"Q110738715", },
-            Terms: [@"allegro", @"allegro one box"]),
-        new NsiItem(
             DisplayName: @"AlzaBox",
             Id: @"alzabox-bee63b",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q115254158", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"AlzaBox", [@"brand:wikidata"] = @"Q115254158", [@"operator"] = @"Alza", [@"operator:wikidata"] = @"Q10786832", },
-            Terms: [@"alza", @"alzabox"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"AlzaBox", [@"brand:wikidata"] = @"Q115254158", [@"name"] = @"AlzaBox", },
+            Terms: [@"alzabox"]),
         new NsiItem(
-            DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            DisplayName: @"DPD Pickup Box",
+            Id: @"dpdpickupbox-48c9bb",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
-            Terms: [@"dpd pickup station"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Box", [@"brand:wikidata"] = @"Q114273730", [@"name"] = @"DPD Pickup Box", [@"operator"] = @"Direct Parcel Distribution CZ", [@"operator:wikidata"] = @"Q58550406", },
+            Terms: [@"direct parcel distribution cz", @"dpd pickup box"]),
         new NsiItem(
             DisplayName: @"Dr. Max Box",
             Id: @"drmaxbox-48c9bb",
@@ -637,6 +661,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q366182", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"GLS Parcel Box", [@"brand:wikidata"] = @"Q366182", [@"name"] = @"GLS Parcel Box", [@"operator"] = @"General Logistics Systems Czech Republic", [@"operator:wikidata"] = @"Q135580045", },
             Terms: [@"general logistics systems czech republic", @"gls", @"gls parcel box"]),
+        new NsiItem(
+            DisplayName: @"One Box",
+            Id: @"onebox-48c9bb",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q110738715", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"One Box", [@"brand:wikidata"] = @"Q110738715", [@"name"] = @"One Box", [@"operator"] = @"Allegro Retail", [@"operator:wikidata"] = @"Q96265995", },
+            Terms: [@"allegro one box", @"allegro retail", @"one box", @"one box by allegro"]),
         new NsiItem(
             DisplayName: @"Penguin Box",
             Id: @"penguinbox-7c84a0",
@@ -722,6 +752,24 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand"] = @"Pilulka", [@"brand:wikidata"] = @"Q41960196", [@"healthcare"] = @"pharmacy", [@"name"] = @"Pilulka", },
             Terms: [@"pilulka"]),
         new NsiItem(
+            DisplayName: @"Charita Česká republika",
+            Id: @"charitaceskarepublika-16d48f",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"brand:wikidata"] = @"Q11723065", [@"recycling_type"] = @"container", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"brand"] = @"Charita Česká republika", [@"brand:cs"] = @"Charita Česká republika", [@"brand:en"] = @"Caritas Czech Republic", [@"brand:wikidata"] = @"Q11723065", [@"recycling_type"] = @"container", },
+            Terms: [@"caritas czech republic", @"charita česká republika"]),
+        new NsiItem(
+            DisplayName: @"TextilEco",
+            Id: @"textileco-7f5fab",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"brand:wikidata"] = @"Q137507665", [@"recycling_type"] = @"container", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"brand"] = @"TextilEco", [@"brand:wikidata"] = @"Q137507665", [@"operator"] = @"TextilEco", [@"operator:wikidata"] = @"Q137507665", [@"recycling_type"] = @"container", },
+            Terms: [@"textileco"]),
+        new NsiItem(
+            DisplayName: @"Textileco (Český červený kříž)",
+            Id: @"textileco-16d48f",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"brand:wikidata"] = @"Q19602750", [@"recycling_type"] = @"container", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"brand"] = @"Textileco", [@"brand:wikidata"] = @"Q19602750", [@"operator"] = @"Coretex CZ", [@"operator:wikidata"] = @"Q137507932", [@"recycling_type"] = @"container", },
+            Terms: [@"Textileco (Český červený kříž)", @"coretex cz", @"textileco"]),
+        new NsiItem(
             DisplayName: @"Fresh Corner Restaurant",
             Id: @"freshcornerrestaurant-c8a273",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q129256375", },
@@ -754,8 +802,8 @@ public static class NsiRegion_CZ
         new NsiItem(
             DisplayName: @"Unilabs",
             Id: @"unilabs-3c0828",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q134885714", [@"healthcare"] = @"sample_collection", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Unilabs", [@"brand:wikidata"] = @"Q134885714", [@"healthcare"] = @"sample_collection", [@"name"] = @"Unilabs", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1602925", [@"healthcare"] = @"sample_collection", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Unilabs", [@"brand:wikidata"] = @"Q1602925", [@"healthcare"] = @"sample_collection", [@"name"] = @"Unilabs", },
             Terms: [@"unilabs"]),
         new NsiItem(
             DisplayName: @"Form Factory",
@@ -769,6 +817,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q54078", [@"leisure"] = @"indoor_play", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"leisure"] = @"indoor_play", [@"name"] = @"Småland", },
             Terms: [@"IKEA Småland", @"ikea"]),
+        new NsiItem(
+            DisplayName: @"eMotion",
+            Id: @"emotion-4afda5",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q139071415", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"eMotion", [@"brand:wikidata"] = @"Q139071415", [@"man_made"] = @"charge_point", },
+            Terms: [@"emotion", @"omv emotion"]),
         new NsiItem(
             DisplayName: @"evmapa",
             Id: @"evmapa-4e1964",
@@ -787,6 +841,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q549181", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"MOL Plugee", [@"brand:wikidata"] = @"Q549181", [@"man_made"] = @"charge_point", [@"operator"] = @"MOL", [@"operator:wikidata"] = @"Q549181", },
             Terms: [@"mol", @"mol nyrt.", @"mol plugee"]),
+        new NsiItem(
+            DisplayName: @"Olife Energy",
+            Id: @"olifeenergy-9fccfa",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116895290", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Olife Energy", [@"brand:wikidata"] = @"Q116895290", [@"man_made"] = @"charge_point", },
+            Terms: [@"olife energy"]),
         new NsiItem(
             DisplayName: @"Powerbox.one",
             Id: @"powerboxone-9fccfa",
@@ -926,11 +986,23 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Paul", [@"brand:wikidata"] = @"Q3370417", [@"name"] = @"Paul", [@"shop"] = @"bakery", },
             Terms: [@"paul"]),
         new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
+        new NsiItem(
             DisplayName: @"ProSpánek",
             Id: @"prospanek-5fff87",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116895610", [@"shop"] = @"bed", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"ProSpánek", [@"brand:wikidata"] = @"Q116895610", [@"name"] = @"ProSpánek", [@"shop"] = @"bed", },
             Terms: [@"prospánek"]),
+        new NsiItem(
+            DisplayName: @"Chance",
+            Id: @"chance-ee30fd",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q22810780", [@"shop"] = @"bookmaker", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Chance", [@"brand:wikidata"] = @"Q22810780", [@"name"] = @"Chance", [@"shop"] = @"bookmaker", },
+            Terms: [@"chance"]),
         new NsiItem(
             DisplayName: @"Fortuna",
             Id: @"fortuna-af7df4",
@@ -1118,6 +1190,12 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"House", [@"brand:wikidata"] = @"Q9294202", [@"name"] = @"House", [@"shop"] = @"clothes", },
             Terms: [@"house"]),
         new NsiItem(
+            DisplayName: @"Kara",
+            Id: @"kara-111ecf",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q54982779", [@"shop"] = @"clothes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Kara", [@"brand:wikidata"] = @"Q54982779", [@"name"] = @"Kara", [@"shop"] = @"clothes", },
+            Terms: [@"kara"]),
+        new NsiItem(
             DisplayName: @"KiK",
             Id: @"kik-323dff",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q883965", [@"shop"] = @"clothes", },
@@ -1189,6 +1267,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q77878002", [@"second_hand"] = @"only", [@"shop"] = @"clothes", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"TEXTILE house", [@"brand:wikidata"] = @"Q77878002", [@"name"] = @"TEXTILE house", [@"second_hand"] = @"only", [@"shop"] = @"clothes", },
             Terms: [@"textile house"]),
+        new NsiItem(
+            DisplayName: @"Triola",
+            Id: @"triola-111ecf",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19602768", [@"clothes"] = @"underwear", [@"shop"] = @"clothes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Triola", [@"brand:wikidata"] = @"Q19602768", [@"clothes"] = @"underwear", [@"name"] = @"Triola", [@"shop"] = @"clothes", },
+            Terms: [@"triola"]),
         new NsiItem(
             DisplayName: @"Van Graaf",
             Id: @"vangraaf-9ef6ea",
@@ -1292,6 +1376,18 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Můj obchod", [@"brand:wikidata"] = @"Q130658827", [@"name"] = @"Můj obchod", [@"shop"] = @"convenience", },
             Terms: [@"můj obchod"]),
         new NsiItem(
+            DisplayName: @"Pont to go",
+            Id: @"ponttogo-a7773e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138807123", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Pont to go", [@"brand:wikidata"] = @"Q138807123", [@"name"] = @"Pont to go", [@"shop"] = @"convenience", },
+            Terms: [@"pont to go"]),
+        new NsiItem(
+            DisplayName: @"Rapo",
+            Id: @"rapo-a7773e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138357241", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rapo", [@"brand:wikidata"] = @"Q138357241", [@"name"] = @"Rapo", [@"shop"] = @"convenience", },
+            Terms: [@"potraviny rapo", @"rapo"]),
+        new NsiItem(
             DisplayName: @"Tempo (Česko)",
             Id: @"tempo-a7773e",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q52851660", [@"shop"] = @"convenience", },
@@ -1316,11 +1412,11 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Viva Billa", [@"brand:wikidata"] = @"Q124305949", [@"name"] = @"Viva Billa", [@"shop"] = @"convenience", },
             Terms: [@"viva billa"]),
         new NsiItem(
-            DisplayName: @"Żabka",
-            Id: @"zabka-f55ead",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2589061", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Żabka", [@"brand:wikidata"] = @"Q2589061", [@"name"] = @"Żabka", [@"name:pl"] = @"Żabka", [@"name:uk"] = @"Жабка", [@"shop"] = @"convenience", },
-            Terms: [@"freshmarket", @"żabka", @"жабка"]),
+            DisplayName: @"Žabka",
+            Id: @"zabka-a7773e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133445159", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Žabka", [@"brand:wikidata"] = @"Q133445159", [@"name"] = @"Žabka", [@"shop"] = @"convenience", },
+            Terms: [@"žabka", @"žabka potraviny"]),
         new NsiItem(
             DisplayName: @"Dermacol",
             Id: @"dermacol-85d8c2",
@@ -1454,6 +1550,12 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"PLANEO Elektro", [@"brand:wikidata"] = @"Q107723323", [@"name"] = @"PLANEO Elektro", [@"shop"] = @"electronics", },
             Terms: [@"planeo elektro"]),
         new NsiItem(
+            DisplayName: @"Smarty.cz",
+            Id: @"smartycz-e98bb6",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q67806661", [@"shop"] = @"electronics", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Smarty.cz", [@"brand:wikidata"] = @"Q67806661", [@"name"] = @"Smarty.cz", [@"shop"] = @"electronics", },
+            Terms: [@"smarty.cz"]),
+        new NsiItem(
             DisplayName: @"Breno",
             Id: @"breno-198c44",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q54948969", [@"shop"] = @"flooring", },
@@ -1508,11 +1610,11 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Möbelix", [@"brand:wikidata"] = @"Q877547", [@"name"] = @"Möbelix", [@"shop"] = @"furniture", },
             Terms: [@"möbelix"]),
         new NsiItem(
-            DisplayName: @"Sconto Möbel Sofort",
-            Id: @"scontomobelsofort-7ce246",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2260475", [@"shop"] = @"furniture", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Sconto Möbel Sofort", [@"brand:wikidata"] = @"Q2260475", [@"name"] = @"Sconto Möbel Sofort", [@"name:cs"] = @"Sconto Nábytek", [@"name:de"] = @"Sconto Möbel Sofort", [@"name:sk"] = @"Sconto Nábytok", [@"shop"] = @"furniture", [@"short_name"] = @"Sconto", },
-            Terms: [@"sconto", @"sconto möbel sofort", @"sconto nábytek", @"sconto nábytok", @"sconto sb"]),
+            DisplayName: @"Sconto Nábytek (Česko)",
+            Id: @"scontonabytek-8f409c",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q58169397", [@"shop"] = @"furniture", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Sconto Nábytek", [@"brand:wikidata"] = @"Q58169397", [@"name"] = @"Sconto Nábytek", [@"shop"] = @"furniture", [@"short_name"] = @"Sconto", },
+            Terms: [@"Sconto Nábytek (Česko)", @"sconto", @"sconto nábytek"]),
         new NsiItem(
             DisplayName: @"Siko",
             Id: @"siko-2a1637",
@@ -1520,17 +1622,17 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Siko", [@"brand:wikidata"] = @"Q58218696", [@"name"] = @"Siko", [@"shop"] = @"furniture", },
             Terms: [@"siko"]),
         new NsiItem(
-            DisplayName: @"Mountfield",
-            Id: @"mountfield-570714",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q21180783", [@"shop"] = @"garden_centre", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mountfield", [@"brand:wikidata"] = @"Q21180783", [@"name"] = @"Mountfield", [@"shop"] = @"garden_centre", },
-            Terms: [@"mountfield"]),
-        new NsiItem(
             DisplayName: @"Albi",
             Id: @"albi-100c1c",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q67804907", [@"shop"] = @"gift", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Albi", [@"brand:wikidata"] = @"Q67804907", [@"name"] = @"Albi", [@"shop"] = @"gift", },
             Terms: [@"albi"]),
+        new NsiItem(
+            DisplayName: @"Mountfield",
+            Id: @"mountfield-9aa91c",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q21180783", [@"shop"] = @"groundskeeping", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mountfield", [@"brand:wikidata"] = @"Q21180783", [@"name"] = @"Mountfield", [@"shop"] = @"groundskeeping", },
+            Terms: [@"mountfield"]),
         new NsiItem(
             DisplayName: @"Klier",
             Id: @"klier-03dd74",
@@ -1573,6 +1675,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116884264", [@"shop"] = @"interior_decoration", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"home&you", [@"brand:wikidata"] = @"Q116884264", [@"name"] = @"home&you", [@"shop"] = @"interior_decoration", },
             Terms: [@"home&you"]),
+        new NsiItem(
+            DisplayName: @"Apart",
+            Id: @"apart-d80787",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11686561", [@"shop"] = @"jewelry", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Apart", [@"brand:wikidata"] = @"Q11686561", [@"name"] = @"Apart", [@"shop"] = @"jewelry", },
+            Terms: [@"apart"]),
         new NsiItem(
             DisplayName: @"Klenoty Aurum",
             Id: @"klenotyaurum-90a468",
@@ -1652,6 +1760,12 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Husky", [@"brand:wikidata"] = @"Q54973467", [@"name"] = @"Husky", [@"shop"] = @"outdoor", },
             Terms: [@"husky"]),
         new NsiItem(
+            DisplayName: @"Rock Point",
+            Id: @"rockpoint-8604ab",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q58604820", [@"shop"] = @"outdoor", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rock Point", [@"brand:wikidata"] = @"Q58604820", [@"name"] = @"Rock Point", [@"shop"] = @"outdoor", },
+            Terms: [@"rock point"]),
+        new NsiItem(
             DisplayName: @"Delikana",
             Id: @"delikana-97942d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q130334843", [@"shop"] = @"pastry", },
@@ -1700,11 +1814,17 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Pet Center", [@"brand:wikidata"] = @"Q58607477", [@"name"] = @"Pet Center", [@"shop"] = @"pet", },
             Terms: [@"pet center"]),
         new NsiItem(
-            DisplayName: @"SUPER ZOO",
+            DisplayName: @"Super zoo",
             Id: @"superzoo-09e3e7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q93998805", [@"shop"] = @"pet", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"SUPER ZOO", [@"brand:wikidata"] = @"Q93998805", [@"name"] = @"SUPER ZOO", [@"shop"] = @"pet", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Super zoo", [@"brand:wikidata"] = @"Q93998805", [@"name"] = @"Super zoo", [@"shop"] = @"pet", },
             Terms: [@"super zoo"]),
+        new NsiItem(
+            DisplayName: @"Zvěrokruh",
+            Id: @"zverokruh-381fdf",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q54980452", [@"shop"] = @"pet", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Zvěrokruh", [@"brand:wikidata"] = @"Q54980452", [@"name"] = @"Zvěrokruh", [@"shop"] = @"pet", },
+            Terms: [@"zvěrokruh"]),
         new NsiItem(
             DisplayName: @"Baťa",
             Id: @"bata-76c27d",
@@ -1801,6 +1921,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q698032", [@"shop"] = @"stationery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Koh-i-Noor", [@"brand:wikidata"] = @"Q698032", [@"name"] = @"Koh-i-Noor", [@"official_name"] = @"Koh-i-Noor Hardtmuth", [@"shop"] = @"stationery", },
             Terms: [@"koh-i-noor", @"koh-i-noor hardtmuth"]),
+        new NsiItem(
+            DisplayName: @"McPen",
+            Id: @"mcpen-c4c564",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116892513", [@"shop"] = @"stationery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"McPen", [@"brand:wikidata"] = @"Q116892513", [@"name"] = @"McPen", [@"shop"] = @"stationery", },
+            Terms: [@"mcpen"]),
         new NsiItem(
             DisplayName: @"Albert",
             Id: @"albert-8e6809",
@@ -1921,6 +2047,12 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q110254058", [@"shop"] = @"tobacco", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Tabák Valmont", [@"brand:wikidata"] = @"Q110254058", [@"name"] = @"Tabák Valmont", [@"shop"] = @"tobacco", },
             Terms: [@"tabák valmont", @"valmont"]),
+        new NsiItem(
+            DisplayName: @"Tobacco DC",
+            Id: @"tobaccodc-56156e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137939456", [@"shop"] = @"tobacco", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Tobacco DC", [@"brand:wikidata"] = @"Q137939456", [@"name"] = @"Tobacco DC", [@"shop"] = @"tobacco", },
+            Terms: [@"tobacco dc", @"trafika tobacco dc"]),
         new NsiItem(
             DisplayName: @"TRAFICON",
             Id: @"traficon-56156e",
@@ -2091,7 +2223,7 @@ public static class NsiRegion_CZ
             Terms: [@"exe hotels"]),
         new NsiItem(
             DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
+            Id: @"mamashelter-876740",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
             Terms: [@"mama shelter"]),
@@ -2126,6 +2258,12 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator"] = @"BigMedia", [@"operator:wikidata"] = @"Q121621060", },
             Terms: [@"bigmedia"]),
         new NsiItem(
+            DisplayName: @"euroAWK",
+            Id: @"euroawk-52c6c0",
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator:wikidata"] = @"Q98406698", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator"] = @"euroAWK", [@"operator:wikidata"] = @"Q98406698", },
+            Terms: [@"euroawk", @"euroawk, spol. s.r.o."]),
+        new NsiItem(
             DisplayName: @"IKEA",
             Id: @"ikea-1dde13",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator:wikidata"] = @"Q54078", },
@@ -2144,11 +2282,23 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"poster_box", [@"operator"] = @"euroAWK", [@"operator:wikidata"] = @"Q98406698", },
             Terms: [@"euroawk", @"euroawk, spol. s.r.o."]),
         new NsiItem(
+            DisplayName: @"Správa železnic",
+            Id: @"spravazeleznic-980c9e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_parking", [@"operator:wikidata"] = @"Q1848025", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_parking", [@"operator"] = @"Správa železnic", [@"operator:short"] = @"SŽ", [@"operator:wikidata"] = @"Q1848025", },
+            Terms: [@"správa železnic", @"sž", @"szdc"]),
+        new NsiItem(
             DisplayName: @"IKEA",
             Id: @"ikea-e9436a",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q54078", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"IKEA", [@"operator:wikidata"] = @"Q54078", },
             Terms: [@"ikea", @"ikea delft"]),
+        new NsiItem(
+            DisplayName: @"Lokni",
+            Id: @"lokni-eb7dc3",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"drinking_water", [@"operator:wikidata"] = @"Q136769679", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"drinking_water", [@"operator"] = @"Lokni", [@"operator:wikidata"] = @"Q136769679", },
+            Terms: [@"lokni"]),
         new NsiItem(
             DisplayName: @"Policie České republiky",
             Id: @"policieceskerepubliky-8b7b09",
@@ -2204,10 +2354,16 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Diakonie Broumov", [@"operator:wikidata"] = @"Q67814869", },
             Terms: [@"diakonie broumov"]),
         new NsiItem(
+            DisplayName: @"FCC BEC",
+            Id: @"fccbec-778b5b",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q135843069", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"FCC BEC", [@"operator:wikidata"] = @"Q135843069", },
+            Terms: [@"fcc bec"]),
+        new NsiItem(
             DisplayName: @"KlokTex",
             Id: @"kloktex-778b5b",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q131441348", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"KlokTex", [@"operator:wikidata"] = @"Q131441348", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q131441348", [@"recycling_type"] = @"container", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"KlokTex", [@"operator:wikidata"] = @"Q131441348", [@"recycling_type"] = @"container", [@"recycling:shoes"] = @"yes", [@"recycling:textiles"] = @"yes", [@"recycling:toys"] = @"yes", },
             Terms: [@"kloktex"]),
         new NsiItem(
             DisplayName: @"Marius Pedersen",
@@ -2215,12 +2371,6 @@ public static class NsiRegion_CZ
             Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q12326151", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Marius Pedersen", [@"operator:wikidata"] = @"Q12326151", },
             Terms: [@"marius pedersen", @"marius pedersen,a.s."]),
-        new NsiItem(
-            DisplayName: @"Textileco",
-            Id: @"textileco-778b5b",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q19602750", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Textileco", [@"operator:wikidata"] = @"Q19602750", },
-            Terms: [@"textileco"]),
         new NsiItem(
             DisplayName: @"IDS JMK",
             Id: @"idsjmk-abb2e4",
@@ -2393,8 +2543,8 @@ public static class NsiRegion_CZ
             DisplayName: @"Správa železnic",
             Id: @"spravazeleznic-5f01ff",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q1848025", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Správa železnic", [@"operator:wikidata"] = @"Q1848025", },
-            Terms: [@"správa železnic", @"sždc"]),
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Správa železnic", [@"operator:short"] = @"SŽ", [@"operator:wikidata"] = @"Q1848025", },
+            Terms: [@"správa železnic", @"sž", @"szdc"]),
         new NsiItem(
             DisplayName: @"Teta",
             Id: @"teta-9137b5",
@@ -2432,17 +2582,11 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"operator"] = @"České dráhy", [@"operator:short"] = @"ČD", [@"operator:wikidata"] = @"Q304944", [@"power"] = @"catenary_mast", },
             Terms: [@"čd", @"české dráhy", @"cz:čd"]),
         new NsiItem(
-            DisplayName: @"Správa železnic, s. o.",
-            Id: @"spravazeleznicso-e7d44b",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"catenary_mast", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic, s. o.", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"catenary_mast", },
-            Terms: [@"správa železnic", @"správa železnic, s. o.", @"sžcz"]),
-        new NsiItem(
             DisplayName: @"Správa železnic",
-            Id: @"czspravazeleznic-e7d44b",
+            Id: @"spravazeleznic-e7d44b",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"catenary_mast", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"cz:Správa železnic", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"catenary_mast", },
-            Terms: [@"cz:správa železnic", @"správa železnic", @"sžcz"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic", [@"operator:short"] = @"SŽ", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"catenary_mast", },
+            Terms: [@"správa železnic", @"sprava zeleznic, s. o.", @"sž", @"szcz"]),
         new NsiItem(
             DisplayName: @"ČEZ",
             Id: @"cez-e7507c",
@@ -2597,8 +2741,8 @@ public static class NsiRegion_CZ
             DisplayName: @"Správa železnic",
             Id: @"spravazeleznic-fd39e1",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"substation", },
-            Terms: [@"správa železnic", @"sž", @"sždc"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic", [@"operator:short"] = @"SŽ", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"substation", },
+            Terms: [@"správa železnic", @"sž", @"szdc"]),
         new NsiItem(
             DisplayName: @"ČEPS",
             Id: @"ceps-2998d9",
@@ -2669,8 +2813,8 @@ public static class NsiRegion_CZ
             DisplayName: @"Správa železnic",
             Id: @"spravazeleznic-5a056f",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"transformer", },
-            Terms: [@"správa železnic", @"sž", @"sždc"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic", [@"operator:short"] = @"SŽ", [@"operator:wikidata"] = @"Q1848025", [@"power"] = @"transformer", },
+            Terms: [@"správa železnic", @"sž", @"szdc"]),
         new NsiItem(
             DisplayName: @"ČEPS",
             Id: @"ceps-3c5842",
@@ -2702,11 +2846,11 @@ public static class NsiRegion_CZ
             AddTags: new Dictionary<string, string> { [@"operator"] = @"České dráhy", [@"operator:short"] = @"ČD", [@"operator:wikidata"] = @"Q304944", [@"route"] = @"railway", [@"type"] = @"route", },
             Terms: [@"čd", @"české dráhy", @"cz:čd"]),
         new NsiItem(
-            DisplayName: @"Správa železnic, s. o.",
-            Id: @"spravazeleznicso-fb3809",
+            DisplayName: @"Správa železnic",
+            Id: @"spravazeleznic-fb3809",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1848025", [@"route"] = @"railway", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic, s. o.", [@"operator:wikidata"] = @"Q1848025", [@"route"] = @"railway", [@"type"] = @"route", },
-            Terms: [@"správa železnic", @"správa železnic, s. o.", @"sžcz"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Správa železnic", [@"operator:short"] = @"SŽ", [@"operator:wikidata"] = @"Q1848025", [@"route"] = @"railway", [@"type"] = @"route", },
+            Terms: [@"správa železnic", @"sprava zeleznic, s. o.", @"sž", @"szcz"]),
         new NsiItem(
             DisplayName: @"CETIN a.s.",
             Id: @"cetinas-8bbb66",
@@ -2715,7 +2859,7 @@ public static class NsiRegion_CZ
             Terms: [@"cetin a.s."]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
+            Id: @"arriva-b74934",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             Terms: [@"arriva"]),
@@ -2781,7 +2925,7 @@ public static class NsiRegion_CZ
             Terms: [@"pid", @"prague integrated transport", @"pražská integrovaná doprava"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
+            Id: @"arriva-d898fa",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"arriva"]),

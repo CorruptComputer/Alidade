@@ -278,10 +278,10 @@ public static class NsiRegion_PK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Telenor", [@"brand:wikidata"] = @"Q3445676", [@"name"] = @"Telenor", [@"shop"] = @"mobile_phone", },
             Terms: [@"Telenor Pakistan", @"telenor"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Serena Hotels",

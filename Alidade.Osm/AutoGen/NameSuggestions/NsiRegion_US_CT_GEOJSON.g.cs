@@ -32,6 +32,12 @@ public static class NsiRegion_US_CT_GEOJSON
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Xtra Fuels", [@"brand:wikidata"] = @"Q121160101", },
             Terms: [@"xtra fuels", @"xtramart"]),
         new NsiItem(
+            DisplayName: @"American Eagle Financial Credit Union",
+            Id: @"americaneaglefinancialcreditunion-7bb27b",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q138529638", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"American Eagle Financial Credit Union", [@"brand:wikidata"] = @"Q138529638", [@"operator"] = @"American Eagle Financial Credit Union", [@"operator:wikidata"] = @"Q138529638", },
+            Terms: [@"american eagle financial credit union"]),
+        new NsiItem(
             DisplayName: @"Berkshire Bank",
             Id: @"berkshirebank-02a2aa",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q48976878", },
@@ -49,6 +55,12 @@ public static class NsiRegion_US_CT_GEOJSON
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q6541584", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Liberty Bank", [@"brand:wikidata"] = @"Q6541584", [@"operator"] = @"Liberty Bank", [@"operator:wikidata"] = @"Q6541584", },
             Terms: [@"Liberty Bank (Connecticut)", @"liberty bank"]),
+        new NsiItem(
+            DisplayName: @"American Eagle Financial Credit Union",
+            Id: @"americaneaglefinancialcreditunion-9baf35",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q138529638", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"American Eagle Financial Credit Union", [@"brand:wikidata"] = @"Q138529638", [@"name"] = @"American Eagle Financial Credit Union", },
+            Terms: [@"american eagle financial credit union"]),
         new NsiItem(
             DisplayName: @"Berkshire Bank",
             Id: @"berkshirebank-782f7d",

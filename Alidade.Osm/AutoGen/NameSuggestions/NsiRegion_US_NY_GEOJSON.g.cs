@@ -82,8 +82,8 @@ public static class NsiRegion_US_NY_GEOJSON
         new NsiItem(
             DisplayName: @"Republic Bank (Philadelphia)",
             Id: @"republicbank-9bba96",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q55316482", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q55316482", [@"operator"] = @"Republic Bank", [@"operator:wikidata"] = @"Q55316482", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q16976594", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q16976594", [@"operator"] = @"Republic Bank", [@"operator:wikidata"] = @"Q16976594", },
             Terms: [@"Republic Bank (Philadelphia)", @"republic bank"]),
         new NsiItem(
             DisplayName: @"Tompkins Community Bank",
@@ -142,8 +142,8 @@ public static class NsiRegion_US_NY_GEOJSON
         new NsiItem(
             DisplayName: @"Republic Bank (Philadelphia)",
             Id: @"republicbank-9c6083",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q55316482", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q55316482", [@"name"] = @"Republic Bank", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q16976594", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q16976594", [@"name"] = @"Republic Bank", },
             Terms: [@"Republic Bank (Philadelphia)", @"republic bank"]),
         new NsiItem(
             DisplayName: @"Tompkins Community Bank",
@@ -1042,8 +1042,8 @@ public static class NsiRegion_US_NY_GEOJSON
         new NsiItem(
             DisplayName: @"Niagara Mohawk",
             Id: @"niagaramohawk-255ed7",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"line", },
             Terms: [@"niagara mohawk"]),
         new NsiItem(
             DisplayName: @"NYSEG",
@@ -1090,8 +1090,8 @@ public static class NsiRegion_US_NY_GEOJSON
         new NsiItem(
             DisplayName: @"Niagara Mohawk",
             Id: @"niagaramohawk-451afe",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"minor_line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"minor_line", },
             Terms: [@"niagara mohawk"]),
         new NsiItem(
             DisplayName: @"NYSEG",
@@ -1150,8 +1150,8 @@ public static class NsiRegion_US_NY_GEOJSON
         new NsiItem(
             DisplayName: @"Niagara Mohawk",
             Id: @"niagaramohawk-08de41",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"pole", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"pole", },
             Terms: [@"niagara mohawk"]),
         new NsiItem(
             DisplayName: @"NYSEG",
@@ -1234,8 +1234,8 @@ public static class NsiRegion_US_NY_GEOJSON
         new NsiItem(
             DisplayName: @"Niagara Mohawk",
             Id: @"niagaramohawk-f597d1",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q25028424", [@"power"] = @"tower", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Niagara Mohawk", [@"operator:wikidata"] = @"Q1465461", [@"power"] = @"tower", },
             Terms: [@"niagara mohawk"]),
         new NsiItem(
             DisplayName: @"NYSEG",

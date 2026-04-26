@@ -267,10 +267,16 @@ public static class NsiRegion_KZ
             Terms: [@"33 пингвина"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
+        new NsiItem(
+            DisplayName: @"Globbing",
+            Id: @"globbing-1f20af",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q138667393", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"Globbing", [@"brand:wikidata"] = @"Q138667393", [@"name"] = @"Globbing", },
+            Terms: [@"globbing"]),
         new NsiItem(
             DisplayName: @"Қазпошта",
             Id: @"kazpost-a244bc",
@@ -454,15 +460,21 @@ public static class NsiRegion_KZ
         new NsiItem(
             DisplayName: @"Евросеть",
             Id: @"euroset-62982a",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65310", [@"shop"] = @"mobile_phone", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Евросеть", [@"brand:en"] = @"Euroset", [@"brand:ru"] = @"Евросеть", [@"brand:wikidata"] = @"Q65310", [@"name"] = @"Евросеть", [@"name:en"] = @"Euroset", [@"name:ru"] = @"Евросеть", [@"shop"] = @"mobile_phone", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65371", [@"shop"] = @"mobile_phone", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Евросеть", [@"brand:en"] = @"Euroset", [@"brand:ru"] = @"Евросеть", [@"brand:wikidata"] = @"Q65371", [@"name"] = @"Евросеть", [@"name:en"] = @"Euroset", [@"name:ru"] = @"Евросеть", [@"shop"] = @"mobile_phone", },
             Terms: [@"euroset", @"евросеть"]),
         new NsiItem(
+            DisplayName: @"Ozon",
+            Id: @"ozon-f8825b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2365235", [@"shop"] = @"outpost", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Ozon", [@"brand:en"] = @"Ozon", [@"brand:wikidata"] = @"Q2365235", [@"name"] = @"Ozon", [@"name:en"] = @"Ozon", [@"shop"] = @"outpost", },
+            Terms: [@"ozon"]),
+        new NsiItem(
             DisplayName: @"Wildberries",
-            Id: @"wildberries-f8825b",
+            Id: @"wildberries-c79976",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24933714", [@"shop"] = @"outpost", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"shop"] = @"outpost", },
-            Terms: [@"wildberries"]),
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:en"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"name:en"] = @"Wildberries", [@"shop"] = @"outpost", },
+            Terms: [@"wb", @"wildberries"]),
         new NsiItem(
             DisplayName: @"Sister's Aroma",
             Id: @"sistersaroma-20926e",
@@ -536,10 +548,10 @@ public static class NsiRegion_KZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fix Price", [@"brand:wikidata"] = @"Q4038791", [@"name"] = @"Fix Price", [@"name:be"] = @"Фікс Прайс", [@"name:be-Latn"] = @"Fiks Prajs", [@"name:en"] = @"Fix Price", [@"name:ru"] = @"Фикс Прайс", [@"name:uk"] = @"Фікс Прайс", [@"shop"] = @"variety_store", },
             Terms: [@"fiks prajs", @"fix price", @"фикс прайс", @"фікс прайс"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Marriott Executive Apartments",

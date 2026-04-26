@@ -303,7 +303,7 @@ public static class NsiRegion_NZ
             Terms: [@"jucy"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-36ec13",
+            Id: @"bppulse-ac8b5c",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q39057719", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -386,6 +386,12 @@ public static class NsiRegion_NZ
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Noodle Canteen", [@"brand:wikidata"] = @"Q115565791", [@"cuisine"] = @"noodle", [@"name"] = @"Noodle Canteen", [@"takeaway"] = @"yes", },
             Terms: [@"noodle canteen"]),
         new NsiItem(
+            DisplayName: @"OMG! Decadent Donuts",
+            Id: @"omgdecadentdonuts-6ed0e2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q138388838", [@"cuisine"] = @"donut", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"OMG! Decadent Donuts", [@"brand:wikidata"] = @"Q138388838", [@"cuisine"] = @"donut", [@"diet:gluten_free"] = @"only", [@"diet:vegan"] = @"only", [@"name"] = @"OMG! Decadent Donuts", [@"takeaway"] = @"yes", },
+            Terms: [@"omg", @"omg! decadent donuts"]),
+        new NsiItem(
             DisplayName: @"Sal's Pizza",
             Id: @"salspizza-3a7e06",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q115566078", [@"cuisine"] = @"pizza", },
@@ -393,7 +399,7 @@ public static class NsiRegion_NZ
             Terms: [@"sal's ny pizza", @"sal's pizza"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -535,6 +541,12 @@ public static class NsiRegion_NZ
             Tags: new Dictionary<string, string> { [@"amenity"] = @"post_depot", [@"brand:wikidata"] = @"Q130400315", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_depot", [@"brand"] = @"InXpress", [@"brand:wikidata"] = @"Q130400315", [@"operator"] = @"InXpress", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q130400315", },
             Terms: [@"inxpress"]),
+        new NsiItem(
+            DisplayName: @"DX Mail (New Zealand)",
+            Id: @"dxmail-c4f0a8",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"brand:wikidata"] = @"Q125635563", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"brand"] = @"DX Mail", [@"brand:wikidata"] = @"Q125635563", [@"name"] = @"DX Mail", },
+            Terms: [@"DX Mail (New Zealand)", @"document exchange mail", @"dx mail", @"new zealand document exchange"]),
         new NsiItem(
             DisplayName: @"Bento Bowl",
             Id: @"bentobowl-8ced4c",
@@ -705,7 +717,7 @@ public static class NsiRegion_NZ
             Terms: [@"lollipops playland"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-937d1e",
+            Id: @"bppulse-269202",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -916,8 +928,8 @@ public static class NsiRegion_NZ
         new NsiItem(
             DisplayName: @"Holden",
             Id: @"holden-e02034",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q29281", [@"shop"] = @"car", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q29281", [@"name"] = @"Holden", [@"shop"] = @"car", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q112728701", [@"shop"] = @"car", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q112728701", [@"name"] = @"Holden", [@"shop"] = @"car", },
             Terms: [@"holden"]),
         new NsiItem(
             DisplayName: @"Repco",
@@ -934,15 +946,15 @@ public static class NsiRegion_NZ
         new NsiItem(
             DisplayName: @"Holden",
             Id: @"holden-224beb",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q29281", [@"shop"] = @"car_repair", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q29281", [@"name"] = @"Holden", [@"shop"] = @"car_repair", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q112728701", [@"shop"] = @"car_repair", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q112728701", [@"name"] = @"Holden", [@"shop"] = @"car_repair", },
             Terms: [@"holden"]),
         new NsiItem(
-            DisplayName: @"Carpet Court",
-            Id: @"carpetcourt-41ee08",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q117156437", [@"shop"] = @"carpet", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Carpet Court", [@"brand:wikidata"] = @"Q117156437", [@"name"] = @"Carpet Court", [@"shop"] = @"carpet", },
-            Terms: [@"carpet court"]),
+            DisplayName: @"Carpet Court (New Zealand)",
+            Id: @"carpetcourt-3bed23",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137908618", [@"shop"] = @"carpet", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Carpet Court", [@"brand:wikidata"] = @"Q137908618", [@"name"] = @"Carpet Court", [@"shop"] = @"carpet", },
+            Terms: [@"Carpet Court (New Zealand)", @"carpet court"]),
         new NsiItem(
             DisplayName: @"Habitat for Humanity ReStore",
             Id: @"habitatforhumanityrestore-0873d3",
@@ -1652,12 +1664,6 @@ public static class NsiRegion_NZ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Godfreys", [@"brand:wikidata"] = @"Q17005430", [@"name"] = @"Godfreys", [@"shop"] = @"vacuum_cleaner", },
             Terms: [@"godfreys"]),
         new NsiItem(
-            DisplayName: @"EB Games (Oceania)",
-            Id: @"ebgames-be6d96",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5322604", [@"shop"] = @"video_games", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"EB Games", [@"brand:wikidata"] = @"Q5322604", [@"name"] = @"EB Games", [@"shop"] = @"video_games", },
-            Terms: [@"EB Games (Oceania)", @"eb games", @"electronics boutique / eb games"]),
-        new NsiItem(
             DisplayName: @"Costco",
             Id: @"costco-69a5bf",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q715583", [@"shop"] = @"wholesale", },
@@ -1837,6 +1843,12 @@ public static class NsiRegion_NZ
             Tags: new Dictionary<string, string> { [@"amenity"] = @"police", [@"operator:wikidata"] = @"Q12063956", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"police", [@"operator"] = @"New Zealand Police", [@"operator:wikidata"] = @"Q12063956", },
             Terms: [@"new zealand police", @"nz police"]),
+        new NsiItem(
+            DisplayName: @"DX Mail (New Zealand)",
+            Id: @"dxmail-6c56da",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator:wikidata"] = @"Q125635563", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"brand"] = @"DX Mail", [@"brand:wikidata"] = @"Q125635563", [@"operator"] = @"DX Mail", [@"operator:wikidata"] = @"Q125635563", },
+            Terms: [@"DX Mail (New Zealand)", @"document exchange mail", @"dx mail", @"new zealand document exchange"]),
         new NsiItem(
             DisplayName: @"New Zealand Post",
             Id: @"newzealandpost-6c56da",
@@ -2372,6 +2384,12 @@ public static class NsiRegion_NZ
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Orion New Zealand", [@"operator:wikidata"] = @"Q7102789", [@"power"] = @"substation", },
             Terms: [@"orion new zealand"]),
         new NsiItem(
+            DisplayName: @"OtagoNet",
+            Id: @"otagonet-8d74a7",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q135580521", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"OtagoNet", [@"operator:wikidata"] = @"Q135580521", [@"power"] = @"substation", },
+            Terms: [@"otagonet"]),
+        new NsiItem(
             DisplayName: @"Powerco",
             Id: @"powerco-8d74a7",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q7236675", [@"power"] = @"substation", },
@@ -2515,6 +2533,12 @@ public static class NsiRegion_NZ
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q7102789", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Orion New Zealand", [@"operator:wikidata"] = @"Q7102789", [@"power"] = @"transformer", },
             Terms: [@"orion new zealand"]),
+        new NsiItem(
+            DisplayName: @"OtagoNet",
+            Id: @"otagonet-05e84a",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q135580521", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"OtagoNet", [@"operator:wikidata"] = @"Q135580521", [@"power"] = @"transformer", },
+            Terms: [@"otagonet"]),
         new NsiItem(
             DisplayName: @"Powerco",
             Id: @"powerco-05e84a",

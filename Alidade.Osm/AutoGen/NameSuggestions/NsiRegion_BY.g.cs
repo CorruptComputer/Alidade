@@ -166,8 +166,8 @@ public static class NsiRegion_BY
         new NsiItem(
             DisplayName: @"Франсабанк",
             Id: @"fransabank-18595f",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q13033234", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Франсабанк", [@"brand:be"] = @"Франсабанк", [@"brand:en"] = @"Fransabank", [@"brand:ru"] = @"Франсабанк", [@"brand:wikidata"] = @"Q13033234", [@"operator"] = @"Франсабанк", [@"operator:wikidata"] = @"Q13033234", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q3919652", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Франсабанк", [@"brand:be"] = @"Франсабанк", [@"brand:en"] = @"Fransabank", [@"brand:ru"] = @"Франсабанк", [@"brand:wikidata"] = @"Q3919652", [@"operator"] = @"Франсабанк", [@"operator:wikidata"] = @"Q3919652", },
             Terms: [@"fransabank", @"франсабанк"]),
         new NsiItem(
             DisplayName: @"Цептер Банк",
@@ -310,8 +310,8 @@ public static class NsiRegion_BY
         new NsiItem(
             DisplayName: @"Франсабанк",
             Id: @"fransabank-4aad73",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q13033234", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Франсабанк", [@"brand:be"] = @"Франсабанк", [@"brand:en"] = @"Fransabank", [@"brand:ru"] = @"Франсабанк", [@"brand:wikidata"] = @"Q13033234", [@"name"] = @"Франсабанк", [@"name:be"] = @"Франсабанк", [@"name:en"] = @"Fransabank", [@"name:ru"] = @"Франсабанк", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q3919652", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Франсабанк", [@"brand:be"] = @"Франсабанк", [@"brand:en"] = @"Fransabank", [@"brand:ru"] = @"Франсабанк", [@"brand:wikidata"] = @"Q3919652", [@"name"] = @"Франсабанк", [@"name:be"] = @"Франсабанк", [@"name:en"] = @"Fransabank", [@"name:ru"] = @"Франсабанк", },
             Terms: [@"fransabank", @"франсабанк"]),
         new NsiItem(
             DisplayName: @"Цептер Банк",
@@ -411,7 +411,7 @@ public static class NsiRegion_BY
             Terms: [@"33 пингвина"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -850,8 +850,8 @@ public static class NsiRegion_BY
         new NsiItem(
             DisplayName: @"Евросеть",
             Id: @"euroset-62982a",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65310", [@"shop"] = @"mobile_phone", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Евросеть", [@"brand:en"] = @"Euroset", [@"brand:ru"] = @"Евросеть", [@"brand:wikidata"] = @"Q65310", [@"name"] = @"Евросеть", [@"name:en"] = @"Euroset", [@"name:ru"] = @"Евросеть", [@"shop"] = @"mobile_phone", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65371", [@"shop"] = @"mobile_phone", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Евросеть", [@"brand:en"] = @"Euroset", [@"brand:ru"] = @"Евросеть", [@"brand:wikidata"] = @"Q65371", [@"name"] = @"Евросеть", [@"name:en"] = @"Euroset", [@"name:ru"] = @"Евросеть", [@"shop"] = @"mobile_phone", },
             Terms: [@"euroset", @"евросеть"]),
         new NsiItem(
             DisplayName: @"МТС",
@@ -878,11 +878,17 @@ public static class NsiRegion_BY
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fielmann", [@"brand:wikidata"] = @"Q457822", [@"name"] = @"Fielmann", [@"shop"] = @"optician", },
             Terms: [@"fielmann"]),
         new NsiItem(
+            DisplayName: @"Ozon",
+            Id: @"ozon-f8825b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2365235", [@"shop"] = @"outpost", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Ozon", [@"brand:en"] = @"Ozon", [@"brand:wikidata"] = @"Q2365235", [@"name"] = @"Ozon", [@"name:en"] = @"Ozon", [@"shop"] = @"outpost", },
+            Terms: [@"ozon"]),
+        new NsiItem(
             DisplayName: @"Wildberries",
-            Id: @"wildberries-f8825b",
+            Id: @"wildberries-c79976",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24933714", [@"shop"] = @"outpost", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"shop"] = @"outpost", },
-            Terms: [@"wildberries"]),
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:en"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"name:en"] = @"Wildberries", [@"shop"] = @"outpost", },
+            Terms: [@"wb", @"wildberries"]),
         new NsiItem(
             DisplayName: @"ZOObazar",
             Id: @"zoobazar-3053c4",

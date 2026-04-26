@@ -434,6 +434,12 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"Migrol", [@"brand:wikidata"] = @"Q1747771", [@"name"] = @"Migrol Car Wash", },
             Terms: [@"Migrol Car Wash", @"migrol"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-a1174d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q126913632", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"bike-energy",
             Id: @"bikeenergy-b97cbe",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q67770877", },
@@ -447,7 +453,7 @@ public static class NsiRegion_CH
             Terms: [@"chargeone", @"heinemann"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -663,7 +669,7 @@ public static class NsiRegion_CH
             Terms: [@"babilou"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -890,6 +896,18 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"leisure"] = @"indoor_play", [@"name"] = @"Småland", },
             Terms: [@"IKEA Småland", @"ikea"]),
         new NsiItem(
+            DisplayName: @"Monkey Town",
+            Id: @"monkeytown-f9368f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426657", [@"leisure"] = @"indoor_play", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Monkey Town", [@"brand:wikidata"] = @"Q138426657", [@"fee"] = @"yes", [@"leisure"] = @"indoor_play", [@"name"] = @"Monkey Town", },
+            Terms: [@"monkey town"]),
+        new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-f43120",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"bike-energy",
             Id: @"bikeenergy-1491ca",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q67770877", [@"man_made"] = @"charge_point", },
@@ -903,7 +921,7 @@ public static class NsiRegion_CH
             Terms: [@"chargeone", @"heinemann"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -1076,6 +1094,12 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"brand"] = @"L'Agence Automobilière", [@"brand:wikidata"] = @"Q120734335", [@"name"] = @"L'Agence Automobilière", [@"second_hand"] = @"only", [@"shop"] = @"car", },
             Terms: [@"l'agence automobilière"]),
         new NsiItem(
+            DisplayName: @"Derendinger",
+            Id: @"derendinger-dfc2fd",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1200150", [@"shop"] = @"car_parts", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Derendinger", [@"brand:wikidata"] = @"Q1200150", [@"name"] = @"Derendinger", [@"shop"] = @"car_parts", },
+            Terms: [@"derendinger"]),
+        new NsiItem(
             DisplayName: @"1a autoservice",
             Id: @"1aautoservice-4c8afc",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q109558465", [@"shop"] = @"car_repair", },
@@ -1099,6 +1123,12 @@ public static class NsiRegion_CH
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q35594", [@"shop"] = @"car_repair", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Koenigsegg", [@"brand:wikidata"] = @"Q35594", [@"name"] = @"Koenigsegg", [@"shop"] = @"car_repair", },
             Terms: [@"koenigsegg"]),
+        new NsiItem(
+            DisplayName: @"Magasin du Monde",
+            Id: @"magasindumonde-ea61d3",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q109044029", [@"shop"] = @"charity", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Magasin du Monde", [@"brand:wikidata"] = @"Q109044029", [@"name"] = @"Magasin du Monde", [@"shop"] = @"charity", },
+            Terms: [@"magasin du monde"]),
         new NsiItem(
             DisplayName: @"Dropa",
             Id: @"dropa-05cd60",
@@ -1742,6 +1772,12 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Optic 2000", [@"brand:wikidata"] = @"Q3354445", [@"name"] = @"Optic 2000", [@"shop"] = @"optician", },
             Terms: [@"optic 2000"]),
         new NsiItem(
+            DisplayName: @"Optical Center",
+            Id: @"opticalcenter-efdbe9",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
+            Terms: [@"optical center"]),
+        new NsiItem(
             DisplayName: @"Visilab",
             Id: @"visilab-fac47f",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2528307", [@"shop"] = @"optician", },
@@ -2084,6 +2120,12 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Leonardo Boutique", [@"brand:wikidata"] = @"Q1819101", [@"name"] = @"Leonardo Boutique", [@"tourism"] = @"hotel", },
             Terms: [@"leonardo boutique"]),
         new NsiItem(
+            DisplayName: @"Mama Shelter",
+            Id: @"mamashelter-876740",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
+            Terms: [@"mama shelter"]),
+        new NsiItem(
             DisplayName: @"NH Hotels",
             Id: @"nhhotel-e9b4fb",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1604631", [@"tourism"] = @"hotel", },
@@ -2210,11 +2252,11 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"IWB", [@"operator:wikidata"] = @"Q1303238", },
             Terms: [@"iwb"]),
         new NsiItem(
-            DisplayName: @"Migrol",
+            DisplayName: @"Migrol Charge",
             Id: @"migrol-086737",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q1747771", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Migrol", [@"operator:wikidata"] = @"Q1747771", },
-            Terms: [@"migrol"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Migrol", [@"operator:wikidata"] = @"Q1747771", [@"short_name"] = @"M-Charge", },
+            Terms: [@"Migrol Charge", @"m-charge", @"migrol"]),
         new NsiItem(
             DisplayName: @"MOVE",
             Id: @"move-086737",
@@ -2336,6 +2378,12 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator"] = @"SBB", [@"operator:wikidata"] = @"Q83835", },
             Terms: [@"sbb"]),
         new NsiItem(
+            DisplayName: @"Société Internationale de Sauvetage du Léman",
+            Id: @"societeinternationaledesauvetageduleman-9c4f1b",
+            Tags: new Dictionary<string, string> { [@"emergency"] = @"water_rescue", [@"operator:wikidata"] = @"Q3488421", },
+            AddTags: new Dictionary<string, string> { [@"emergency"] = @"water_rescue", [@"operator"] = @"Société Internationale de Sauvetage du Léman", [@"operator:short"] = @"SISL", [@"operator:wikidata"] = @"Q3488421", },
+            Terms: [@"sisl", @"société internationale de sauvetage du léman"]),
+        new NsiItem(
             DisplayName: @"Agrola",
             Id: @"agrola-d761b8",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q397351", },
@@ -2414,11 +2462,11 @@ public static class NsiRegion_CH
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"IWB", [@"operator:wikidata"] = @"Q1303238", },
             Terms: [@"iwb"]),
         new NsiItem(
-            DisplayName: @"Migrol",
+            DisplayName: @"Migrol Charge",
             Id: @"migrol-d761b8",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q1747771", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Migrol", [@"operator:wikidata"] = @"Q1747771", },
-            Terms: [@"migrol"]),
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Migrol", [@"operator:wikidata"] = @"Q1747771", [@"short_name"] = @"M-Charge", },
+            Terms: [@"Migrol Charge", @"m-charge", @"migrol"]),
         new NsiItem(
             DisplayName: @"MOVE",
             Id: @"move-d761b8",

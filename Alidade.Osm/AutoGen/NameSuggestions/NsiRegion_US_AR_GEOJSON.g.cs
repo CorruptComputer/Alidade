@@ -112,8 +112,8 @@ public static class NsiRegion_US_AR_GEOJSON
         new NsiItem(
             DisplayName: @"Big Red Stores",
             Id: @"bigred-087ec0",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q109648675", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Big Red Stores", [@"brand:wikidata"] = @"Q109648675", [@"name"] = @"Big Red", [@"shop"] = @"convenience", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3268010", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Big Red Stores", [@"brand:wikidata"] = @"Q3268010", [@"name"] = @"Big Red", [@"shop"] = @"convenience", },
             Terms: [@"big red stores"]),
         new NsiItem(
             DisplayName: @"Refuel",

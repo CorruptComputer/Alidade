@@ -17,7 +17,7 @@ public static class NsiRegion_NO
             DisplayName: @"Everfuel",
             Id: @"everfuel-b750b3",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q114905024", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Everfuel", [@"brand:wikidata"] = @"Q114905024", [@"fuel:LH2"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Everfuel", [@"brand:wikidata"] = @"Q114905024", },
             Terms: [@"everfuel"]),
         new NsiItem(
             DisplayName: @"Preem",
@@ -25,6 +25,12 @@ public static class NsiRegion_NO
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q598835", },
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Preem", [@"brand:wikidata"] = @"Q598835", },
             Terms: [@"preem"]),
+        new NsiItem(
+            DisplayName: @"St1",
+            Id: @"st1-a298f9",
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q7592214", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"St1", [@"brand:wikidata"] = @"Q7592214", },
+            Terms: [@"st1"]),
         new NsiItem(
             DisplayName: @"Uno-X",
             Id: @"unox-38cbf4",
@@ -218,6 +224,12 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Preem", [@"brand:wikidata"] = @"Q598835", [@"name"] = @"Preem", },
             Terms: [@"preem"]),
         new NsiItem(
+            DisplayName: @"St1",
+            Id: @"st1-c8bbc2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q7592214", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"St1", [@"brand:wikidata"] = @"Q7592214", [@"name"] = @"St1", },
+            Terms: [@"st1"]),
+        new NsiItem(
             DisplayName: @"Uno-X",
             Id: @"unox-9449e0",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q3362746", },
@@ -302,6 +314,12 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Peppes Pizza", [@"brand:wikidata"] = @"Q911973", [@"cuisine"] = @"pizza", [@"takeaway"] = @"yes", },
             Terms: [@"peppes pizza"]),
         new NsiItem(
+            DisplayName: @"Pincho Nation",
+            Id: @"pinchonation-c5098f",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q42298558", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Pincho Nation", [@"brand:wikidata"] = @"Q42298558", [@"cuisine"] = @"tapas", [@"name"] = @"Pincho Nation", },
+            Terms: [@"pincho nation"]),
+        new NsiItem(
             DisplayName: @"Selecta",
             Id: @"selecta-ed4d31",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand:wikidata"] = @"Q472153", [@"vending"] = @"drinks;sweets", },
@@ -338,11 +356,23 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Bademiljø", [@"brand:wikidata"] = @"Q129941627", [@"craft"] = @"plumber", [@"name"] = @"Bademiljø", },
             Terms: [@"bademiljø"]),
         new NsiItem(
+            DisplayName: @"Actic",
+            Id: @"actic-064b3e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q10400539", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Actic", [@"brand:wikidata"] = @"Q10400539", [@"leisure"] = @"fitness_centre", [@"name"] = @"Actic", },
+            Terms: [@"actic"]),
+        new NsiItem(
             DisplayName: @"Barry's",
             Id: @"barrys-1b6d66",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q96373178", [@"leisure"] = @"fitness_centre", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Barry's", [@"brand:wikidata"] = @"Q96373178", [@"leisure"] = @"fitness_centre", [@"name"] = @"Barry's", },
             Terms: [@"barry's"]),
+        new NsiItem(
+            DisplayName: @"Fitness24Seven",
+            Id: @"fitness24seven-46465b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Fitness24Seven", [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", [@"name"] = @"Fitness24Seven", },
+            Terms: [@"fitness24seven"]),
         new NsiItem(
             DisplayName: @"Sats",
             Id: @"sats-44c5d4",
@@ -477,7 +507,7 @@ public static class NsiRegion_NO
             Terms: [@"bestdrive"]),
         new NsiItem(
             DisplayName: @"Mekonomen",
-            Id: @"mekonomen-7de64b",
+            Id: @"mekonomen-158011",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q10580079", [@"shop"] = @"car_repair", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mekonomen", [@"brand:wikidata"] = @"Q10580079", [@"name"] = @"Mekonomen", [@"shop"] = @"car_repair", },
             Terms: [@"mekonomen"]),
@@ -489,7 +519,7 @@ public static class NsiRegion_NO
             Terms: [@"polestar", @"polestar racing"]),
         new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),
@@ -1192,8 +1222,8 @@ public static class NsiRegion_NO
         new NsiItem(
             DisplayName: @"Oppegård kommune",
             Id: @"oppegardkommune-476d58",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q57868", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Oppegård kommune", [@"operator:wikidata"] = @"Q57868", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q45303406", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Oppegård kommune", [@"operator:wikidata"] = @"Q45303406", },
             Terms: [@"oppegård kommune"]),
         new NsiItem(
             DisplayName: @"Oslo kommune",
@@ -1804,8 +1834,8 @@ public static class NsiRegion_NO
         new NsiItem(
             DisplayName: @"Viken fylkeskommune",
             Id: @"vikenfylkeskommune-ee5f1f",
-            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q66536308", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Viken fylkeskommune", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q66536308", },
+            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q11269848", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Viken fylkeskommune", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q11269848", },
             Terms: [@"viken fylkeskommune"]),
         new NsiItem(
             DisplayName: @"Bergen kommune",
@@ -2062,8 +2092,8 @@ public static class NsiRegion_NO
         new NsiItem(
             DisplayName: @"Oppegård kommune",
             Id: @"oppegardkommune-0916f2",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q57868", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Oppegård kommune", [@"operator:wikidata"] = @"Q57868", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q45303406", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Oppegård kommune", [@"operator:wikidata"] = @"Q45303406", },
             Terms: [@"oppegård kommune"]),
         new NsiItem(
             DisplayName: @"Oslo kommune",
@@ -2384,11 +2414,11 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Nett", [@"operator:wikidata"] = @"Q117833205", [@"power"] = @"line", },
             Terms: [@"glitre energi", @"glitre energi nett", @"glitre nett"]),
         new NsiItem(
-            DisplayName: @"Hafslund E-CO Vannkraft",
-            Id: @"hafslundecovannkraft-e0b869",
+            DisplayName: @"Hafslund Kraft",
+            Id: @"hafslundkraft-e0b869",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund E-CO Vannkraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"line", },
-            Terms: [@"hafslund e-co vannkraft"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund Kraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"line", },
+            Terms: [@"hafslund e-co vannkraft", @"hafslund e-co vannkraft as", @"hafslund kraft"]),
         new NsiItem(
             DisplayName: @"Haugaland Kraft Nett",
             Id: @"haugalandkraftnett-e0b869",
@@ -2648,11 +2678,11 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Nett", [@"operator:wikidata"] = @"Q117833205", [@"power"] = @"minor_line", },
             Terms: [@"glitre energi", @"glitre energi nett", @"glitre nett"]),
         new NsiItem(
-            DisplayName: @"Hafslund E-CO Vannkraft",
-            Id: @"hafslundecovannkraft-5b4abc",
+            DisplayName: @"Hafslund Kraft",
+            Id: @"hafslundkraft-5b4abc",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund E-CO Vannkraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"minor_line", },
-            Terms: [@"hafslund e-co vannkraft"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund Kraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"minor_line", },
+            Terms: [@"hafslund e-co vannkraft", @"hafslund e-co vannkraft as", @"hafslund kraft"]),
         new NsiItem(
             DisplayName: @"Haugaland Kraft Nett",
             Id: @"haugalandkraftnett-5b4abc",
@@ -2836,8 +2866,8 @@ public static class NsiRegion_NO
         new NsiItem(
             DisplayName: @"Glitre Energi",
             Id: @"glitreenergi-44cc7f",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5376857", [@"power"] = @"plant", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Energi", [@"operator:wikidata"] = @"Q5376857", [@"power"] = @"plant", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q4355084", [@"power"] = @"plant", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Energi", [@"operator:wikidata"] = @"Q4355084", [@"power"] = @"plant", },
             Terms: [@"glitre energi"]),
         new NsiItem(
             DisplayName: @"Hafslund Kraft",
@@ -2990,11 +3020,11 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Nett", [@"operator:wikidata"] = @"Q117833205", [@"power"] = @"pole", },
             Terms: [@"glitre energi", @"glitre energi nett", @"glitre nett"]),
         new NsiItem(
-            DisplayName: @"Hafslund E-CO Vannkraft",
-            Id: @"hafslundecovannkraft-05f310",
+            DisplayName: @"Hafslund Kraft",
+            Id: @"hafslundkraft-05f310",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund E-CO Vannkraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"pole", },
-            Terms: [@"hafslund e-co vannkraft"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund Kraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"pole", },
+            Terms: [@"hafslund e-co vannkraft", @"hafslund e-co vannkraft as", @"hafslund kraft"]),
         new NsiItem(
             DisplayName: @"Haugaland Kraft Nett",
             Id: @"haugalandkraftnett-05f310",
@@ -3256,8 +3286,8 @@ public static class NsiRegion_NO
         new NsiItem(
             DisplayName: @"Glitre Energi",
             Id: @"glitreenergi-ba6ae8",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5376857", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Energi", [@"operator:wikidata"] = @"Q5376857", [@"power"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q4355084", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Energi", [@"operator:wikidata"] = @"Q4355084", [@"power"] = @"substation", },
             Terms: [@"glitre energi"]),
         new NsiItem(
             DisplayName: @"Glitre Nett",
@@ -3554,11 +3584,11 @@ public static class NsiRegion_NO
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Nett", [@"operator:wikidata"] = @"Q117833205", [@"power"] = @"tower", },
             Terms: [@"glitre energi", @"glitre energi nett", @"glitre nett"]),
         new NsiItem(
-            DisplayName: @"Hafslund E-CO Vannkraft",
-            Id: @"hafslundecovannkraft-c20ae5",
+            DisplayName: @"Hafslund Kraft",
+            Id: @"hafslundkraft-c20ae5",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund E-CO Vannkraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"tower", },
-            Terms: [@"hafslund e-co vannkraft"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Hafslund Kraft", [@"operator:wikidata"] = @"Q5321386", [@"power"] = @"tower", },
+            Terms: [@"hafslund e-co vannkraft", @"hafslund e-co vannkraft as", @"hafslund kraft"]),
         new NsiItem(
             DisplayName: @"Haugaland Kraft Nett",
             Id: @"haugalandkraftnett-c20ae5",
@@ -3820,8 +3850,8 @@ public static class NsiRegion_NO
         new NsiItem(
             DisplayName: @"Glitre Energi",
             Id: @"glitreenergi-7fe9fe",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5376857", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Energi", [@"operator:wikidata"] = @"Q5376857", [@"power"] = @"transformer", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q4355084", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Glitre Energi", [@"operator:wikidata"] = @"Q4355084", [@"power"] = @"transformer", },
             Terms: [@"glitre energi"]),
         new NsiItem(
             DisplayName: @"Glitre Nett",

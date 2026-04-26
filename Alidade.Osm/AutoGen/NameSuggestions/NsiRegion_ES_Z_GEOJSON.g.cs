@@ -56,6 +56,12 @@ public static class NsiRegion_ES_Z_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Viesgo Renovables, S.L.U.", [@"operator:wikidata"] = @"Q113464319", [@"power"] = @"generator", },
             Terms: [@"viesgo renovables, s.l.u."]),
         new NsiItem(
+            DisplayName: @"Autobuses Urbanos de Zaragoza",
+            Id: @"autobusesurbanosdezaragoza-42a099",
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q138063789", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Autobuses Urbanos de Zaragoza", [@"network:short"] = @"AUZ", [@"network:wikidata"] = @"Q138063789", [@"operator"] = @"Avanza Zaragoza", [@"operator:wikidata"] = @"Q6151783", [@"public_transport"] = @"platform", },
+            Terms: [@"autobuses urbanos de zaragoza", @"auz", @"auzsa", @"avanza zaragoza", @"tuzsa", @"urbanos de zaragoza"]),
+        new NsiItem(
             DisplayName: @"Consorcio de Transportes del Área de Zaragoza",
             Id: @"consorciodetransportesdelareadezaragoza-42a099",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q5784328", [@"public_transport"] = @"platform", },
@@ -79,6 +85,12 @@ public static class NsiRegion_ES_Z_GEOJSON
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q1584986", [@"railway"] = @"tram_stop", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Tranvía de Zaragoza", [@"network:guid"] = @"ES-AR-Z-Tranvia", [@"network:wikidata"] = @"Q1584986", [@"operator"] = @"Sociedad de Economía Mixta Los Tranvías de Zaragoza", [@"railway"] = @"tram_stop", },
             Terms: [@"es-ar-z-tranvia", @"sociedad de economía mixta los tranvías de zaragoza", @"tranvía de zaragoza", @"zaragoza tram"]),
+        new NsiItem(
+            DisplayName: @"Autobuses Urbanos de Zaragoza",
+            Id: @"autobusesurbanosdezaragoza-dc8c3b",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q138063789", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Autobuses Urbanos de Zaragoza", [@"network:short"] = @"AUZ", [@"network:wikidata"] = @"Q138063789", [@"operator"] = @"Avanza Zaragoza", [@"operator:wikidata"] = @"Q6151783", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"autobuses urbanos de zaragoza", @"auz", @"auzsa", @"avanza zaragoza", @"tuzsa", @"urbanos de zaragoza"]),
         new NsiItem(
             DisplayName: @"Consorcio de Transportes del Área de Zaragoza",
             Id: @"consorciodetransportesdelareadezaragoza-dc8c3b",

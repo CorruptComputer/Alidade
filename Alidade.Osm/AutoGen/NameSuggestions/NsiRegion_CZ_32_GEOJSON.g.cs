@@ -14,6 +14,12 @@ public static class NsiRegion_CZ_32_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Pilsen Bike",
+            Id: @"pilsenbike-143d02",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138580074", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"Pilsen Bike", [@"brand:wikidata"] = @"Q138580074", [@"operator"] = @"Plzeňské městské dopravní podniky", [@"operator:short"] = @"PMDP", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q2099900", },
+            Terms: [@"pilsen bike", @"plzeňské městské dopravní podniky", @"pmdp"]),
+        new NsiItem(
             DisplayName: @"Zdravotnická záchranná služba Plzeňského kraje",
             Id: @"zdravotnickazachrannasluzbaplzenskehokraje-d305cd",
             Tags: new Dictionary<string, string> { [@"emergency"] = @"ambulance_station", [@"operator:wikidata"] = @"Q10857912", },
@@ -55,6 +61,12 @@ public static class NsiRegion_CZ_32_GEOJSON
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q12021682", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Integrovaná doprava Plzeňského kraje", [@"network:short"] = @"IDPK", [@"network:wikidata"] = @"Q12021682", [@"public_transport"] = @"platform", },
             Terms: [@"idpk", @"integrovaná doprava plzeňského kraje", @"mhd plzeň"]),
+        new NsiItem(
+            DisplayName: @"IDPK",
+            Id: @"integrovanadopravaplzenskehokraje-6b0f88",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021682", [@"railway"] = @"halt", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaná doprava Plzeňského kraje", [@"network:short"] = @"IDPK", [@"network:wikidata"] = @"Q12021682", [@"railway"] = @"halt", [@"train"] = @"yes", },
+            Terms: [@"idpk", @"integrovaná doprava plzeňského kraje"]),
         new NsiItem(
             DisplayName: @"IDPK",
             Id: @"integrovanadopravaplzenskehokraje-c98247",

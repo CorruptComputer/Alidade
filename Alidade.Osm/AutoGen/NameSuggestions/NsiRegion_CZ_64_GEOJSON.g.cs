@@ -26,6 +26,12 @@ public static class NsiRegion_CZ_64_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"drinking_water", [@"operator"] = @"Veřejná zeleň města Brna", [@"operator:short"] = @"VZMB", [@"operator:wikidata"] = @"Q118583570", },
             Terms: [@"veřejná zeleň města brna", @"vzmb"]),
         new NsiItem(
+            DisplayName: @"EKOR",
+            Id: @"ekor-11b1a1",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q138356457", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"EKOR", [@"operator:wikidata"] = @"Q138356457", },
+            Terms: [@"ekor"]),
+        new NsiItem(
             DisplayName: @"SAKO",
             Id: @"sako-6bd299",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q12050646", },

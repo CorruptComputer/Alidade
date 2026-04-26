@@ -30,7 +30,7 @@ public static class NsiRegion_DE_TH_GEOJSON
             Id: @"teilauto-c26449",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"brand:wikidata"] = @"Q2400658", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"brand"] = @"teilAuto", [@"brand:wikidata"] = @"Q2400658", [@"operator"] = @"teilAuto eG", [@"operator:type"] = @"private", },
-            Terms: [@"teilauto", @"teilauto eg"]),
+            Terms: [@"mobility center gmbh", @"teilauto", @"teilauto eg"]),
         new NsiItem(
             DisplayName: @"AOK Plus",
             Id: @"aokplus-6e8fbd",
@@ -55,12 +55,6 @@ public static class NsiRegion_DE_TH_GEOJSON
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q114193481", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"TTM", [@"brand:wikidata"] = @"Q114193481", [@"name"] = @"TTM", [@"shop"] = @"doityourself", },
             Terms: [@"ttm"]),
-        new NsiItem(
-            DisplayName: @"teilAuto eG",
-            Id: @"teilautoeg-0cbba8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q2400658", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"teilAuto eG", [@"operator:wikidata"] = @"Q2400658", },
-            Terms: [@"mobility center gmbh", @"teilauto eg"]),
         new NsiItem(
             DisplayName: @"EGG Energieversorgung Gera",
             Id: @"eggenergieversorgunggera-8c6e73",
@@ -194,6 +188,12 @@ public static class NsiRegion_DE_TH_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Kyffhäuser Abwasser- und Trinkwasserverband", [@"operator:short"] = @"KAT", [@"operator:wikidata"] = @"Q130387991", },
             Terms: [@"kat", @"kyffhäuser abwasser- und trinkwasserverband"]),
         new NsiItem(
+            DisplayName: @"Mitteldeutsche Netzgesellschaft Gas",
+            Id: @"mitteldeutschenetzgesellschaftgas-c878f8",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q138455477", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Mitteldeutsche Netzgesellschaft Gas", [@"operator:short"] = @"MITNETZ Gas", [@"operator:wikidata"] = @"Q138455477", },
+            Terms: [@"mitnetz gas", @"mitteldeutsche netzgesellschaft gas", @"mitteldeutsche netzgesellschaft gas gmbh"]),
+        new NsiItem(
             DisplayName: @"Stadtwerke Jena",
             Id: @"stadtwerkejena-b8415f",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q15848843", },
@@ -248,6 +248,12 @@ public static class NsiRegion_DE_TH_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Kyffhäuser Abwasser- und Trinkwasserverband", [@"operator:short"] = @"KAT", [@"operator:wikidata"] = @"Q130387991", [@"pipeline"] = @"substation", },
             Terms: [@"kat", @"kyffhäuser abwasser- und trinkwasserverband"]),
         new NsiItem(
+            DisplayName: @"Mitteldeutsche Netzgesellschaft Gas",
+            Id: @"mitteldeutschenetzgesellschaftgas-49c3f2",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138455477", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Mitteldeutsche Netzgesellschaft Gas", [@"operator:short"] = @"MITNETZ Gas", [@"operator:wikidata"] = @"Q138455477", [@"pipeline"] = @"substation", },
+            Terms: [@"mitnetz gas", @"mitteldeutsche netzgesellschaft gas", @"mitteldeutsche netzgesellschaft gas gmbh"]),
+        new NsiItem(
             DisplayName: @"Stadtwerke Jena",
             Id: @"stadtwerkejena-dc7419",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q15848843", [@"pipeline"] = @"substation", },
@@ -295,6 +301,12 @@ public static class NsiRegion_DE_TH_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124377769", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"EAM Netz", [@"operator:wikidata"] = @"Q124377769", [@"power"] = @"substation", },
             Terms: [@"eam", @"eam netz", @"energienetz mitte", @"eon mitte"]),
+        new NsiItem(
+            DisplayName: @"Energienetze Weimar",
+            Id: @"energienetzeweimar-402326",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427519", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Energienetze Weimar", [@"operator:short"] = @"ENWG", [@"operator:wikidata"] = @"Q138427519", [@"power"] = @"substation", },
+            Terms: [@"energienetze weimar", @"enwg", @"enwg energienetze weimar gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"EVA Energieversorgung Apolda",
             Id: @"evaenergieversorgungapolda-402326",
@@ -355,6 +367,12 @@ public static class NsiRegion_DE_TH_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124377769", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"EAM Netz", [@"operator:wikidata"] = @"Q124377769", [@"power"] = @"transformer", },
             Terms: [@"eam", @"eam netz", @"energienetz mitte", @"eon mitte"]),
+        new NsiItem(
+            DisplayName: @"Energienetze Weimar",
+            Id: @"energienetzeweimar-f3bd8a",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427519", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Energienetze Weimar", [@"operator:short"] = @"ENWG", [@"operator:wikidata"] = @"Q138427519", [@"power"] = @"transformer", },
+            Terms: [@"energienetze weimar", @"enwg", @"enwg energienetze weimar gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"EVA Energieversorgung Apolda",
             Id: @"evaenergieversorgungapolda-f3bd8a",

@@ -14,6 +14,12 @@ public static class NsiRegion_IN_TN_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"TASMAC",
+            Id: @"tasmac-0cc5fb",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1971258", [@"shop"] = @"alcohol", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"TASMAC", [@"brand:wikidata"] = @"Q1971258", [@"name"] = @"TASMAC", [@"shop"] = @"alcohol", },
+            Terms: [@"tasmac"]),
+        new NsiItem(
             DisplayName: @"Department of Higher Education (Tamil Nadu)",
             Id: @"departmentofhighereducation-6d804b",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q5260332", },

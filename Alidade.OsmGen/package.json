@@ -1,8 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "@openstreetmap/editor-layer-index": "github:osmlab/editor-layer-index#5febfce0d81471ab6a26463867ef5795b45ee4c6",
-    "@openstreetmap/id-tagging-schema": "github:openstreetmap/id-tagging-schema#245e730ec86de017ebce8512e8bdc60d26a93fe2",
-    "name-suggestion-index": "7.0.20260126"
+    "@openstreetmap/editor-layer-index": "github:osmlab/editor-layer-index#b3e9bb6e913165df00ac6694e575f14b572ac847",
+    "@openstreetmap/id-tagging-schema": "github:openstreetmap/id-tagging-schema#78bdd5fcde44f411269627b17063ad5625de433f",
+    "name-suggestion-index": "7.0.20260414"
   }
 }

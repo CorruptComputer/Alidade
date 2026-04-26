@@ -14,6 +14,12 @@ public static class NsiRegion_DE_SH_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Hamburger Sparkasse",
+            Id: @"hamburgersparkasse-e71c95",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1573140", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Hamburger Sparkasse", [@"brand:wikidata"] = @"Q1573140", [@"operator"] = @"Hamburger Sparkasse", [@"operator:wikidata"] = @"Q1573140", },
+            Terms: [@"hamburger sparkasse"]),
+        new NsiItem(
             DisplayName: @"Nord-Ostsee Sparkasse",
             Id: @"nordostseesparkasse-54c314",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1369016", },
@@ -25,6 +31,12 @@ public static class NsiRegion_DE_SH_GEOJSON
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1231375", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank Hamburg", [@"brand:wikidata"] = @"Q1231375", [@"operator"] = @"Sparda-Bank Hamburg", [@"operator:wikidata"] = @"Q1231375", },
             Terms: [@"sparda-bank", @"sparda-bank hamburg", @"sparda-bank hamburg eg"]),
+        new NsiItem(
+            DisplayName: @"Hamburger Sparkasse",
+            Id: @"hamburgersparkasse-6fe669",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1573140", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Hamburger Sparkasse", [@"brand:wikidata"] = @"Q1573140", [@"name"] = @"Hamburger Sparkasse", [@"short_name"] = @"Haspa", },
+            Terms: [@"hamburger sparkasse", @"haspa"]),
         new NsiItem(
             DisplayName: @"Nord-Ostsee Sparkasse",
             Id: @"nordostseesparkasse-a957a3",

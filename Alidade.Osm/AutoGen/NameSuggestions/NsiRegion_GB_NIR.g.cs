@@ -134,6 +134,12 @@ public static class NsiRegion_GB_NIR
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"library", [@"operator"] = @"Northern Ireland Library Authority", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q50693680", },
             Terms: [@"northern ireland library authority"]),
         new NsiItem(
+            DisplayName: @"Department for Infrastructure",
+            Id: @"departmentforinfrastructure-bf409c",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"parking", [@"operator:wikidata"] = @"Q3044778", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parking", [@"name"] = @"Department for Infrastructure", [@"operator"] = @"Department for Infrastructure", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q3044778", },
+            Terms: [@"department for infrastructure"]),
+        new NsiItem(
             DisplayName: @"National Trust",
             Id: @"nationaltrust-d0df4a",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parking", [@"operator:wikidata"] = @"Q333515", },
@@ -163,12 +169,6 @@ public static class NsiRegion_GB_NIR
             Tags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator:wikidata"] = @"Q333515", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator"] = @"National Trust", [@"operator:type"] = @"charitable", [@"operator:wikidata"] = @"Q333515", },
             Terms: [@"national trust"]),
-        new NsiItem(
-            DisplayName: @"Newry, Mourne and Down District Council",
-            Id: @"newrymourneanddowndistrictcouncil-93a25a",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator:wikidata"] = @"Q16998911", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator"] = @"Newry, Mourne and Down District Council", [@"operator:wikidata"] = @"Q16998911", },
-            Terms: [@"newry, mourne and down district council"]),
         new NsiItem(
             DisplayName: @"DAERA (Northern Ireland)",
             Id: @"departmentofagricultureenvironmentandruralaffairs-04a8ee",
@@ -206,12 +206,6 @@ public static class NsiRegion_GB_NIR
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"nature_reserve", [@"operator"] = @"National Trust", [@"operator:type"] = @"charitable", [@"operator:wikidata"] = @"Q333515", },
             Terms: [@"national trust"]),
         new NsiItem(
-            DisplayName: @"Newry, Mourne and Down District Council",
-            Id: @"newrymourneanddowndistrictcouncil-afc2c1",
-            Tags: new Dictionary<string, string> { [@"leisure"] = @"nature_reserve", [@"operator:wikidata"] = @"Q16998911", },
-            AddTags: new Dictionary<string, string> { [@"leisure"] = @"nature_reserve", [@"operator"] = @"Newry, Mourne and Down District Council", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q16998911", },
-            Terms: [@"newry, mourne and down district council"]),
-        new NsiItem(
             DisplayName: @"Belfast City Council",
             Id: @"belfastcitycouncil-fe9c0f",
             Tags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator:wikidata"] = @"Q55934837", },
@@ -223,12 +217,6 @@ public static class NsiRegion_GB_NIR
             Tags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator:wikidata"] = @"Q333515", },
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator"] = @"National Trust", [@"operator:type"] = @"charitable", [@"operator:wikidata"] = @"Q333515", },
             Terms: [@"national trust"]),
-        new NsiItem(
-            DisplayName: @"Newry, Mourne and Down District Council",
-            Id: @"newrymourneanddowndistrictcouncil-fe9c0f",
-            Tags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator:wikidata"] = @"Q16998911", },
-            AddTags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator"] = @"Newry, Mourne and Down District Council", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q16998911", },
-            Terms: [@"newry, mourne and down district council"]),
         new NsiItem(
             DisplayName: @"Newry, Mourne and Down District Council",
             Id: @"newrymourneanddowndistrictcouncil-a4a9b2",

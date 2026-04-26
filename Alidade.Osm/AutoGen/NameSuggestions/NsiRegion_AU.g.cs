@@ -447,7 +447,7 @@ public static class NsiRegion_AU
             Terms: [@"crown resorts"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-36ec13",
+            Id: @"bppulse-ac8b5c",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q39057719", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -493,6 +493,12 @@ public static class NsiRegion_AU
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cinema", [@"brand:wikidata"] = @"Q7963128", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cinema", [@"brand"] = @"Wallis Cinemas", [@"brand:wikidata"] = @"Q7963128", [@"name"] = @"Wallis Cinemas", },
             Terms: [@"wallis cinema", @"wallis cinemas", @"wallis theatres"]),
+        new NsiItem(
+            DisplayName: @"Medicare Urgent Care Clinic",
+            Id: @"medicareurgentcareclinic-f397d0",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"brand:wikidata"] = @"Q137945385", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"brand"] = @"Medicare Urgent Care Clinic", [@"brand:wikidata"] = @"Q137945385", [@"healthcare"] = @"clinic", [@"healthcare:speciality"] = @"urgent", [@"name"] = @"Medicare Urgent Care Clinic", [@"short_name"] = @"Medicare UCC", [@"walk-in"] = @"yes", },
+            Terms: [@"medicare ucc", @"medicare urgent care clinic"]),
         new NsiItem(
             DisplayName: @"SAE Institute",
             Id: @"saeinstitute-7a11fb",
@@ -567,7 +573,7 @@ public static class NsiRegion_AU
             Terms: [@"grill'd"]),
         new NsiItem(
             DisplayName: @"Guzman y Gomez",
-            Id: @"guzmanygomez-2f4cab",
+            Id: @"guzmanygomez-8cc1c5",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q23019759", [@"cuisine"] = @"mexican", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Guzman y Gomez", [@"brand:wikidata"] = @"Q23019759", [@"cuisine"] = @"mexican", [@"name"] = @"Guzman y Gomez", [@"takeaway"] = @"yes", },
             Terms: [@"guzman y gomez"]),
@@ -614,6 +620,12 @@ public static class NsiRegion_AU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Oakberry Açaí bowls", [@"brand:wikidata"] = @"Q104870840", [@"cuisine"] = @"açaí", [@"name"] = @"Oakberry Açaí bowls", [@"takeaway"] = @"yes", },
             Terms: [@"oakberry açaí bowls"]),
         new NsiItem(
+            DisplayName: @"OMG! Decadent Donuts",
+            Id: @"omgdecadentdonuts-6ed0e2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q138388838", [@"cuisine"] = @"donut", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"OMG! Decadent Donuts", [@"brand:wikidata"] = @"Q138388838", [@"cuisine"] = @"donut", [@"diet:gluten_free"] = @"only", [@"diet:vegan"] = @"only", [@"name"] = @"OMG! Decadent Donuts", [@"takeaway"] = @"yes", },
+            Terms: [@"omg", @"omg! decadent donuts"]),
+        new NsiItem(
             DisplayName: @"Oporto",
             Id: @"oporto-d43c69",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q4412342", [@"cuisine"] = @"burger;chicken", },
@@ -651,7 +663,7 @@ public static class NsiRegion_AU
             Terms: [@"soul origin"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1227,10 +1239,16 @@ public static class NsiRegion_AU
             Terms: [@"bounce", @"bounce inc"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-937d1e",
+            Id: @"bppulse-269202",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
+        new NsiItem(
+            DisplayName: @"The Commons",
+            Id: @"thecommons-4400d0",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138389093", [@"office"] = @"coworking", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"The Commons", [@"brand:wikidata"] = @"Q138389093", [@"name"] = @"The Commons", [@"office"] = @"coworking", },
+            Terms: [@"the commons"]),
         new NsiItem(
             DisplayName: @"Express Employment Professionals",
             Id: @"expressemploymentprofessionals-867cf6",
@@ -1576,8 +1594,8 @@ public static class NsiRegion_AU
         new NsiItem(
             DisplayName: @"Holden",
             Id: @"holden-e02034",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q29281", [@"shop"] = @"car", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q29281", [@"name"] = @"Holden", [@"shop"] = @"car", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q112728701", [@"shop"] = @"car", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q112728701", [@"name"] = @"Holden", [@"shop"] = @"car", },
             Terms: [@"holden"]),
         new NsiItem(
             DisplayName: @"Koenigsegg",
@@ -1630,8 +1648,8 @@ public static class NsiRegion_AU
         new NsiItem(
             DisplayName: @"Holden",
             Id: @"holden-224beb",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q29281", [@"shop"] = @"car_repair", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q29281", [@"name"] = @"Holden", [@"shop"] = @"car_repair", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q112728701", [@"shop"] = @"car_repair", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Holden", [@"brand:wikidata"] = @"Q112728701", [@"name"] = @"Holden", [@"shop"] = @"car_repair", },
             Terms: [@"holden"]),
         new NsiItem(
             DisplayName: @"Koenigsegg",
@@ -1640,11 +1658,11 @@ public static class NsiRegion_AU
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Koenigsegg", [@"brand:wikidata"] = @"Q35594", [@"name"] = @"Koenigsegg", [@"shop"] = @"car_repair", },
             Terms: [@"koenigsegg"]),
         new NsiItem(
-            DisplayName: @"Carpet Court",
-            Id: @"carpetcourt-41ee08",
+            DisplayName: @"Carpet Court (Australia)",
+            Id: @"carpetcourt-0f90b0",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q117156437", [@"shop"] = @"carpet", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Carpet Court", [@"brand:wikidata"] = @"Q117156437", [@"name"] = @"Carpet Court", [@"shop"] = @"carpet", },
-            Terms: [@"carpet court"]),
+            Terms: [@"Carpet Court (Australia)", @"carpet court"]),
         new NsiItem(
             DisplayName: @"Habitat for Humanity ReStore",
             Id: @"habitatforhumanityrestore-0873d3",
@@ -3099,7 +3117,7 @@ public static class NsiRegion_AU
             Terms: [@"the reject shop"]),
         new NsiItem(
             DisplayName: @"EB Games (Oceania)",
-            Id: @"ebgames-be6d96",
+            Id: @"ebgames-2d3af9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5322604", [@"shop"] = @"video_games", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"EB Games", [@"brand:wikidata"] = @"Q5322604", [@"name"] = @"EB Games", [@"shop"] = @"video_games", },
             Terms: [@"EB Games (Oceania)", @"eb games", @"electronics boutique / eb games"]),

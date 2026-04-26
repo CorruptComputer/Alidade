@@ -21,7 +21,7 @@ public static class NsiRegion_FI
             Terms: [@"abc"]),
         new NsiItem(
             DisplayName: @"St1",
-            Id: @"st1-d45232",
+            Id: @"st1-a298f9",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q7592214", },
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"St1", [@"brand:wikidata"] = @"Q7592214", },
             Terms: [@"st1"]),
@@ -213,7 +213,7 @@ public static class NsiRegion_FI
             Terms: [@"sibylla"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -231,7 +231,7 @@ public static class NsiRegion_FI
             Terms: [@"abc"]),
         new NsiItem(
             DisplayName: @"St1",
-            Id: @"st1-cf1d83",
+            Id: @"st1-c8bbc2",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q7592214", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"St1", [@"brand:wikidata"] = @"Q7592214", [@"name"] = @"St1", },
             Terms: [@"st1"]),
@@ -285,7 +285,7 @@ public static class NsiRegion_FI
             Terms: [@"royal rangers"]),
         new NsiItem(
             DisplayName: @"Fitness24Seven",
-            Id: @"fitness24seven-5fc685",
+            Id: @"fitness24seven-46465b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fitness24Seven", [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", [@"name"] = @"Fitness24Seven", },
             Terms: [@"fitness24seven"]),
@@ -356,6 +356,12 @@ public static class NsiRegion_FI
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Alko", [@"brand:wikidata"] = @"Q1849187", [@"name"] = @"Alko", [@"shop"] = @"alcohol", },
             Terms: [@"alko"]),
         new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
+        new NsiItem(
             DisplayName: @"Akateeminen Kirjakauppa",
             Id: @"akateeminenkirjakauppa-0c91f3",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q10403942", [@"shop"] = @"books", },
@@ -380,8 +386,14 @@ public static class NsiRegion_FI
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Euromaster", [@"brand:wikidata"] = @"Q3060668", [@"name"] = @"Euromaster", [@"shop"] = @"car_repair", },
             Terms: [@"euromaster"]),
         new NsiItem(
+            DisplayName: @"Mekonomen",
+            Id: @"mekonomen-158011",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q10580079", [@"shop"] = @"car_repair", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mekonomen", [@"brand:wikidata"] = @"Q10580079", [@"name"] = @"Mekonomen", [@"shop"] = @"car_repair", },
+            Terms: [@"mekonomen"]),
+        new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),

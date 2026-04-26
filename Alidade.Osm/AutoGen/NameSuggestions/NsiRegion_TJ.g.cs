@@ -44,6 +44,12 @@ public static class NsiRegion_TJ
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Мегафон", [@"brand:en"] = @"MegaFon", [@"brand:ru"] = @"Мегафон", [@"brand:wikidata"] = @"Q1720713", [@"name"] = @"Мегафон", [@"name:en"] = @"MegaFon", [@"name:ru"] = @"Мегафон", [@"shop"] = @"mobile_phone", },
             Terms: [@"megafon", @"мегафон"]),
         new NsiItem(
+            DisplayName: @"Wildberries",
+            Id: @"wildberries-c79976",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24933714", [@"shop"] = @"outpost", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:en"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"name:en"] = @"Wildberries", [@"shop"] = @"outpost", },
+            Terms: [@"wb", @"wildberries"]),
+        new NsiItem(
             DisplayName: @"Serena Hotels",
             Id: @"serenahotels-b76fe0",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7453121", [@"tourism"] = @"hotel", },

@@ -214,8 +214,8 @@ public static class NsiRegion_NG
         new NsiItem(
             DisplayName: @"APGA",
             Id: @"apga-a60dd5",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q4729271", [@"office"] = @"political_party", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"APGA", [@"brand:wikidata"] = @"Q4729271", [@"office"] = @"political_party", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q4729266", [@"office"] = @"political_party", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"APGA", [@"brand:wikidata"] = @"Q4729266", [@"office"] = @"political_party", },
             Terms: [@"all progressives grand alliance", @"apga"]),
         new NsiItem(
             DisplayName: @"PDP",

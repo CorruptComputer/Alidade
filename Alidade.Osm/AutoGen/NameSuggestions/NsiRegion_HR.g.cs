@@ -22,8 +22,8 @@ public static class NsiRegion_HR
         new NsiItem(
             DisplayName: @"Crodux",
             Id: @"crodux-3bc7ea",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q62274622", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Crodux", [@"brand:wikidata"] = @"Q62274622", },
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q108169059", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Crodux", [@"brand:wikidata"] = @"Q108169059", },
             Terms: [@"crodux"]),
         new NsiItem(
             DisplayName: @"INA",
@@ -336,7 +336,7 @@ public static class NsiRegion_HR
             Id: @"greenway-1cf5d4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q116450281", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"GreenWay", [@"brand:wikidata"] = @"Q116450281", },
-            Terms: [@"greenway"]),
+            Terms: [@"greenway", @"greenway infrastructure"]),
         new NsiItem(
             DisplayName: @"MOL Plugee",
             Id: @"molplugee-ce45cd",
@@ -382,8 +382,8 @@ public static class NsiRegion_HR
         new NsiItem(
             DisplayName: @"Crodux",
             Id: @"crodux-a8f5c5",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q62274622", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Crodux", [@"brand:wikidata"] = @"Q62274622", [@"name"] = @"Crodux", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q108169059", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Crodux", [@"brand:wikidata"] = @"Q108169059", [@"name"] = @"Crodux", },
             Terms: [@"crodux"]),
         new NsiItem(
             DisplayName: @"INA",
@@ -411,7 +411,7 @@ public static class NsiRegion_HR
             Terms: [@"Box Now (Hrvatska)", @"box now"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -504,7 +504,7 @@ public static class NsiRegion_HR
             Id: @"greenway-99811b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116450281", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"GreenWay", [@"brand:wikidata"] = @"Q116450281", [@"man_made"] = @"charge_point", },
-            Terms: [@"greenway"]),
+            Terms: [@"greenway", @"greenway infrastructure"]),
         new NsiItem(
             DisplayName: @"MOL Plugee",
             Id: @"molplugee-bb0527",
@@ -571,6 +571,12 @@ public static class NsiRegion_HR
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q127603433", [@"shop"] = @"beauty", },
             AddTags: new Dictionary<string, string> { [@"alt_name"] = @"Nomasvello", [@"beauty"] = @"hair_removal", [@"brand"] = @"No+vello", [@"brand:wikidata"] = @"Q127603433", [@"name"] = @"No+vello", [@"shop"] = @"beauty", },
             Terms: [@"no+vello", @"nomasvello"]),
+        new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
         new NsiItem(
             DisplayName: @"Tipico",
             Id: @"tipico-7054e9",
@@ -718,8 +724,8 @@ public static class NsiRegion_HR
         new NsiItem(
             DisplayName: @"Lonia",
             Id: @"lonia-5b00ff",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q125761235", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Lonia", [@"brand:wikidata"] = @"Q125761235", [@"name"] = @"Lonia", [@"shop"] = @"convenience", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65156084", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Lonia", [@"brand:wikidata"] = @"Q65156084", [@"name"] = @"Lonia", [@"shop"] = @"convenience", },
             Terms: [@"lonia"]),
         new NsiItem(
             DisplayName: @"Mercator",
@@ -962,10 +968,10 @@ public static class NsiRegion_HR
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Top Shop", [@"brand:wikidata"] = @"Q116919675", [@"name"] = @"Top Shop", [@"shop"] = @"variety_store", },
             Terms: [@"top shop"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Art'otel",
@@ -1191,7 +1197,7 @@ public static class NsiRegion_HR
             Terms: [@"hž infrastruktura"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
+            Id: @"arriva-b74934",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             Terms: [@"arriva"]),
@@ -1239,7 +1245,7 @@ public static class NsiRegion_HR
             Terms: [@"zet"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
+            Id: @"arriva-d898fa",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"arriva"]),

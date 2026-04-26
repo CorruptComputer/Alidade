@@ -284,6 +284,12 @@ public static class NsiRegion_MY
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Jamaica Blue", [@"brand:wikidata"] = @"Q24965819", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Jamaica Blue", [@"takeaway"] = @"yes", },
             Terms: [@"jamaica blue"]),
         new NsiItem(
+            DisplayName: @"Macao Imperial Tea",
+            Id: @"macaoimperialtea-5ac393",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q137921377", [@"cuisine"] = @"bubble_tea", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Macao Imperial Tea", [@"brand:en"] = @"Macao Imperial Tea", [@"brand:wikidata"] = @"Q137921377", [@"brand:zh"] = @"澳門皇茶", [@"cuisine"] = @"bubble_tea", [@"name"] = @"Macao Imperial Tea", [@"takeaway"] = @"yes", },
+            Terms: [@"macao imperial tea", @"澳門皇茶"]),
+        new NsiItem(
             DisplayName: @"Mixue Ice Cream & Tea",
             Id: @"mixue-930f31",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q107406476", [@"cuisine"] = @"ice_cream;bubble_tea", },
@@ -411,7 +417,7 @@ public static class NsiRegion_MY
             Terms: [@"secret recipe"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1042,8 +1048,8 @@ public static class NsiRegion_MY
         new NsiItem(
             DisplayName: @"Celcom",
             Id: @"celcom-c82acb",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q836827", [@"shop"] = @"telecommunication", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Celcom", [@"brand:wikidata"] = @"Q836827", [@"name"] = @"Celcom", [@"shop"] = @"telecommunication", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3268530", [@"shop"] = @"telecommunication", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Celcom", [@"brand:wikidata"] = @"Q3268530", [@"name"] = @"Celcom", [@"shop"] = @"telecommunication", },
             Terms: [@"celcom"]),
         new NsiItem(
             DisplayName: @"Digi Store",

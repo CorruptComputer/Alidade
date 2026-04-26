@@ -38,6 +38,24 @@ public static class NsiRegion_JP_28_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"関西みらい銀行", [@"brand:en"] = @"Kansai Mirai Bank", [@"brand:ja"] = @"関西みらい銀行", [@"brand:wikidata"] = @"Q62679053", [@"name"] = @"関西みらい銀行", [@"name:en"] = @"Kansai Mirai Bank", [@"name:ja"] = @"関西みらい銀行", },
             Terms: [@"kansai mirai bank", @"関西みらい銀行"]),
         new NsiItem(
+            DisplayName: @"コープこうべ",
+            Id: @"coopkobe-69d013",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5137453", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"alt_name:en"] = @"Co-op Kobe", [@"brand"] = @"コープこうべ", [@"brand:en"] = @"CO・OP Kobe", [@"brand:ja"] = @"コープこうべ", [@"brand:wikidata"] = @"Q5137453", [@"name"] = @"コープこうべ", [@"name:en"] = @"CO・OP Kobe", [@"name:ja"] = @"コープこうべ", [@"official_name"] = @"生活協同組合コープこうべ", [@"official_name:en"] = @"The Consumer Co-operative Kobe", [@"official_name:ja"] = @"生活協同組合コープこうべ", [@"shop"] = @"supermarket", },
+            Terms: [@"co-op kobe", @"co・op kobe", @"the consumer co-operative kobe", @"コープこうべ", @"生活協同組合コープこうべ"]),
+        new NsiItem(
+            DisplayName: @"マルナカ",
+            Id: @"marunaka-24bb01",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11341399", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"マルナカ", [@"brand:en"] = @"Marunaka", [@"brand:ja"] = @"マルナカ", [@"brand:wikidata"] = @"Q11341399", [@"name"] = @"マルナカ", [@"name:en"] = @"Marunaka", [@"name:ja"] = @"マルナカ", [@"shop"] = @"supermarket", },
+            Terms: [@"marunaka", @"マルナカ"]),
+        new NsiItem(
+            DisplayName: @"ゆめタウン",
+            Id: @"youmetown-3d6118",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11280900", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ゆめタウン", [@"brand:en"] = @"YouMe Town", [@"brand:ja"] = @"ゆめタウン", [@"brand:wikidata"] = @"Q11280900", [@"name"] = @"ゆめタウン", [@"name:en"] = @"YouMe Town", [@"name:ja"] = @"ゆめタウン", [@"shop"] = @"supermarket", },
+            Terms: [@"youme town", @"ゆめタウン"]),
+        new NsiItem(
             DisplayName: @"加古川市",
             Id: @"745ff2-47429f",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"community_centre", [@"operator:wikidata"] = @"Q750569", },

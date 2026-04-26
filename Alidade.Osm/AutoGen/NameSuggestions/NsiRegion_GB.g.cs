@@ -104,6 +104,12 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Tesco", [@"brand:wikidata"] = @"Q487494", },
             Terms: [@"tesco", @"tesco esso express", @"tesco petrol filling station", @"tesco petrol station"]),
         new NsiItem(
+            DisplayName: @"Welcome Break",
+            Id: @"welcomebreak-4d1df5",
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q7980609", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Welcome Break", [@"brand:wikidata"] = @"Q7980609", },
+            Terms: [@"welcome break"]),
+        new NsiItem(
             DisplayName: @"Blue Cross Rehoming Centre",
             Id: @"bluecrossrehomingcentre-ae7821",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"animal_shelter", [@"brand:wikidata"] = @"Q3520039", },
@@ -825,7 +831,7 @@ public static class NsiRegion_GB
             Terms: [@"blink"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-36ec13",
+            Id: @"bppulse-ac8b5c",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q39057719", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -1257,7 +1263,7 @@ public static class NsiRegion_GB
             Terms: [@"Sushi Shop (Europe)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1400,6 +1406,12 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Tesco", [@"brand:wikidata"] = @"Q487494", [@"name"] = @"Tesco", },
             Terms: [@"tesco", @"tesco esso express", @"tesco petrol filling station", @"tesco petrol station"]),
         new NsiItem(
+            DisplayName: @"Welcome Break",
+            Id: @"welcomebreak-20aed2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q7980609", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Welcome Break", [@"brand:wikidata"] = @"Q7980609", [@"name"] = @"Welcome Break", },
+            Terms: [@"welcome break"]),
+        new NsiItem(
             DisplayName: @"Buzz Bingo",
             Id: @"buzzbingo-738ef2",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"gambling", [@"brand:wikidata"] = @"Q60746117", },
@@ -1473,7 +1485,7 @@ public static class NsiRegion_GB
             Terms: [@"shane english school", @"shēn eikaiwa", @"シェーン英会話"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -1971,7 +1983,7 @@ public static class NsiRegion_GB
             Terms: [@"coast to coast"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -2131,12 +2143,6 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q62075311", [@"cuisine"] = @"seafood", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Ocean Basket", [@"brand:wikidata"] = @"Q62075311", [@"cuisine"] = @"seafood", [@"name"] = @"Ocean Basket", },
             Terms: [@"ocean basket"]),
-        new NsiItem(
-            DisplayName: @"Patty & Bun",
-            Id: @"pattyandbun-9b5453",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q110103854", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Patty & Bun", [@"brand:wikidata"] = @"Q110103854", [@"cuisine"] = @"burger", [@"diet:vegan"] = @"yes", [@"name"] = @"Patty & Bun", [@"takeaway"] = @"yes", },
-            Terms: [@"patty & bun"]),
         new NsiItem(
             DisplayName: @"Pho",
             Id: @"pho-9b5453",
@@ -2595,7 +2601,7 @@ public static class NsiRegion_GB
             Terms: [@"blink"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-937d1e",
+            Id: @"bppulse-269202",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -3253,6 +3259,12 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7115196", [@"shop"] = @"books", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Oxfam Bookshop", [@"brand:wikidata"] = @"Q7115196", [@"name"] = @"Oxfam Bookshop", [@"second_hand"] = @"only", [@"shop"] = @"books", },
             Terms: [@"oxfam", @"oxfam bookshop"]),
+        new NsiItem(
+            DisplayName: @"TGJones",
+            Id: @"tgjones-4cb062",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133575797", [@"shop"] = @"books", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"TGJones", [@"brand:wikidata"] = @"Q133575797", [@"name"] = @"TGJones", [@"shop"] = @"books", },
+            Terms: [@"tgjones"]),
         new NsiItem(
             DisplayName: @"The Works",
             Id: @"theworks-b448ba",
@@ -4376,6 +4388,12 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Nisa", [@"brand:wikidata"] = @"Q16999069", [@"name"] = @"Nisa", [@"shop"] = @"convenience", },
             Terms: [@"nisa", @"nisa retail", @"nisalocally"]),
         new NsiItem(
+            DisplayName: @"Nisa Express",
+            Id: @"nisaexpress-232829",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q16999069", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Nisa", [@"brand:wikidata"] = @"Q16999069", [@"name"] = @"Nisa Express", [@"shop"] = @"convenience", },
+            Terms: [@"Nisa Express", @"nisa"]),
+        new NsiItem(
             DisplayName: @"Nisa Local",
             Id: @"nisalocal-232829",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q16999069", [@"shop"] = @"convenience", },
@@ -4400,12 +4418,6 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Sainsbury's Local", [@"brand:wikidata"] = @"Q13218434", [@"name"] = @"Sainsbury's Local", [@"shop"] = @"convenience", },
             Terms: [@"sainsbury's local"]),
         new NsiItem(
-            DisplayName: @"Scotmid",
-            Id: @"scotmid-232829",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7435719", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Scotmid", [@"brand:wikidata"] = @"Q7435719", [@"name"] = @"Scotmid", [@"shop"] = @"convenience", },
-            Terms: [@"scotmid", @"scotmid co-operative"]),
-        new NsiItem(
             DisplayName: @"Shop'N Drive",
             Id: @"shopndrive-232829",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q107439152", [@"shop"] = @"convenience", },
@@ -4417,6 +4429,12 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q131438635", [@"shop"] = @"convenience", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"SimplyFresh", [@"brand:wikidata"] = @"Q131438635", [@"name"] = @"SimplyFresh", [@"shop"] = @"convenience", },
             Terms: [@"simplyfresh"]),
+        new NsiItem(
+            DisplayName: @"The Co-operative Food",
+            Id: @"thecooperativefood-232829",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q107617274", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"The Co-operative Food", [@"brand:wikidata"] = @"Q107617274", [@"name"] = @"The Co-operative Food", [@"shop"] = @"convenience", },
+            Terms: [@"the co-operative food"]),
         new NsiItem(
             DisplayName: @"Valero",
             Id: @"valero-6ca601",
@@ -4575,7 +4593,7 @@ public static class NsiRegion_GB
             Terms: [@"homebase"]),
         new NsiItem(
             DisplayName: @"Screwfix",
-            Id: @"screwfix-6b37cb",
+            Id: @"screwfix-553b50",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7439115", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Screwfix", [@"brand:wikidata"] = @"Q7439115", [@"name"] = @"Screwfix", [@"shop"] = @"doityourself", },
             Terms: [@"screwfix"]),
@@ -4717,6 +4735,12 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q119276672", [@"shop"] = @"fishing", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Angling Direct", [@"brand:wikidata"] = @"Q119276672", [@"name"] = @"Angling Direct", [@"shop"] = @"fishing", },
             Terms: [@"angling direct"]),
+        new NsiItem(
+            DisplayName: @"Central Coop Florist",
+            Id: @"centralcoopflorist-7c660b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q16986583", [@"shop"] = @"florist", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Central England Co-operative", [@"brand:wikidata"] = @"Q16986583", [@"name"] = @"Central Coop Florist", [@"shop"] = @"florist", },
+            Terms: [@"Central Coop Florist", @"central england co-operative"]),
         new NsiItem(
             DisplayName: @"Interflora",
             Id: @"interflora-6ef878",
@@ -4880,6 +4904,12 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Card Factory", [@"brand:wikidata"] = @"Q5038192", [@"name"] = @"Card Factory", [@"shop"] = @"gift", },
             Terms: [@"card factory"]),
         new NsiItem(
+            DisplayName: @"Cards Direct",
+            Id: @"cardsdirect-da52c2",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q114826765", [@"shop"] = @"gift", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cards Direct", [@"brand:wikidata"] = @"Q114826765", [@"name"] = @"Cards Direct", [@"shop"] = @"gift", },
+            Terms: [@"cards direct"]),
+        new NsiItem(
             DisplayName: @"Cardzone",
             Id: @"cardzone-da52c2",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123019897", [@"shop"] = @"gift", },
@@ -4921,6 +4951,12 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q28457455", [@"shop"] = @"gift", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Scribbler", [@"brand:wikidata"] = @"Q28457455", [@"name"] = @"Scribbler", [@"shop"] = @"gift", },
             Terms: [@"scribbler"]),
+        new NsiItem(
+            DisplayName: @"TGJones",
+            Id: @"tgjones-da52c2",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133575797", [@"shop"] = @"gift", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"TGJones", [@"brand:wikidata"] = @"Q133575797", [@"name"] = @"TGJones", [@"shop"] = @"gift", },
+            Terms: [@"tgjones"]),
         new NsiItem(
             DisplayName: @"Barbershop by Timpson",
             Id: @"barbershopbytimpson-afda3f",
@@ -5570,6 +5606,12 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Dune London", [@"brand:wikidata"] = @"Q65557112", [@"name"] = @"Dune London", [@"shop"] = @"shoes", [@"short_name"] = @"Dune", },
             Terms: [@"dune", @"dune london"]),
         new NsiItem(
+            DisplayName: @"Footasylum",
+            Id: @"footasylum-eede13",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126913565", [@"shop"] = @"shoes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Footasylum", [@"brand:wikidata"] = @"Q126913565", [@"name"] = @"Footasylum", [@"shop"] = @"shoes", },
+            Terms: [@"footasylum"]),
+        new NsiItem(
             DisplayName: @"G.H. Bass & Co.",
             Id: @"ghbassandco-bd5ddf",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q16993893", [@"shop"] = @"shoes", },
@@ -5695,6 +5737,12 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7544536", [@"shop"] = @"stationery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Smiggle", [@"brand:wikidata"] = @"Q7544536", [@"name"] = @"Smiggle", [@"shop"] = @"stationery", },
             Terms: [@"smiggle"]),
+        new NsiItem(
+            DisplayName: @"TGJones",
+            Id: @"tgjones-a503c5",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133575797", [@"shop"] = @"stationery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"TGJones", [@"brand:wikidata"] = @"Q133575797", [@"name"] = @"TGJones", [@"shop"] = @"stationery", },
+            Terms: [@"tgjones"]),
         new NsiItem(
             DisplayName: @"Access Self Storage",
             Id: @"accessselfstorage-93b48c",
@@ -5857,12 +5905,6 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q152096", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Sainsbury's", [@"brand:wikidata"] = @"Q152096", [@"name"] = @"Sainsbury's", [@"shop"] = @"supermarket", },
             Terms: [@"sainsbury's", @"sainsbury's / j sainsbury"]),
-        new NsiItem(
-            DisplayName: @"Scotmid",
-            Id: @"scotmid-a8278b",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7435719", [@"shop"] = @"supermarket", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Scotmid", [@"brand:wikidata"] = @"Q7435719", [@"name"] = @"Scotmid", [@"shop"] = @"supermarket", },
-            Terms: [@"scotmid"]),
         new NsiItem(
             DisplayName: @"SuperValu (Ireland/UK)",
             Id: @"supervalu-b7087f",
@@ -6239,7 +6281,7 @@ public static class NsiRegion_GB
             DisplayName: @"Parkdean Resorts",
             Id: @"parkdeanresorts-74ea6b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7138226", [@"tourism"] = @"caravan_site", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Parkdean Resorts", [@"brand:wikidata"] = @"Q7138226", [@"name"] = @"Parkdean Resorts", [@"tourism"] = @"caravan_site", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Parkdean Resorts", [@"brand:wikidata"] = @"Q7138226", [@"tourism"] = @"caravan_site", },
             Terms: [@"parkdean resorts"]),
         new NsiItem(
             DisplayName: @"A&O",
@@ -6409,6 +6451,12 @@ public static class NsiRegion_GB
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q9361374", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Travelodge", [@"brand:wikidata"] = @"Q9361374", [@"internet_access"] = @"wlan", [@"internet_access:fee"] = @"customers", [@"internet_access:ssid"] = @"Travelodge WiFi", [@"name"] = @"Travelodge", [@"tourism"] = @"hotel", },
             Terms: [@"Travelodge (Europe)", @"travelodge"]),
+        new NsiItem(
+            DisplayName: @"Village Hotels",
+            Id: @"villagehotel-3fca16",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q16963550", [@"tourism"] = @"hotel", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Village Hotels", [@"brand:wikidata"] = @"Q16963550", [@"name"] = @"Village Hotel", [@"tourism"] = @"hotel", },
+            Terms: [@"village hotels"]),
         new NsiItem(
             DisplayName: @"Virgin Hotel",
             Id: @"virginhotels-7e47e0",
@@ -8150,6 +8198,12 @@ public static class NsiRegion_GB
             AddTags: new Dictionary<string, string> { [@"operator"] = @"SSE plc", [@"operator:wikidata"] = @"Q493854", [@"power"] = @"transformer", },
             Terms: [@"sse plc"]),
         new NsiItem(
+            DisplayName: @"Scottish Hydro Electric Transmission",
+            Id: @"scottishhydroelectrictransmission-104543",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q114423668", [@"route"] = @"power", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Scottish Hydro Electric Transmission", [@"operator:wikidata"] = @"Q114423668", [@"route"] = @"power", [@"type"] = @"route", },
+            Terms: [@"scottish hydro electric transmission", @"ssen transmission"]),
+        new NsiItem(
             DisplayName: @"Network Rail",
             Id: @"networkrail-b6d660",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1501071", [@"route"] = @"railway", [@"type"] = @"route", },
@@ -8159,14 +8213,14 @@ public static class NsiRegion_GB
             DisplayName: @"Central England Co-operative",
             Id: @"centralenglandcooperative-ac8d0d",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q16986583", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"The Co-operative Food", [@"brand:wikidata"] = @"Q107617274", [@"name"] = @"The Co-operative Food", [@"operator"] = @"Central England Co-operative", [@"operator:wikidata"] = @"Q16986583", [@"shop"] = @"convenience", },
-            Terms: [@"central co-op food", @"central england co-operative", @"the co-operative food"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Central England Co-operative", [@"operator:wikidata"] = @"Q16986583", [@"shop"] = @"convenience", },
+            Terms: [@"central co-op food", @"central england co-operative"]),
         new NsiItem(
             DisplayName: @"Heart of England Co-operative Society",
             Id: @"heartofenglandcooperativesociety-ac8d0d",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5692254", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"The Co-operative Food", [@"brand:wikidata"] = @"Q107617274", [@"name"] = @"The Co-operative Food", [@"operator"] = @"Heart of England Co-operative Society", [@"operator:wikidata"] = @"Q5692254", [@"shop"] = @"convenience", },
-            Terms: [@"heart of england co-operative society", @"the co-operative food"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Heart of England Co-operative Society", [@"operator:wikidata"] = @"Q5692254", [@"shop"] = @"convenience", },
+            Terms: [@"heart of england co-operative society"]),
         new NsiItem(
             DisplayName: @"The Co-operative Group (coop blue)",
             Id: @"thecooperativegroup-ac8d0d",
@@ -8177,8 +8231,8 @@ public static class NsiRegion_GB
             DisplayName: @"The Southern Co-operative",
             Id: @"thesoutherncooperative-ac8d0d",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q7569773", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"The Co-operative Food", [@"brand:wikidata"] = @"Q107617274", [@"name"] = @"The Co-operative Food", [@"operator"] = @"The Southern Co-operative", [@"operator:wikidata"] = @"Q7569773", [@"shop"] = @"convenience", },
-            Terms: [@"southern co-operative", @"the co-operative food", @"the southern co-operative"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"The Southern Co-operative", [@"operator:wikidata"] = @"Q7569773", [@"shop"] = @"convenience", },
+            Terms: [@"southern co-operative", @"the southern co-operative"]),
         new NsiItem(
             DisplayName: @"DataBank",
             Id: @"databank-73d34b",
@@ -8211,7 +8265,7 @@ public static class NsiRegion_GB
             Terms: [@"Millennium Milepost", @"walk wheel cycle trust"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
+            Id: @"arriva-b74934",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             Terms: [@"arriva"]),
@@ -8325,7 +8379,7 @@ public static class NsiRegion_GB
             Terms: [@"tpe", @"transpennine", @"transpennine express"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
+            Id: @"arriva-d898fa",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"arriva"]),

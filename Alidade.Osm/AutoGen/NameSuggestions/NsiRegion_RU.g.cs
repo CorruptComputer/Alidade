@@ -128,10 +128,10 @@ public static class NsiRegion_RU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Halyk Bank", [@"brand:wikidata"] = @"Q1046186", [@"old_name"] = @"Народный банк", [@"operator"] = @"Halyk Bank", [@"operator:wikidata"] = @"Q1046186", },
             Terms: [@"halyk bank", @"казкоммерцбанк", @"народный банк"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-3ecec5",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-4a82ee",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit Bank", [@"operator:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit", [@"operator:wikidata"] = @"Q45568", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"Абсолют",
@@ -172,8 +172,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"Возрождение",
             Id: @"vozrozhdeniebank-da35c8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q4114952", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Возрождение", [@"brand:en"] = @"Vozrozhdenie Bank", [@"brand:ru"] = @"Возрождение", [@"brand:wikidata"] = @"Q4114952", [@"operator"] = @"Возрождение", [@"operator:wikidata"] = @"Q4114952", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1549389", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Возрождение", [@"brand:en"] = @"Vozrozhdenie Bank", [@"brand:ru"] = @"Возрождение", [@"brand:wikidata"] = @"Q1549389", [@"operator"] = @"Возрождение", [@"operator:wikidata"] = @"Q1549389", },
             Terms: [@"vozrozhdenie bank", @"возрождение"]),
         new NsiItem(
             DisplayName: @"ВТБ (Россия)",
@@ -256,8 +256,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"РНКБ",
             Id: @"f27cb2-da35c8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q16912944", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"РНКБ", [@"brand:wikidata"] = @"Q16912944", [@"operator"] = @"РНКБ", [@"operator:wikidata"] = @"Q16912944", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1549389", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"РНКБ", [@"brand:wikidata"] = @"Q1549389", [@"operator"] = @"РНКБ", [@"operator:wikidata"] = @"Q1549389", },
             Terms: [@"рнкб"]),
         new NsiItem(
             DisplayName: @"Росбанк",
@@ -320,10 +320,10 @@ public static class NsiRegion_RU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Halyk Bank", [@"brand:wikidata"] = @"Q1046186", [@"name"] = @"Halyk Bank", [@"name:en"] = @"Halyk Bank", [@"name:kk"] = @"Халық Банкі", [@"name:ru"] = @"Халык банк", [@"official_name:kk"] = @"«Қазақстан Халық Банкі» АҚ", [@"official_name:ru"] = @"АО «Народный Банк Казахстана»", [@"old_name"] = @"Народный банк", },
             Terms: [@"«қазақстан халық банкі» ақ", @"halyk bank", @"ао «народный банк казахстана»", @"казкоммерцбанк", @"народный банк", @"халык банк", @"халық банкі"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-ff6e1c",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-d887c4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit Bank", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"Абсолют",
@@ -364,8 +364,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"Возрождение",
             Id: @"vozrozhdeniebank-0eb427",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q4114952", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Возрождение", [@"brand:en"] = @"Vozrozhdenie Bank", [@"brand:ru"] = @"Возрождение", [@"brand:wikidata"] = @"Q4114952", [@"name"] = @"Возрождение", [@"name:en"] = @"Vozrozhdenie Bank", [@"name:ru"] = @"Возрождение", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1549389", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Возрождение", [@"brand:en"] = @"Vozrozhdenie Bank", [@"brand:ru"] = @"Возрождение", [@"brand:wikidata"] = @"Q1549389", [@"name"] = @"Возрождение", [@"name:en"] = @"Vozrozhdenie Bank", [@"name:ru"] = @"Возрождение", },
             Terms: [@"vozrozhdenie bank", @"возрождение"]),
         new NsiItem(
             DisplayName: @"ВТБ (Россия)",
@@ -448,8 +448,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"РНКБ",
             Id: @"f27cb2-0eb427",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q16912944", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"РНКБ", [@"brand:wikidata"] = @"Q16912944", [@"name"] = @"РНКБ", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1549389", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"РНКБ", [@"brand:wikidata"] = @"Q1549389", [@"name"] = @"РНКБ", },
             Terms: [@"рнкб"]),
         new NsiItem(
             DisplayName: @"Росбанк",
@@ -538,8 +538,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"Kuzina",
             Id: @"kuzina-1c12ef",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q48947300", [@"cuisine"] = @"coffee_shop", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Kuzina", [@"brand:wikidata"] = @"Q48947300", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Kuzina", [@"takeaway"] = @"yes", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q48947300", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Kuzina", [@"brand:wikidata"] = @"Q48947300", [@"cuisine"] = @"pastry", [@"name"] = @"Kuzina", [@"takeaway"] = @"yes", },
             Terms: [@"kuzina"]),
         new NsiItem(
             DisplayName: @"Max Brenner",
@@ -655,6 +655,12 @@ public static class NsiRegion_RU
             Tags: new Dictionary<string, string> { [@"amenity"] = @"dentist", [@"brand:wikidata"] = @"Q110775866", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"dentist", [@"brand"] = @"Мой Зубной", [@"brand:wikidata"] = @"Q110775866", [@"healthcare"] = @"dentist", [@"name"] = @"Мой Зубной", },
             Terms: [@"мой зубной"]),
+        new NsiItem(
+            DisplayName: @"Art Lunch",
+            Id: @"artlunch-58d77e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q138317516", [@"fast_food"] = @"cafeteria", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Art Lunch", [@"brand:en"] = @"Art Lunch", [@"brand:hy"] = @"Արտ Լանչ", [@"brand:wikidata"] = @"Q138317516", [@"cuisine"] = @"armenian;european", [@"fast_food"] = @"cafeteria", [@"name"] = @"Art Lunch", [@"name:en"] = @"Art Lunch", [@"name:hy"] = @"Արտ Լանչ", [@"takeaway"] = @"yes", },
+            Terms: [@"art lunch", @"արտ լանչ"]),
         new NsiItem(
             DisplayName: @"Marugame Udon",
             Id: @"marugameudon-a3c3a3",
@@ -879,7 +885,7 @@ public static class NsiRegion_RU
             Terms: [@"unistream", @"юнистрим"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -1075,6 +1081,12 @@ public static class NsiRegion_RU
             Tags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand:wikidata"] = @"Q109995996", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand"] = @"Фиалка", [@"brand:ru"] = @"Фиалка", [@"brand:wikidata"] = @"Q109995996", [@"healthcare"] = @"pharmacy", [@"name"] = @"Фиалка", [@"name:en"] = @"Fialka", [@"name:ru"] = @"Фиалка", },
             Terms: [@"fialka", @"фиалка", @"фиалка аптека"]),
+        new NsiItem(
+            DisplayName: @"Почта России",
+            Id: @"russianpost-1328c6",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"brand:wikidata"] = @"Q1502763", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"brand"] = @"Почта России", [@"brand:en"] = @"Russian Post", [@"brand:ru"] = @"Почта России", [@"brand:wikidata"] = @"Q1502763", [@"operator"] = @"АО ""Почта России""", [@"operator:en"] = @"Russian Post", [@"operator:ru"] = @"АО ""Почта России""", [@"operator:wikidata"] = @"Q1502763", },
+            Terms: [@"russian post", @"ао ""почта россии""", @"отделение связи", @"почта россии", @"фгуп почта россии"]),
         new NsiItem(
             DisplayName: @"СДЭК",
             Id: @"5ac048-c762cb",
@@ -2032,8 +2044,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"Евросеть",
             Id: @"euroset-62982a",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65310", [@"shop"] = @"mobile_phone", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Евросеть", [@"brand:en"] = @"Euroset", [@"brand:ru"] = @"Евросеть", [@"brand:wikidata"] = @"Q65310", [@"name"] = @"Евросеть", [@"name:en"] = @"Euroset", [@"name:ru"] = @"Евросеть", [@"shop"] = @"mobile_phone", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65371", [@"shop"] = @"mobile_phone", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Евросеть", [@"brand:en"] = @"Euroset", [@"brand:ru"] = @"Евросеть", [@"brand:wikidata"] = @"Q65371", [@"name"] = @"Евросеть", [@"name:en"] = @"Euroset", [@"name:ru"] = @"Евросеть", [@"shop"] = @"mobile_phone", },
             Terms: [@"euroset", @"евросеть"]),
         new NsiItem(
             DisplayName: @"Мегафон",
@@ -2068,8 +2080,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"Союзпечать",
             Id: @"6aba18-313f17",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q4430611", [@"shop"] = @"newsagent", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Союзпечать", [@"brand:wikidata"] = @"Q4430611", [@"name"] = @"Союзпечать", [@"shop"] = @"newsagent", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q4397882", [@"shop"] = @"newsagent", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Союзпечать", [@"brand:wikidata"] = @"Q4397882", [@"name"] = @"Союзпечать", [@"shop"] = @"newsagent", },
             Terms: [@"союзпечать"]),
         new NsiItem(
             DisplayName: @"NL International",
@@ -2103,16 +2115,16 @@ public static class NsiRegion_RU
             Terms: [@"lamoda"]),
         new NsiItem(
             DisplayName: @"Ozon",
-            Id: @"ozon-968c70",
+            Id: @"ozon-f8825b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2365235", [@"shop"] = @"outpost", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Ozon", [@"brand:wikidata"] = @"Q2365235", [@"name"] = @"Ozon", [@"shop"] = @"outpost", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Ozon", [@"brand:en"] = @"Ozon", [@"brand:wikidata"] = @"Q2365235", [@"name"] = @"Ozon", [@"name:en"] = @"Ozon", [@"shop"] = @"outpost", },
             Terms: [@"ozon"]),
         new NsiItem(
             DisplayName: @"Wildberries",
-            Id: @"wildberries-f8825b",
+            Id: @"wildberries-c79976",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24933714", [@"shop"] = @"outpost", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"shop"] = @"outpost", },
-            Terms: [@"wildberries"]),
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:en"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"name:en"] = @"Wildberries", [@"shop"] = @"outpost", },
+            Terms: [@"wb", @"wildberries"]),
         new NsiItem(
             DisplayName: @"Яндекс.Маркет",
             Id: @"yandexmarket-968c70",
@@ -2528,10 +2540,10 @@ public static class NsiRegion_RU
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fix Price", [@"brand:wikidata"] = @"Q4038791", [@"name"] = @"Fix Price", [@"name:be"] = @"Фікс Прайс", [@"name:be-Latn"] = @"Fiks Prajs", [@"name:en"] = @"Fix Price", [@"name:ru"] = @"Фикс Прайс", [@"name:uk"] = @"Фікс Прайс", [@"shop"] = @"variety_store", },
             Terms: [@"fiks prajs", @"fix price", @"фикс прайс", @"фікс прайс"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Selgros",
@@ -2618,6 +2630,12 @@ public static class NsiRegion_RU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"police", [@"operator"] = @"Полиция России", [@"operator:en"] = @"Police of Russia", [@"operator:ru"] = @"Полиция России", [@"operator:wikidata"] = @"Q1188211", },
             Terms: [@"police of russia", @"отдел полиции", @"полиция россии", @"пункт полиции", @"участковый пункт полиции"]),
         new NsiItem(
+            DisplayName: @"Почта России",
+            Id: @"russianpost-98aa7c",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator:wikidata"] = @"Q1502763", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"brand"] = @"Почта России", [@"brand:en"] = @"Russian Post", [@"brand:ru"] = @"Почта России", [@"brand:wikidata"] = @"Q1502763", [@"operator"] = @"Почта России", [@"operator:en"] = @"Russian Post", [@"operator:ru"] = @"АО ""Почта России""", [@"operator:wikidata"] = @"Q1502763", },
+            Terms: [@"russian post", @"ао ""почта россии""", @"отделение связи", @"почта россии", @"фгуп почта россии"]),
+        new NsiItem(
             DisplayName: @"СДЭК",
             Id: @"5ac048-6df28a",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator:wikidata"] = @"Q28665980", },
@@ -2629,18 +2647,6 @@ public static class NsiRegion_RU
             Tags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator:wikidata"] = @"Q16947973", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"brand"] = @"Цайняо", [@"brand:en"] = @"Cainiao", [@"brand:ru"] = @"Цайняо", [@"brand:wikidata"] = @"Q16947973", [@"operator"] = @"Цайняо", [@"operator:wikidata"] = @"Q16947973", },
             Terms: [@"cainiao", @"цайняо"]),
-        new NsiItem(
-            DisplayName: @"Почта России",
-            Id: @"6898b3-98aa7c",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator:wikidata"] = @"Q1502763", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator"] = @"АО ""Почта России""", [@"operator:wikidata"] = @"Q1502763", },
-            Terms: [@"ао ""почта россии""", @"почта россии", @"фгуп почта россии"]),
-        new NsiItem(
-            DisplayName: @"Почта России",
-            Id: @"6898b3-5789f0",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"operator:wikidata"] = @"Q1502763", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"operator"] = @"АО ""Почта России""", [@"operator:wikidata"] = @"Q1502763", },
-            Terms: [@"ао ""почта россии""", @"почта россии", @"фгуп почта россии"]),
         new NsiItem(
             DisplayName: @"SOEX",
             Id: @"soex-a3d9bb",
@@ -2668,8 +2674,8 @@ public static class NsiRegion_RU
         new NsiItem(
             DisplayName: @"Россвязь",
             Id: @"9c761b-6db49f",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"telephone", [@"operator:wikidata"] = @"Q4481735", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"telephone", [@"operator"] = @"Россвязь", [@"operator:wikidata"] = @"Q4481735", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"telephone", [@"operator:wikidata"] = @"Q4294667", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"telephone", [@"operator"] = @"Россвязь", [@"operator:wikidata"] = @"Q4294667", },
             Terms: [@"россвязь"]),
         new NsiItem(
             DisplayName: @"Ростелеком",

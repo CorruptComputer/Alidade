@@ -29,7 +29,7 @@ public static class NsiRegion_DK
             DisplayName: @"Everfuel",
             Id: @"everfuel-b750b3",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q114905024", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Everfuel", [@"brand:wikidata"] = @"Q114905024", [@"fuel:LH2"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Everfuel", [@"brand:wikidata"] = @"Q114905024", },
             Terms: [@"everfuel"]),
         new NsiItem(
             DisplayName: @"F24",
@@ -92,6 +92,12 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"YX", [@"brand:wikidata"] = @"Q4580519", },
             Terms: [@"yx", @"yx energi"]),
         new NsiItem(
+            DisplayName: @"AL Sydbank",
+            Id: @"alsydbank-ea875f",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q825159", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"AL Sydbank", [@"brand:wikidata"] = @"Q825159", [@"operator"] = @"AL Sydbank", [@"operator:wikidata"] = @"Q825159", },
+            Terms: [@"al sydbank", @"sydbank"]),
+        new NsiItem(
             DisplayName: @"BNP Paribas",
             Id: @"bnpparibas-c1fb51",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q499707", },
@@ -128,11 +134,23 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Nordea", [@"brand:wikidata"] = @"Q1123823", [@"operator"] = @"Nordea", [@"operator:wikidata"] = @"Q1123823", },
             Terms: [@"nordea"]),
         new NsiItem(
-            DisplayName: @"Sydbank",
-            Id: @"sydbank-ea875f",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q825159", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sydbank", [@"brand:wikidata"] = @"Q825159", [@"operator"] = @"Sydbank", [@"operator:wikidata"] = @"Q825159", },
-            Terms: [@"sydbank"]),
+            DisplayName: @"Skjern Bank",
+            Id: @"skjernbank-198cfd",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q43523656", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Skjern Bank", [@"brand:wikidata"] = @"Q43523656", [@"operator"] = @"Skjern Bank", [@"operator:wikidata"] = @"Q43523656", },
+            Terms: [@"skjern bank"]),
+        new NsiItem(
+            DisplayName: @"Sparekassen Danmark",
+            Id: @"sparekassendanmark-198cfd",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q108608328", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparekassen Danmark", [@"brand:wikidata"] = @"Q108608328", [@"operator"] = @"Sparekassen Danmark", [@"operator:wikidata"] = @"Q108608328", },
+            Terms: [@"sparekassen danmark"]),
+        new NsiItem(
+            DisplayName: @"AL Sydbank",
+            Id: @"alsydbank-9eeba7",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q825159", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"AL Sydbank", [@"brand:wikidata"] = @"Q825159", [@"name"] = @"AL Sydbank", },
+            Terms: [@"al sydbank", @"sydbank"]),
         new NsiItem(
             DisplayName: @"BNP Paribas",
             Id: @"bnpparibas-a4be3f",
@@ -170,11 +188,17 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Nordea", [@"brand:wikidata"] = @"Q1123823", [@"name"] = @"Nordea", },
             Terms: [@"nordea"]),
         new NsiItem(
-            DisplayName: @"Sydbank",
-            Id: @"sydbank-9eeba7",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q825159", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Sydbank", [@"brand:wikidata"] = @"Q825159", [@"name"] = @"Sydbank", },
-            Terms: [@"sydbank"]),
+            DisplayName: @"Skjern Bank",
+            Id: @"skjernbank-cc27e5",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q43523656", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Skjern Bank", [@"brand:wikidata"] = @"Q43523656", [@"name"] = @"Skjern Bank", },
+            Terms: [@"skjern bank"]),
+        new NsiItem(
+            DisplayName: @"Sparekassen Danmark",
+            Id: @"sparekassendanmark-cc27e5",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q108608328", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Sparekassen Danmark", [@"brand:wikidata"] = @"Q108608328", [@"name"] = @"Sparekassen Danmark", [@"operator"] = @"Sparekassen Danmark", [@"operator:wikidata"] = @"Q108608328", },
+            Terms: [@"sparekassen danmark"]),
         new NsiItem(
             DisplayName: @"Bycyklen",
             Id: @"bycyklen-e198ac",
@@ -217,6 +241,12 @@ public static class NsiRegion_DK
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q2819394", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"AS 24", [@"brand:wikidata"] = @"Q2819394", [@"name"] = @"AS 24", },
             Terms: [@"as 24"]),
+        new NsiItem(
+            DisplayName: @"Wash World",
+            Id: @"washworld-83b5fb",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q130249954", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"Wash World", [@"brand:wikidata"] = @"Q130249954", [@"name"] = @"Wash World", [@"operator"] = @"Wash World", [@"operator:wikidata"] = @"Q130249954", },
+            Terms: [@"wash world"]),
         new NsiItem(
             DisplayName: @"Fastned",
             Id: @"fastned-782c71",
@@ -392,6 +422,12 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"O'Learys", [@"brand:wikidata"] = @"Q10605590", [@"cuisine"] = @"american", [@"name"] = @"O'Learys", },
             Terms: [@"o'learys"]),
         new NsiItem(
+            DisplayName: @"Pincho Nation",
+            Id: @"pinchonation-c5098f",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q42298558", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Pincho Nation", [@"brand:wikidata"] = @"Q42298558", [@"cuisine"] = @"tapas", [@"name"] = @"Pincho Nation", },
+            Terms: [@"pincho nation"]),
+        new NsiItem(
             DisplayName: @"Sticks'n'Sushi",
             Id: @"sticksnsushi-10a489",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q12337197", [@"cuisine"] = @"sushi", },
@@ -421,6 +457,12 @@ public static class NsiRegion_DK
             Tags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand:wikidata"] = @"Q63720061", [@"vending"] = @"excrement_bags", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand"] = @"Dog-Station", [@"brand:wikidata"] = @"Q63720061", [@"vending"] = @"excrement_bags", },
             Terms: [@"dog-station"]),
+        new NsiItem(
+            DisplayName: @"Kosan Gas",
+            Id: @"kosangas-8d9d76",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand:wikidata"] = @"Q138029964", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand"] = @"Kosan Gas", [@"brand:wikidata"] = @"Q138029964", [@"vending"] = @"gas", },
+            Terms: [@"kosan gas"]),
         new NsiItem(
             DisplayName: @"Selecta",
             Id: @"selecta-ed4d31",
@@ -530,10 +572,22 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Lagkagehuset", [@"brand:wikidata"] = @"Q12323572", [@"name"] = @"Lagkagehuset", [@"shop"] = @"bakery", },
             Terms: [@"lagkagehuset"]),
         new NsiItem(
+            DisplayName: @"Drømmeland",
+            Id: @"drommeland-211d3a",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5306688", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Drømmeland", [@"brand:wikidata"] = @"Q5306688", [@"name"] = @"Drømmeland", [@"shop"] = @"bed", },
+            Terms: [@"drømmeland"]),
+        new NsiItem(
+            DisplayName: @"Bike&Co",
+            Id: @"bikeandco-ff17d0",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138392067", [@"shop"] = @"bicycle", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Bike&Co", [@"brand:wikidata"] = @"Q138392067", [@"name"] = @"Bike&Co", [@"shop"] = @"bicycle", },
+            Terms: [@"bike & ko", @"bike og co", @"bike og ko", @"bike&co"]),
+        new NsiItem(
             DisplayName: @"Fri BikeShop",
             Id: @"fribikeshop-ff17d0",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q26721030", [@"shop"] = @"bicycle", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Fri BikeShop", [@"brand:wikidata"] = @"Q26721030", [@"name"] = @"Fri BikeShop", [@"shop"] = @"bicycle", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q80575447", [@"shop"] = @"bicycle", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Fri BikeShop", [@"brand:wikidata"] = @"Q80575447", [@"name"] = @"Fri BikeShop", [@"shop"] = @"bicycle", },
             Terms: [@"fri bikeshop"]),
         new NsiItem(
             DisplayName: @"Bog & idé",
@@ -597,7 +651,7 @@ public static class NsiRegion_DK
             Terms: [@"hella service partner"]),
         new NsiItem(
             DisplayName: @"Mekonomen",
-            Id: @"mekonomen-7de64b",
+            Id: @"mekonomen-158011",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q10580079", [@"shop"] = @"car_repair", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mekonomen", [@"brand:wikidata"] = @"Q10580079", [@"name"] = @"Mekonomen", [@"shop"] = @"car_repair", },
             Terms: [@"mekonomen"]),
@@ -620,6 +674,18 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Teknicar", [@"brand:wikidata"] = @"Q110510682", [@"name"] = @"Teknicar", [@"shop"] = @"car_repair", },
             Terms: [@"teknicar"]),
         new NsiItem(
+            DisplayName: @"Blue Cross (Denmark)",
+            Id: @"blakorsgenbrug-40689c",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123178402", [@"shop"] = @"charity", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Blå Kors", [@"brand:wikidata"] = @"Q123178402", [@"name"] = @"Blå Kors Genbrug", [@"operator"] = @"Blå Kors Danmark", [@"operator:wikidata"] = @"Q123178402", [@"second_hand"] = @"yes", [@"shop"] = @"charity", },
+            Terms: [@"Blue Cross (Denmark)", @"blå kors", @"blå kors danmark"]),
+        new NsiItem(
+            DisplayName: @"Danmission",
+            Id: @"danmissiongenbrug-40689c",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11964723", [@"shop"] = @"charity", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Danmission", [@"brand:wikidata"] = @"Q11964723", [@"name"] = @"Danmission Genbrug", [@"operator"] = @"Danmission", [@"operator:wikidata"] = @"Q11964723", [@"second_hand"] = @"yes", [@"shop"] = @"charity", },
+            Terms: [@"danmission"]),
+        new NsiItem(
             DisplayName: @"Dansk Røde Kors Genbrug",
             Id: @"danskrodekorsgenbrug-40689c",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12307527", [@"shop"] = @"charity", },
@@ -635,8 +701,14 @@ public static class NsiRegion_DK
             DisplayName: @"Kirkens Korshær Genbrug",
             Id: @"kirkenskorshaergenbrug-40689c",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12321915", [@"shop"] = @"charity", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Kirkens Korshær Genbrug", [@"brand:wikidata"] = @"Q12321915", [@"name"] = @"Kirkens Korshær Genbrug", [@"shop"] = @"charity", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Kirkens Korshær Genbrug", [@"brand:wikidata"] = @"Q12321915", [@"name"] = @"Kirkens Korshær Genbrug", [@"operator"] = @"Kirkens Korshær Genbrug", [@"operator:wikidata"] = @"Q12321915", [@"second_hand"] = @"yes", [@"shop"] = @"charity", },
             Terms: [@"kirkens korshær genbrug"]),
+        new NsiItem(
+            DisplayName: @"Mission Afrika",
+            Id: @"missionafrikagenbrug-40689c",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12327349", [@"shop"] = @"charity", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mission Afrika", [@"brand:wikidata"] = @"Q12327349", [@"name"] = @"Mission Afrika Genbrug", [@"operator"] = @"Mission Afrika", [@"operator:wikidata"] = @"Q12327349", [@"second_hand"] = @"yes", [@"shop"] = @"charity", },
+            Terms: [@"mission afrika"]),
         new NsiItem(
             DisplayName: @"Matas",
             Id: @"matas-9eec7a",
@@ -645,10 +717,16 @@ public static class NsiRegion_DK
             Terms: [@"matas"]),
         new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),
+        new NsiItem(
+            DisplayName: @"I.M. Frellsen",
+            Id: @"imfrellsen-9675fe",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12342297", [@"shop"] = @"chocolate", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"I.M. Frellsen", [@"brand:wikidata"] = @"Q12342297", [@"name"] = @"I.M. Frellsen", [@"operator"] = @"I.M. Frellsen", [@"operator:wikidata"] = @"Q12342297", [@"shop"] = @"chocolate", },
+            Terms: [@"i.m. frellsen"]),
         new NsiItem(
             DisplayName: @"H&M Kids",
             Id: @"handmkids-2ecfc2",
@@ -686,6 +764,12 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Street One", [@"brand:wikidata"] = @"Q61997265", [@"name"] = @"Street One", [@"shop"] = @"clothes", },
             Terms: [@"street one"]),
         new NsiItem(
+            DisplayName: @"Tøjeksperten",
+            Id: @"tojeskperten-7949a4",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12339995", [@"shop"] = @"clothes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Tøjeksperten", [@"brand:wikidata"] = @"Q12339995", [@"clothes"] = @"men", [@"name"] = @"Tøjeskperten", [@"shop"] = @"clothes", },
+            Terms: [@"tøjeksperten"]),
+        new NsiItem(
             DisplayName: @"White Stuff",
             Id: @"whitestuff-98a4ed",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7995442", [@"shop"] = @"clothes", },
@@ -697,6 +781,12 @@ public static class NsiRegion_DK
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q122921301", [@"shop"] = @"clothes", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Zizzi", [@"brand:wikidata"] = @"Q122921301", [@"name"] = @"Zizzi", [@"shop"] = @"clothes", },
             Terms: [@"zizzi"]),
+        new NsiItem(
+            DisplayName: @"Nærkøb",
+            Id: @"naerkob-f9ced2",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138634124", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Nærkøb", [@"brand:wikidata"] = @"Q138634124", [@"name"] = @"Nærkøb", [@"shop"] = @"convenience", },
+            Terms: [@"nærkøb", @"naerkoeb"]),
         new NsiItem(
             DisplayName: @"bareMinerals",
             Id: @"bareminerals-fdc7bb",
@@ -794,6 +884,12 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Warhammer", [@"brand:wikidata"] = @"Q136613133", [@"name"] = @"Warhammer", [@"shop"] = @"games", },
             Terms: [@"games workshop", @"warhammer"]),
         new NsiItem(
+            DisplayName: @"Plantorama",
+            Id: @"plantorama-a67868",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12331952", [@"shop"] = @"garden_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Plantorama", [@"brand:wikidata"] = @"Q12331952", [@"name"] = @"Plantorama", [@"shop"] = @"garden_centre", },
+            Terms: [@"plantorama"]),
+        new NsiItem(
             DisplayName: @"HiFi Klubben",
             Id: @"hifiklubben-d52532",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3437804", [@"shop"] = @"hifi", },
@@ -848,17 +944,41 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Ace & Tate", [@"brand:wikidata"] = @"Q110516413", [@"name"] = @"Ace & Tate", [@"shop"] = @"optician", },
             Terms: [@"ace & tate"]),
         new NsiItem(
+            DisplayName: @"Profil Optik",
+            Id: @"profiloptik-f943c4",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12332426", [@"shop"] = @"optician", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Profil Optik", [@"brand:wikidata"] = @"Q12332426", [@"name"] = @"Profil Optik", [@"shop"] = @"optician", },
+            Terms: [@"profil optik"]),
+        new NsiItem(
             DisplayName: @"Smarteyes",
             Id: @"smarteyes-32f5e0",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q64008424", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Smarteyes", [@"brand:wikidata"] = @"Q64008424", [@"name"] = @"Smarteyes", [@"shop"] = @"optician", },
             Terms: [@"smarteyes"]),
         new NsiItem(
+            DisplayName: @"Synoptik",
+            Id: @"synoptik-32f5e0",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q10687541", [@"shop"] = @"optician", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Synoptik", [@"brand:wikidata"] = @"Q10687541", [@"name"] = @"Synoptik", [@"shop"] = @"optician", },
+            Terms: [@"synoptik"]),
+        new NsiItem(
+            DisplayName: @"Thiele",
+            Id: @"thiele-f943c4",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12339176", [@"shop"] = @"optician", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Thiele", [@"brand:wikidata"] = @"Q12339176", [@"name"] = @"Thiele", [@"shop"] = @"optician", },
+            Terms: [@"thiele"]),
+        new NsiItem(
             DisplayName: @"Maxi Zoo",
             Id: @"maxizoo-3e2920",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q108403242", [@"shop"] = @"pet", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Maxi Zoo", [@"brand:wikidata"] = @"Q108403242", [@"name"] = @"Maxi Zoo", [@"shop"] = @"pet", },
             Terms: [@"maxi zoo"]),
+        new NsiItem(
+            DisplayName: @"Kirppu",
+            Id: @"kirppu-839d92",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q130303972", [@"shop"] = @"second_hand", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Kirppu", [@"brand:wikidata"] = @"Q130303972", [@"name"] = @"Kirppu", [@"shop"] = @"second_hand", },
+            Terms: [@"kirppu"]),
         new NsiItem(
             DisplayName: @"Lloyd",
             Id: @"lloyd-928d17",
@@ -1132,8 +1252,8 @@ public static class NsiRegion_DK
         new NsiItem(
             DisplayName: @"Share Now",
             Id: @"sharenow-663d52",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q62021602", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q62021602", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q131572664", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q131572664", },
             Terms: [@"share now"]),
         new NsiItem(
             DisplayName: @"Aldi (Aldi Nord group)",
@@ -1508,6 +1628,12 @@ public static class NsiRegion_DK
             AddTags: new Dictionary<string, string> { [@"operator"] = @"N1 A/S", [@"operator:wikidata"] = @"Q130348827", [@"power"] = @"substation", },
             Terms: [@"n1 a/s"]),
         new NsiItem(
+            DisplayName: @"RAH Net",
+            Id: @"rahnet-3aeb55",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130212974", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"RAH Net", [@"operator:wikidata"] = @"Q130212974", [@"power"] = @"substation", },
+            Terms: [@"rah", @"rah net"]),
+        new NsiItem(
             DisplayName: @"Verdo",
             Id: @"verdo-3aeb55",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q12343812", [@"power"] = @"substation", },
@@ -1549,6 +1675,12 @@ public static class NsiRegion_DK
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130348827", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"N1 A/S", [@"operator:wikidata"] = @"Q130348827", [@"power"] = @"transformer", },
             Terms: [@"n1 a/s"]),
+        new NsiItem(
+            DisplayName: @"RAH Net",
+            Id: @"rahnet-694f23",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130212974", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"RAH Net", [@"operator:wikidata"] = @"Q130212974", [@"power"] = @"transformer", },
+            Terms: [@"rah", @"rah net"]),
         new NsiItem(
             DisplayName: @"Verdo",
             Id: @"verdo-694f23",

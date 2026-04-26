@@ -110,6 +110,12 @@ public static class NsiRegion_CY
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Island", [@"brand:wikidata"] = @"Q60867333", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Island", [@"takeaway"] = @"yes", },
             Terms: [@"coffee island"]),
         new NsiItem(
+            DisplayName: @"Coffee Lab",
+            Id: @"coffeelab-0c7853",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Lab", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Lab", [@"takeaway"] = @"yes", },
+            Terms: [@"coffee lab"]),
+        new NsiItem(
             DisplayName: @"Mikel",
             Id: @"mikel-349bad",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q16952021", [@"cuisine"] = @"coffee_shop", },
@@ -129,7 +135,7 @@ public static class NsiRegion_CY
             Terms: [@"oakberry açaí bowls"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -377,14 +383,14 @@ public static class NsiRegion_CY
             DisplayName: @"Cyprus Post",
             Id: @"cypruspost-4539a3",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator:wikidata"] = @"Q5200484", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator"] = @"Cyprus Post", [@"operator:wikidata"] = @"Q5200484", },
-            Terms: [@"cyprus post"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_box", [@"operator"] = @"Cyprus Post", [@"operator:el"] = @"Κυπριακά Ταχυδρομεία", [@"operator:en"] = @"Cyprus Post", [@"operator:wikidata"] = @"Q5200484", },
+            Terms: [@"cyprus post", @"κυπριακά ταχυδρομεία"]),
         new NsiItem(
             DisplayName: @"Cyprus Post",
             Id: @"cypruspost-28cbc0",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"operator:wikidata"] = @"Q5200484", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"operator"] = @"Cyprus Post", [@"operator:wikidata"] = @"Q5200484", },
-            Terms: [@"cyprus post"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"post_office", [@"operator"] = @"Cyprus Post", [@"operator:el"] = @"Κυπριακά Ταχυδρομεία", [@"operator:en"] = @"Cyprus Post", [@"operator:wikidata"] = @"Q5200484", },
+            Terms: [@"cyprus post", @"κυπριακά ταχυδρομεία"]),
         new NsiItem(
             DisplayName: @"Electricity Authority of Cyprus",
             Id: @"electricityauthorityofcyprus-00afc2",

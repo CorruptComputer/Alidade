@@ -201,7 +201,7 @@ public static class NsiRegion_LT
             Terms: [@"viada"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -295,6 +295,12 @@ public static class NsiRegion_LT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q136814388", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Biržų duona", [@"brand:wikidata"] = @"Q136814388", [@"name"] = @"Biržų duona", [@"shop"] = @"bakery", },
             Terms: [@"biržų duona"]),
+        new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
         new NsiItem(
             DisplayName: @"Drogas",
             Id: @"drogas-1a360a",

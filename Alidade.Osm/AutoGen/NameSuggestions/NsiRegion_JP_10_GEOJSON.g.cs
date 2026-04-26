@@ -14,6 +14,12 @@ public static class NsiRegion_JP_10_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"ツルヤ",
+            Id: @"tsuruya-a888b6",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11318832", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ツルヤ", [@"brand:en"] = @"Tsuruya", [@"brand:ja"] = @"ツルヤ", [@"brand:wikidata"] = @"Q11318832", [@"name"] = @"ツルヤ", [@"name:en"] = @"Tsuruya", [@"name:ja"] = @"ツルヤ", [@"shop"] = @"supermarket", },
+            Terms: [@"tsuruya", @"ツルヤ"]),
+        new NsiItem(
             DisplayName: @"群馬県企業局",
             Id: @"f8514d-d2d0a3",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q11609576", [@"power"] = @"plant", },

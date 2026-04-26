@@ -442,8 +442,8 @@ public static class NsiRegion_US_NV_GEOJSON
         new NsiItem(
             DisplayName: @"Nevada Power Company",
             Id: @"nevadapowercompany-21bd89",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"line", },
             Terms: [@"nevada power company"]),
         new NsiItem(
             DisplayName: @"NV Energy",
@@ -460,8 +460,8 @@ public static class NsiRegion_US_NV_GEOJSON
         new NsiItem(
             DisplayName: @"Nevada Power Company",
             Id: @"nevadapowercompany-008944",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"minor_line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"minor_line", },
             Terms: [@"nevada power company"]),
         new NsiItem(
             DisplayName: @"NV Energy",
@@ -484,8 +484,8 @@ public static class NsiRegion_US_NV_GEOJSON
         new NsiItem(
             DisplayName: @"Nevada Power Company",
             Id: @"nevadapowercompany-83372a",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"pole", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"pole", },
             Terms: [@"nevada power company"]),
         new NsiItem(
             DisplayName: @"NV Energy",
@@ -514,8 +514,8 @@ public static class NsiRegion_US_NV_GEOJSON
         new NsiItem(
             DisplayName: @"Nevada Power Company",
             Id: @"nevadapowercompany-c5999d",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q17107993", [@"power"] = @"tower", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Nevada Power Company", [@"operator:wikidata"] = @"Q1961658", [@"power"] = @"tower", },
             Terms: [@"nevada power company"]),
         new NsiItem(
             DisplayName: @"NV Energy",

@@ -32,12 +32,6 @@ public static class NsiRegion_ES_LE_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"library", [@"operator"] = @"Universidad de León", [@"operator:type"] = @"university", [@"operator:wikidata"] = @"Q781108", },
             Terms: [@"universidad de león"]),
         new NsiItem(
-            DisplayName: @"Consejería de Educación de la Junta de Castilla y León",
-            Id: @"consejeriadeeducaciondelajuntadecastillayleon-5f247a",
-            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q30297363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Consejería de Educación de la Junta de Castilla y León", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q30297363", },
-            Terms: [@"consejería de educación de la junta de castilla y león"]),
-        new NsiItem(
             DisplayName: @"Junta de Castilla y León",
             Id: @"juntadecastillayleon-5f247a",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q3314606", },
@@ -77,7 +71,7 @@ public static class NsiRegion_ES_LE_GEOJSON
             DisplayName: @"Cercanías León",
             Id: @"cercaniasleon-f2954f",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q107428854", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías León", [@"network:wikidata"] = @"Q107428854", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q1143007", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías León", [@"network:wikidata"] = @"Q107428854", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q3109506", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"cercanías león", @"feve", @"renfe cercanías am", @"renfe feve"]),
         new NsiItem(
             DisplayName: @"Autobuses Urbanos de León",
@@ -95,7 +89,7 @@ public static class NsiRegion_ES_LE_GEOJSON
             DisplayName: @"Cercanías León",
             Id: @"cercaniasleon-cc5d06",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q107428854", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías León", [@"network:wikidata"] = @"Q107428854", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q1143007", [@"route"] = @"train", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías León", [@"network:wikidata"] = @"Q107428854", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q3109506", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"cercanías león", @"feve", @"renfe cercanías am", @"renfe feve"]),
     ];
 }

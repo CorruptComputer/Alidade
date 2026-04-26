@@ -292,8 +292,8 @@ public static class NsiRegion_FR_PDL_GEOJSON
         new NsiItem(
             DisplayName: @"Lila",
             Id: @"lila-8c601f",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q3240211", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Lila", [@"network:wikidata"] = @"Q3240211", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q65156365", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Lila", [@"network:wikidata"] = @"Q65156365", [@"public_transport"] = @"platform", },
             Terms: [@"fr_lila", @"lila"]),
         new NsiItem(
             DisplayName: @"Lila Presqu'île",
@@ -412,8 +412,8 @@ public static class NsiRegion_FR_PDL_GEOJSON
         new NsiItem(
             DisplayName: @"Lila",
             Id: @"lila-00e183",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q3240211", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Lila", [@"network:wikidata"] = @"Q3240211", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q65156365", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Lila", [@"network:wikidata"] = @"Q65156365", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"fr_lila", @"lila"]),
         new NsiItem(
             DisplayName: @"Lila Presqu'île",

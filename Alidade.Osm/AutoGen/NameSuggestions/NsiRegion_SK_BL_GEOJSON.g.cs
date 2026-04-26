@@ -32,6 +32,12 @@ public static class NsiRegion_SK_BL_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand"] = @"Bratislavský parkovací asistent PAAS", [@"brand:short"] = @"PAAS", [@"brand:wikidata"] = @"Q136769463", [@"vending"] = @"parking_tickets", },
             Terms: [@"bratislavský parkovací asistent paas", @"paas"]),
         new NsiItem(
+            DisplayName: @"OLO",
+            Id: @"odvozalikvidaciaodpadu-913f68",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q136036319", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Odvoz a likvidácia odpadu", [@"operator:short"] = @"OLO", [@"operator:wikidata"] = @"Q136036319", },
+            Terms: [@"odvoz a likvidácia odpadu", @"olo"]),
+        new NsiItem(
             DisplayName: @"City Business Center",
             Id: @"citybusinesscenter-2ca003",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q4180036", },

@@ -231,7 +231,7 @@ public static class NsiRegion_BE
             Terms: [@"as 24"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -423,7 +423,7 @@ public static class NsiRegion_BE
             Terms: [@"budbee"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -561,7 +561,7 @@ public static class NsiRegion_BE
             Terms: [@"snap fitness"]),
         new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -1424,6 +1424,12 @@ public static class NsiRegion_BE
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Maisons du Monde", [@"brand:wikidata"] = @"Q3280364", [@"name"] = @"Maisons du Monde", [@"shop"] = @"furniture", },
             Terms: [@"maisons du monde"]),
         new NsiItem(
+            DisplayName: @"Meubles Gautier",
+            Id: @"meublesgautier-affdb4",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426875", [@"shop"] = @"furniture", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Meubles Gautier", [@"brand:wikidata"] = @"Q138426875", [@"name"] = @"Meubles Gautier", [@"shop"] = @"furniture", },
+            Terms: [@"gautier", @"les meubles gautier", @"meubles gautier"]),
+        new NsiItem(
             DisplayName: @"Poltronesofà",
             Id: @"poltronesofa-488b55",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q80833069", [@"shop"] = @"furniture", },
@@ -1641,7 +1647,7 @@ public static class NsiRegion_BE
             Terms: [@"oogwereld"]),
         new NsiItem(
             DisplayName: @"Optical Center",
-            Id: @"opticalcenter-7f892a",
+            Id: @"opticalcenter-efdbe9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
             Terms: [@"optical center"]),
@@ -1900,8 +1906,8 @@ public static class NsiRegion_BE
         new NsiItem(
             DisplayName: @"Cora",
             Id: @"cora-ea1ce5",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q686643", [@"shop"] = @"supermarket", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cora", [@"brand:wikidata"] = @"Q686643", [@"name"] = @"Cora", [@"shop"] = @"supermarket", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1273376", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cora", [@"brand:wikidata"] = @"Q1273376", [@"name"] = @"Cora", [@"shop"] = @"supermarket", },
             Terms: [@"cora"]),
         new NsiItem(
             DisplayName: @"Delhaize",
@@ -2698,8 +2704,8 @@ public static class NsiRegion_BE
         new NsiItem(
             DisplayName: @"FOD Financiën - SPF Finances - FOD Finanzen",
             Id: @"fodfinancienspffinancesfodfinanzen-fe27ed",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q2479908", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"FOD Financiën - SPF Finances - FOD Finanzen", [@"operator:de"] = @"FOD Finanzen", [@"operator:fr"] = @"SPF Finances", [@"operator:nl"] = @"FOD Financiën", [@"operator:wikidata"] = @"Q2479908", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q28438031", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"FOD Financiën - SPF Finances - FOD Finanzen", [@"operator:de"] = @"FOD Finanzen", [@"operator:fr"] = @"SPF Finances", [@"operator:nl"] = @"FOD Financiën", [@"operator:wikidata"] = @"Q28438031", },
             Terms: [@"fod financiën", @"fod financiën - spf finances - fod finanzen", @"fod finanzen", @"spf finances"]),
         new NsiItem(
             DisplayName: @"NMBS/SNCB",
@@ -2740,8 +2746,8 @@ public static class NsiRegion_BE
         new NsiItem(
             DisplayName: @"FOD Financiën - SPF Finances - FOD Finanzen",
             Id: @"fodfinancienspffinancesfodfinanzen-81c06d",
-            Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q2479908", },
-            AddTags: new Dictionary<string, string> { [@"government"] = @"ministry", [@"office"] = @"government", [@"operator"] = @"FOD Financiën - SPF Finances - FOD Finanzen", [@"operator:de"] = @"FOD Finanzen", [@"operator:fr"] = @"SPF Finances", [@"operator:nl"] = @"FOD Financiën", [@"operator:wikidata"] = @"Q2479908", },
+            Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q28438031", },
+            AddTags: new Dictionary<string, string> { [@"government"] = @"ministry", [@"office"] = @"government", [@"operator"] = @"FOD Financiën - SPF Finances - FOD Finanzen", [@"operator:de"] = @"FOD Finanzen", [@"operator:fr"] = @"SPF Finances", [@"operator:nl"] = @"FOD Financiën", [@"operator:wikidata"] = @"Q28438031", },
             Terms: [@"fod financiën", @"fod financiën - spf finances - fod finanzen", @"fod finanzen", @"spf finances"]),
         new NsiItem(
             DisplayName: @"Vlaamse overheid",

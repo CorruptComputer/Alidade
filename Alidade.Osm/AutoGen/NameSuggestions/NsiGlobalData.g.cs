@@ -36,8 +36,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"Agip",
             Id: @"agip-98293a",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q377915", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Agip", [@"brand:wikidata"] = @"Q377915", },
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q565594", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Agip", [@"brand:wikidata"] = @"Q565594", },
             Terms: [@"agip"]),
         new NsiItem(
             DisplayName: @"Air Liquide",
@@ -153,12 +153,6 @@ public static class NsiGlobalData
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q109676002", },
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Mobil", [@"brand:wikidata"] = @"Q109676002", },
             Terms: [@"mobil", @"mobile"]),
-        new NsiItem(
-            DisplayName: @"MOL",
-            Id: @"mol-ff109b",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q549181", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", },
-            Terms: [@"mol"]),
         new NsiItem(
             DisplayName: @"Neste",
             Id: @"neste-ff109b",
@@ -1000,47 +994,41 @@ public static class NsiGlobalData
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"Poznański Rower Miejski", [@"brand:wikidata"] = @"Q11826173", [@"network"] = @"Poznański Rower Miejski", [@"network:wikidata"] = @"Q11826173", [@"operator"] = @"Nextbike Polska", [@"operator:type"] = @"private", },
             Terms: [@"nextbike polska", @"poznański rower miejski"]),
         new NsiItem(
-            DisplayName: @"PubliBike (Agglo Fribourg-Freiburg)",
-            Id: @"publibike-53b479",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Agglo Fribourg-Freiburg", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Agglo Fribourg-Freiburg)", @"publibike"]),
+            DisplayName: @"PubliBike Velospot (Agglo Fribourg-Freiburg)",
+            Id: @"publibikevelospot-53b479",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138003595", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike Velospot", [@"brand:wikidata"] = @"Q138003595", [@"network"] = @"Agglo Fribourg-Freiburg", [@"operator"] = @"PubliBike AG", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
+            Terms: [@"PubliBike Velospot (Agglo Fribourg-Freiburg)", @"publibike ag", @"publibike velospot"]),
         new NsiItem(
-            DisplayName: @"PubliBike (Lausanne-Morges)",
-            Id: @"publibike-9ea11b",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Lausanne-Morges", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Lausanne-Morges)", @"publibike"]),
+            DisplayName: @"PubliBike Velospot (Lugano-Malcantone)",
+            Id: @"publibikevelospot-0bf680",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138003595", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike Velospot", [@"brand:wikidata"] = @"Q138003595", [@"network"] = @"Lugano-Malcantone", [@"operator"] = @"PubliBike AG", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
+            Terms: [@"PubliBike Velospot (Lugano-Malcantone)", @"publibike ag", @"publibike velospot"]),
         new NsiItem(
-            DisplayName: @"PubliBike (Lugano-Malcantone)",
-            Id: @"publibike-0bf680",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Lugano-Malcantone", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Lugano-Malcantone)", @"publibike"]),
+            DisplayName: @"PubliBike Velospot (Région de Nyon)",
+            Id: @"publibikevelospot-61be25",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138003595", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike Velospot", [@"brand:wikidata"] = @"Q138003595", [@"network"] = @"Région de Nyon", [@"operator"] = @"PubliBike AG", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
+            Terms: [@"PubliBike Velospot (Région de Nyon)", @"publibike ag", @"publibike velospot"]),
         new NsiItem(
-            DisplayName: @"PubliBike (Région de Nyon)",
-            Id: @"publibike-61be25",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Région de Nyon", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Région de Nyon)", @"publibike"]),
+            DisplayName: @"PubliBike Velospot (Sierre)",
+            Id: @"publibikevelospot-04d31e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138003595", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike Velospot", [@"brand:wikidata"] = @"Q138003595", [@"network"] = @"Sierre", [@"operator"] = @"PubliBike AG", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
+            Terms: [@"PubliBike Velospot (Sierre)", @"publibike ag", @"publibike velospot"]),
         new NsiItem(
-            DisplayName: @"PubliBike (Sierre)",
-            Id: @"publibike-04d31e",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Sierre", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Sierre)", @"publibike"]),
+            DisplayName: @"PubliBike Velospot (Sion)",
+            Id: @"publibikevelospot-31ea02",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138003595", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike Velospot", [@"brand:wikidata"] = @"Q138003595", [@"network"] = @"Sion", [@"operator"] = @"PubliBike AG", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
+            Terms: [@"PubliBike Velospot (Sion)", @"publibike ag", @"publibike velospot"]),
         new NsiItem(
-            DisplayName: @"PubliBike (Sion)",
-            Id: @"publibike-31ea02",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Sion", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Sion)", @"publibike"]),
-        new NsiItem(
-            DisplayName: @"PubliBike (Velo Bern)",
-            Id: @"publibike-a8de7e",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q3555363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike", [@"brand:wikidata"] = @"Q3555363", [@"network"] = @"Velo Bern", [@"operator"] = @"PubliBike", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
-            Terms: [@"PubliBike (Velo Bern)", @"publibike"]),
+            DisplayName: @"PubliBike Velospot (Velo Bern)",
+            Id: @"publibikevelospot-a8de7e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q138003595", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"PubliBike Velospot", [@"brand:wikidata"] = @"Q138003595", [@"network"] = @"Velo Region Bern", [@"operator"] = @"PubliBike AG", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3555363", },
+            Terms: [@"PubliBike Velospot (Velo Bern)", @"publibike ag", @"publibike velospot"]),
         new NsiItem(
             DisplayName: @"Santander Cycles (Brunel)",
             Id: @"santandercycles-977a2d",
@@ -1246,12 +1234,6 @@ public static class NsiGlobalData
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"CoCo", [@"brand:wikidata"] = @"Q65084369", [@"cuisine"] = @"bubble_tea", [@"name"] = @"CoCo Fresh Tea & Juice", [@"short_name"] = @"CoCo", [@"takeaway"] = @"yes", },
             Terms: [@"coco"]),
         new NsiItem(
-            DisplayName: @"Coffee Lab",
-            Id: @"coffeelab-e1ef51",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Lab", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Lab", [@"takeaway"] = @"yes", },
-            Terms: [@"coffee lab"]),
-        new NsiItem(
             DisplayName: @"Coffee Republic",
             Id: @"coffeerepublic-e1ef51",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q5140923", [@"cuisine"] = @"coffee_shop", },
@@ -1373,7 +1355,7 @@ public static class NsiGlobalData
             Terms: [@"onezo", @"onezo tapioca", @"onezo tea", @"丸作", @"丸作食茶"]),
         new NsiItem(
             DisplayName: @"Quickly",
-            Id: @"quickly-fb11e8",
+            Id: @"quickly-92c4b0",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q3771463", [@"cuisine"] = @"bubble_tea", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Quickly", [@"brand:en"] = @"Quickly", [@"brand:wikidata"] = @"Q3771463", [@"brand:zh"] = @"快可立", [@"cuisine"] = @"bubble_tea", [@"name"] = @"Quickly", [@"name:en"] = @"Quickly", [@"name:zh"] = @"快可立", [@"takeaway"] = @"yes", },
             Terms: [@"quickly", @"快可立"]),
@@ -1562,7 +1544,7 @@ public static class NsiGlobalData
             Id: @"karcher-43b899",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q696798", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"Kärcher", [@"brand:wikidata"] = @"Q696798", [@"name"] = @"Kärcher", },
-            Terms: [@"kärcher", @"kärcher clean park"]),
+            Terms: [@"kaercher", @"kärcher", @"kärcher clean park"]),
         new NsiItem(
             DisplayName: @"Mobil",
             Id: @"mobil-43b899",
@@ -1912,12 +1894,6 @@ public static class NsiGlobalData
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Pizza Hut", [@"brand:wikidata"] = @"Q191615", [@"cuisine"] = @"pizza", [@"name"] = @"Pizza Hut Express", [@"takeaway"] = @"yes", },
             Terms: [@"Pizza Hut Express", @"pizza hut"]),
         new NsiItem(
-            DisplayName: @"Pizza Inn",
-            Id: @"pizzainn-658eea",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q4118850", [@"cuisine"] = @"pizza", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Pizza Inn", [@"brand:wikidata"] = @"Q4118850", [@"cuisine"] = @"pizza", [@"name"] = @"Pizza Inn", [@"takeaway"] = @"yes", },
-            Terms: [@"pizza inn"]),
-        new NsiItem(
             DisplayName: @"Pizza Nova",
             Id: @"pizzanova-658eea",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q7199971", [@"cuisine"] = @"pizza", },
@@ -2040,8 +2016,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"Agip",
             Id: @"agip-025116",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q377915", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Agip", [@"brand:wikidata"] = @"Q377915", [@"name"] = @"Agip", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q565594", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Agip", [@"brand:wikidata"] = @"Q565594", [@"name"] = @"Agip", },
             Terms: [@"agip"]),
         new NsiItem(
             DisplayName: @"Air Liquide",
@@ -2157,12 +2133,6 @@ public static class NsiGlobalData
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q109676002", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Mobil", [@"brand:wikidata"] = @"Q109676002", [@"name"] = @"Mobil", },
             Terms: [@"mobil", @"mobile"]),
-        new NsiItem(
-            DisplayName: @"MOL",
-            Id: @"mol-b3d110",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q549181", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
-            Terms: [@"mol"]),
         new NsiItem(
             DisplayName: @"Neste",
             Id: @"neste-b3d110",
@@ -2712,8 +2682,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"Parkeon",
             Id: @"parkeon-ceeccb",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand:wikidata"] = @"Q3365450", [@"vending"] = @"parking_tickets", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand"] = @"Parkeon", [@"brand:wikidata"] = @"Q3365450", [@"vending"] = @"parking_tickets", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand:wikidata"] = @"Q131636808", [@"vending"] = @"parking_tickets", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"brand"] = @"Parkeon", [@"brand:wikidata"] = @"Q131636808", [@"vending"] = @"parking_tickets", },
             Terms: [@"parkeon"]),
         new NsiItem(
             DisplayName: @"Pepsi",
@@ -3024,8 +2994,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"Regus",
             Id: @"regus-cfb41b",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q761072", [@"office"] = @"coworking", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Regus", [@"brand:wikidata"] = @"Q761072", [@"name"] = @"Regus", [@"office"] = @"coworking", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q130240418", [@"office"] = @"coworking", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Regus", [@"brand:wikidata"] = @"Q130240418", [@"name"] = @"Regus", [@"office"] = @"coworking", },
             Terms: [@"regus"]),
         new NsiItem(
             DisplayName: @"Spaces",
@@ -3309,6 +3279,12 @@ public static class NsiGlobalData
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123408957", [@"shop"] = @"beauty", },
             AddTags: new Dictionary<string, string> { [@"beauty"] = @"skin_care", [@"brand"] = @"Guinot", [@"brand:wikidata"] = @"Q123408957", [@"name"] = @"Guinot", [@"shop"] = @"beauty", },
             Terms: [@"guinot"]),
+        new NsiItem(
+            DisplayName: @"Emma",
+            Id: @"emma-1dfb01",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q110952031", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Emma", [@"brand:wikidata"] = @"Q110952031", [@"name"] = @"Emma", [@"shop"] = @"bed", },
+            Terms: [@"emma", @"emma sleep"]),
         new NsiItem(
             DisplayName: @"Yataş Bedding",
             Id: @"yatasbedding-1dfb01",
@@ -5891,7 +5867,7 @@ public static class NsiGlobalData
             Terms: [@"shell shop"]),
         new NsiItem(
             DisplayName: @"Spar",
-            Id: @"spar-dfe3d0",
+            Id: @"spar-1effe0",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q610492", [@"shop"] = @"convenience", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Spar", [@"brand:wikidata"] = @"Q610492", [@"name"] = @"Spar", [@"shop"] = @"convenience", },
             Terms: [@"spar", @"spar ni"]),
@@ -7343,7 +7319,7 @@ public static class NsiGlobalData
             Terms: [@"masymas (Luis Piña)", @"luis piña, s.a.", @"masymas"]),
         new NsiItem(
             DisplayName: @"Spar",
-            Id: @"spar-d767cd",
+            Id: @"spar-eedea5",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q610492", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Spar", [@"brand:wikidata"] = @"Q610492", [@"name"] = @"Spar", [@"shop"] = @"supermarket", },
             Terms: [@"spar"]),
@@ -7592,7 +7568,7 @@ public static class NsiGlobalData
             Id: @"karcher-11ac87",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q696798", [@"shop"] = @"vacuum_cleaner", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Kärcher", [@"brand:wikidata"] = @"Q696798", [@"name"] = @"Kärcher", [@"shop"] = @"vacuum_cleaner", },
-            Terms: [@"kärcher"]),
+            Terms: [@"kaercher", @"kärcher"]),
         new NsiItem(
             DisplayName: @"Vorwerk",
             Id: @"vorwerk-11ac87",
@@ -8361,6 +8337,12 @@ public static class NsiGlobalData
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q96419376", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Sonder", [@"brand:wikidata"] = @"Q96419376", [@"name"] = @"Sonder", [@"tourism"] = @"hotel", },
             Terms: [@"sonder"]),
+        new NsiItem(
+            DisplayName: @"Spark by Hilton",
+            Id: @"sparkbyhilton-779ccb",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q136412253", [@"tourism"] = @"hotel", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Spark by Hilton", [@"brand:wikidata"] = @"Q136412253", [@"name"] = @"Spark by Hilton", [@"tourism"] = @"hotel", },
+            Terms: [@"spark by hilton"]),
         new NsiItem(
             DisplayName: @"St. Regis",
             Id: @"stregis-779ccb",
@@ -11946,8 +11928,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"General Electric",
             Id: @"generalelectric-74685d",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q54173", [@"power"] = @"generator", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"General Electric", [@"operator:wikidata"] = @"Q54173", [@"power"] = @"generator", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1485061", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"General Electric", [@"operator:wikidata"] = @"Q1485061", [@"power"] = @"generator", },
             Terms: [@"general electric"]),
         new NsiItem(
             DisplayName: @"Iberdrola",
@@ -12594,8 +12576,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"Cyxtera",
             Id: @"cyxtera-918717",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q111143924", [@"telecom"] = @"data_center", },
-            AddTags: new Dictionary<string, string> { [@"name"] = @"Cyxtera", [@"operator"] = @"Cyxtera", [@"operator:wikidata"] = @"Q111143924", [@"telecom"] = @"data_center", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q127304226", [@"telecom"] = @"data_center", },
+            AddTags: new Dictionary<string, string> { [@"name"] = @"Cyxtera", [@"operator"] = @"Cyxtera", [@"operator:wikidata"] = @"Q127304226", [@"telecom"] = @"data_center", },
             Terms: [@"cyxtera"]),
         new NsiItem(
             DisplayName: @"Digital Realty",
@@ -12636,8 +12618,8 @@ public static class NsiGlobalData
         new NsiItem(
             DisplayName: @"Interxion",
             Id: @"interxion-918717",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q685641", [@"telecom"] = @"data_center", },
-            AddTags: new Dictionary<string, string> { [@"name"] = @"Interxion", [@"operator"] = @"Interxion", [@"operator:wikidata"] = @"Q685641", [@"telecom"] = @"data_center", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5275969", [@"telecom"] = @"data_center", },
+            AddTags: new Dictionary<string, string> { [@"name"] = @"Interxion", [@"operator"] = @"Interxion", [@"operator:wikidata"] = @"Q5275969", [@"telecom"] = @"data_center", },
             Terms: [@"interxion"]),
         new NsiItem(
             DisplayName: @"Iron Mountain",
@@ -12958,6 +12940,12 @@ public static class NsiGlobalData
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"MetroLINK", [@"network:wikidata"] = @"Q7268260", [@"operator"] = @"Metro Rock Island County Metropolitan Mass Transit District", [@"public_transport"] = @"platform", },
             Terms: [@"MetroLINK (Quad Cities)", @"metro rock island county metropolitan mass transit district", @"metrolink"]),
         new NsiItem(
+            DisplayName: @"MetroLink Tulsa",
+            Id: @"metrolinktulsa-dd04a1",
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q6825293", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"MetroLink Tulsa", [@"network:short"] = @"MTTA", [@"network:wikidata"] = @"Q6825293", [@"operator"] = @"MetroLink Tulsa", [@"operator:wikidata"] = @"Q6825293", [@"public_transport"] = @"platform", },
+            Terms: [@"metrolink tulsa", @"metropolitan tulsa transit authority", @"mtta", @"tulsa transit"]),
+        new NsiItem(
             DisplayName: @"Montebello Bus Lines",
             Id: @"montebellobuslines-bdffab",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q6905005", [@"public_transport"] = @"platform", },
@@ -13071,12 +13059,6 @@ public static class NsiGlobalData
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q7711628", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"TheBus", [@"network:wikidata"] = @"Q7711628", [@"public_transport"] = @"platform", },
             Terms: [@"TheBus (PGC)", @"thebus"]),
-        new NsiItem(
-            DisplayName: @"Tulsa Transit",
-            Id: @"tulsatransit-dd04a1",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q6825293", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Tulsa Transit", [@"network:short"] = @"MTTA", [@"network:wikidata"] = @"Q6825293", [@"operator"] = @"MetroLink Tulsa", [@"operator:wikidata"] = @"Q6825293", [@"public_transport"] = @"platform", },
-            Terms: [@"metrolink tulsa", @"metropolitan tulsa transit authority", @"mtta", @"tulsa transit"]),
         new NsiItem(
             DisplayName: @"Valley Transit (Washington)",
             Id: @"valleytransit-c123e5",
@@ -13594,6 +13576,12 @@ public static class NsiGlobalData
             AddTags: new Dictionary<string, string> { [@"network"] = @"MetroLINK", [@"network:wikidata"] = @"Q7268260", [@"operator"] = @"Metro Rock Island County Metropolitan Mass Transit District", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"MetroLINK (Quad Cities)", @"metro rock island county metropolitan mass transit district", @"metrolink"]),
         new NsiItem(
+            DisplayName: @"MetroLink Tulsa",
+            Id: @"metrolinktulsa-f70821",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q6825293", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"MetroLink Tulsa", [@"network:short"] = @"MTTA", [@"network:wikidata"] = @"Q6825293", [@"operator"] = @"MetroLink Tulsa", [@"operator:wikidata"] = @"Q6825293", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"metrolink tulsa", @"metropolitan tulsa transit authority", @"mtta", @"tulsa transit"]),
+        new NsiItem(
             DisplayName: @"Montebello Bus Lines",
             Id: @"montebellobuslines-30bfdd",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q6905005", [@"route"] = @"bus", [@"type"] = @"route", },
@@ -13707,12 +13695,6 @@ public static class NsiGlobalData
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7711628", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"TheBus", [@"network:wikidata"] = @"Q7711628", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"TheBus (PGC)", @"thebus"]),
-        new NsiItem(
-            DisplayName: @"Tulsa Transit",
-            Id: @"tulsatransit-f70821",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q6825293", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Tulsa Transit", [@"network:short"] = @"MTTA", [@"network:wikidata"] = @"Q6825293", [@"operator"] = @"MetroLink Tulsa", [@"operator:wikidata"] = @"Q6825293", [@"route"] = @"bus", [@"type"] = @"route", },
-            Terms: [@"metrolink tulsa", @"metropolitan tulsa transit authority", @"mtta", @"tulsa transit"]),
         new NsiItem(
             DisplayName: @"Valley Transit (Washington)",
             Id: @"valleytransit-7922a5",

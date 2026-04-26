@@ -14,11 +14,23 @@ public static class NsiRegion_DE_RP_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Nassauische Sparkasse",
+            Id: @"nassauischesparkasse-33c66d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1751833", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Nassauische Sparkasse", [@"brand:wikidata"] = @"Q1751833", [@"operator"] = @"Nassauische Sparkasse", [@"operator:wikidata"] = @"Q1751833", },
+            Terms: [@"nassauer sparkasse", @"nassauische sparkasse"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank Südwest",
             Id: @"spardabanksudwest-36c3e3",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2307157", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank Südwest", [@"brand:wikidata"] = @"Q2307157", [@"operator"] = @"Sparda-Bank Südwest", [@"operator:wikidata"] = @"Q2307157", },
             Terms: [@"sparda-bank", @"sparda-bank südwest", @"sparda-bank südwest eg", @"sparda-bank sw"]),
+        new NsiItem(
+            DisplayName: @"Nassauische Sparkasse",
+            Id: @"nassauischesparkase-60f681",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1751833", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Nassauische Sparkasse", [@"brand:wikidata"] = @"Q1751833", [@"name"] = @"Nassauische Sparkase", [@"short_name"] = @"Naspa", },
+            Terms: [@"naspa", @"nassauer sparkasse", @"nassauische sparkasse"]),
         new NsiItem(
             DisplayName: @"Sparda-Bank Südwest",
             Id: @"spardabanksudwest-75cfbb",
@@ -416,6 +428,12 @@ public static class NsiRegion_DE_RP_GEOJSON
             AddTags: new Dictionary<string, string> { [@"emergency"] = @"siren", [@"operator"] = @"Berufsfeuerwehr Koblenz", [@"operator:wikidata"] = @"Q1409884", },
             Terms: [@"berufsfeuerwehr koblenz"]),
         new NsiItem(
+            DisplayName: @"Nationalparkverbandsgemeinde Herrstein-Rhaunen",
+            Id: @"nationalparkverbandsgemeindeherrsteinrhaunen-d10492",
+            Tags: new Dictionary<string, string> { [@"emergency"] = @"siren", [@"operator:wikidata"] = @"Q55276514", },
+            AddTags: new Dictionary<string, string> { [@"emergency"] = @"siren", [@"operator"] = @"Nationalparkverbandsgemeinde Herrstein-Rhaunen", [@"operator:wikidata"] = @"Q55276514", },
+            Terms: [@"nationalparkverbandsgemeinde herrstein-rhaunen"]),
+        new NsiItem(
             DisplayName: @"Verbandsgemeinde Bernkastel-Kues",
             Id: @"verbandsgemeindebernkastelkues-d10492",
             Tags: new Dictionary<string, string> { [@"emergency"] = @"siren", [@"operator:wikidata"] = @"Q643228", },
@@ -559,6 +577,12 @@ public static class NsiRegion_DE_RP_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q128479606", [@"pipeline"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"MVV Netze", [@"operator:short"] = @"MVV", [@"operator:wikidata"] = @"Q128479606", [@"pipeline"] = @"substation", },
             Terms: [@"mvv", @"mvv energie", @"mvv energie gmbh", @"mvv netze", @"mvv netze gmbh"]),
+        new NsiItem(
+            DisplayName: @"Pfalzwind",
+            Id: @"pfalzwind-865cfd",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138456224", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Pfalzwind", [@"operator:wikidata"] = @"Q138456224", [@"power"] = @"generator", },
+            Terms: [@"pfalzwind", @"pfalzwind gmbh"]),
         new NsiItem(
             DisplayName: @"Stadtwerke Speyer",
             Id: @"stadtwerkespeyer-865cfd",

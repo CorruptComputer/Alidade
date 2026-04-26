@@ -26,6 +26,18 @@ public static class NsiRegion_JP_25_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"関西みらい銀行", [@"brand:en"] = @"Kansai Mirai Bank", [@"brand:ja"] = @"関西みらい銀行", [@"brand:wikidata"] = @"Q62679053", [@"name"] = @"関西みらい銀行", [@"name:en"] = @"Kansai Mirai Bank", [@"name:ja"] = @"関西みらい銀行", },
             Terms: [@"kansai mirai bank", @"関西みらい銀行"]),
         new NsiItem(
+            DisplayName: @"ピアゴ",
+            Id: @"piago-442a71",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q91014434", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ピアゴ", [@"brand:en"] = @"PIAGO", [@"brand:ja"] = @"ピアゴ", [@"brand:wikidata"] = @"Q91014434", [@"name"] = @"ピアゴ", [@"name:en"] = @"PIAGO", [@"name:ja"] = @"ピアゴ", [@"shop"] = @"supermarket", },
+            Terms: [@"piago", @"ピアゴ"]),
+        new NsiItem(
+            DisplayName: @"ベイシア",
+            Id: @"beisia-92743a",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11336776", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ベイシア", [@"brand:en"] = @"Beisia", [@"brand:ja"] = @"ベイシア", [@"brand:wikidata"] = @"Q11336776", [@"name"] = @"ベイシア", [@"name:en"] = @"Beisia", [@"name:ja"] = @"ベイシア", [@"shop"] = @"supermarket", },
+            Terms: [@"beisia", @"ベイシア"]),
+        new NsiItem(
             DisplayName: @"大津市",
             Id: @"91c21f-8dd48f",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q202907", },

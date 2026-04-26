@@ -146,6 +146,12 @@ public static class NsiRegion_GR
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Island", [@"brand:wikidata"] = @"Q60867333", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Island", [@"takeaway"] = @"yes", },
             Terms: [@"coffee island"]),
         new NsiItem(
+            DisplayName: @"Coffee Lab",
+            Id: @"coffeelab-0c7853",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Lab", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Lab", [@"takeaway"] = @"yes", },
+            Terms: [@"coffee lab"]),
+        new NsiItem(
             DisplayName: @"Mikel",
             Id: @"mikel-349bad",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q16952021", [@"cuisine"] = @"coffee_shop", },

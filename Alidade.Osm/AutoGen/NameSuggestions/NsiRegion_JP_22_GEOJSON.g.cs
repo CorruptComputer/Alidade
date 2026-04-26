@@ -14,6 +14,12 @@ public static class NsiRegion_JP_22_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"東急ストア",
+            Id: @"tokyustore-466bb0",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11526963", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"東急ストア", [@"brand:en"] = @"Tokyu Store", [@"brand:ja"] = @"東急ストア", [@"brand:wikidata"] = @"Q11526963", [@"name"] = @"東急ストア", [@"name:en"] = @"Tokyu Store", [@"name:ja"] = @"東急ストア", [@"shop"] = @"supermarket", },
+            Terms: [@"tokyu store", @"東急ストア"]),
+        new NsiItem(
             DisplayName: @"浜松市",
             Id: @"dba649-f2ffe4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"community_centre", [@"operator:wikidata"] = @"Q185125", },

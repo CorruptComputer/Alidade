@@ -118,8 +118,8 @@ public static class NsiRegion_150
         new NsiItem(
             DisplayName: @"Unilabs",
             Id: @"unilabs-99f3b6",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q134885714", [@"healthcare"] = @"laboratory", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Unilabs", [@"brand:wikidata"] = @"Q134885714", [@"healthcare"] = @"laboratory", [@"name"] = @"Unilabs", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1602925", [@"healthcare"] = @"laboratory", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Unilabs", [@"brand:wikidata"] = @"Q1602925", [@"healthcare"] = @"laboratory", [@"name"] = @"Unilabs", },
             Terms: [@"unilabs"]),
         new NsiItem(
             DisplayName: @"Gebrüder Weiss",
@@ -336,7 +336,7 @@ public static class NsiRegion_150
             Id: @"veantattoo-eea007",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116871240", [@"shop"] = @"tattoo", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"VeAn Tattoo", [@"brand:wikidata"] = @"Q116871240", [@"name"] = @"VeAn Tattoo", [@"shop"] = @"tattoo", },
-            Terms: [@"vean tattoo"]),
+            Terms: [@"vean", @"vean tattoo"]),
         new NsiItem(
             DisplayName: @"Skuba",
             Id: @"skuba-c1f68a",

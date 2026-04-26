@@ -26,6 +26,12 @@ public static class NsiRegion_JP_01_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"北海道信用金庫", [@"brand:wikidata"] = @"Q28691716", [@"name"] = @"北海道信用金庫", },
             Terms: [@"北海道信用金庫"]),
         new NsiItem(
+            DisplayName: @"コープさっぽろ",
+            Id: @"coopsapporo-c0ae3d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11574624", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"COOP SAPPORO", [@"brand:en"] = @"COOP SAPPORO", [@"brand:ja"] = @"コープさっぽろ", [@"brand:wikidata"] = @"Q11574624", [@"name"] = @"コープさっぽろ", [@"name:en"] = @"Coop Sapporo", [@"name:ja"] = @"コープさっぽろ", [@"shop"] = @"supermarket", },
+            Terms: [@"coop sapporo", @"コープさっぽろ"]),
+        new NsiItem(
             DisplayName: @"シティ",
             Id: @"city-c0ae3d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q115865410", [@"shop"] = @"supermarket", },
@@ -38,6 +44,12 @@ public static class NsiRegion_JP_01_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"シティ", [@"brand:en"] = @"CITY", [@"brand:ja"] = @"シティ", [@"brand:wikidata"] = @"Q115865410", [@"name"] = @"シティマート", [@"name:en"] = @"CITY mart", [@"name:ja"] = @"シティマート", [@"shop"] = @"supermarket", },
             Terms: [@"city", @"city mart", @"シティ", @"シティマート"]),
         new NsiItem(
+            DisplayName: @"スーパーアークス",
+            Id: @"superarcs-c0ae3d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q17190570", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"SUPER ARCS", [@"brand:en"] = @"SUPER ARCS", [@"brand:ja"] = @"スーパーアークス", [@"brand:wikidata"] = @"Q17190570", [@"name"] = @"スーパーアークス", [@"name:en"] = @"Super Arcs", [@"name:ja"] = @"スーパーアークス", [@"shop"] = @"supermarket", },
+            Terms: [@"super arcs", @"スーパーアークス"]),
+        new NsiItem(
             DisplayName: @"ラッキー",
             Id: @"lucky-c0ae3d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q115865306", [@"shop"] = @"supermarket", },
@@ -49,6 +61,12 @@ public static class NsiRegion_JP_01_GEOJSON
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q115865306", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"ラッキー", [@"brand:en"] = @"LUCKY", [@"brand:ja"] = @"ラッキー", [@"brand:wikidata"] = @"Q115865306", [@"name"] = @"ラッキーマート", [@"name:en"] = @"LUCKY mart", [@"name:ja"] = @"ラッキーマート", [@"shop"] = @"supermarket", },
             Terms: [@"lucky", @"lucky mart", @"ラッキー", @"ラッキーマート"]),
+        new NsiItem(
+            DisplayName: @"ラルズマート",
+            Id: @"ralsemart-c0ae3d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11347482", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"RALSE MART", [@"brand:en"] = @"RALSE MART", [@"brand:ja"] = @"ラルズマート", [@"brand:wikidata"] = @"Q11347482", [@"name"] = @"ラルズマート", [@"name:en"] = @"Ralse Mart", [@"name:ja"] = @"ラルズマート", [@"shop"] = @"supermarket", },
+            Terms: [@"ralse mart", @"ラルズマート"]),
         new NsiItem(
             DisplayName: @"新ひだか町",
             Id: @"townofshinhidaka-e10a6d",

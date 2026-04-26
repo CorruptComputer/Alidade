@@ -14,6 +14,36 @@ public static class NsiRegion_JP_14_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"スーパーアルプス",
+            Id: @"superalps-000a1a",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11313666", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"スーパーアルプス", [@"brand:en"] = @"Super Alps", [@"brand:ja"] = @"スーパーアルプス", [@"brand:wikidata"] = @"Q11313666", [@"name"] = @"スーパーアルプス", [@"name:en"] = @"Super Alps", [@"name:ja"] = @"スーパーアルプス", [@"shop"] = @"supermarket", },
+            Terms: [@"super alps", @"スーパーアルプス"]),
+        new NsiItem(
+            DisplayName: @"バロー",
+            Id: @"valor-e49ced",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11328346", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"バロー", [@"brand:en"] = @"Valor", [@"brand:ja"] = @"バロー", [@"brand:wikidata"] = @"Q11328346", [@"name"] = @"バロー", [@"name:en"] = @"Valor", [@"name:ja"] = @"バロー", [@"shop"] = @"supermarket", },
+            Terms: [@"valor", @"バロー"]),
+        new NsiItem(
+            DisplayName: @"ピーコックストア",
+            Id: @"peacockstore-d02e4f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11331715", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"PEACOCK STORE", [@"brand:en"] = @"PEACOCK STORE", [@"brand:ja"] = @"ピーコックストア", [@"brand:wikidata"] = @"Q11331715", [@"name"] = @"ピーコックストア", [@"name:en"] = @"Peacock Store", [@"name:ja"] = @"ピーコックストア", [@"shop"] = @"supermarket", },
+            Terms: [@"peacock store", @"ピーコックストア"]),
+        new NsiItem(
+            DisplayName: @"ワイズマート",
+            Id: @"ysmart-d02e4f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11351175", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ワイズマート", [@"brand:en"] = @"Y'smart", [@"brand:ja"] = @"ワイズマート", [@"brand:wikidata"] = @"Q11351175", [@"name"] = @"ワイズマート", [@"name:en"] = @"Y'smart", [@"name:ja"] = @"ワイズマート", [@"shop"] = @"supermarket", },
+            Terms: [@"y'smart", @"よしのぶっさん", @"ワイズマート", @"吉野物産"]),
+        new NsiItem(
+            DisplayName: @"相鉄ローゼン",
+            Id: @"sotetsurosen-6e8ffa",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11582450", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"alt_name"] = @"そうてつローゼン", [@"brand"] = @"相鉄ローゼン", [@"brand:en"] = @"Sotetsu Rosen", [@"brand:ja"] = @"相鉄ローゼン", [@"brand:wikidata"] = @"Q11582450", [@"name"] = @"相鉄ローゼン", [@"name:en"] = @"Sotetsu Rosen", [@"name:ja"] = @"相鉄ローゼン", [@"shop"] = @"supermarket", },
+            Terms: [@"sotetsu rosen", @"そうてつローゼン", @"相鉄ローゼン"]),
+        new NsiItem(
             DisplayName: @"小田原市",
             Id: @"eecdcc-417cb9",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q267258", },

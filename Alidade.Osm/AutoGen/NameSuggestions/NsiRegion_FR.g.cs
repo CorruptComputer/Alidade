@@ -332,8 +332,14 @@ public static class NsiRegion_FR
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"AS 24", [@"brand:wikidata"] = @"Q2819394", [@"name"] = @"AS 24", },
             Terms: [@"as 24"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-a1174d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q126913632", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -518,6 +524,12 @@ public static class NsiRegion_FR
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Mezzo di Pasta", [@"brand:wikidata"] = @"Q1926453", [@"cuisine"] = @"pasta", [@"name"] = @"Mezzo di Pasta", [@"takeaway"] = @"yes", },
             Terms: [@"mezzo di pasta"]),
         new NsiItem(
+            DisplayName: @"Mister Garden",
+            Id: @"mistergarden-e4dee6",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q138312953", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Mister Garden", [@"brand:wikidata"] = @"Q138312953", [@"cuisine"] = @"salad", [@"diet:vegan"] = @"yes", [@"diet:vegetarian"] = @"yes", [@"takeaway"] = @"yes", },
+            Terms: [@"mister garden"]),
+        new NsiItem(
             DisplayName: @"Mr. Pretzels",
             Id: @"mrpretzels-d3f544",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q115728208", },
@@ -585,7 +597,7 @@ public static class NsiRegion_FR
             Terms: [@"Sushi Shop (Europe)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -711,7 +723,7 @@ public static class NsiRegion_FR
             Terms: [@"guidepost montessori"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -992,8 +1004,14 @@ public static class NsiRegion_FR
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Le Five", [@"brand:wikidata"] = @"Q130256689", [@"leisure"] = @"sports_centre", [@"sport"] = @"five-a-side", },
             Terms: [@"five", @"le five"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-f43120",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -1700,6 +1718,12 @@ public static class NsiRegion_FR
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Gitem", [@"brand:wikidata"] = @"Q3107853", [@"name"] = @"Gitem", [@"shop"] = @"electronics", },
             Terms: [@"gitem"]),
         new NsiItem(
+            DisplayName: @"Europeche",
+            Id: @"europeche-bc8e02",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q132015915", [@"shop"] = @"fishing", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Europeche", [@"brand:wikidata"] = @"Q132015915", [@"name"] = @"Europeche", [@"shop"] = @"fishing", },
+            Terms: [@"europeche"]),
+        new NsiItem(
             DisplayName: @"Interflora",
             Id: @"interflora-6ef878",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q692179", [@"shop"] = @"florist", },
@@ -1765,6 +1789,12 @@ public static class NsiRegion_FR
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3280364", [@"shop"] = @"furniture", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Maisons du Monde", [@"brand:wikidata"] = @"Q3280364", [@"name"] = @"Maisons du Monde", [@"shop"] = @"furniture", },
             Terms: [@"maisons du monde"]),
+        new NsiItem(
+            DisplayName: @"Meubles Gautier",
+            Id: @"meublesgautier-affdb4",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426875", [@"shop"] = @"furniture", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Meubles Gautier", [@"brand:wikidata"] = @"Q138426875", [@"name"] = @"Meubles Gautier", [@"shop"] = @"furniture", },
+            Terms: [@"gautier", @"les meubles gautier", @"meubles gautier"]),
         new NsiItem(
             DisplayName: @"Poltronesofà",
             Id: @"poltronesofa-488b55",
@@ -1983,7 +2013,7 @@ public static class NsiRegion_FR
             Terms: [@"optic 2000"]),
         new NsiItem(
             DisplayName: @"Optical Center",
-            Id: @"opticalcenter-7f892a",
+            Id: @"opticalcenter-efdbe9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
             Terms: [@"optical center"]),
@@ -2116,8 +2146,8 @@ public static class NsiRegion_FR
         new NsiItem(
             DisplayName: @"La Halle aux Chaussures",
             Id: @"lahalleauxchaussures-c57706",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62390731", [@"shop"] = @"shoes", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"La Halle", [@"brand:wikidata"] = @"Q62390731", [@"name"] = @"La Halle aux Chaussures", [@"shop"] = @"shoes", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q100728296", [@"shop"] = @"shoes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"La Halle", [@"brand:wikidata"] = @"Q100728296", [@"name"] = @"La Halle aux Chaussures", [@"shop"] = @"shoes", },
             Terms: [@"La Halle aux Chaussures", @"la halle"]),
         new NsiItem(
             DisplayName: @"San Marina",
@@ -2152,8 +2182,8 @@ public static class NsiRegion_FR
         new NsiItem(
             DisplayName: @"GO Sport",
             Id: @"gosport-63990e",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3117422", [@"shop"] = @"sports", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"GO Sport", [@"brand:wikidata"] = @"Q3117422", [@"name"] = @"GO Sport", [@"shop"] = @"sports", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q666888", [@"shop"] = @"sports", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"GO Sport", [@"brand:wikidata"] = @"Q666888", [@"name"] = @"GO Sport", [@"shop"] = @"sports", },
             Terms: [@"go sport"]),
         new NsiItem(
             DisplayName: @"Hoka",
@@ -2242,8 +2272,8 @@ public static class NsiRegion_FR
         new NsiItem(
             DisplayName: @"Cora",
             Id: @"cora-ea1ce5",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q686643", [@"shop"] = @"supermarket", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cora", [@"brand:wikidata"] = @"Q686643", [@"name"] = @"Cora", [@"shop"] = @"supermarket", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1273376", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cora", [@"brand:wikidata"] = @"Q1273376", [@"name"] = @"Cora", [@"shop"] = @"supermarket", },
             Terms: [@"cora"]),
         new NsiItem(
             DisplayName: @"E.Leclerc",
@@ -2510,10 +2540,10 @@ public static class NsiRegion_FR
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Costco", [@"brand:wikidata"] = @"Q715583", [@"membership"] = @"required", [@"name"] = @"Costco", [@"shop"] = @"wholesale", },
             Terms: [@"costco", @"costco wholesale"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"Transgourmet",
@@ -3151,6 +3181,18 @@ public static class NsiRegion_FR
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2910597", [@"power"] = @"generator", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Boralex", [@"operator:wikidata"] = @"Q2910597", [@"power"] = @"generator", },
             Terms: [@"boralex"]),
+        new NsiItem(
+            DisplayName: @"EDF PEI",
+            Id: @"edfpei-ebc5ae",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q113735966", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"EDF PEI", [@"operator:wikidata"] = @"Q113735966", [@"power"] = @"generator", },
+            Terms: [@"edf pei"]),
+        new NsiItem(
+            DisplayName: @"Gazel Energie",
+            Id: @"gazelenergie-ebc5ae",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q3488512", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Gazel Energie", [@"operator:wikidata"] = @"Q3488512", [@"power"] = @"generator", },
+            Terms: [@"gazel energie"]),
         new NsiItem(
             DisplayName: @"IKEA",
             Id: @"ikea-b6ae82",

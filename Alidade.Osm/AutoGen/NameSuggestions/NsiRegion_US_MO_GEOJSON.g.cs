@@ -356,6 +356,12 @@ public static class NsiRegion_US_MO_GEOJSON
             AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"Missouri Department of Conservation", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q6879553", },
             Terms: [@"missouri department of conservation"]),
         new NsiItem(
+            DisplayName: @"Missouri State Parks",
+            Id: @"missouristateparks-ff9f49",
+            Tags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator:wikidata"] = @"Q109319569", },
+            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"Missouri State Parks", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q109319569", },
+            Terms: [@"missouri state parks"]),
+        new NsiItem(
             DisplayName: @"Saint Louis County Emergency Communications Commission",
             Id: @"saintlouiscountyemergencycommunicationscommission-05d8de",
             Tags: new Dictionary<string, string> { [@"emergency"] = @"siren", [@"operator:wikidata"] = @"Q123689350", },

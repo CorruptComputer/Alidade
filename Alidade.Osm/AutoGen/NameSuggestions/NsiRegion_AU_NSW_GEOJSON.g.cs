@@ -110,11 +110,11 @@ public static class NsiRegion_AU_NSW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Sydney Catholic Schools", [@"operator:type"] = @"religious", [@"operator:wikidata"] = @"Q116242611", },
             Terms: [@"sydney catholic schools"]),
         new NsiItem(
-            DisplayName: @"Transport for NSW",
+            DisplayName: @"Opal Card Reader",
             Id: @"transportfornsw-832030",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"ticket_validator", [@"operator:wikidata"] = @"Q7834923", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"ticket_validator", [@"operator"] = @"Transport for NSW", [@"operator:wikidata"] = @"Q7834923", },
-            Terms: [@"tfnsw", @"transport for nsw"]),
+            Terms: [@"Opal Card Reader", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"Central Coast Council",
             Id: @"centralcoastcouncil-3fb4b7",
@@ -156,7 +156,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneytrains-3fb4b7",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator:wikidata"] = @"Q7660181", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"toilets", [@"operator"] = @"Sydney Trains", [@"operator:wikidata"] = @"Q7660181", },
-            Terms: [@"sydney trains"]),
+            Terms: [@"sydney trains", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"Wollongong City Council",
             Id: @"wollongongcitycouncil-3fb4b7",
@@ -618,7 +618,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneytrains-1266b7",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q7660181", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Sydney Trains", [@"operator:wikidata"] = @"Q7660181", [@"power"] = @"substation", },
-            Terms: [@"sydney trains"]),
+            Terms: [@"sydney trains", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"TransGrid",
             Id: @"transgrid-1266b7",
@@ -690,7 +690,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneytrains-17e0e3",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q7660181", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Sydney Trains", [@"operator:wikidata"] = @"Q7660181", [@"power"] = @"transformer", },
-            Terms: [@"sydney trains"]),
+            Terms: [@"sydney trains", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"TransGrid",
             Id: @"transgrid-17e0e3",
@@ -708,7 +708,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneyferries-e7a7dd",
             Tags: new Dictionary<string, string> { [@"ferry"] = @"yes", [@"network:wikidata"] = @"Q3162795", [@"public_transport"] = @"station", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"ferry_terminal", [@"ferry"] = @"yes", [@"network"] = @"Sydney Ferries", [@"network:wikidata"] = @"Q3162795", [@"operator"] = @"Transdev Sydney Ferries", [@"operator:wikidata"] = @"Q16927194", [@"public_transport"] = @"station", },
-            Terms: [@"sydney ferries", @"transdev sydney ferries"]),
+            Terms: [@"sydney ferries", @"tfnsw", @"transdev sydney ferries", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"Newcastle Transport",
             Id: @"newcastletransport-6d8e1c",
@@ -732,7 +732,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneymetro-21fc59",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q14774571", [@"public_transport"] = @"station", [@"subway"] = @"yes", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Sydney Metro", [@"network:wikidata"] = @"Q14774571", [@"operator"] = @"Metro Trains Sydney", [@"operator:wikidata"] = @"Q20861549", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"subway", [@"subway"] = @"yes", },
-            Terms: [@"metro trains sydney", @"sydney metro"]),
+            Terms: [@"metro trains sydney", @"sydney metro", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"NSW TrainLink",
             Id: @"nswtrainlink-e3afe8",
@@ -750,7 +750,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneytrains-bdb656",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7660181", [@"railway"] = @"station", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Sydney Trains", [@"network:wikidata"] = @"Q7660181", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
-            Terms: [@"sydney trains"]),
+            Terms: [@"sydney trains", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"Newcastle Transport",
             Id: @"newcastletransport-4ab973",
@@ -768,13 +768,13 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneyferries-613015",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q3162795", [@"route"] = @"ferry", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Sydney Ferries", [@"network:wikidata"] = @"Q3162795", [@"operator"] = @"Transdev Sydney Ferries", [@"operator:wikidata"] = @"Q16927194", [@"route"] = @"ferry", [@"type"] = @"route", },
-            Terms: [@"sydney ferries", @"transdev sydney ferries"]),
+            Terms: [@"sydney ferries", @"tfnsw", @"transdev sydney ferries", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"Sydney Ferries",
             Id: @"sydneyferries-613015",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q3162795", [@"route"] = @"ferry", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Sydney Ferries", [@"network:wikidata"] = @"Q3162795", [@"operator"] = @"Transdev Sydney Ferries", [@"operator:wikidata"] = @"Q16927194", [@"route"] = @"ferry", },
-            Terms: [@"sydney ferries", @"transdev sydney ferries"]),
+            Terms: [@"sydney ferries", @"tfnsw", @"transdev sydney ferries", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"Sydney Light Rail",
             Id: @"sydneylightrail-fa5af0",
@@ -786,7 +786,7 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneymetro-20be20",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q14774571", [@"route"] = @"subway", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Sydney Metro", [@"network:wikidata"] = @"Q14774571", [@"operator"] = @"Metro Trains Sydney", [@"operator:wikidata"] = @"Q20861549", [@"route"] = @"subway", [@"type"] = @"route", },
-            Terms: [@"metro trains sydney", @"sydney metro"]),
+            Terms: [@"metro trains sydney", @"sydney metro", @"tfnsw", @"transport for nsw"]),
         new NsiItem(
             DisplayName: @"NSW TrainLink",
             Id: @"nswtrainlink-b63b85",
@@ -804,6 +804,6 @@ public static class NsiRegion_AU_NSW_GEOJSON
             Id: @"sydneytrains-73c4d6",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7660181", [@"route"] = @"train", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Sydney Trains", [@"network:wikidata"] = @"Q7660181", [@"route"] = @"train", [@"type"] = @"route", },
-            Terms: [@"sydney trains"]),
+            Terms: [@"sydney trains", @"tfnsw", @"transport for nsw"]),
     ];
 }

@@ -664,8 +664,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"ALLTEL Corporation",
             Id: @"alltelcorporation-a42e80",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q684083", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q684083", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q298594", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q298594", },
             Terms: [@"alltel corporation"]),
         new NsiItem(
             DisplayName: @"Arlington County",
@@ -790,8 +790,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"ALLTEL Corporation",
             Id: @"alltelcorporation-a31d78",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q684083", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q684083", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q298594", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"ALLTEL Corporation", [@"operator:wikidata"] = @"Q298594", },
             Terms: [@"alltel corporation"]),
         new NsiItem(
             DisplayName: @"Virginia DMV",
@@ -820,8 +820,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-a84d3b",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"generator", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"generator", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"generator", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"A&N Electric Cooperative",
@@ -874,8 +874,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-a36c89",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"line", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"West Penn Power",
@@ -934,8 +934,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-59e99d",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"minor_line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"minor_line", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"West Penn Power",
@@ -946,8 +946,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-87b9b7",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"plant", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"plant", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"plant", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"plant", },
             Terms: [@"virginia electric & power co", @"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"A&N Electric Cooperative",
@@ -1000,8 +1000,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-7ce060",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"pole", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"pole", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"West Penn Power",
@@ -1042,8 +1042,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-73adb4",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"substation", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"Washington Metropolitan Area Transit Authority",
@@ -1108,8 +1108,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-037e19",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"tower", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"tower", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"West Penn Power",
@@ -1150,8 +1150,8 @@ public static class NsiRegion_US_VA_GEOJSON
         new NsiItem(
             DisplayName: @"Virginia Electric & Power Company",
             Id: @"virginiaelectricandpowercompany-1d1ce8",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q117834539", [@"power"] = @"transformer", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q677464", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Virginia Electric & Power Company", [@"operator:wikidata"] = @"Q677464", [@"power"] = @"transformer", },
             Terms: [@"virginia electric & power company"]),
         new NsiItem(
             DisplayName: @"Washington Metropolitan Area Transit Authority",

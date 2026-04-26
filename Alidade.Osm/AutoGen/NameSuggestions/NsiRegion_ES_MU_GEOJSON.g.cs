@@ -53,7 +53,7 @@ public static class NsiRegion_ES_MU_GEOJSON
             DisplayName: @"Cercanías Cartagena",
             Id: @"cercaniascartagena-9341ca",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q28181968", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Cartagena", [@"network:wikidata"] = @"Q28181968", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q1143007", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Cartagena", [@"network:wikidata"] = @"Q28181968", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q3109506", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"cercanías cartagena", @"feve", @"renfe cercanías am", @"renfe feve"]),
         new NsiItem(
             DisplayName: @"Cercanías Murcia/Alicante",
@@ -83,7 +83,7 @@ public static class NsiRegion_ES_MU_GEOJSON
             DisplayName: @"Cercanías Cartagena",
             Id: @"cercaniascartagena-d69803",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q28181968", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Cartagena", [@"network:wikidata"] = @"Q28181968", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q1143007", [@"route"] = @"train", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Cartagena", [@"network:wikidata"] = @"Q28181968", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q3109506", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"cercanías cartagena", @"feve", @"renfe cercanías am", @"renfe feve"]),
         new NsiItem(
             DisplayName: @"Cercanías Murcia/Alicante",

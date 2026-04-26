@@ -38,6 +38,12 @@ public static class NsiRegion_HU
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"INA", [@"brand:wikidata"] = @"Q1662137", },
             Terms: [@"ina"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-87a582",
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", },
+            Terms: [@"mol"]),
+        new NsiItem(
             DisplayName: @"OIL!",
             Id: @"oil-9b66df",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q2007561", },
@@ -110,10 +116,10 @@ public static class NsiRegion_HU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Raiffeisen Bank", [@"brand:wikidata"] = @"Q16522506", [@"operator"] = @"Raiffeisen Bank", [@"operator:wikidata"] = @"Q16522506", },
             Terms: [@"Raiffeisen Bank (Magyarország)", @"raiffeisen", @"raiffeisen bank"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-3ecec5",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-4a82ee",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit Bank", [@"operator:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit", [@"operator:wikidata"] = @"Q45568", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"BNP Paribas",
@@ -170,10 +176,10 @@ public static class NsiRegion_HU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Raiffeisen Bank", [@"brand:wikidata"] = @"Q16522506", [@"name"] = @"Raiffeisen Bank", },
             Terms: [@"Raiffeisen Bank (Magyarország)", @"raiffeisen", @"raiffeisen bank"]),
         new NsiItem(
-            DisplayName: @"UniCredit Bank",
-            Id: @"unicreditbank-ff6e1c",
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-d887c4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q45568", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit Bank", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit Bank", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit", },
             Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"Piana Vyshnia",
@@ -236,6 +242,12 @@ public static class NsiRegion_HU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"AS 24", [@"brand:wikidata"] = @"Q2819394", [@"name"] = @"AS 24", },
             Terms: [@"as 24"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-edc9f9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
+            Terms: [@"mol", @"mol jetwash", @"mol wash"]),
+        new NsiItem(
             DisplayName: @"OMV",
             Id: @"omv-3df771",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q168238", },
@@ -259,6 +271,12 @@ public static class NsiRegion_HU
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q137696853", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Elektro Profi", [@"brand:wikidata"] = @"Q137696853", [@"name"] = @"Elektro Profi", [@"operator"] = @"Elektro Profi Mobility Kft.", [@"operator:wikidata"] = @"Q137696853", },
             Terms: [@"elektro profi", @"elektro profi mobility kft."]),
+        new NsiItem(
+            DisplayName: @"eMotion",
+            Id: @"emotion-d44228",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q139071415", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"eMotion", [@"brand:wikidata"] = @"Q139071415", },
+            Terms: [@"emotion", @"omv emotion"]),
         new NsiItem(
             DisplayName: @"Mobiliti",
             Id: @"mobiliti-39fea5",
@@ -344,6 +362,12 @@ public static class NsiRegion_HU
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"INA", [@"brand:wikidata"] = @"Q1662137", [@"name"] = @"INA", },
             Terms: [@"ina"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-f55142",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
+            Terms: [@"mol"]),
+        new NsiItem(
             DisplayName: @"OIL!",
             Id: @"oil-4b4296",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q2007561", },
@@ -365,8 +389,8 @@ public static class NsiRegion_HU
             DisplayName: @"AlzaBox",
             Id: @"alzabox-bee63b",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q115254158", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"AlzaBox", [@"brand:wikidata"] = @"Q115254158", [@"operator"] = @"Alza", [@"operator:wikidata"] = @"Q10786832", },
-            Terms: [@"alza", @"alzabox"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"AlzaBox", [@"brand:wikidata"] = @"Q115254158", [@"name"] = @"AlzaBox", },
+            Terms: [@"alzabox"]),
         new NsiItem(
             DisplayName: @"DHL csomagautomata",
             Id: @"dhl-68603c",
@@ -375,7 +399,7 @@ public static class NsiRegion_HU
             Terms: [@"DHL csomagautomata", @"dhl"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -411,10 +435,10 @@ public static class NsiRegion_HU
             Terms: [@"MPL (Magyar Posta Logisztika)", @"magyar posta logisztika", @"magyar posta logisztika (mpl)", @"mpl"]),
         new NsiItem(
             DisplayName: @"Z-Box (Packeta)",
-            Id: @"zbox-e15ec5",
+            Id: @"zbox-e32bf4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q121537464", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"Z-Box", [@"brand:wikidata"] = @"Q121537464", [@"name"] = @"Z-Box", [@"operator"] = @"Packeta", [@"operator:wikidata"] = @"Q67809905", },
-            Terms: [@"Z-Box (Packeta)", @"packeta", @"z-box"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"Z-Box", [@"brand:wikidata"] = @"Q121537464", [@"name"] = @"Z-Box", },
+            Terms: [@"Z-Box (Packeta)", @"packeta", @"packeta z-box", @"z-box"]),
         new NsiItem(
             DisplayName: @"Alma Gyógyszertár",
             Id: @"almagyogyszertar-3674c9",
@@ -487,6 +511,12 @@ public static class NsiRegion_HU
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137696853", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Elektro Profi", [@"brand:wikidata"] = @"Q137696853", [@"man_made"] = @"charge_point", [@"operator"] = @"Elektro Profi Mobility Kft.", [@"operator:wikidata"] = @"Q137696853", },
             Terms: [@"elektro profi", @"elektro profi mobility kft."]),
+        new NsiItem(
+            DisplayName: @"eMotion",
+            Id: @"emotion-4afda5",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q139071415", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"eMotion", [@"brand:wikidata"] = @"Q139071415", [@"man_made"] = @"charge_point", },
+            Terms: [@"emotion", @"omv emotion"]),
         new NsiItem(
             DisplayName: @"Mobiliti",
             Id: @"mobiliti-fdff72",
@@ -577,6 +607,12 @@ public static class NsiRegion_HU
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128245525", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Lipóti Pékség", [@"brand:wikidata"] = @"Q128245525", [@"name"] = @"Lipóti Pékség", [@"shop"] = @"bakery", },
             Terms: [@"lipóti pékség"]),
+        new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
         new NsiItem(
             DisplayName: @"Inter Cars",
             Id: @"intercars-a4b6c1",
@@ -1064,10 +1100,10 @@ public static class NsiRegion_HU
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Top Shop", [@"brand:wikidata"] = @"Q116919675", [@"name"] = @"Top Shop", [@"shop"] = @"variety_store", },
             Terms: [@"top shop"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"A&O",
@@ -1654,8 +1690,8 @@ public static class NsiRegion_HU
         new NsiItem(
             DisplayName: @"Volánbusz",
             Id: @"volanbusz-1d4a9b",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q746503", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Volánbusz", [@"network:wikidata"] = @"Q746503", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q1180332", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Volánbusz", [@"network:wikidata"] = @"Q1180332", [@"public_transport"] = @"platform", },
             Terms: [@"volánbusz"]),
         new NsiItem(
             DisplayName: @"VOR",
@@ -1667,7 +1703,7 @@ public static class NsiRegion_HU
             DisplayName: @"BHÉV",
             Id: @"bhev-fb1ca9",
             Tags: new Dictionary<string, string> { [@"light_rail"] = @"yes", [@"network:wikidata"] = @"Q723245", [@"public_transport"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"light_rail"] = @"yes", [@"network"] = @"BHÉV", [@"network:wikidata"] = @"Q723245", [@"operator"] = @"MÁV-HÉV", [@"operator:wikidata"] = @"Q26722428", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"light_rail", },
+            AddTags: new Dictionary<string, string> { [@"light_rail"] = @"yes", [@"network"] = @"BHÉV", [@"network:wikidata"] = @"Q723245", [@"operator"] = @"MÁV-HÉV", [@"operator:wikidata"] = @"Q1180332", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"light_rail", },
             Terms: [@"bhév", @"máv-hév", @"máv-hév zrt"]),
         new NsiItem(
             DisplayName: @"Budapesti metró",
@@ -1714,8 +1750,8 @@ public static class NsiRegion_HU
         new NsiItem(
             DisplayName: @"Volánbusz",
             Id: @"volanbusz-6ba633",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q746503", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Volánbusz", [@"network:wikidata"] = @"Q746503", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q1180332", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Volánbusz", [@"network:wikidata"] = @"Q1180332", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"volánbusz"]),
         new NsiItem(
             DisplayName: @"VOR",
@@ -1727,7 +1763,7 @@ public static class NsiRegion_HU
             DisplayName: @"BHÉV",
             Id: @"bhev-96ddc1",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q723245", [@"route"] = @"light_rail", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"BHÉV", [@"network:wikidata"] = @"Q723245", [@"operator"] = @"MÁV-HÉV", [@"operator:wikidata"] = @"Q26722428", [@"route"] = @"light_rail", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"BHÉV", [@"network:wikidata"] = @"Q723245", [@"operator"] = @"MÁV-HÉV", [@"operator:wikidata"] = @"Q1180332", [@"route"] = @"light_rail", [@"type"] = @"route", },
             Terms: [@"bhév", @"máv-hév", @"máv-hév zrt"]),
         new NsiItem(
             DisplayName: @"Budapesti metró",

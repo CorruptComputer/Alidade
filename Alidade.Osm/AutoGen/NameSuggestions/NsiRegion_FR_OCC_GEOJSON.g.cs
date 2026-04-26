@@ -316,8 +316,8 @@ public static class NsiRegion_FR_OCC_GEOJSON
         new NsiItem(
             DisplayName: @"Université Paul Sabatier",
             Id: @"universitepaulsabatier-54417e",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q1273188", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Université Paul Sabatier", [@"operator:wikidata"] = @"Q1273188", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q135218300", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Université Paul Sabatier", [@"operator:wikidata"] = @"Q135218300", },
             Terms: [@"université paul sabatier"]),
         new NsiItem(
             DisplayName: @"Université Toulouse Capitole",

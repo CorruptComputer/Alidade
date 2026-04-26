@@ -38,12 +38,6 @@ public static class NsiRegion_CZ_72_GEOJSON
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"IDS ZID", [@"network:wikidata"] = @"Q10861159", [@"public_transport"] = @"platform", },
             Terms: [@"ids zid"]),
         new NsiItem(
-            DisplayName: @"IDSOK",
-            Id: @"idsok-e27fcc",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q12021688", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"public_transport"] = @"platform", },
-            Terms: [@"idsok"]),
-        new NsiItem(
             DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-8ac7e1",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q12027635", [@"public_transport"] = @"platform", },
@@ -57,6 +51,12 @@ public static class NsiRegion_CZ_72_GEOJSON
             Terms: [@"odis"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
+            Id: @"integrovanadopravazlinskehokraje-2741b9",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"halt", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaná doprava Zlínského kraje", [@"network:short"] = @"IDZK", [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"halt", [@"train"] = @"yes", },
+            Terms: [@"IDZK (Česko)", @"idzk", @"integrovaná doprava zlínského kraje"]),
+        new NsiItem(
+            DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-b03030",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"station", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaná doprava Zlínského kraje", [@"network:short"] = @"IDZK", [@"network:wikidata"] = @"Q12027635", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
@@ -67,12 +67,6 @@ public static class NsiRegion_CZ_72_GEOJSON
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12043044", [@"railway"] = @"station", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"ODIS", [@"network:wikidata"] = @"Q12043044", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"odis"]),
-        new NsiItem(
-            DisplayName: @"IDSOK",
-            Id: @"idsok-4c0bb9",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"railway"] = @"tram_stop", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"railway"] = @"tram_stop", },
-            Terms: [@"idsok"]),
         new NsiItem(
             DisplayName: @"ODIS",
             Id: @"odis-afff60",
@@ -85,12 +79,6 @@ public static class NsiRegion_CZ_72_GEOJSON
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q10861159", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"IDS ZID", [@"network:wikidata"] = @"Q10861159", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"ids zid"]),
-        new NsiItem(
-            DisplayName: @"IDSOK",
-            Id: @"idsok-f85345",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"route"] = @"bus", [@"type"] = @"route", },
-            Terms: [@"idsok"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-028705",
@@ -115,12 +103,6 @@ public static class NsiRegion_CZ_72_GEOJSON
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12043044", [@"route"] = @"train", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"ODIS", [@"network:wikidata"] = @"Q12043044", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"odis"]),
-        new NsiItem(
-            DisplayName: @"IDSOK",
-            Id: @"idsok-96e584",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"route"] = @"tram", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"route"] = @"tram", [@"type"] = @"route", },
-            Terms: [@"idsok"]),
         new NsiItem(
             DisplayName: @"ODIS",
             Id: @"odis-ad1f04",

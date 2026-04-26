@@ -404,11 +404,11 @@ public static class NsiRegion_FR_NAQ_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Teréga", [@"operator:wikidata"] = @"Q3537771", [@"pipeline"] = @"substation", [@"substance"] = @"gas", },
             Terms: [@"teréga", @"tigf"]),
         new NsiItem(
-            DisplayName: @"ETS/RFV",
-            Id: @"euskaltrenbidesarearedferroviariavasca-d26a12",
+            DisplayName: @"ETS",
+            Id: @"euskaltrenbidesarea-d26a12",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2838529", [@"power"] = @"catenary_mast", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Euskal Trenbide Sarea/Red Ferroviaria Vasca", [@"operator:es"] = @"Red Ferroviaria Vasca", [@"operator:eu"] = @"Euskal Trenbide Sarea", [@"operator:short"] = @"ETS/RFV", [@"operator:short:es"] = @"RFV", [@"operator:short:eu"] = @"ETS", [@"operator:wikidata"] = @"Q2838529", [@"power"] = @"catenary_mast", },
-            Terms: [@"ets", @"ets/rfv", @"euskal trenbide sarea", @"euskal trenbide sarea/red ferroviaria vasca", @"red ferroviaria vasca", @"rfv"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Euskal Trenbide Sarea", [@"operator:es"] = @"Red Ferroviaria Vasca", [@"operator:eu"] = @"Euskal Trenbide Sarea", [@"operator:short"] = @"ETS", [@"operator:short:es"] = @"RFV", [@"operator:short:eu"] = @"ETS", [@"operator:wikidata"] = @"Q2838529", [@"power"] = @"catenary_mast", },
+            Terms: [@"ets", @"euskal trenbide sarea", @"red ferroviaria vasca", @"rfv"]),
         new NsiItem(
             DisplayName: @"TotalEnergies Électricité et Gaz France",
             Id: @"totalenergieselectriciteetgazfrance-54c2ea",
@@ -428,11 +428,11 @@ public static class NsiRegion_FR_NAQ_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Gérédis", [@"operator:wikidata"] = @"Q112115590", [@"power"] = @"transformer", },
             Terms: [@"gérédis"]),
         new NsiItem(
-            DisplayName: @"ETS/RFV",
-            Id: @"euskaltrenbidesarearedferroviariavasca-06961a",
+            DisplayName: @"ETS",
+            Id: @"euskaltrenbidesarea-06961a",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2838529", [@"route"] = @"railway", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Euskal Trenbide Sarea/Red Ferroviaria Vasca", [@"operator:es"] = @"Red Ferroviaria Vasca", [@"operator:eu"] = @"Euskal Trenbide Sarea", [@"operator:short"] = @"ETS/RFV", [@"operator:short:es"] = @"RFV", [@"operator:short:eu"] = @"ETS", [@"operator:wikidata"] = @"Q2838529", [@"route"] = @"railway", [@"type"] = @"route", },
-            Terms: [@"ets", @"ets/rfv", @"euskal trenbide sarea", @"euskal trenbide sarea/red ferroviaria vasca", @"red ferroviaria vasca", @"rfv"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Euskal Trenbide Sarea", [@"operator:es"] = @"Red Ferroviaria Vasca", [@"operator:eu"] = @"Euskal Trenbide Sarea", [@"operator:short"] = @"ETS", [@"operator:short:es"] = @"RFV", [@"operator:short:eu"] = @"ETS", [@"operator:wikidata"] = @"Q2838529", [@"route"] = @"railway", [@"type"] = @"route", },
+            Terms: [@"ets", @"euskal trenbide sarea", @"red ferroviaria vasca", @"rfv"]),
         new NsiItem(
             DisplayName: @"Alégo",
             Id: @"alego-c59f88",

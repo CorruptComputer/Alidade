@@ -395,13 +395,13 @@ public static class NsiRegion_US_NH_GEOJSON
             DisplayName: @"New Hampshire Division of Forests and Lands",
             Id: @"newhampshiredivisionofforestsandlands-38c1a8",
             Tags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator:wikidata"] = @"Q65122745", },
-            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"New Hampshire Division of Forests and Lands", [@"operator:wikidata"] = @"Q65122745", },
+            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"New Hampshire Division of Forests and Lands", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q65122745", },
             Terms: [@"new hampshire division of forests and lands"]),
         new NsiItem(
             DisplayName: @"New Hampshire Division of Parks and Recreation",
             Id: @"newhampshiredivisionofparksandrecreation-38c1a8",
             Tags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator:wikidata"] = @"Q7008150", },
-            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"New Hampshire Division of Parks and Recreation", [@"operator:wikidata"] = @"Q7008150", },
+            AddTags: new Dictionary<string, string> { [@"boundary"] = @"protected_area", [@"operator"] = @"New Hampshire Division of Parks and Recreation", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q7008150", },
             Terms: [@"new hampshire division of parks and recreation", @"new hampshire state parks"]),
         new NsiItem(
             DisplayName: @"New Hampshire Fish and Game Department",

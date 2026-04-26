@@ -119,8 +119,8 @@ public static class NsiRegion_ES_V_GEOJSON
             DisplayName: @"Metrovalencia",
             Id: @"metrovalencia-a67112",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q511171", [@"public_transport"] = @"station", [@"subway"] = @"yes", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"subway", [@"subway"] = @"yes", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"metrovalencia"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"subway", [@"subway"] = @"yes", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"metrovalencia"]),
         new NsiItem(
             DisplayName: @"Cercanías València",
             Id: @"cercaniasvalencia-d6a80e",
@@ -131,8 +131,8 @@ public static class NsiRegion_ES_V_GEOJSON
             DisplayName: @"Metrovalencia",
             Id: @"metrovalencia-4daa90",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q511171", [@"railway"] = @"tram_stop", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"railway"] = @"tram_stop", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"metrovalencia"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"railway"] = @"tram_stop", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"metrovalencia"]),
         new NsiItem(
             DisplayName: @"EMT (València)",
             Id: @"emt-a154e2",
@@ -161,8 +161,8 @@ public static class NsiRegion_ES_V_GEOJSON
             DisplayName: @"Metrovalencia",
             Id: @"metrovalencia-87c695",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q511171", [@"route"] = @"subway", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"subway", [@"type"] = @"route", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"metrovalencia"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"subway", [@"type"] = @"route", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"metrovalencia"]),
         new NsiItem(
             DisplayName: @"Cercanías València",
             Id: @"cercaniasvalencia-9c1d09",
@@ -173,7 +173,7 @@ public static class NsiRegion_ES_V_GEOJSON
             DisplayName: @"Metrovalencia",
             Id: @"metrovalencia-43910c",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q511171", [@"route"] = @"tram", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"tram", [@"type"] = @"route", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"metrovalencia"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Metrovalencia", [@"network:wikidata"] = @"Q511171", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"tram", [@"type"] = @"route", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"metrovalencia"]),
     ];
 }

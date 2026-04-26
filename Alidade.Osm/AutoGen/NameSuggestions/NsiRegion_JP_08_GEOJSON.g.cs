@@ -20,6 +20,12 @@ public static class NsiRegion_JP_08_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"タイヨー", [@"brand:en"] = @"Taiyo", [@"brand:ja"] = @"タイヨー", [@"brand:wikidata"] = @"Q11315814", [@"name"] = @"タイヨー", [@"name:en"] = @"Taiyo", [@"name:ja"] = @"タイヨー", [@"shop"] = @"supermarket", },
             Terms: [@"タイヨー（南関東）", @"taiyo", @"タイヨー"]),
         new NsiItem(
+            DisplayName: @"ヨークベニマル",
+            Id: @"yorkbenimaru-52f258",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11346199", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ヨークベニマル", [@"brand:en"] = @"York Benimaru", [@"brand:ja"] = @"ヨークベニマル", [@"brand:wikidata"] = @"Q11346199", [@"name"] = @"ヨークベニマル", [@"name:en"] = @"York Benimaru", [@"name:ja"] = @"ヨークベニマル", [@"shop"] = @"supermarket", },
+            Terms: [@"york benimaru", @"ヨークベニマル"]),
+        new NsiItem(
             DisplayName: @"つくば市",
             Id: @"cityoftsukuba-f93e45",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"community_centre", [@"operator:wikidata"] = @"Q273863", },

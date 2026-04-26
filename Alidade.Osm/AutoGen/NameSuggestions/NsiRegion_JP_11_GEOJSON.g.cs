@@ -14,6 +14,36 @@ public static class NsiRegion_JP_11_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"コモディイイダ",
+            Id: @"comodiiida-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11302699", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"コモディイイダ", [@"brand:en"] = @"Comodi-iida", [@"brand:ja"] = @"コモディイイダ", [@"brand:wikidata"] = @"Q11302699", [@"name"] = @"コモディイイダ", [@"name:en"] = @"Comodi-iida", [@"name:ja"] = @"コモディイイダ", [@"shop"] = @"supermarket", },
+            Terms: [@"comodi-iida", @"コモディイイダ"]),
+        new NsiItem(
+            DisplayName: @"スーパーアルプス",
+            Id: @"superalps-000a1a",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11313666", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"スーパーアルプス", [@"brand:en"] = @"Super Alps", [@"brand:ja"] = @"スーパーアルプス", [@"brand:wikidata"] = @"Q11313666", [@"name"] = @"スーパーアルプス", [@"name:en"] = @"Super Alps", [@"name:ja"] = @"スーパーアルプス", [@"shop"] = @"supermarket", },
+            Terms: [@"super alps", @"スーパーアルプス"]),
+        new NsiItem(
+            DisplayName: @"スーパーバリュー",
+            Id: @"supervalue-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11313802", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"スーパーバリュー", [@"brand:en"] = @"Super Value", [@"brand:ja"] = @"スーパーバリュー", [@"brand:wikidata"] = @"Q11313802", [@"name"] = @"スーパーバリュー", [@"name:en"] = @"Super Value", [@"name:ja"] = @"スーパーバリュー", [@"shop"] = @"supermarket", },
+            Terms: [@"super value", @"スーパーバリュー"]),
+        new NsiItem(
+            DisplayName: @"ベルクス",
+            Id: @"belx-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11305967", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ベルクス", [@"brand:en"] = @"Bel'x", [@"brand:ja"] = @"ベルクス", [@"brand:wikidata"] = @"Q11305967", [@"name"] = @"ベルクス", [@"name:en"] = @"Bel'x", [@"name:ja"] = @"ベルクス", [@"shop"] = @"supermarket", },
+            Terms: [@"bel'x", @"ベルクス"]),
+        new NsiItem(
+            DisplayName: @"東武ストア",
+            Id: @"tobustore-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11527478", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"東武ストア", [@"brand:en"] = @"Tobu Store", [@"brand:ja"] = @"東武ストア", [@"brand:wikidata"] = @"Q11527478", [@"name"] = @"東武ストア", [@"name:en"] = @"Tobu Store", [@"name:ja"] = @"東武ストア", [@"shop"] = @"supermarket", },
+            Terms: [@"tobu store", @"東武ストア"]),
+        new NsiItem(
             DisplayName: @"埼玉東部消防組合",
             Id: @"aad553-bce399",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fire_station", [@"operator:wikidata"] = @"Q11426528", },

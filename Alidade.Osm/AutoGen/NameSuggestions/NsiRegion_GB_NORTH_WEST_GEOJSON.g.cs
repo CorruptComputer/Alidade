@@ -28,8 +28,8 @@ public static class NsiRegion_GB_NORTH_WEST_GEOJSON
         new NsiItem(
             DisplayName: @"South Lakeland District Council",
             Id: @"southlakelanddistrictcouncil-16207f",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q73072749", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"South Lakeland District Council", [@"operator:wikidata"] = @"Q73072749", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q111962803", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"South Lakeland District Council", [@"operator:wikidata"] = @"Q111962803", },
             Terms: [@"south lakeland district council"]),
         new NsiItem(
             DisplayName: @"Cheshire Fire and Rescue Service",
@@ -130,8 +130,8 @@ public static class NsiRegion_GB_NORTH_WEST_GEOJSON
         new NsiItem(
             DisplayName: @"South Lakeland District Council",
             Id: @"southlakelanddistrictcouncil-081ccb",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q73072749", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"South Lakeland District Council", [@"operator:wikidata"] = @"Q73072749", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q111962803", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"South Lakeland District Council", [@"operator:wikidata"] = @"Q111962803", },
             Terms: [@"south lakeland district council"]),
         new NsiItem(
             DisplayName: @"Bee Network",

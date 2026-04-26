@@ -112,8 +112,8 @@ public static class NsiRegion_AR
         new NsiItem(
             DisplayName: @"Galicia Más",
             Id: @"galiciamas-b67a7c",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q130642790", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Galicia Más", [@"brand:wikidata"] = @"Q130642790", [@"operator"] = @"Galicia Más", [@"operator:wikidata"] = @"Q130642790", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q5414064", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Galicia Más", [@"brand:wikidata"] = @"Q5414064", [@"operator"] = @"Galicia Más", [@"operator:wikidata"] = @"Q5414064", },
             Terms: [@"galicia más"]),
         new NsiItem(
             DisplayName: @"Itaú",
@@ -214,8 +214,8 @@ public static class NsiRegion_AR
         new NsiItem(
             DisplayName: @"Galicia Más",
             Id: @"galiciamas-841353",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q130642790", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Galicia Más", [@"brand:wikidata"] = @"Q130642790", [@"name"] = @"Galicia Más", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q5414064", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Galicia Más", [@"brand:wikidata"] = @"Q5414064", [@"name"] = @"Galicia Más", },
             Terms: [@"galicia más"]),
         new NsiItem(
             DisplayName: @"Itaú",
@@ -285,7 +285,7 @@ public static class NsiRegion_AR
             Terms: [@"mostaza"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -327,7 +327,7 @@ public static class NsiRegion_AR
             Terms: [@"school of rock"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -784,8 +784,8 @@ public static class NsiRegion_AR
         new NsiItem(
             DisplayName: @"AFIP",
             Id: @"administracionfederaldeingresospublicos-cc6da1",
-            Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q830277", },
-            AddTags: new Dictionary<string, string> { [@"name"] = @"AFIP", [@"office"] = @"government", [@"operator"] = @"Administración Federal de Ingresos Públicos", [@"operator:short"] = @"AFIP", [@"operator:wikidata"] = @"Q830277", },
+            Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q130607922", },
+            AddTags: new Dictionary<string, string> { [@"name"] = @"AFIP", [@"office"] = @"government", [@"operator"] = @"Administración Federal de Ingresos Públicos", [@"operator:short"] = @"AFIP", [@"operator:wikidata"] = @"Q130607922", },
             Terms: [@"administración federal de ingresos públicos", @"afip"]),
         new NsiItem(
             DisplayName: @"ANSES",

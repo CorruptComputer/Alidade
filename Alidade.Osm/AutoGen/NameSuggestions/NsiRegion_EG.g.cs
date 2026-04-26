@@ -260,6 +260,12 @@ public static class NsiRegion_EG
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"The United Bank", [@"brand:ar"] = @"المصرف المتحد (مصر)", [@"brand:en"] = @"The United Bank", [@"brand:wikidata"] = @"Q12193242", [@"name"] = @"The United Bank", [@"name:ar"] = @"المصرف المتحد (مصر)", [@"name:en"] = @"The United Bank", },
             Terms: [@"the united bank", @"المصرف المتحد (مصر)"]),
         new NsiItem(
+            DisplayName: @"Coffee Lab",
+            Id: @"coffeelab-0c7853",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Coffee Lab", [@"brand:wikidata"] = @"Q109568497", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Coffee Lab", [@"takeaway"] = @"yes", },
+            Terms: [@"coffee lab"]),
+        new NsiItem(
             DisplayName: @"Mikel",
             Id: @"mikel-349bad",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q16952021", [@"cuisine"] = @"coffee_shop", },

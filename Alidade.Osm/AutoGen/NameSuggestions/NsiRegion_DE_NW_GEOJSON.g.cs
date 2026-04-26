@@ -20,11 +20,23 @@ public static class NsiRegion_DE_NW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank", [@"brand:wikidata"] = @"Q2307136", [@"operator"] = @"Sparda-Bank", [@"operator:wikidata"] = @"Q2307136", },
             Terms: [@"Sparda-Bank (Deutschland)", @"sparda-bank"]),
         new NsiItem(
+            DisplayName: @"Volksbank Köln Bonn eG",
+            Id: @"volksbankkolnbonneg-e9664c",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q41680844", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Volksbank Köln Bonn eG", [@"brand:wikidata"] = @"Q41680844", [@"operator"] = @"Volksbank Köln Bonn eG", [@"operator:wikidata"] = @"Q41680844", },
+            Terms: [@"volksbank köln bonn eg"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank (Deutschland)",
             Id: @"spardabank-a7f91c",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q2307136", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Sparda-Bank", [@"brand:wikidata"] = @"Q2307136", [@"name"] = @"Sparda-Bank", },
             Terms: [@"Sparda-Bank (Deutschland)", @"sparda-bank"]),
+        new NsiItem(
+            DisplayName: @"Volksbank Köln Bonn eG",
+            Id: @"volksbankkolnbonneg-a03017",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q41680844", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Volksbank Köln Bonn eG", [@"brand:wikidata"] = @"Q41680844", [@"name"] = @"Volksbank Köln Bonn eG", },
+            Terms: [@"volksbank köln bonn eg"]),
         new NsiItem(
             DisplayName: @"metropolradruhr",
             Id: @"metropolradruhr-130ced",
@@ -1250,6 +1262,12 @@ public static class NsiRegion_DE_NW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Stadt Bonn", [@"operator:wikidata"] = @"Q586", },
             Terms: [@"stadt bonn"]),
         new NsiItem(
+            DisplayName: @"Stadt Münster",
+            Id: @"stadtmunster-574564",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q2742", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Stadt Münster", [@"operator:wikidata"] = @"Q2742", },
+            Terms: [@"stadt münster"]),
+        new NsiItem(
             DisplayName: @"e-regio",
             Id: @"eregio-e37083",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q124422502", },
@@ -1304,6 +1322,12 @@ public static class NsiRegion_DE_NW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"AVU Netz", [@"operator:wikidata"] = @"Q124369250", },
             Terms: [@"aktiengesellschaft für versorgungsunternehmen", @"avu", @"avu ag", @"avu netz", @"avu netz gmbh"]),
         new NsiItem(
+            DisplayName: @"bn:t Blatzheim Networks Telecom",
+            Id: @"bntblatzheimnetworkstelecom-75f58d",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q136006423", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"bn:t Blatzheim Networks Telecom", [@"operator:short"] = @"bn:t", [@"operator:wikidata"] = @"Q136006423", },
+            Terms: [@"bn:t", @"bn:t blatzheim networks telecom", @"bn:t blatzheim networks telecom gmbh"]),
+        new NsiItem(
             DisplayName: @"e-regio",
             Id: @"eregio-75f58d",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q124422502", },
@@ -1315,6 +1339,12 @@ public static class NsiRegion_DE_NW_GEOJSON
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q1360246", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"NetCologne", [@"operator:wikidata"] = @"Q1360246", },
             Terms: [@"netcologne"]),
+        new NsiItem(
+            DisplayName: @"NEW Netz",
+            Id: @"newnetz-75f58d",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q135905263", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"NEW Netz", [@"operator:wikidata"] = @"Q135905263", },
+            Terms: [@"new netz"]),
         new NsiItem(
             DisplayName: @"Regionetz",
             Id: @"regionetz-75f58d",
@@ -1471,6 +1501,12 @@ public static class NsiRegion_DE_NW_GEOJSON
             Tags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator:wikidata"] = @"Q2551890", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator"] = @"Wasserverband Eifel-Rur", [@"operator:short"] = @"WVER", [@"operator:wikidata"] = @"Q2551890", },
             Terms: [@"wasserverband eifel-rur", @"wver"]),
+        new NsiItem(
+            DisplayName: @"Wupperverband",
+            Id: @"wupperverband-ea0c8b",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator:wikidata"] = @"Q2595186", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator"] = @"Wupperverband", [@"operator:wikidata"] = @"Q2595186", },
+            Terms: [@"wupperverband"]),
         new NsiItem(
             DisplayName: @"Stadt Bielefeld",
             Id: @"stadtbielefeld-7646da",
@@ -1686,7 +1722,7 @@ public static class NsiRegion_DE_NW_GEOJSON
             Id: @"avaconnetz-6177b3",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"AVU Netz",
             Id: @"avunetz-26c4cf",
@@ -1742,11 +1778,11 @@ public static class NsiRegion_DE_NW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Netzgesellschaft Gütersloh", [@"operator:wikidata"] = @"Q124462977", [@"power"] = @"substation", },
             Terms: [@"netzgesellschaft gütersloh", @"netzgesellschaft gütersloh mbh"]),
         new NsiItem(
-            DisplayName: @"NEW",
-            Id: @"new-26c4cf",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1960038", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"NEW", [@"operator:wikidata"] = @"Q1960038", [@"power"] = @"substation", },
-            Terms: [@"new", @"nvv"]),
+            DisplayName: @"NEW Netz",
+            Id: @"newnetz-26c4cf",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q135905263", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"NEW Netz", [@"operator:wikidata"] = @"Q135905263", [@"power"] = @"substation", },
+            Terms: [@"new", @"new ag", @"new netz", @"nvv"]),
         new NsiItem(
             DisplayName: @"Regionetz",
             Id: @"regionetz-26c4cf",
@@ -1870,8 +1906,8 @@ public static class NsiRegion_DE_NW_GEOJSON
         new NsiItem(
             DisplayName: @"VEW",
             Id: @"vew-26c4cf",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1642431", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"VEW", [@"operator:wikidata"] = @"Q1642431", [@"power"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138133", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"VEW", [@"operator:wikidata"] = @"Q138133", [@"power"] = @"substation", },
             Terms: [@"vew"]),
         new NsiItem(
             DisplayName: @"Westfalen Weser Netz",
@@ -1944,7 +1980,7 @@ public static class NsiRegion_DE_NW_GEOJSON
             Id: @"avaconnetz-f46145",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"AVU Netz",
             Id: @"avunetz-ad09f9",
@@ -2000,11 +2036,11 @@ public static class NsiRegion_DE_NW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Netzgesellschaft Gütersloh", [@"operator:wikidata"] = @"Q124462977", [@"power"] = @"transformer", },
             Terms: [@"netzgesellschaft gütersloh", @"netzgesellschaft gütersloh mbh"]),
         new NsiItem(
-            DisplayName: @"NEW",
-            Id: @"new-ad09f9",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1960038", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"NEW", [@"operator:wikidata"] = @"Q1960038", [@"power"] = @"transformer", },
-            Terms: [@"new", @"nvv"]),
+            DisplayName: @"NEW Netz",
+            Id: @"newnetz-ad09f9",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q135905263", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"NEW Netz", [@"operator:wikidata"] = @"Q135905263", [@"power"] = @"transformer", },
+            Terms: [@"new", @"new ag", @"new netz", @"nvv"]),
         new NsiItem(
             DisplayName: @"Regionetz",
             Id: @"regionetz-ad09f9",
@@ -2128,8 +2164,8 @@ public static class NsiRegion_DE_NW_GEOJSON
         new NsiItem(
             DisplayName: @"VEW",
             Id: @"vew-ad09f9",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1642431", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"VEW", [@"operator:wikidata"] = @"Q1642431", [@"power"] = @"transformer", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138133", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"VEW", [@"operator:wikidata"] = @"Q138133", [@"power"] = @"transformer", },
             Terms: [@"vew"]),
         new NsiItem(
             DisplayName: @"Westfalen Weser Netz",

@@ -200,12 +200,6 @@ public static class NsiRegion_CA_QC_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Tigre Géant", [@"brand:wikidata"] = @"Q5558429", [@"name"] = @"Tigre Géant", [@"shop"] = @"department_store", },
             Terms: [@"giant tiger", @"tigre géant"]),
         new NsiItem(
-            DisplayName: @"Rona+",
-            Id: @"rona-381944",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123688669", [@"shop"] = @"doityourself", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona+", [@"brand:wikidata"] = @"Q123688669", [@"name"] = @"Rona+", [@"shop"] = @"doityourself", },
-            Terms: [@"lowes", @"réno-dépôt", @"rona+"]),
-        new NsiItem(
             DisplayName: @"Meubles Léon",
             Id: @"meublesleon-20962f",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q6524456", [@"shop"] = @"furniture", },
@@ -286,8 +280,8 @@ public static class NsiRegion_CA_QC_GEOJSON
         new NsiItem(
             DisplayName: @"Astral",
             Id: @"astral-5f3ac7",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator:wikidata"] = @"Q750438", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator"] = @"Astral", [@"operator:wikidata"] = @"Q750438", },
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator:wikidata"] = @"Q815713", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator"] = @"Astral", [@"operator:wikidata"] = @"Q815713", },
             Terms: [@"astral"]),
         new NsiItem(
             DisplayName: @"Ville de Gatineau",

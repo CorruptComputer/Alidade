@@ -219,7 +219,7 @@ public static class NsiRegion_SG
             Terms: [@"five guys", @"five guys burgers and fries"]),
         new NsiItem(
             DisplayName: @"Guzman y Gomez",
-            Id: @"guzmanygomez-2f4cab",
+            Id: @"guzmanygomez-8cc1c5",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q23019759", [@"cuisine"] = @"mexican", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Guzman y Gomez", [@"brand:wikidata"] = @"Q23019759", [@"cuisine"] = @"mexican", [@"name"] = @"Guzman y Gomez", [@"takeaway"] = @"yes", },
             Terms: [@"guzman y gomez"]),
@@ -241,6 +241,12 @@ public static class NsiRegion_SG
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q4260444", [@"cuisine"] = @"donut;coffee_shop", },
             AddTags: new Dictionary<string, string> { [@"alt_name"] = @"J.Co Donuts and Coffee", [@"amenity"] = @"fast_food", [@"brand"] = @"J.Co Donuts'", [@"brand:wikidata"] = @"Q4260444", [@"cuisine"] = @"donut;coffee_shop", [@"name"] = @"J.Co", [@"takeaway"] = @"yes", },
             Terms: [@"J.Co Donuts", @"j.co donuts and coffee", @"j.co donuts'"]),
+        new NsiItem(
+            DisplayName: @"OMG! Decadent Donuts",
+            Id: @"omgdecadentdonuts-6ed0e2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q138388838", [@"cuisine"] = @"donut", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"OMG! Decadent Donuts", [@"brand:wikidata"] = @"Q138388838", [@"cuisine"] = @"donut", [@"diet:gluten_free"] = @"only", [@"diet:vegan"] = @"only", [@"name"] = @"OMG! Decadent Donuts", [@"takeaway"] = @"yes", },
+            Terms: [@"omg", @"omg! decadent donuts"]),
         new NsiItem(
             DisplayName: @"Pret A Manger",
             Id: @"pretamanger-a11118",
@@ -369,7 +375,7 @@ public static class NsiRegion_SG
             Terms: [@"bonchon", @"bonchon chicken", @"bonchon fried chicken"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -585,7 +591,7 @@ public static class NsiRegion_SG
             Terms: [@"breadtalk"]),
         new NsiItem(
             DisplayName: @"Paris Baguette",
-            Id: @"parisbaguette-e1a226",
+            Id: @"parisbaguette-f87f10",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62605260", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Paris Baguette", [@"brand:wikidata"] = @"Q62605260", [@"name"] = @"Paris Baguette", [@"shop"] = @"bakery", },
             Terms: [@"paris baguette", @"paris baguette cafe"]),
@@ -961,6 +967,12 @@ public static class NsiRegion_SG
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q132680230", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"lyf", [@"brand:wikidata"] = @"Q132680230", [@"name"] = @"lyf", [@"tourism"] = @"hotel", },
             Terms: [@"lyf"]),
+        new NsiItem(
+            DisplayName: @"Mama Shelter",
+            Id: @"mamashelter-876740",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
+            Terms: [@"mama shelter"]),
         new NsiItem(
             DisplayName: @"Raffles",
             Id: @"raffles-771760",

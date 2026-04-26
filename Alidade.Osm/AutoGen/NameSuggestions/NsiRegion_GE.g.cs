@@ -449,8 +449,8 @@ public static class NsiRegion_GE
             DisplayName: @"ლუქა პოლარე",
             Id: @"lucapolare-9f5e40",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"ice_cream", [@"brand:wikidata"] = @"Q131469957", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"ice_cream", [@"brand"] = @"ლუქა პოლარე", [@"brand:en"] = @"Luca Polare", [@"brand:ka"] = @"ლუქა პოლარე", [@"brand:ru"] = @"Лука Поларе", [@"brand:wikidata"] = @"Q131469957", [@"name"] = @"ლუქა პოლარე", [@"name:en"] = @"Luca Polare", [@"name:ka"] = @"ლუქა პოლარე", [@"name:ru"] = @"Лука Поларе", },
-            Terms: [@"luca polare", @"лука поларе", @"ლუქა პოლარე"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"ice_cream", [@"brand"] = @"ლუკა პოლარე", [@"brand:en"] = @"Luca Polare", [@"brand:ka"] = @"ლუკა პოლარე", [@"brand:ru"] = @"Лука Поларе", [@"brand:wikidata"] = @"Q131469957", [@"name"] = @"ლუკა პოლარე", [@"name:en"] = @"Luca Polare", [@"name:ka"] = @"ლუკა პოლარე", [@"name:ru"] = @"Лука Поларе", },
+            Terms: [@"ლუქა პოლარე", @"luca polare", @"лука поларе", @"ლუკა პოლარე"]),
         new NsiItem(
             DisplayName: @"Locker.ge Parcel Locker",
             Id: @"lockerge-303b81",
@@ -473,13 +473,13 @@ public static class NsiRegion_GE
             DisplayName: @"თიბისი ბანკის ჩასარიცხი აპარატი",
             Id: @"tbcbank-ebda91",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"payment_terminal", [@"brand:wikidata"] = @"Q2620975", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"payment_terminal", [@"brand"] = @"თიბისი ბანკი", [@"brand:en"] = @"TBC Bank", [@"brand:ka"] = @"თიბისი ბანკი", [@"brand:ru"] = @"ТиБиСи Банк", [@"brand:wikidata"] = @"Q2620975", [@"operator"] = @"თიბისი ბანკი", [@"operator:ka"] = @"თიბისი ბანკი", [@"operator:wikidata"] = @"Q2620975", [@"payment:cash"] = @"yes", [@"payment:cash:EUR"] = @"yes", [@"payment:cash:USD"] = @"yes", [@"payment:coins"] = @"no", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"payment_terminal", [@"brand"] = @"თიბისი ბანკი", [@"brand:en"] = @"TBC Bank", [@"brand:ka"] = @"თიბისი ბანკი", [@"brand:ru"] = @"ТиБиСи Банк", [@"brand:wikidata"] = @"Q2620975", [@"operator"] = @"თიბისი ბანკი", [@"operator:ka"] = @"თიბისი ბანკი", [@"operator:wikidata"] = @"Q2620975", [@"payment:cash"] = @"yes", [@"payment:cash:EUR"] = @"yes", [@"payment:cash:USD"] = @"yes", [@"payment:coins"] = @"yes", },
             Terms: [@"თიბისი ბანკის ჩასარიცხი აპარატი", @"tbc bank", @"тибиси банк", @"თიბისი ბანკი"]),
         new NsiItem(
             DisplayName: @"საქართველოს ბანკის ჩასარიცხი აპარატი",
             Id: @"bankofgeorgia-ebda91",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"payment_terminal", [@"brand:wikidata"] = @"Q2469733", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"payment_terminal", [@"brand"] = @"საქართველოს ბანკი", [@"brand:en"] = @"Bank of Georgia", [@"brand:ka"] = @"საქართველოს ბანკი", [@"brand:ru"] = @"Банк Грузии", [@"brand:tr"] = @"Gürcistan Bankası", [@"brand:wikidata"] = @"Q2469733", [@"operator"] = @"საქართველოს ბანკი", [@"operator:ka"] = @"საქართველოს ბანკი", [@"operator:wikidata"] = @"Q2469733", [@"payment:cash"] = @"yes", [@"payment:cash:EUR"] = @"yes", [@"payment:cash:USD"] = @"yes", [@"payment:coins"] = @"no", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"payment_terminal", [@"brand"] = @"საქართველოს ბანკი", [@"brand:en"] = @"Bank of Georgia", [@"brand:ka"] = @"საქართველოს ბანკი", [@"brand:ru"] = @"Банк Грузии", [@"brand:tr"] = @"Gürcistan Bankası", [@"brand:wikidata"] = @"Q2469733", [@"operator"] = @"საქართველოს ბანკი", [@"operator:ka"] = @"საქართველოს ბანკი", [@"operator:wikidata"] = @"Q2469733", [@"payment:cash"] = @"yes", [@"payment:cash:EUR"] = @"yes", [@"payment:cash:USD"] = @"yes", [@"payment:coins"] = @"yes", },
             Terms: [@"საქართველოს ბანკის ჩასარიცხი აპარატი", @"bank of georgia", @"gürcistan bankası", @"банк грузии", @"საქართველოს ბანკი"]),
         new NsiItem(
             DisplayName: @"ფეიბოქსი",
@@ -490,8 +490,8 @@ public static class NsiRegion_GE
         new NsiItem(
             DisplayName: @"36.6",
             Id: @"366-6b8b1e",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand:wikidata"] = @"Q226889", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand"] = @"36.6", [@"brand:en"] = @"36.6", [@"brand:ka"] = @"36.6", [@"brand:ru"] = @"36.6", [@"brand:wikidata"] = @"Q226889", [@"healthcare"] = @"pharmacy", [@"name"] = @"36.6", [@"name:en"] = @"36.6", [@"name:ka"] = @"36.6", [@"name:ru"] = @"36.6", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand:wikidata"] = @"Q131746590", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"pharmacy", [@"brand"] = @"36.6", [@"brand:en"] = @"36.6", [@"brand:ka"] = @"36.6", [@"brand:ru"] = @"36.6", [@"brand:wikidata"] = @"Q131746590", [@"healthcare"] = @"pharmacy", [@"name"] = @"36.6", [@"name:en"] = @"36.6", [@"name:ka"] = @"36.6", [@"name:ru"] = @"36.6", },
             Terms: [@"36.6"]),
         new NsiItem(
             DisplayName: @"ავერსი",
@@ -565,6 +565,12 @@ public static class NsiRegion_GE
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q97832915", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"BigChefs", [@"brand:wikidata"] = @"Q97832915", [@"name"] = @"BigChefs", },
             Terms: [@"bigchefs"]),
+        new NsiItem(
+            DisplayName: @"გრინვეი",
+            Id: @"greenway-bc0e89",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"vehicle_inspection", [@"brand:wikidata"] = @"Q134735986", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"vehicle_inspection", [@"brand"] = @"გრინვეი", [@"brand:en"] = @"Greenway", [@"brand:ka"] = @"გრინვეი", [@"brand:ru"] = @"Гринвей", [@"brand:wikidata"] = @"Q134735986", [@"name"] = @"გრინვეი", [@"name:en"] = @"Greenway", [@"name:ka"] = @"გრინვეი", [@"name:ru"] = @"Гринвей", },
+            Terms: [@"greenway", @"гринвей", @"გრინვეი"]),
         new NsiItem(
             DisplayName: @"სინევო",
             Id: @"synevo-5675a4",
@@ -1003,6 +1009,12 @@ public static class NsiRegion_GE
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q131469951", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"რონიკო", [@"brand:en"] = @"Roniko", [@"brand:ka"] = @"რონიკო", [@"brand:ru"] = @"Ронико", [@"brand:wikidata"] = @"Q131469951", [@"name"] = @"რონიკო", [@"name:en"] = @"Roniko", [@"name:ka"] = @"რონიკო", [@"name:ru"] = @"Ронико", [@"shop"] = @"optician", },
             Terms: [@"roniko", @"ронико", @"რონიკო"]),
+        new NsiItem(
+            DisplayName: @"Wildberries",
+            Id: @"wildberries-c79976",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24933714", [@"shop"] = @"outpost", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:en"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"name:en"] = @"Wildberries", [@"shop"] = @"outpost", },
+            Terms: [@"wb", @"wildberries"]),
         new NsiItem(
             DisplayName: @"ანტრე",
             Id: @"entree-7fe386",

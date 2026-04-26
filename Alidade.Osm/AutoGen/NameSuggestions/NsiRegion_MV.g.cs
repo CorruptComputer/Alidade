@@ -14,6 +14,18 @@ public static class NsiRegion_MV
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Bank of Maldives",
+            Id: @"bankofmaldives-413aed",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q4856148", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Bank of Maldives", [@"brand:en"] = @"Bank of Maldives", [@"brand:wikidata"] = @"Q4856148", [@"operator"] = @"Bank of Maldives", [@"operator:wikidata"] = @"Q4856148", },
+            Terms: [@"bank of maldives"]),
+        new NsiItem(
+            DisplayName: @"Bank of Maldives",
+            Id: @"bankofmaldives-ec25c3",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q4856148", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Bank of Maldives", [@"brand:en"] = @"Bank of Maldives", [@"brand:wikidata"] = @"Q4856148", [@"name"] = @"Bank of Maldives", [@"name:en"] = @"Bank of Maldives", },
+            Terms: [@"bank of maldives"]),
+        new NsiItem(
             DisplayName: @"Barista",
             Id: @"barista-56abeb",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q644735", [@"cuisine"] = @"coffee_shop", },
@@ -103,5 +115,35 @@ public static class NsiRegion_MV
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130384689", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Fenaka Vaikaradhoo Branch", [@"operator:wikidata"] = @"Q130384689", [@"power"] = @"transformer", },
             Terms: [@"fenaka corporation limited vaikaradhoo", @"fenaka vaikaradhoo branch"]),
+        new NsiItem(
+            DisplayName: @"RTL",
+            Id: @"rtl-d54873",
+            Tags: new Dictionary<string, string> { [@"ferry"] = @"yes", [@"network:wikidata"] = @"Q138509118", [@"public_transport"] = @"station", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"ferry_terminal", [@"ferry"] = @"yes", [@"network"] = @"RTL", [@"network:wikidata"] = @"Q138509118", [@"operator"] = @"MTCC", [@"operator:wikidata"] = @"Q138509111", [@"public_transport"] = @"station", },
+            Terms: [@"mtcc", @"rtl"]),
+        new NsiItem(
+            DisplayName: @"RTL (Maldives)",
+            Id: @"rtl-3bfe6b",
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q138509118", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"RTL", [@"network:wikidata"] = @"Q138509118", [@"operator"] = @"MTCC", [@"operator:wikidata"] = @"Q138509111", [@"public_transport"] = @"platform", },
+            Terms: [@"RTL (Maldives)", @"mtcc", @"rtl"]),
+        new NsiItem(
+            DisplayName: @"RTL (Maldives)",
+            Id: @"rtl-80c041",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q138509118", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"RTL", [@"network:wikidata"] = @"Q138509118", [@"operator"] = @"MTCC", [@"operator:wikidata"] = @"Q138509111", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"RTL (Maldives)", @"mtcc", @"rtl"]),
+        new NsiItem(
+            DisplayName: @"RTL",
+            Id: @"rtl-982c29",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q138509118", [@"route"] = @"ferry", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"RTL", [@"network:wikidata"] = @"Q138509118", [@"operator"] = @"MTCC", [@"operator:wikidata"] = @"Q138509111", [@"route"] = @"ferry", [@"type"] = @"route", },
+            Terms: [@"mtcc", @"rtl"]),
+        new NsiItem(
+            DisplayName: @"RTL",
+            Id: @"rtl-982c29",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q138509118", [@"route"] = @"ferry", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"RTL", [@"network:wikidata"] = @"Q138509118", [@"operator"] = @"MTCC", [@"operator:wikidata"] = @"Q138509111", [@"route"] = @"ferry", },
+            Terms: [@"mtcc", @"rtl"]),
     ];
 }

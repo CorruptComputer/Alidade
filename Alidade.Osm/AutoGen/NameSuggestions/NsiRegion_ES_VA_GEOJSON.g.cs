@@ -38,12 +38,6 @@ public static class NsiRegion_ES_VA_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"library", [@"operator"] = @"Ayuntamiento de Valladolid", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q8210810", },
             Terms: [@"ayuntamiento de valladolid"]),
         new NsiItem(
-            DisplayName: @"Consejería de Educación de la Junta de Castilla y León",
-            Id: @"consejeriadeeducaciondelajuntadecastillayleon-5f247a",
-            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q30297363", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Consejería de Educación de la Junta de Castilla y León", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q30297363", },
-            Terms: [@"consejería de educación de la junta de castilla y león"]),
-        new NsiItem(
             DisplayName: @"Junta de Castilla y León",
             Id: @"juntadecastillayleon-5f247a",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q3314606", },

@@ -296,6 +296,12 @@ public static class NsiRegion_MK
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Sport Vision", [@"brand:wikidata"] = @"Q116729857", [@"name"] = @"Sport Vision", [@"shop"] = @"sports", },
             Terms: [@"sport vision"]),
         new NsiItem(
+            DisplayName: @"Kam Market (Macedonia)",
+            Id: @"kammarket-2e3a41",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65296228", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Kam Market", [@"brand:wikidata"] = @"Q65296228", [@"name"] = @"Kam Market", [@"shop"] = @"supermarket", },
+            Terms: [@"Kam Market (Macedonia)", @"kam market"]),
+        new NsiItem(
             DisplayName: @"A1 (Северна Македонија)",
             Id: @"a1-5455f4",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24589907", [@"shop"] = @"telecommunication", },

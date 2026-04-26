@@ -243,7 +243,7 @@ public static class NsiRegion_MO
             Terms: [@"emperor cinemas", @"英皇戲院", @"英皇戲院 emperor cinemas"]),
         new NsiItem(
             DisplayName: @"八方雲集 Bafang Dumpling",
-            Id: @"bafangdumpling-dd590e",
+            Id: @"bafangdumpling-17dd9a",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q28417381", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"八方雲集 Bafang Dumpling", [@"brand:en"] = @"Bafang Dumpling", [@"brand:wikidata"] = @"Q28417381", [@"brand:zh"] = @"八方雲集", [@"brand:zh-Hans"] = @"八方云集", [@"brand:zh-Hant"] = @"八方雲集", [@"cuisine"] = @"dumplings", [@"name"] = @"八方雲集 Bafang Dumpling", [@"name:en"] = @"Bafang Dumpling", [@"name:zh"] = @"八方雲集", [@"name:zh-Hans"] = @"八方云集", [@"name:zh-Hant"] = @"八方雲集", [@"takeaway"] = @"yes", },
             Terms: [@"bafang dumpling", @"八方云集", @"八方雲集", @"八方雲集 bafang dumpling"]),

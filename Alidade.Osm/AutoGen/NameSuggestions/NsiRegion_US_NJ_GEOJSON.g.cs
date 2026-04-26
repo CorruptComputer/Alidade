@@ -58,8 +58,8 @@ public static class NsiRegion_US_NJ_GEOJSON
         new NsiItem(
             DisplayName: @"Republic Bank (Philadelphia)",
             Id: @"republicbank-9bba96",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q55316482", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q55316482", [@"operator"] = @"Republic Bank", [@"operator:wikidata"] = @"Q55316482", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q16976594", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q16976594", [@"operator"] = @"Republic Bank", [@"operator:wikidata"] = @"Q16976594", },
             Terms: [@"Republic Bank (Philadelphia)", @"republic bank"]),
         new NsiItem(
             DisplayName: @"Valley Bank",
@@ -94,8 +94,8 @@ public static class NsiRegion_US_NJ_GEOJSON
         new NsiItem(
             DisplayName: @"Republic Bank (Philadelphia)",
             Id: @"republicbank-9c6083",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q55316482", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q55316482", [@"name"] = @"Republic Bank", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q16976594", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Republic Bank", [@"brand:wikidata"] = @"Q16976594", [@"name"] = @"Republic Bank", },
             Terms: [@"Republic Bank (Philadelphia)", @"republic bank"]),
         new NsiItem(
             DisplayName: @"Valley Bank",

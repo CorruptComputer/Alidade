@@ -14,11 +14,23 @@ public static class NsiRegion_DE_NI_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Hamburger Sparkasse",
+            Id: @"hamburgersparkasse-e71c95",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1573140", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Hamburger Sparkasse", [@"brand:wikidata"] = @"Q1573140", [@"operator"] = @"Hamburger Sparkasse", [@"operator:wikidata"] = @"Q1573140", },
+            Terms: [@"hamburger sparkasse"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank (Deutschland)",
             Id: @"spardabank-eb9668",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2307136", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank", [@"brand:wikidata"] = @"Q2307136", [@"operator"] = @"Sparda-Bank", [@"operator:wikidata"] = @"Q2307136", },
             Terms: [@"Sparda-Bank (Deutschland)", @"sparda-bank"]),
+        new NsiItem(
+            DisplayName: @"Hamburger Sparkasse",
+            Id: @"hamburgersparkasse-6fe669",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1573140", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Hamburger Sparkasse", [@"brand:wikidata"] = @"Q1573140", [@"name"] = @"Hamburger Sparkasse", [@"short_name"] = @"Haspa", },
+            Terms: [@"hamburger sparkasse", @"haspa"]),
         new NsiItem(
             DisplayName: @"Sparda-Bank (Deutschland)",
             Id: @"spardabank-a7f91c",
@@ -458,6 +470,12 @@ public static class NsiRegion_DE_NI_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"GEW Wilhelmshaven", [@"operator:short"] = @"GEW", [@"operator:wikidata"] = @"Q124462847", },
             Terms: [@"gew", @"gew wilhelmshaven", @"gew wilhelmshaven gmbh"]),
         new NsiItem(
+            DisplayName: @"Goetel",
+            Id: @"goetel-8d06eb",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q138456532", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Goetel", [@"operator:wikidata"] = @"Q138456532", [@"utility"] = @"telecom", },
+            Terms: [@"goetel"]),
+        new NsiItem(
             DisplayName: @"Harz Energie Netz",
             Id: @"harzenergienetz-1aee73",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q124370202", },
@@ -493,6 +511,12 @@ public static class NsiRegion_DE_NI_GEOJSON
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q133567418", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Stadtwerke Northeim", [@"operator:wikidata"] = @"Q133567418", },
             Terms: [@"stadtwerke northeim"]),
+        new NsiItem(
+            DisplayName: @"Stadtwerke Verden",
+            Id: @"stadtwerkeverden-8d06eb",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q138456578", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Stadtwerke Verden", [@"operator:wikidata"] = @"Q138456578", },
+            Terms: [@"stadtwerke verden"]),
         new NsiItem(
             DisplayName: @"Versorgungsbetriebe Hann. Münden",
             Id: @"versorgungsbetriebehannmunden-8d06eb",
@@ -696,7 +720,7 @@ public static class NsiRegion_DE_NI_GEOJSON
             Id: @"avaconnetz-6177b3",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"substation", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"Braunschweiger Verkehrs-GmbH",
             Id: @"braunschweigerverkehrsgmbh-1af6be",
@@ -757,6 +781,12 @@ public static class NsiRegion_DE_NI_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q108690530", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Achim", [@"operator:wikidata"] = @"Q108690530", [@"power"] = @"substation", },
             Terms: [@"stadtwerke achim", @"stadtwerke achim ag"]),
+        new NsiItem(
+            DisplayName: @"Stadtwerke Garbsen",
+            Id: @"stadtwerkegarbsen-1af6be",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427394", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Garbsen", [@"operator:wikidata"] = @"Q138427394", [@"power"] = @"substation", },
+            Terms: [@"stadtwerke garbsen"]),
         new NsiItem(
             DisplayName: @"Stadtwerke Wolfenbüttel",
             Id: @"stadtwerkewolfenbuttel-1af6be",
@@ -840,7 +870,7 @@ public static class NsiRegion_DE_NI_GEOJSON
             Id: @"avaconnetz-f46145",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Avacon Netz", [@"operator:wikidata"] = @"Q124369334", [@"power"] = @"transformer", },
-            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon"]),
+            Terms: [@"avacon", @"avacon ag", @"avacon netz", @"avacon netz gmbh", @"e.on avacon", @"hsn", @"hsn magdeburg"]),
         new NsiItem(
             DisplayName: @"Braunschweiger Verkehrs-GmbH",
             Id: @"braunschweigerverkehrsgmbh-d8137c",
@@ -901,6 +931,12 @@ public static class NsiRegion_DE_NI_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q108690530", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Achim", [@"operator:wikidata"] = @"Q108690530", [@"power"] = @"transformer", },
             Terms: [@"stadtwerke achim", @"stadtwerke achim ag"]),
+        new NsiItem(
+            DisplayName: @"Stadtwerke Garbsen",
+            Id: @"stadtwerkegarbsen-d8137c",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427394", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Garbsen", [@"operator:wikidata"] = @"Q138427394", [@"power"] = @"transformer", },
+            Terms: [@"stadtwerke garbsen"]),
         new NsiItem(
             DisplayName: @"Stadtwerke Wolfenbüttel",
             Id: @"stadtwerkewolfenbuttel-d8137c",

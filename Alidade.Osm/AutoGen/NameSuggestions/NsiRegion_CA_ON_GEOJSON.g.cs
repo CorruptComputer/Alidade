@@ -278,12 +278,6 @@ public static class NsiRegion_CA_ON_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Caryl Baker Visage", [@"brand:wikidata"] = @"Q133247231", [@"name"] = @"Caryl Baker Visage", [@"shop"] = @"cosmetics", },
             Terms: [@"caryl baker visage"]),
         new NsiItem(
-            DisplayName: @"Rona+",
-            Id: @"rona-381944",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123688669", [@"shop"] = @"doityourself", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona+", [@"brand:wikidata"] = @"Q123688669", [@"name"] = @"Rona+", [@"shop"] = @"doityourself", },
-            Terms: [@"lowes", @"réno-dépôt", @"rona+"]),
-        new NsiItem(
             DisplayName: @"Stag Shop",
             Id: @"stagshop-1c11b3",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133255758", [@"shop"] = @"erotic", },
@@ -388,8 +382,8 @@ public static class NsiRegion_CA_ON_GEOJSON
         new NsiItem(
             DisplayName: @"Astral",
             Id: @"astral-5f3ac7",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator:wikidata"] = @"Q750438", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator"] = @"Astral", [@"operator:wikidata"] = @"Q750438", },
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator:wikidata"] = @"Q815713", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"billboard", [@"operator"] = @"Astral", [@"operator:wikidata"] = @"Q815713", },
             Terms: [@"astral"]),
         new NsiItem(
             DisplayName: @"City of Kitchener",
@@ -1540,8 +1534,8 @@ public static class NsiRegion_CA_ON_GEOJSON
         new NsiItem(
             DisplayName: @"Niagara Falls Transit",
             Id: @"niagarafallstransit-f5d42f",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q7023691", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Niagara Falls Transit", [@"network:wikidata"] = @"Q7023691", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q17017099", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Niagara Falls Transit", [@"network:wikidata"] = @"Q17017099", [@"public_transport"] = @"platform", },
             Terms: [@"niagara falls transit"]),
         new NsiItem(
             DisplayName: @"Oakville Transit",
@@ -1570,8 +1564,8 @@ public static class NsiRegion_CA_ON_GEOJSON
         new NsiItem(
             DisplayName: @"St. Catharines Transit",
             Id: @"stcatharinestransit-f5d42f",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q7587418", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"St. Catharines Transit", [@"network:wikidata"] = @"Q7587418", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q17017099", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"St. Catharines Transit", [@"network:wikidata"] = @"Q17017099", [@"public_transport"] = @"platform", },
             Terms: [@"st. catharines transit"]),
         new NsiItem(
             DisplayName: @"Thunder Bay Transit",
@@ -1714,8 +1708,8 @@ public static class NsiRegion_CA_ON_GEOJSON
         new NsiItem(
             DisplayName: @"Niagara Falls Transit",
             Id: @"niagarafallstransit-6d07fa",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7023691", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Niagara Falls Transit", [@"network:wikidata"] = @"Q7023691", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q17017099", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Niagara Falls Transit", [@"network:wikidata"] = @"Q17017099", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"niagara falls transit"]),
         new NsiItem(
             DisplayName: @"Oakville Transit",
@@ -1744,8 +1738,8 @@ public static class NsiRegion_CA_ON_GEOJSON
         new NsiItem(
             DisplayName: @"St. Catharines Transit",
             Id: @"stcatharinestransit-6d07fa",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7587418", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"St. Catharines Transit", [@"network:wikidata"] = @"Q7587418", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q17017099", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"St. Catharines Transit", [@"network:wikidata"] = @"Q17017099", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"st. catharines transit"]),
         new NsiItem(
             DisplayName: @"Thunder Bay Transit",

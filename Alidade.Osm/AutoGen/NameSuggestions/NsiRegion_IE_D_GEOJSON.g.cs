@@ -74,22 +74,10 @@ public static class NsiRegion_IE_D_GEOJSON
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Dublin Bus", [@"network:wikidata"] = @"Q1263090", [@"public_transport"] = @"platform", },
             Terms: [@"dublin bus"]),
         new NsiItem(
-            DisplayName: @"Commuter",
-            Id: @"commuter-cad9d3",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q5155093", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Commuter", [@"network:wikidata"] = @"Q5155093", [@"operator"] = @"Iarnród Éireann", [@"operator:en"] = @"Irish Rail", [@"operator:ga"] = @"Iarnród Éireann", [@"operator:wikidata"] = @"Q73043", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
-            Terms: [@"commuter", @"dublin commuter", @"iarnród éireann", @"irish rail"]),
-        new NsiItem(
             DisplayName: @"Dublin Bus",
             Id: @"dublinbus-ef336e",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q1263090", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Dublin Bus", [@"network:wikidata"] = @"Q1263090", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"dublin bus"]),
-        new NsiItem(
-            DisplayName: @"Commuter",
-            Id: @"commuter-91413c",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q5155093", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Commuter", [@"network:wikidata"] = @"Q5155093", [@"operator"] = @"Iarnród Éireann", [@"operator:en"] = @"Irish Rail", [@"operator:ga"] = @"Iarnród Éireann", [@"operator:wikidata"] = @"Q73043", [@"route"] = @"train", [@"type"] = @"route", },
-            Terms: [@"commuter", @"dublin commuter", @"iarnród éireann", @"irish rail"]),
     ];
 }

@@ -14,11 +14,23 @@ public static class NsiRegion_CZ_20_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Obec Kamenný Přívoz",
+            Id: @"obeckamennyprivoz-7e9c00",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q1115424", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Obec Kamenný Přívoz", [@"operator:wikidata"] = @"Q1115424", },
+            Terms: [@"obec kamenný přívoz"]),
+        new NsiItem(
             DisplayName: @"Obec Tuchlovice",
             Id: @"obectuchlovice-7e9c00",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q2342073", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Obec Tuchlovice", [@"operator:wikidata"] = @"Q2342073", },
             Terms: [@"obec tuchlovice"]),
+        new NsiItem(
+            DisplayName: @"Potex",
+            Id: @"potex-afbb8e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q138821850", [@"recycling_type"] = @"container", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Potex", [@"operator:wikidata"] = @"Q138821850", [@"recycling_type"] = @"container", [@"recycling:shoes"] = @"yes", [@"recycling:textiles"] = @"yes", [@"recycling:toys"] = @"yes", },
+            Terms: [@"potex"]),
         new NsiItem(
             DisplayName: @"Statutární město Kladno",
             Id: @"statutarnimestokladno-1e4ec4",

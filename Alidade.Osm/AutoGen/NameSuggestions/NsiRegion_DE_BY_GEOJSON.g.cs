@@ -14,11 +14,23 @@ public static class NsiRegion_DE_BY_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Frankfurter Volksbank",
+            Id: @"frankfurtervolksbank-28eefa",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1445057", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Frankfurter Volksbank", [@"brand:wikidata"] = @"Q1445057", [@"operator"] = @"Frankfurter Volksbank", [@"operator:wikidata"] = @"Q1445057", },
+            Terms: [@"frankfurter volksbank", @"frankfurter volksbank rhein/main", @"volksbank frankfurt"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank (Deutschland)",
             Id: @"spardabank-eb9668",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2307136", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank", [@"brand:wikidata"] = @"Q2307136", [@"operator"] = @"Sparda-Bank", [@"operator:wikidata"] = @"Q2307136", },
             Terms: [@"Sparda-Bank (Deutschland)", @"sparda-bank"]),
+        new NsiItem(
+            DisplayName: @"Frankfurter Volksbank",
+            Id: @"frankfurtervolksbank-e7a309",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1445057", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Frankfurter Volksbank", [@"brand:wikidata"] = @"Q1445057", [@"name"] = @"Frankfurter Volksbank", },
+            Terms: [@"frankfurter volksbank", @"frankfurter volksbank rhein/main", @"volksbank frankfurt"]),
         new NsiItem(
             DisplayName: @"Sparda-Bank (Deutschland)",
             Id: @"spardabank-a7f91c",
@@ -422,17 +434,35 @@ public static class NsiRegion_DE_BY_GEOJSON
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator"] = @"Bayerische Verwaltung der staatlichen Schlösser, Gärten und Seen", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q812310", },
             Terms: [@"bayerische verwaltung der staatlichen schlösser, gärten und seen"]),
         new NsiItem(
+            DisplayName: @"DJK Schweinfurt",
+            Id: @"djkschweinfurt-d293c1",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q108964742", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"DJK Schweinfurt", [@"operator:wikidata"] = @"Q108964742", },
+            Terms: [@"djk schweinfurt"]),
+        new NsiItem(
             DisplayName: @"Gemeinde Unterhaching",
             Id: @"gemeindeunterhaching-d293c1",
             Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q264899", },
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Gemeinde Unterhaching", [@"operator:wikidata"] = @"Q264899", },
             Terms: [@"gemeinde unterhaching"]),
         new NsiItem(
+            DisplayName: @"Putzbrunner SV",
+            Id: @"putzbrunnersv-d293c1",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q122948694", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Putzbrunner SV", [@"operator:wikidata"] = @"Q122948694", },
+            Terms: [@"putzbrunner sv"]),
+        new NsiItem(
             DisplayName: @"Stadt Freising",
             Id: @"stadtfreising-d293c1",
             Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q6998", },
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Stadt Freising", [@"operator:wikidata"] = @"Q6998", },
             Terms: [@"stadt freising"]),
+        new NsiItem(
+            DisplayName: @"TC Rot-Blau Regensburg e.V.",
+            Id: @"tcrotblauregensburgev-d293c1",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q28367418", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"TC Rot-Blau Regensburg e.V.", [@"operator:wikidata"] = @"Q28367418", },
+            Terms: [@"tc rot-blau regensburg e.v."]),
         new NsiItem(
             DisplayName: @"Turngemeinde Schweinfurt 1848 e.V.",
             Id: @"turngemeindeschweinfurt1848ev-d293c1",
@@ -532,8 +562,8 @@ public static class NsiRegion_DE_BY_GEOJSON
         new NsiItem(
             DisplayName: @"Bayerisches Landesamt für Umwelt",
             Id: @"bayerischeslandesamtfurumwelt-3932c9",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q63088680", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Bayerisches Landesamt für Umwelt", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q63088680", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q812422", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Bayerisches Landesamt für Umwelt", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q812422", },
             Terms: [@"bayerisches landesamt für umwelt"]),
         new NsiItem(
             DisplayName: @"Wasserwirtschaftsamt Bad Kissingen",
@@ -619,6 +649,12 @@ public static class NsiRegion_DE_BY_GEOJSON
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q107477739", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Bayernwerk Netz", [@"operator:wikidata"] = @"Q107477739", },
             Terms: [@"bayernwerk", @"bayernwerk ag", @"bayernwerk netz", @"isar-amperwerke", @"isar-amperwerke a.g."]),
+        new NsiItem(
+            DisplayName: @"Lechwerke",
+            Id: @"lechwerke-d5f5e8",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q1811384", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Lechwerke", [@"operator:wikidata"] = @"Q1811384", },
+            Terms: [@"lechwerke"]),
         new NsiItem(
             DisplayName: @"OsthessenNetz",
             Id: @"osthessennetz-d5f5e8",

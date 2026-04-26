@@ -26,11 +26,53 @@ public static class NsiRegion_JP_12_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"東光高岳", [@"brand:en"] = @"Takaoka Toko", [@"brand:ja"] = @"東光高岳", [@"brand:wikidata"] = @"Q17220263", [@"man_made"] = @"charge_point", [@"operator"] = @"東光高岳", [@"operator:en"] = @"Takaoka Toko", [@"operator:ja"] = @"東光高岳", [@"operator:wikidata"] = @"Q17220263", },
             Terms: [@"takaoka toko", @"東光高岳"]),
         new NsiItem(
+            DisplayName: @"コモディイイダ",
+            Id: @"comodiiida-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11302699", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"コモディイイダ", [@"brand:en"] = @"Comodi-iida", [@"brand:ja"] = @"コモディイイダ", [@"brand:wikidata"] = @"Q11302699", [@"name"] = @"コモディイイダ", [@"name:en"] = @"Comodi-iida", [@"name:ja"] = @"コモディイイダ", [@"shop"] = @"supermarket", },
+            Terms: [@"comodi-iida", @"コモディイイダ"]),
+        new NsiItem(
+            DisplayName: @"スーパーバリュー",
+            Id: @"supervalue-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11313802", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"スーパーバリュー", [@"brand:en"] = @"Super Value", [@"brand:ja"] = @"スーパーバリュー", [@"brand:wikidata"] = @"Q11313802", [@"name"] = @"スーパーバリュー", [@"name:en"] = @"Super Value", [@"name:ja"] = @"スーパーバリュー", [@"shop"] = @"supermarket", },
+            Terms: [@"super value", @"スーパーバリュー"]),
+        new NsiItem(
             DisplayName: @"タイヨー（南関東）",
             Id: @"taiyo-801a3e",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11315814", [@"shop"] = @"supermarket", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"タイヨー", [@"brand:en"] = @"Taiyo", [@"brand:ja"] = @"タイヨー", [@"brand:wikidata"] = @"Q11315814", [@"name"] = @"タイヨー", [@"name:en"] = @"Taiyo", [@"name:ja"] = @"タイヨー", [@"shop"] = @"supermarket", },
             Terms: [@"タイヨー（南関東）", @"taiyo", @"タイヨー"]),
+        new NsiItem(
+            DisplayName: @"トウズ",
+            Id: @"tous-96fdfa",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q53308796", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"トウズ", [@"brand:en"] = @"Tou's", [@"brand:ja"] = @"トウズ", [@"brand:wikidata"] = @"Q53308796", [@"name"] = @"トウズ", [@"name:en"] = @"Tou's", [@"name:ja"] = @"トウズ", [@"shop"] = @"supermarket", },
+            Terms: [@"tou's", @"トウズ"]),
+        new NsiItem(
+            DisplayName: @"ピーコックストア",
+            Id: @"peacockstore-d02e4f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11331715", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"PEACOCK STORE", [@"brand:en"] = @"PEACOCK STORE", [@"brand:ja"] = @"ピーコックストア", [@"brand:wikidata"] = @"Q11331715", [@"name"] = @"ピーコックストア", [@"name:en"] = @"Peacock Store", [@"name:ja"] = @"ピーコックストア", [@"shop"] = @"supermarket", },
+            Terms: [@"peacock store", @"ピーコックストア"]),
+        new NsiItem(
+            DisplayName: @"ベルクス",
+            Id: @"belx-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11305967", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ベルクス", [@"brand:en"] = @"Bel'x", [@"brand:ja"] = @"ベルクス", [@"brand:wikidata"] = @"Q11305967", [@"name"] = @"ベルクス", [@"name:en"] = @"Bel'x", [@"name:ja"] = @"ベルクス", [@"shop"] = @"supermarket", },
+            Terms: [@"bel'x", @"ベルクス"]),
+        new NsiItem(
+            DisplayName: @"ワイズマート",
+            Id: @"ysmart-d02e4f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11351175", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ワイズマート", [@"brand:en"] = @"Y'smart", [@"brand:ja"] = @"ワイズマート", [@"brand:wikidata"] = @"Q11351175", [@"name"] = @"ワイズマート", [@"name:en"] = @"Y'smart", [@"name:ja"] = @"ワイズマート", [@"shop"] = @"supermarket", },
+            Terms: [@"y'smart", @"よしのぶっさん", @"ワイズマート", @"吉野物産"]),
+        new NsiItem(
+            DisplayName: @"東武ストア",
+            Id: @"tobustore-692411",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11527478", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"東武ストア", [@"brand:en"] = @"Tobu Store", [@"brand:ja"] = @"東武ストア", [@"brand:wikidata"] = @"Q11527478", [@"name"] = @"東武ストア", [@"name:en"] = @"Tobu Store", [@"name:ja"] = @"東武ストア", [@"shop"] = @"supermarket", },
+            Terms: [@"tobu store", @"東武ストア"]),
         new NsiItem(
             DisplayName: @"八千代市",
             Id: @"94b900-24905e",

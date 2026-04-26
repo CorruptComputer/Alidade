@@ -16,8 +16,8 @@ public static class NsiRegion_IT_72_GEOJSON
         new NsiItem(
             DisplayName: @"AMTS (Benevento)",
             Id: @"amts-c4e26d",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q3601034", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"AMTS", [@"network:wikidata"] = @"Q3601034", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q105086527", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"AMTS", [@"network:wikidata"] = @"Q105086527", [@"public_transport"] = @"platform", },
             Terms: [@"AMTS (Benevento)", @"amts"]),
         new NsiItem(
             DisplayName: @"Azienda Napoletana Mobilità",
@@ -34,8 +34,8 @@ public static class NsiRegion_IT_72_GEOJSON
         new NsiItem(
             DisplayName: @"AMTS (Benevento)",
             Id: @"amts-df91b6",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q3601034", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"AMTS", [@"network:wikidata"] = @"Q3601034", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q105086527", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"AMTS", [@"network:wikidata"] = @"Q105086527", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"AMTS (Benevento)", @"amts"]),
         new NsiItem(
             DisplayName: @"Azienda Napoletana Mobilità",

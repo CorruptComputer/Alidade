@@ -140,6 +140,12 @@ public static class NsiRegion_UA
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Укр-Петроль", [@"brand:wikidata"] = @"Q117706274", },
             Terms: [@"ukr-petrol", @"пп ""укр-петроль""", @"укр-петроль"]),
         new NsiItem(
+            DisplayName: @"àbank",
+            Id: @"abank-968b58",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q28705400", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"àbank", [@"brand:en"] = @"àbank", [@"brand:uk"] = @"а̀банк", [@"brand:wikidata"] = @"Q28705400", [@"operator"] = @"àbank", [@"operator:wikidata"] = @"Q28705400", },
+            Terms: [@"àbank", @"accent-bank", @"àбанк", @"а-банк", @"а̀банк", @"акцент-банк"]),
+        new NsiItem(
             DisplayName: @"ComInBank",
             Id: @"cominbank-968b58",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q116871124", },
@@ -223,12 +229,6 @@ public static class NsiRegion_UA
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q12164628", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Universal Bank", [@"brand:en"] = @"Universal Bank", [@"brand:uk"] = @"Універсал Банк", [@"brand:wikidata"] = @"Q12164628", [@"operator"] = @"Universal Bank", [@"operator:wikidata"] = @"Q12164628", },
             Terms: [@"monobank", @"universal bank", @"точка видачі monobank", @"точка видачі monobank | universal bank", @"універсал банк"]),
-        new NsiItem(
-            DisplayName: @"а̀банк",
-            Id: @"abank-968b58",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q28705400", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"а̀банк", [@"brand:en"] = @"àbank", [@"brand:uk"] = @"а̀банк", [@"brand:wikidata"] = @"Q28705400", [@"operator"] = @"а̀банк", [@"operator:wikidata"] = @"Q28705400", },
-            Terms: [@"àbank", @"accent-bank", @"àбанк", @"а-банк", @"а̀банк", @"акцент-банк"]),
         new NsiItem(
             DisplayName: @"Акордбанк",
             Id: @"accordbank-968b58",
@@ -314,6 +314,12 @@ public static class NsiRegion_UA
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Укрексімбанк", [@"brand:en"] = @"Ukreximbank", [@"brand:uk"] = @"Укрексімбанк", [@"brand:wikidata"] = @"Q4470728", [@"operator"] = @"Укрексімбанк", [@"operator:wikidata"] = @"Q4470728", },
             Terms: [@"exim-банк", @"ukrexim", @"ukreximbank", @"ат укрексімбанк", @"укрексім", @"укрексімбанк"]),
         new NsiItem(
+            DisplayName: @"àbank",
+            Id: @"abank-c8dc19",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q28705400", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"àbank", [@"brand:en"] = @"àbank", [@"brand:uk"] = @"а̀банк", [@"brand:wikidata"] = @"Q28705400", [@"name"] = @"àbank", [@"name:en"] = @"àbank", [@"name:uk"] = @"а̀банк", },
+            Terms: [@"àbank", @"accent-bank", @"àбанк", @"а-банк", @"а̀банк", @"акцент-банк"]),
+        new NsiItem(
             DisplayName: @"ComInBank",
             Id: @"cominbank-c8dc19",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q116871124", },
@@ -397,12 +403,6 @@ public static class NsiRegion_UA
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q12164628", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Universal Bank", [@"brand:en"] = @"Universal Bank", [@"brand:uk"] = @"Універсал Банк", [@"brand:wikidata"] = @"Q12164628", [@"name"] = @"Universal Bank", [@"name:en"] = @"Universal Bank", [@"name:uk"] = @"Універсал Банк", },
             Terms: [@"monobank", @"universal bank", @"точка видачі monobank", @"точка видачі monobank | universal bank", @"універсал банк"]),
-        new NsiItem(
-            DisplayName: @"а̀банк",
-            Id: @"abank-c8dc19",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q28705400", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"а̀банк", [@"brand:en"] = @"àbank", [@"brand:uk"] = @"а̀банк", [@"brand:wikidata"] = @"Q28705400", [@"name"] = @"а̀банк", [@"name:en"] = @"àbank", [@"name:uk"] = @"а̀банк", },
-            Terms: [@"àbank", @"accent-bank", @"àбанк", @"а-банк", @"а̀банк", @"акцент-банк"]),
         new NsiItem(
             DisplayName: @"Акордбанк",
             Id: @"accordbank-c8dc19",
@@ -529,12 +529,6 @@ public static class NsiRegion_UA
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q122241258", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Львівська Майстерня Шоколаду", [@"brand:en"] = @"Lviv Handmade Chocolate", [@"brand:uk"] = @"Львівська Майстерня Шоколаду", [@"brand:wikidata"] = @"Q122241258", [@"cuisine"] = @"chocolate", [@"name"] = @"Львівська Майстерня Шоколаду", [@"name:en"] = @"Lviv Handmade Chocolate", [@"name:uk"] = @"Львівська Майстерня Шоколаду", [@"takeaway"] = @"yes", },
             Terms: [@"lviv chocolate factory", @"lviv handmade chocolate", @"львівська майстерня шоколаду"]),
-        new NsiItem(
-            DisplayName: @"Франс.уа",
-            Id: @"ad3ee0-d74022",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q122361953", [@"cuisine"] = @"coffee_shop", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Франс.уа", [@"brand:wikidata"] = @"Q122361953", [@"cuisine"] = @"coffee_shop", [@"name"] = @"Франс.уа", [@"takeaway"] = @"yes", },
-            Terms: [@"frans.ua", @"франс.уа"]),
         new NsiItem(
             DisplayName: @"AS 24",
             Id: @"as24-d24fa4",
@@ -1225,6 +1219,12 @@ public static class NsiRegion_UA
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q117705965", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Сімейна пекарня", [@"brand:wikidata"] = @"Q117705965", [@"name"] = @"Сімейна пекарня", [@"shop"] = @"bakery", },
             Terms: [@"family bakery", @"сімейна пекарня"]),
+        new NsiItem(
+            DisplayName: @"Франс.уа",
+            Id: @"ad3ee0-3664c0",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q122361953", [@"shop"] = @"bakery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Франс.уа", [@"brand:wikidata"] = @"Q122361953", [@"name"] = @"Франс.уа", [@"shop"] = @"bakery", [@"takeaway"] = @"yes", },
+            Terms: [@"frans.ua", @"франс.уа"]),
         new NsiItem(
             DisplayName: @"Цар Хліб",
             Id: @"9f4099-3664c0",
@@ -2048,10 +2048,10 @@ public static class NsiRegion_UA
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fozzy", [@"brand:wikidata"] = @"Q12063200", [@"name"] = @"Fozzy", [@"shop"] = @"wholesale", },
             Terms: [@"fozzy", @"фоззі"]),
         new NsiItem(
-            DisplayName: @"METRO",
+            DisplayName: @"Metro",
             Id: @"metro-09b7b7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q13610282", [@"shop"] = @"wholesale", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"METRO", [@"shop"] = @"wholesale", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"METRO", [@"brand:wikidata"] = @"Q13610282", [@"name"] = @"Metro", [@"shop"] = @"wholesale", },
             Terms: [@"metro", @"metro cash & carry"]),
         new NsiItem(
             DisplayName: @"OKWINE",

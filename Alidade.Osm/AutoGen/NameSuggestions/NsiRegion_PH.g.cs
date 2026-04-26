@@ -380,6 +380,12 @@ public static class NsiRegion_PH
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"cuisine"] = @"coffee_shop", [@"name"] = @"IKEA Café", [@"takeaway"] = @"yes", },
             Terms: [@"IKEA Café", @"ikea"]),
         new NsiItem(
+            DisplayName: @"Macao Imperial Tea",
+            Id: @"macaoimperialtea-5ac393",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q137921377", [@"cuisine"] = @"bubble_tea", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"Macao Imperial Tea", [@"brand:en"] = @"Macao Imperial Tea", [@"brand:wikidata"] = @"Q137921377", [@"brand:zh"] = @"澳門皇茶", [@"cuisine"] = @"bubble_tea", [@"name"] = @"Macao Imperial Tea", [@"takeaway"] = @"yes", },
+            Terms: [@"macao imperial tea", @"澳門皇茶"]),
+        new NsiItem(
             DisplayName: @"Mixue Ice Cream & Tea",
             Id: @"mixue-930f31",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand:wikidata"] = @"Q107406476", [@"cuisine"] = @"ice_cream;bubble_tea", },
@@ -436,8 +442,8 @@ public static class NsiRegion_PH
         new NsiItem(
             DisplayName: @"Baliwag",
             Id: @"baliwag-33d36e",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q120755696", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Baliwag", [@"brand:wikidata"] = @"Q120755696", [@"cuisine"] = @"barbecue;filipino", [@"name"] = @"Baliwag", [@"takeaway"] = @"yes", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q120755696", [@"cuisine"] = @"barbecue;filipino;chicken", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Baliwag", [@"brand:wikidata"] = @"Q120755696", [@"cuisine"] = @"barbecue;filipino;chicken", [@"name"] = @"Baliwag", [@"takeaway"] = @"yes", },
             Terms: [@"baliwag", @"baliwag lechon"]),
         new NsiItem(
             DisplayName: @"Burger Machine",
@@ -531,7 +537,7 @@ public static class NsiRegion_PH
             Terms: [@"myungrang hotdog", @"명랑핫도그"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -729,7 +735,7 @@ public static class NsiRegion_PH
             Terms: [@"classic savory"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -770,6 +776,12 @@ public static class NsiRegion_PH
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Max's Restaurant", [@"brand:wikidata"] = @"Q6794477", [@"cuisine"] = @"asian", [@"name"] = @"Max's Restaurant", },
             Terms: [@"max's", @"max's restaurant"]),
         new NsiItem(
+            DisplayName: @"Pancake House",
+            Id: @"pancakehouse-5259a4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q138635080", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Pancake House", [@"brand:wikidata"] = @"Q138635080", [@"cuisine"] = @"regional;filipino;pancake", [@"name"] = @"Pancake House", },
+            Terms: [@"pancake house"]),
+        new NsiItem(
             DisplayName: @"Phở Hòa",
             Id: @"phohoa-13c988",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q55629932", [@"cuisine"] = @"vietnamese;noodle", },
@@ -781,6 +793,12 @@ public static class NsiRegion_PH
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q662845", [@"cuisine"] = @"pizza", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"PizzaExpress", [@"brand:wikidata"] = @"Q662845", [@"cuisine"] = @"pizza", [@"name"] = @"PizzaExpress", },
             Terms: [@"pizzaexpress"]),
+        new NsiItem(
+            DisplayName: @"S&R New York Style Pizza",
+            Id: @"sandrnewyorkstylepizza-5259a4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q138635110", [@"cuisine"] = @"pizza", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"S&R New York Style Pizza", [@"brand:wikidata"] = @"Q138635110", [@"cuisine"] = @"pizza", [@"name"] = @"S&R New York Style Pizza", },
+            Terms: [@"s&r new york style pizza", @"s&r pizza"]),
         new NsiItem(
             DisplayName: @"やよい軒",
             Id: @"yayoiken-73219d",
@@ -1756,8 +1774,8 @@ public static class NsiRegion_PH
         new NsiItem(
             DisplayName: @"National Economic and Development Authority",
             Id: @"nationaleconomicanddevelopmentauthority-7987d4",
-            Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q6972376", },
-            AddTags: new Dictionary<string, string> { [@"government"] = @"agency", [@"office"] = @"government", [@"operator"] = @"National Economic and Development Authority", [@"operator:en"] = @"National Economic and Development Authority", [@"operator:short"] = @"NEDA", [@"operator:tl"] = @"Pambansang Pangasiwaan sa Kabuhayan at Pagpapaunlad", [@"operator:wikidata"] = @"Q6972376", },
+            Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q134305440", },
+            AddTags: new Dictionary<string, string> { [@"government"] = @"agency", [@"office"] = @"government", [@"operator"] = @"National Economic and Development Authority", [@"operator:en"] = @"National Economic and Development Authority", [@"operator:short"] = @"NEDA", [@"operator:tl"] = @"Pambansang Pangasiwaan sa Kabuhayan at Pagpapaunlad", [@"operator:wikidata"] = @"Q134305440", },
             Terms: [@"national economic and development authority", @"neda", @"pambansang pangasiwaan sa kabuhayan at pagpapaunlad"]),
         new NsiItem(
             DisplayName: @"National Police Commission",

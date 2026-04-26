@@ -38,12 +38,6 @@ public static class NsiRegion_CA_MB_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Liquor Mart", [@"brand:wikidata"] = @"Q124030913", [@"name"] = @"Liquor Mart", [@"operator"] = @"Manitoba Liquor & Lotteries Corporation", [@"operator:short"] = @"MBLL", [@"operator:wikidata"] = @"Q29467564", [@"shop"] = @"alcohol", },
             Terms: [@"liquor mart", @"manitoba liquor & lotteries corporation", @"manitoba liquor control commission", @"mbll", @"mlcc", @"mllc"]),
         new NsiItem(
-            DisplayName: @"Rona+",
-            Id: @"rona-381944",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123688669", [@"shop"] = @"doityourself", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona+", [@"brand:wikidata"] = @"Q123688669", [@"name"] = @"Rona+", [@"shop"] = @"doityourself", },
-            Terms: [@"lowes", @"réno-dépôt", @"rona+"]),
-        new NsiItem(
             DisplayName: @"S&H Health Foods",
             Id: @"sandhhealthfoods-59b094",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133255776", [@"shop"] = @"health_food", },

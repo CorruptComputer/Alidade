@@ -16,8 +16,8 @@ public static class NsiRegion_002
         new NsiItem(
             DisplayName: @"Oilibya",
             Id: @"oilibya-11febf",
-            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q7081491", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Oilibya", [@"brand:wikidata"] = @"Q7081491", },
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q126916526", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Oilibya", [@"brand:wikidata"] = @"Q126916526", },
             Terms: [@"oilibia", @"oilibiya", @"oilibya", @"oillibia", @"oilliby", @"oillibya", @"oillybia", @"oilybia", @"olibya", @"olybia"]),
         new NsiItem(
             DisplayName: @"Stanbic Bank",
@@ -34,8 +34,8 @@ public static class NsiRegion_002
         new NsiItem(
             DisplayName: @"Oilibya",
             Id: @"oilibya-5288c9",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q7081491", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Oilibya", [@"brand:wikidata"] = @"Q7081491", [@"name"] = @"Oilibya", [@"name:ar"] = @"أويليبيا", [@"name:en"] = @"Oilibya", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q126916526", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Oilibya", [@"brand:wikidata"] = @"Q126916526", [@"name"] = @"Oilibya", [@"name:ar"] = @"أويليبيا", [@"name:en"] = @"Oilibya", },
             Terms: [@"oilibia", @"oilibiya", @"oilibya", @"oillibia", @"oilliby", @"oillibya", @"oillybia", @"oilybia", @"olibya", @"olybia", @"أويليبيا"]),
     ];
 }

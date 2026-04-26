@@ -116,6 +116,12 @@ public static class NsiRegion_DE_SL_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Creos Deutschland", [@"operator:wikidata"] = @"Q19900544", },
             Terms: [@"creos", @"creos deutschland"]),
         new NsiItem(
+            DisplayName: @"Inexio",
+            Id: @"inexio-367b86",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q135997243", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Inexio", [@"operator:wikidata"] = @"Q135997243", [@"utility"] = @"telecom", },
+            Terms: [@"inexio", @"inexio breitband gmbh"]),
+        new NsiItem(
             DisplayName: @"Stadtwerke Saarbrücken",
             Id: @"stadtwerkesaarbrucken-367b86",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q1718530", },
@@ -194,6 +200,12 @@ public static class NsiRegion_DE_SL_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"VSE", [@"operator:wikidata"] = @"Q15852339", [@"power"] = @"pole", },
             Terms: [@"vse"]),
         new NsiItem(
+            DisplayName: @"Gemeindewerke Wadgassen",
+            Id: @"gemeindewerkewadgassen-af21d1",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427466", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Gemeindewerke Wadgassen", [@"operator:short"] = @"GWW", [@"operator:wikidata"] = @"Q138427466", [@"power"] = @"substation", },
+            Terms: [@"gemeindewerke wadgassen", @"gww"]),
+        new NsiItem(
             DisplayName: @"Stadtwerke Saarbrücken",
             Id: @"stadtwerkesaarbrucken-af21d1",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1718530", [@"power"] = @"substation", },
@@ -211,6 +223,12 @@ public static class NsiRegion_DE_SL_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q15852339", [@"power"] = @"tower", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"VSE", [@"operator:wikidata"] = @"Q15852339", [@"power"] = @"tower", },
             Terms: [@"vse"]),
+        new NsiItem(
+            DisplayName: @"Gemeindewerke Wadgassen",
+            Id: @"gemeindewerkewadgassen-32e7ba",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138427466", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Gemeindewerke Wadgassen", [@"operator:short"] = @"GWW", [@"operator:wikidata"] = @"Q138427466", [@"power"] = @"transformer", },
+            Terms: [@"gemeindewerke wadgassen", @"gww"]),
         new NsiItem(
             DisplayName: @"Stadtwerke Saarbrücken",
             Id: @"stadtwerkesaarbrucken-32e7ba",

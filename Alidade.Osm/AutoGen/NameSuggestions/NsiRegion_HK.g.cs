@@ -507,7 +507,7 @@ public static class NsiRegion_HK
             Terms: [@"marugame seimen", @"丸亀製麵", @"丸亀製麺"]),
         new NsiItem(
             DisplayName: @"八方雲集 Bafang Dumpling",
-            Id: @"bafangdumpling-dd590e",
+            Id: @"bafangdumpling-17dd9a",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q28417381", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"八方雲集 Bafang Dumpling", [@"brand:en"] = @"Bafang Dumpling", [@"brand:wikidata"] = @"Q28417381", [@"brand:zh"] = @"八方雲集", [@"brand:zh-Hans"] = @"八方云集", [@"brand:zh-Hant"] = @"八方雲集", [@"cuisine"] = @"dumplings", [@"name"] = @"八方雲集 Bafang Dumpling", [@"name:en"] = @"Bafang Dumpling", [@"name:zh"] = @"八方雲集", [@"name:zh-Hans"] = @"八方云集", [@"name:zh-Hant"] = @"八方雲集", [@"takeaway"] = @"yes", },
             Terms: [@"bafang dumpling", @"八方云集", @"八方雲集", @"八方雲集 bafang dumpling"]),
@@ -717,7 +717,7 @@ public static class NsiRegion_HK
             Terms: [@"bubba gump shrimp company"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -1765,6 +1765,12 @@ public static class NsiRegion_HK
             Tags: new Dictionary<string, string> { [@"man_made"] = @"reservoir_covered", [@"operator:wikidata"] = @"Q7224120", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"reservoir_covered", [@"operator"] = @"水務署 Water Supplies Department", [@"operator:en"] = @"Water Supplies Department", [@"operator:wikidata"] = @"Q7224120", [@"operator:zh"] = @"水務署", },
             Terms: [@"water supplies department", @"wsd", @"水務署", @"水務署 water supplies department"]),
+        new NsiItem(
+            DisplayName: @"運輸署 Transport Department",
+            Id: @"transportdepartment-426b42",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q2355889", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"運輸署 Transport Department", [@"operator:en"] = @"Transport Department", [@"operator:short:en"] = @"TD", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q2355889", [@"operator:zh"] = @"運輸署", },
+            Terms: [@"td", @"transport department", @"運輸署", @"運輸署 transport department"]),
         new NsiItem(
             DisplayName: @"渠務署 Drainage Services Department",
             Id: @"drainageservicesdepartment-942386",

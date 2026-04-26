@@ -254,6 +254,12 @@ public static class NsiRegion_US_IL_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Aloha Pokē Co", [@"brand:wikidata"] = @"Q111231031", [@"cuisine"] = @"poke", [@"name"] = @"Aloha Pokē Co", [@"takeaway"] = @"yes", },
             Terms: [@"aloha pokē co"]),
         new NsiItem(
+            DisplayName: @"Brown's Chicken",
+            Id: @"brownschicken-0e88aa",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q4975925", [@"cuisine"] = @"chicken", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Brown's Chicken", [@"brand:wikidata"] = @"Q4975925", [@"cuisine"] = @"chicken", [@"name"] = @"Brown's Chicken", [@"takeaway"] = @"yes", },
+            Terms: [@"brown's chicken"]),
+        new NsiItem(
             DisplayName: @"Buona",
             Id: @"buona-8ba3f5",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q23461372", },

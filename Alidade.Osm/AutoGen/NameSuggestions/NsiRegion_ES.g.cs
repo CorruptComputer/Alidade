@@ -572,8 +572,14 @@ public static class NsiRegion_ES
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"casino", [@"brand"] = @"Codere", [@"brand:wikidata"] = @"Q2918415", [@"name"] = @"Codere", },
             Terms: [@"codere"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-a1174d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q126913632", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -789,7 +795,7 @@ public static class NsiRegion_ES
             Terms: [@"Sushi Shop (Europe)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1322,8 +1328,14 @@ public static class NsiRegion_ES
             AddTags: new Dictionary<string, string> { [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"leisure"] = @"indoor_play", [@"name"] = @"Småland", },
             Terms: [@"IKEA Småland", @"ikea"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-f43120",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -1653,7 +1665,7 @@ public static class NsiRegion_ES
             Terms: [@"drogeriemarkt müller", @"müller"]),
         new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),
@@ -1930,20 +1942,20 @@ public static class NsiRegion_ES
         new NsiItem(
             DisplayName: @"Simply Basic",
             Id: @"simplybasic-dd9aae",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5643014", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Simply Basic", [@"brand:wikidata"] = @"Q5643014", [@"name"] = @"Simply Basic", [@"shop"] = @"convenience", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2832081", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Simply Basic", [@"brand:wikidata"] = @"Q2832081", [@"name"] = @"Simply Basic", [@"shop"] = @"convenience", },
             Terms: [@"simply basic"]),
         new NsiItem(
             DisplayName: @"Simply City",
             Id: @"simplycity-dd9aae",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5643014", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Simply City", [@"brand:wikidata"] = @"Q5643014", [@"name"] = @"Simply City", [@"shop"] = @"convenience", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2832081", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Simply City", [@"brand:wikidata"] = @"Q2832081", [@"name"] = @"Simply City", [@"shop"] = @"convenience", },
             Terms: [@"simply city"]),
         new NsiItem(
             DisplayName: @"Simply Store",
             Id: @"simplystore-dd9aae",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5643014", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Simply Store", [@"brand:wikidata"] = @"Q5643014", [@"name"] = @"Simply Store", [@"shop"] = @"convenience", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2832081", [@"shop"] = @"convenience", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Simply Store", [@"brand:wikidata"] = @"Q2832081", [@"name"] = @"Simply Store", [@"shop"] = @"convenience", },
             Terms: [@"simply store"]),
         new NsiItem(
             DisplayName: @"Supercor",
@@ -2307,7 +2319,7 @@ public static class NsiRegion_ES
             Terms: [@"Multiópticas (España)", @"multiópticas"]),
         new NsiItem(
             DisplayName: @"Optical Center",
-            Id: @"opticalcenter-7f892a",
+            Id: @"opticalcenter-efdbe9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
             Terms: [@"optical center"]),
@@ -3434,6 +3446,12 @@ public static class NsiRegion_ES
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"operator"] = @"Korian", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q3198944", },
             Terms: [@"korian"]),
         new NsiItem(
+            DisplayName: @"Renfe",
+            Id: @"renfe-d94bff",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"operator:wikidata"] = @"Q2476154", [@"vending"] = @"public_transport_tickets", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"vending_machine", [@"operator"] = @"Renfe", [@"operator:wikidata"] = @"Q2476154", [@"vending"] = @"public_transport_tickets", },
+            Terms: [@"renfe", @"renfe operadora"]),
+        new NsiItem(
             DisplayName: @"Ejército del Aire y del Espacio",
             Id: @"ejercitodelaireydelespacio-e4da8b",
             Tags: new Dictionary<string, string> { [@"landuse"] = @"military", [@"operator:wikidata"] = @"Q833218", },
@@ -3927,7 +3945,7 @@ public static class NsiRegion_ES
             Terms: [@"alsa"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
+            Id: @"arriva-b74934",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             Terms: [@"arriva"]),
@@ -4011,7 +4029,7 @@ public static class NsiRegion_ES
             Terms: [@"alsa"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
+            Id: @"arriva-d898fa",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"arriva"]),

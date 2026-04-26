@@ -968,6 +968,12 @@ public static class NsiRegion_CA
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"cuisine"] = @"swedish", [@"name"] = @"IKEA Restaurant", [@"name:en"] = @"IKEA Restaurant", [@"name:ru"] = @"Ресторан ИКЕА", [@"takeaway"] = @"yes", },
             Terms: [@"ikea", @"ikea restaurant", @"ресторан икеа"]),
         new NsiItem(
+            DisplayName: @"Jersey Mike's Subs",
+            Id: @"jerseymikessubs-53d9d9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q6184897", [@"cuisine"] = @"sandwich", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Jersey Mike's Subs", [@"brand:wikidata"] = @"Q6184897", [@"cuisine"] = @"sandwich", [@"name"] = @"Jersey Mike's Subs", [@"short_name"] = @"Jersey Mike's", [@"takeaway"] = @"yes", },
+            Terms: [@"jersey mike's", @"jersey mike's subs"]),
+        new NsiItem(
             DisplayName: @"Jimmy the Greek",
             Id: @"jimmythegreek-bf41de",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q17077817", },
@@ -1173,7 +1179,7 @@ public static class NsiRegion_CA
             Terms: [@"Sushi Shop (Canada)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -1924,8 +1930,8 @@ public static class NsiRegion_CA
         new NsiItem(
             DisplayName: @"Shi Miao Dao Yunnan Rice Noodle",
             Id: @"shimiaodaoyunnanricenoodle-85c92c",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese", [@"name"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese;noodle", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese;noodle", [@"name"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
             Terms: [@"shi miao dao yunnan rice noodle", @"shiaomaodao yunnan noodles", @"十秒到云南过桥米线"]),
         new NsiItem(
             DisplayName: @"Shoeless Joe's",
@@ -2020,8 +2026,8 @@ public static class NsiRegion_CA
         new NsiItem(
             DisplayName: @"Yunshang Rice Noodle",
             Id: @"yunshangricenoodle-85c92c",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"noodle", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Yunshang Rice Noodle", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"noodle", [@"name"] = @"Yunshang Rice Noodle", [@"name:en"] = @"Yunshang Rice Noodle", [@"name:zh"] = @"云尚过桥米线", [@"name:zh-Hans"] = @"云尚过桥米线", [@"name:zh-Hant"] = @"雲尚過橋米綫", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"chinese;noodle", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Yunshang Rice Noodle", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"chinese;noodle", [@"name"] = @"Yunshang Rice Noodle", [@"name:en"] = @"Yunshang Rice Noodle", [@"name:zh"] = @"云尚过桥米线", [@"name:zh-Hans"] = @"云尚过桥米线", [@"name:zh-Hant"] = @"雲尚過橋米綫", },
             Terms: [@"yunshang rice noodle", @"云尚过桥米线", @"雲尚過橋米綫"]),
         new NsiItem(
             DisplayName: @"杨国福麻辣烫",
@@ -2209,6 +2215,12 @@ public static class NsiRegion_CA
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q121935489", [@"craft"] = @"glaziery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Glass Doctor", [@"brand:wikidata"] = @"Q121935489", [@"craft"] = @"glaziery", [@"name"] = @"Glass Doctor", },
             Terms: [@"glass doctor"]),
+        new NsiItem(
+            DisplayName: @"CertaPro Painters",
+            Id: @"certapropainters-e498ae",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q121338146", [@"craft"] = @"painter", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"CertaPro Painters", [@"brand:wikidata"] = @"Q121338146", [@"craft"] = @"painter", [@"name"] = @"CertaPro Painters", },
+            Terms: [@"certapro painters"]),
         new NsiItem(
             DisplayName: @"Mr. Rooter",
             Id: @"mrrooter-a0d14d",
@@ -2696,6 +2708,12 @@ public static class NsiRegion_CA
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Goldilocks", [@"brand:wikidata"] = @"Q5580198", [@"name"] = @"Goldilocks", [@"shop"] = @"bakery", },
             Terms: [@"goldilocks"]),
         new NsiItem(
+            DisplayName: @"Paris Baguette",
+            Id: @"parisbaguette-f87f10",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62605260", [@"shop"] = @"bakery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Paris Baguette", [@"brand:wikidata"] = @"Q62605260", [@"name"] = @"Paris Baguette", [@"shop"] = @"bakery", },
+            Terms: [@"paris baguette", @"paris baguette cafe"]),
+        new NsiItem(
             DisplayName: @"Valerio's Tropical Bakeshop",
             Id: @"valeriostropicalbakeshop-515502",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q125537872", [@"shop"] = @"bakery", },
@@ -3169,6 +3187,12 @@ public static class NsiRegion_CA
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q65947984", [@"shop"] = @"clothes", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Bootlegger", [@"brand:wikidata"] = @"Q65947984", [@"clothes"] = @"women", [@"name"] = @"Bootlegger", [@"shop"] = @"clothes", },
             Terms: [@"bootlegger"]),
+        new NsiItem(
+            DisplayName: @"Carter's OshKosh",
+            Id: @"cartersoshkosh-9e1367",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5047083", [@"shop"] = @"clothes", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Carter's", [@"brand:wikidata"] = @"Q5047083", [@"name"] = @"Carter's OshKosh", [@"shop"] = @"clothes", },
+            Terms: [@"Carter's OshKosh", @"carter's"]),
         new NsiItem(
             DisplayName: @"Cleo",
             Id: @"cleo-9e1367",
@@ -3816,7 +3840,7 @@ public static class NsiRegion_CA
             Id: @"rona-fd1fd9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3415283", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona", [@"brand:wikidata"] = @"Q3415283", [@"name"] = @"Rona", [@"shop"] = @"doityourself", },
-            Terms: [@"rona"]),
+            Terms: [@"lowes", @"réno-dépôt", @"rona"]),
         new NsiItem(
             DisplayName: @"The Home Depot",
             Id: @"thehomedepot-00d2a0",
@@ -4485,7 +4509,7 @@ public static class NsiRegion_CA
             Terms: [@"lenscrafters"]),
         new NsiItem(
             DisplayName: @"Optical Center",
-            Id: @"opticalcenter-7f892a",
+            Id: @"opticalcenter-efdbe9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
             Terms: [@"optical center"]),

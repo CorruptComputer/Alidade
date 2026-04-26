@@ -107,14 +107,8 @@ public static class NsiRegion_ES_A_GEOJSON
             DisplayName: @"TRAM Metropolità d'Alacant",
             Id: @"trammetropolitadalacant-aa7621",
             Tags: new Dictionary<string, string> { [@"light_rail"] = @"yes", [@"network:wikidata"] = @"Q2063567", [@"public_transport"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"light_rail"] = @"yes", [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"light_rail", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
-        new NsiItem(
-            DisplayName: @"TRAM Metropolità d'Alacant",
-            Id: @"trammetropolitadalacant-221aed",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q2063567", [@"public_transport"] = @"station", [@"subway"] = @"yes", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"subway", [@"subway"] = @"yes", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
+            AddTags: new Dictionary<string, string> { [@"light_rail"] = @"yes", [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"station"] = @"light_rail", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
         new NsiItem(
             DisplayName: @"Cercanías Murcia/Alicante",
             Id: @"cercaniasmurciaalicante-ea6fae",
@@ -131,8 +125,8 @@ public static class NsiRegion_ES_A_GEOJSON
             DisplayName: @"TRAM Metropolità d'Alacant",
             Id: @"trammetropolitadalacant-2f1090",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q2063567", [@"railway"] = @"tram_stop", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"railway"] = @"tram_stop", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"railway"] = @"tram_stop", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
         new NsiItem(
             DisplayName: @"Autobusos Urbans d'Elx",
             Id: @"autobusosurbansdelx-34543c",
@@ -161,14 +155,8 @@ public static class NsiRegion_ES_A_GEOJSON
             DisplayName: @"TRAM Metropolità d'Alacant",
             Id: @"trammetropolitadalacant-4005c4",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q2063567", [@"route"] = @"light_rail", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"light_rail", [@"type"] = @"route", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
-        new NsiItem(
-            DisplayName: @"TRAM Metropolità d'Alacant",
-            Id: @"trammetropolitadalacant-120cc8",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q2063567", [@"route"] = @"subway", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"subway", [@"type"] = @"route", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"light_rail", [@"type"] = @"route", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
         new NsiItem(
             DisplayName: @"Cercanías Murcia/Alicante",
             Id: @"cercaniasmurciaalicante-ec7a72",
@@ -185,7 +173,7 @@ public static class NsiRegion_ES_A_GEOJSON
             DisplayName: @"TRAM Metropolità d'Alacant",
             Id: @"trammetropolitadalacant-7da580",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q2063567", [@"route"] = @"tram", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"tram", [@"type"] = @"route", },
-            Terms: [@"ferrocarrils de la generalitat valenciana", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"TRAM Metropolità d'Alacant", [@"network:wikidata"] = @"Q2063567", [@"operator"] = @"Ferrocarrils de la Generalitat Valenciana", [@"operator:short"] = @"FGV", [@"operator:wikidata"] = @"Q750832", [@"route"] = @"tram", [@"type"] = @"route", },
+            Terms: [@"ferrocarrils de la generalitat valenciana", @"fgv", @"tram", @"tram alicante", @"tram metropolità d'alacant", @"tram metropolitano de alicante"]),
     ];
 }

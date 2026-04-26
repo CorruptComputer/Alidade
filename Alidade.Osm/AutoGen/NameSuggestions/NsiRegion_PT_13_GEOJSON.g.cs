@@ -20,6 +20,12 @@ public static class NsiRegion_PT_13_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Agrupamento de Escolas Carmen Miranda", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q131446678", },
             Terms: [@"agrupamento de escolas carmen miranda", @"agrupamento de escolas carmen miranda, marco de canaveses"]),
         new NsiItem(
+            DisplayName: @"Agrupamento de Escolas D. Dinis",
+            Id: @"agrupamentodeescolasddinis-bd750b",
+            Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q138329563", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"school", [@"education"] = @"school", [@"operator"] = @"Agrupamento de Escolas D. Dinis", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q138329563", },
+            Terms: [@"agrupamento de escolas d. dinis", @"agrupamento de escolas d. dinis, santo tirso"]),
+        new NsiItem(
             DisplayName: @"Agrupamento de Escolas D. Pedro IV",
             Id: @"agrupamentodeescolasdpedroiv-bd750b",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q131446683", },

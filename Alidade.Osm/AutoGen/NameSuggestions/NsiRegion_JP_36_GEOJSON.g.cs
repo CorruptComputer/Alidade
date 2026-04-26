@@ -14,6 +14,12 @@ public static class NsiRegion_JP_36_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"キョーエイ",
+            Id: @"kyoei-67973a",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11297581", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"キョーエイ", [@"brand:en"] = @"Kyoei", [@"brand:ja"] = @"キョーエイ", [@"brand:wikidata"] = @"Q11297581", [@"name"] = @"キョーエイ", [@"name:en"] = @"Kyoei", [@"name:ja"] = @"キョーエイ", [@"shop"] = @"supermarket", },
+            Terms: [@"kyoei", @"キョーエイ"]),
+        new NsiItem(
             DisplayName: @"四国電力",
             Id: @"shikokuelectricpowercompany-085b02",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q388455", [@"power"] = @"generator", },

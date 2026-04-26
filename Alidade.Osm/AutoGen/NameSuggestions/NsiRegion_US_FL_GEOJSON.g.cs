@@ -236,6 +236,12 @@ public static class NsiRegion_US_FL_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"GATE", [@"brand:wikidata"] = @"Q5526991", [@"name"] = @"GATE Express Car Wash", },
             Terms: [@"GATE Express Car Wash", @"gate", @"gate petroleum"]),
         new NsiItem(
+            DisplayName: @"FPL EVolution",
+            Id: @"fplevolution-66b127",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q138574160", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"FPL EVolution", [@"brand:wikidata"] = @"Q138574160", [@"name"] = @"FPL EVolution", },
+            Terms: [@"fpl evolution"]),
+        new NsiItem(
             DisplayName: @"MD Now Urgent Care",
             Id: @"mdnowurgentcare-81c39b",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"brand:wikidata"] = @"Q131469010", },
@@ -445,6 +451,12 @@ public static class NsiRegion_US_FL_GEOJSON
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q132736322", [@"cuisine"] = @"pizza", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Salvatore's Old Fashioned Pizzeria", [@"brand:wikidata"] = @"Q132736322", [@"cuisine"] = @"pizza", [@"name"] = @"Salvatore's Old Fashioned Pizzeria", [@"short_name"] = @"Salvatore's", },
             Terms: [@"salvatore's", @"salvatore's old fashioned pizzeria"]),
+        new NsiItem(
+            DisplayName: @"FPL EVolution",
+            Id: @"fplevolution-414781",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138574160", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"FPL EVolution", [@"brand:wikidata"] = @"Q138574160", [@"man_made"] = @"charge_point", },
+            Terms: [@"fpl evolution"]),
         new NsiItem(
             DisplayName: @"Ameris Bank",
             Id: @"amerisbank-477daa",

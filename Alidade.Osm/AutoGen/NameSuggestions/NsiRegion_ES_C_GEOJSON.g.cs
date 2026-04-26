@@ -92,16 +92,28 @@ public static class NsiRegion_ES_C_GEOJSON
             AddTags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator"] = @"Xunta de Galicia", [@"operator:wikidata"] = @"Q1779601", },
             Terms: [@"xunta de galicia"]),
         new NsiItem(
+            DisplayName: @"TUSSA",
+            Id: @"transportesurbanosdesantiagosa-1badb6",
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q9090645", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Transportes Urbanos de Santiago S. A.", [@"network:short"] = @"TUSSA", [@"network:wikidata"] = @"Q9090645", [@"public_transport"] = @"platform", },
+            Terms: [@"transportes urbanos de santiago s. a.", @"tussa"]),
+        new NsiItem(
             DisplayName: @"Cercanías Ferrol",
             Id: @"cercaniasferrol-2e621a",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q107428536", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Ferrol", [@"network:wikidata"] = @"Q107428536", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q1143007", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Ferrol", [@"network:wikidata"] = @"Q107428536", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q3109506", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"cercanías ferrol", @"cercanías galicia", @"feve", @"proximidades", @"renfe cercanías am", @"renfe feve"]),
+        new NsiItem(
+            DisplayName: @"TUSSA",
+            Id: @"transportesurbanosdesantiagosa-b9e9f8",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q9090645", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Transportes Urbanos de Santiago S. A.", [@"network:short"] = @"TUSSA", [@"network:wikidata"] = @"Q9090645", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"transportes urbanos de santiago s. a.", @"tussa"]),
         new NsiItem(
             DisplayName: @"Cercanías Ferrol",
             Id: @"cercaniasferrol-171d67",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q107428536", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Ferrol", [@"network:wikidata"] = @"Q107428536", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q1143007", [@"route"] = @"train", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Cercanías Ferrol", [@"network:wikidata"] = @"Q107428536", [@"operator"] = @"Renfe Cercanías AM", [@"operator:wikidata"] = @"Q3109506", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"cercanías ferrol", @"cercanías galicia", @"feve", @"proximidades", @"renfe cercanías am", @"renfe feve"]),
     ];
 }

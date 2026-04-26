@@ -248,12 +248,6 @@ public static class NsiRegion_IL
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"cafe", [@"brand"] = @"רולדין", [@"brand:en"] = @"Roladin", [@"brand:he"] = @"רולדין", [@"brand:wikidata"] = @"Q18390972", [@"cuisine"] = @"coffee_shop", [@"name"] = @"רולדין", [@"name:en"] = @"Roladin", [@"name:he"] = @"רולדין", [@"takeaway"] = @"yes", },
             Terms: [@"roladin", @"רולדין"]),
         new NsiItem(
-            DisplayName: @"Brown's Chicken",
-            Id: @"brownschicken-dbdcb8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q4975925", [@"cuisine"] = @"chicken", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Brown's Chicken", [@"brand:wikidata"] = @"Q4975925", [@"cuisine"] = @"chicken", [@"name"] = @"Brown's Chicken", [@"takeaway"] = @"yes", },
-            Terms: [@"brown's chicken"]),
-        new NsiItem(
             DisplayName: @"Burgeranch",
             Id: @"burgeranch-dbdcb8",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q950269", [@"cuisine"] = @"burger", },
@@ -645,7 +639,7 @@ public static class NsiRegion_IL
             Terms: [@"partner", @"פרטנר"]),
         new NsiItem(
             DisplayName: @"Optical Center",
-            Id: @"opticalcenter-7f892a",
+            Id: @"opticalcenter-efdbe9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3354448", [@"shop"] = @"optician", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Optical Center", [@"brand:wikidata"] = @"Q3354448", [@"name"] = @"Optical Center", [@"shop"] = @"optician", },
             Terms: [@"optical center"]),
@@ -805,6 +799,18 @@ public static class NsiRegion_IL
             Tags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"operator:wikidata"] = @"Q2028422", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"healthcare"] = @"clinic", [@"operator"] = @"כללית", [@"operator:en"] = @"Clalit Healthcare Services", [@"operator:he"] = @"כללית", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q2028422", },
             Terms: [@"clalit healthcare services", @"כללית"]),
+        new NsiItem(
+            DisplayName: @"לאומית",
+            Id: @"leumithealthcareservices-1b314b",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"operator:wikidata"] = @"Q2909707", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"healthcare"] = @"clinic", [@"operator"] = @"לאומית", [@"operator:en"] = @"Leumit Healthcare Services", [@"operator:he"] = @"לאומית", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q2909707", },
+            Terms: [@"leumit healthcare services", @"לאומית"]),
+        new NsiItem(
+            DisplayName: @"מאוחדת",
+            Id: @"meuhedethealthcareservices-1b314b",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"operator:wikidata"] = @"Q2906716", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"clinic", [@"healthcare"] = @"clinic", [@"operator"] = @"מאוחדת", [@"operator:en"] = @"Meuhedet Healthcare Services", [@"operator:he"] = @"מאוחדת", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q2906716", },
+            Terms: [@"meuhedet healthcare services", @"מאוחדת"]),
         new NsiItem(
             DisplayName: @"מכבי",
             Id: @"maccabihealthcareservices-1b314b",

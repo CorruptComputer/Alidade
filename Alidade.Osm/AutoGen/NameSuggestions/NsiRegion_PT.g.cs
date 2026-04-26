@@ -260,6 +260,12 @@ public static class NsiRegion_PT
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"Elefante Azul", [@"brand:wikidata"] = @"Q114185701", [@"name"] = @"Elefante Azul", },
             Terms: [@"elefante azul"]),
         new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-a1174d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q126913632", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
+        new NsiItem(
             DisplayName: @"Cinema NOS",
             Id: @"cinemanos-97a9e2",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"cinema", [@"brand:wikidata"] = @"Q8063259", },
@@ -363,7 +369,7 @@ public static class NsiRegion_PT
             Terms: [@"Sushi Shop (Europe)", @"sushi shop"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -465,7 +471,7 @@ public static class NsiRegion_PT
             Terms: [@"school of rock"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -535,6 +541,12 @@ public static class NsiRegion_PT
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q54078", [@"leisure"] = @"indoor_play", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"IKEA", [@"brand:wikidata"] = @"Q54078", [@"leisure"] = @"indoor_play", [@"name"] = @"Småland", },
             Terms: [@"IKEA Småland", @"ikea"]),
+        new NsiItem(
+            DisplayName: @"Atlante",
+            Id: @"atlante-f43120",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Atlante", [@"brand:wikidata"] = @"Q126913632", [@"man_made"] = @"charge_point", [@"operator"] = @"Atlante", [@"operator:wikidata"] = @"Q126913632", },
+            Terms: [@"atlante"]),
         new NsiItem(
             DisplayName: @"Second Home",
             Id: @"secondhome-b3460a",
@@ -675,7 +687,7 @@ public static class NsiRegion_PT
             Terms: [@"norauto"]),
         new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),
@@ -1305,7 +1317,7 @@ public static class NsiRegion_PT
             Terms: [@"iberostar", @"iberostar hotels & resorts"]),
         new NsiItem(
             DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
+            Id: @"mamashelter-876740",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
             Terms: [@"mama shelter"]),
@@ -1934,6 +1946,12 @@ public static class NsiRegion_PT
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Infraestruturas de Portugal", [@"operator:wikidata"] = @"Q20730106", [@"power"] = @"substation", },
             Terms: [@"infraestruturas de portugal"]),
         new NsiItem(
+            DisplayName: @"Metro do Porto",
+            Id: @"metrodoporto-108ef7",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q29757", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Metro do Porto", [@"operator:wikidata"] = @"Q29757", [@"power"] = @"substation", },
+            Terms: [@"metro do porto"]),
+        new NsiItem(
             DisplayName: @"REN",
             Id: @"ren-108ef7",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1862842", [@"power"] = @"substation", },
@@ -1993,6 +2011,12 @@ public static class NsiRegion_PT
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q20730106", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Infraestruturas de Portugal", [@"operator:wikidata"] = @"Q20730106", [@"power"] = @"transformer", },
             Terms: [@"infraestruturas de portugal"]),
+        new NsiItem(
+            DisplayName: @"Metro do Porto",
+            Id: @"metrodoporto-e26b9a",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q29757", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Metro do Porto", [@"operator:wikidata"] = @"Q29757", [@"power"] = @"transformer", },
+            Terms: [@"metro do porto"]),
         new NsiItem(
             DisplayName: @"REN",
             Id: @"ren-e26b9a",

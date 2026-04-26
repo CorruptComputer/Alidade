@@ -356,12 +356,6 @@ public static class NsiRegion_US_CA_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"LemonShark Poké", [@"brand:wikidata"] = @"Q115411660", [@"cuisine"] = @"poke", [@"name"] = @"LemonShark Poké.", [@"takeaway"] = @"yes", },
             Terms: [@"lemonshark poké"]),
         new NsiItem(
-            DisplayName: @"Mendocino Farms",
-            Id: @"mendocinofarms-c19f86",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q110671982", [@"cuisine"] = @"sandwich", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Mendocino Farms", [@"brand:wikidata"] = @"Q110671982", [@"cuisine"] = @"sandwich", [@"name"] = @"Mendocino Farms", [@"takeaway"] = @"yes", },
-            Terms: [@"mendocino farms"]),
-        new NsiItem(
             DisplayName: @"Nation's Giant Hamburgers",
             Id: @"nationsgianthamburgers-85e020",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q17061887", [@"cuisine"] = @"burger", },
@@ -765,7 +759,7 @@ public static class NsiRegion_US_CA_GEOJSON
             Terms: [@"wheel works"]),
         new NsiItem(
             DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
+            Id: @"mamashelter-876740",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
             Terms: [@"mama shelter"]),
@@ -2332,8 +2326,8 @@ public static class NsiRegion_US_CA_GEOJSON
         new NsiItem(
             DisplayName: @"E-Tran",
             Id: @"etran-e0ee7e",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q5321556", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"E-Tran", [@"network:wikidata"] = @"Q5321556", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q7397015", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"E-Tran", [@"network:wikidata"] = @"Q7397015", [@"public_transport"] = @"platform", },
             Terms: [@"e-tran"]),
         new NsiItem(
             DisplayName: @"Eastern Sierra Transit",
@@ -2668,8 +2662,8 @@ public static class NsiRegion_US_CA_GEOJSON
         new NsiItem(
             DisplayName: @"E-Tran",
             Id: @"etran-62dc11",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q5321556", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"E-Tran", [@"network:wikidata"] = @"Q5321556", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q7397015", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"E-Tran", [@"network:wikidata"] = @"Q7397015", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"e-tran"]),
         new NsiItem(
             DisplayName: @"Eastern Sierra Transit",

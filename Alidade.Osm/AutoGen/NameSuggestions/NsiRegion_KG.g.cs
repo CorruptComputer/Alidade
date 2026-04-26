@@ -104,11 +104,17 @@ public static class NsiRegion_KG
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Билайн", [@"brand:en"] = @"Beeline", [@"brand:ru"] = @"Билайн", [@"brand:wikidata"] = @"Q402880", [@"name"] = @"Билайн", [@"name:en"] = @"Beeline", [@"name:ru"] = @"Билайн", [@"shop"] = @"mobile_phone", },
             Terms: [@"beeline", @"билайн"]),
         new NsiItem(
+            DisplayName: @"Ozon",
+            Id: @"ozon-f8825b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2365235", [@"shop"] = @"outpost", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Ozon", [@"brand:en"] = @"Ozon", [@"brand:wikidata"] = @"Q2365235", [@"name"] = @"Ozon", [@"name:en"] = @"Ozon", [@"shop"] = @"outpost", },
+            Terms: [@"ozon"]),
+        new NsiItem(
             DisplayName: @"Wildberries",
-            Id: @"wildberries-f8825b",
+            Id: @"wildberries-c79976",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q24933714", [@"shop"] = @"outpost", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"shop"] = @"outpost", },
-            Terms: [@"wildberries"]),
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Wildberries", [@"brand:en"] = @"Wildberries", [@"brand:wikidata"] = @"Q24933714", [@"name"] = @"Wildberries", [@"name:en"] = @"Wildberries", [@"shop"] = @"outpost", },
+            Terms: [@"wb", @"wildberries"]),
         new NsiItem(
             DisplayName: @"Магнит",
             Id: @"magnit-d9ae50",

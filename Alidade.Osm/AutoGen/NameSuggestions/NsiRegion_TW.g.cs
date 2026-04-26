@@ -932,11 +932,11 @@ public static class NsiRegion_TW
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"丹丹漢堡", [@"brand:en"] = @"Dandan Hamburger", [@"brand:nan"] = @"Tan-tan Hàn-pó", [@"brand:nan-Hant"] = @"丹丹漢堡", [@"brand:nan-Latn-pehoeji"] = @"Tan-tan Hàn-pó", [@"brand:nan-Latn-tailo"] = @"Tan-tan Hàn-pó", [@"brand:wikidata"] = @"Q30948118", [@"brand:zh"] = @"丹丹漢堡", [@"brand:zh-Hant"] = @"丹丹漢堡", [@"cuisine"] = @"burger", [@"name"] = @"丹丹漢堡", [@"name:en"] = @"Dandan Hamburger", [@"name:nan"] = @"Tan-tan Hàn-pó", [@"name:nan-Hant"] = @"丹丹漢堡", [@"name:nan-Latn-pehoeji"] = @"Tan-tan Hàn-pó", [@"name:nan-Latn-tailo"] = @"Tan-tan Hàn-pó", [@"name:zh"] = @"丹丹漢堡", [@"name:zh-Hant"] = @"丹丹漢堡", [@"takeaway"] = @"yes", },
             Terms: [@"dandan hamburger", @"tan-tan hàn-pó", @"丹丹", @"丹丹漢堡"]),
         new NsiItem(
-            DisplayName: @"八方雲集 Bafang Dumpling",
-            Id: @"bafangdumpling-dd590e",
+            DisplayName: @"八方雲集",
+            Id: @"eightway-70aa35",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q28417381", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"八方雲集 Bafang Dumpling", [@"brand:en"] = @"Bafang Dumpling", [@"brand:wikidata"] = @"Q28417381", [@"brand:zh"] = @"八方雲集", [@"brand:zh-Hans"] = @"八方云集", [@"brand:zh-Hant"] = @"八方雲集", [@"cuisine"] = @"dumplings", [@"name"] = @"八方雲集 Bafang Dumpling", [@"name:en"] = @"Bafang Dumpling", [@"name:zh"] = @"八方雲集", [@"name:zh-Hans"] = @"八方云集", [@"name:zh-Hant"] = @"八方雲集", [@"takeaway"] = @"yes", },
-            Terms: [@"bafang dumpling", @"八方云集", @"八方雲集", @"八方雲集 bafang dumpling"]),
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"八方雲集", [@"brand:en"] = @"Eight Way", [@"brand:wikidata"] = @"Q28417381", [@"brand:zh"] = @"八方雲集", [@"cuisine"] = @"dumplings", [@"name"] = @"八方雲集", [@"name:en"] = @"Eight Way", [@"name:zh"] = @"八方雲集", [@"takeaway"] = @"yes", },
+            Terms: [@"eight way", @"八方雲集"]),
         new NsiItem(
             DisplayName: @"吉野家",
             Id: @"yoshinoya-de27a3",
@@ -2252,6 +2252,12 @@ public static class NsiRegion_TW
             AddTags: new Dictionary<string, string> { [@"brand"] = @"C!ty'super", [@"brand:en"] = @"C!ty'super", [@"brand:wikidata"] = @"Q5124105", [@"name"] = @"C!ty'super", [@"name:en"] = @"C!ty'super", [@"shop"] = @"supermarket", },
             Terms: [@"c!ty'super", @"citysuper"]),
         new NsiItem(
+            DisplayName: @"ロピア",
+            Id: @"lopia-2268ad",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11350624", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ロピア", [@"brand:en"] = @"Lopia", [@"brand:ja"] = @"ロピア", [@"brand:wikidata"] = @"Q11350624", [@"name"] = @"ロピア", [@"name:en"] = @"Lopia", [@"name:ja"] = @"ロピア", [@"shop"] = @"supermarket", },
+            Terms: [@"lopia", @"ロピア"]),
+        new NsiItem(
             DisplayName: @"全聯福利中心",
             Id: @"pxmart-14223e",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7262792", [@"shop"] = @"supermarket", },
@@ -2962,8 +2968,8 @@ public static class NsiRegion_TW
         new NsiItem(
             DisplayName: @"TRA (臺鐵)",
             Id: @"tra-fff7ea",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q697926", [@"railway"] = @"station", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRA", [@"network:en"] = @"Taiwan Railway", [@"network:nan"] = @"Tâi-thih", [@"network:nan-Hant"] = @"臺鐵", [@"network:nan-Latn-pehoeji"] = @"Tâi-thih", [@"network:nan-Latn-tailo"] = @"Tâi-thih", [@"network:short"] = @"TRA", [@"network:wikidata"] = @"Q697926", [@"network:zh"] = @"臺鐵", [@"operator"] = @"臺灣鐵路管理局", [@"operator:en"] = @"Taiwan Railway Administration", [@"operator:nan"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Hant"] = @"臺灣鐵路管理局", [@"operator:nan-Latn-pehoeji"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Latn-tailo"] = @"Tâi-uân Thih-lōo Kuán-lí-kio̍k", [@"operator:short"] = @"台鐵局", [@"operator:wikidata"] = @"Q697926", [@"operator:zh"] = @"臺灣鐵路管理局", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q112151129", [@"railway"] = @"station", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"TRA", [@"network:en"] = @"Taiwan Railway", [@"network:nan"] = @"Tâi-thih", [@"network:nan-Hant"] = @"臺鐵", [@"network:nan-Latn-pehoeji"] = @"Tâi-thih", [@"network:nan-Latn-tailo"] = @"Tâi-thih", [@"network:short"] = @"TRA", [@"network:wikidata"] = @"Q112151129", [@"network:zh"] = @"臺鐵", [@"operator"] = @"臺灣鐵路管理局", [@"operator:en"] = @"Taiwan Railway Administration", [@"operator:nan"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Hant"] = @"臺灣鐵路管理局", [@"operator:nan-Latn-pehoeji"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Latn-tailo"] = @"Tâi-uân Thih-lōo Kuán-lí-kio̍k", [@"operator:short"] = @"台鐵局", [@"operator:wikidata"] = @"Q112151129", [@"operator:zh"] = @"臺灣鐵路管理局", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"TRA (臺鐵)", @"tâi-oân thih-lō͘ koán-lí-kio̍k", @"tâi-thih", @"tâi-uân thih-lōo kuán-lí-kio̍k", @"taiwan railway", @"taiwan railway administration", @"tra", @"台鐵局", @"臺灣鐵路管理局", @"臺鐵"]),
         new NsiItem(
             DisplayName: @"台灣高鐵",
@@ -3076,8 +3082,8 @@ public static class NsiRegion_TW
         new NsiItem(
             DisplayName: @"TRA (臺鐵)",
             Id: @"tra-acc966",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q697926", [@"route"] = @"train", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"TRA", [@"network:en"] = @"Taiwan Railway", [@"network:nan"] = @"Tâi-thih", [@"network:nan-Hant"] = @"臺鐵", [@"network:nan-Latn-pehoeji"] = @"Tâi-thih", [@"network:nan-Latn-tailo"] = @"Tâi-thih", [@"network:short"] = @"TRA", [@"network:wikidata"] = @"Q697926", [@"network:zh"] = @"臺鐵", [@"operator"] = @"臺灣鐵路管理局", [@"operator:en"] = @"Taiwan Railway Administration", [@"operator:nan"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Hant"] = @"臺灣鐵路管理局", [@"operator:nan-Latn-pehoeji"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Latn-tailo"] = @"Tâi-uân Thih-lōo Kuán-lí-kio̍k", [@"operator:short"] = @"台鐵局", [@"operator:wikidata"] = @"Q697926", [@"operator:zh"] = @"臺灣鐵路管理局", [@"route"] = @"train", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q112151129", [@"route"] = @"train", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"TRA", [@"network:en"] = @"Taiwan Railway", [@"network:nan"] = @"Tâi-thih", [@"network:nan-Hant"] = @"臺鐵", [@"network:nan-Latn-pehoeji"] = @"Tâi-thih", [@"network:nan-Latn-tailo"] = @"Tâi-thih", [@"network:short"] = @"TRA", [@"network:wikidata"] = @"Q112151129", [@"network:zh"] = @"臺鐵", [@"operator"] = @"臺灣鐵路管理局", [@"operator:en"] = @"Taiwan Railway Administration", [@"operator:nan"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Hant"] = @"臺灣鐵路管理局", [@"operator:nan-Latn-pehoeji"] = @"Tâi-oân Thih-lō͘ Koán-lí-kio̍k", [@"operator:nan-Latn-tailo"] = @"Tâi-uân Thih-lōo Kuán-lí-kio̍k", [@"operator:short"] = @"台鐵局", [@"operator:wikidata"] = @"Q112151129", [@"operator:zh"] = @"臺灣鐵路管理局", [@"route"] = @"train", [@"type"] = @"route", },
             Terms: [@"TRA (臺鐵)", @"tâi-oân thih-lō͘ koán-lí-kio̍k", @"tâi-thih", @"tâi-uân thih-lōo kuán-lí-kio̍k", @"taiwan railway", @"taiwan railway administration", @"tra", @"台鐵局", @"臺灣鐵路管理局", @"臺鐵"]),
         new NsiItem(
             DisplayName: @"台灣高鐵",

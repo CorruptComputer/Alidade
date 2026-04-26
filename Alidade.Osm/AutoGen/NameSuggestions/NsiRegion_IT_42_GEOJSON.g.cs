@@ -34,8 +34,8 @@ public static class NsiRegion_IT_42_GEOJSON
         new NsiItem(
             DisplayName: @"Provincia di Genova",
             Id: @"provinciadigenova-1fc046",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q16183", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Provincia di Genova", [@"operator:wikidata"] = @"Q16183", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q18288152", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Provincia di Genova", [@"operator:wikidata"] = @"Q18288152", },
             Terms: [@"provincia di genova"]),
         new NsiItem(
             DisplayName: @"AMT Genova",

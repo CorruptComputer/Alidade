@@ -170,12 +170,6 @@ public static class NsiRegion_US_GA_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Lviv Croissants", [@"brand:wikidata"] = @"Q116871093", [@"cuisine"] = @"sandwich", [@"name"] = @"Lviv Croissants", [@"takeaway"] = @"yes", },
             Terms: [@"lviv croissants", @"lwowskie croissanty", @"львівські круасани"]),
         new NsiItem(
-            DisplayName: @"Mendocino Farms",
-            Id: @"mendocinofarms-c19f86",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q110671982", [@"cuisine"] = @"sandwich", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Mendocino Farms", [@"brand:wikidata"] = @"Q110671982", [@"cuisine"] = @"sandwich", [@"name"] = @"Mendocino Farms", [@"takeaway"] = @"yes", },
-            Terms: [@"mendocino farms"]),
-        new NsiItem(
             DisplayName: @"Friendly Express",
             Id: @"friendlyexpress-e7c562",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q110300768", },

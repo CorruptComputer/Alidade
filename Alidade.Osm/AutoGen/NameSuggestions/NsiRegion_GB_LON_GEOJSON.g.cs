@@ -536,12 +536,6 @@ public static class NsiRegion_GB_LON_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Art'otel", [@"brand:wikidata"] = @"Q14516231", [@"name"] = @"Art'otel", [@"tourism"] = @"hotel", },
             Terms: [@"art'otel"]),
         new NsiItem(
-            DisplayName: @"Mama Shelter",
-            Id: @"mamashelter-0d5f7f",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q12716714", [@"tourism"] = @"hotel", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mama Shelter", [@"brand:wikidata"] = @"Q12716714", [@"name"] = @"Mama Shelter", [@"tourism"] = @"hotel", },
-            Terms: [@"mama shelter"]),
-        new NsiItem(
             DisplayName: @"Legible London map",
             Id: @"legiblelondon-d25149",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q6518074", [@"information"] = @"map", [@"tourism"] = @"information", },
@@ -959,8 +953,8 @@ public static class NsiRegion_GB_LON_GEOJSON
             DisplayName: @"Chelmsford Star Co-operative Society",
             Id: @"chelmsfordstarcooperativesociety-c1b095",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q5089972", [@"shop"] = @"convenience", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"The Co-operative Food", [@"brand:wikidata"] = @"Q107617274", [@"name"] = @"The Co-operative Food", [@"operator"] = @"Chelmsford Star Co-operative Society", [@"operator:wikidata"] = @"Q5089972", [@"shop"] = @"convenience", },
-            Terms: [@"chelmsford star co-operative society", @"the co-operative food"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Chelmsford Star Co-operative Society", [@"operator:wikidata"] = @"Q5089972", [@"shop"] = @"convenience", },
+            Terms: [@"chelmsford star co-operative society"]),
         new NsiItem(
             DisplayName: @"London Buses",
             Id: @"londonbuses-b324b1",

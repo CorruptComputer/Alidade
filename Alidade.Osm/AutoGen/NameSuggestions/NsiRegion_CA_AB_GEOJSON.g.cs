@@ -68,12 +68,6 @@ public static class NsiRegion_CA_AB_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"UFA", [@"brand:wikidata"] = @"Q1809831", [@"name"] = @"UFA", [@"shop"] = @"convenience", },
             Terms: [@"ufa", @"united farmers of alberta"]),
         new NsiItem(
-            DisplayName: @"Rona+",
-            Id: @"rona-381944",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q123688669", [@"shop"] = @"doityourself", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Rona+", [@"brand:wikidata"] = @"Q123688669", [@"name"] = @"Rona+", [@"shop"] = @"doityourself", },
-            Terms: [@"lowes", @"réno-dépôt", @"rona+"]),
-        new NsiItem(
             DisplayName: @"Wellwise",
             Id: @"wellwise-a5f7a9",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133255800", [@"shop"] = @"medical_supply", },

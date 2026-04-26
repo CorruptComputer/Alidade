@@ -62,6 +62,12 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Lotos Optima", [@"brand:wikidata"] = @"Q1256909", },
             Terms: [@"lotos optima"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-87a582",
+            Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", },
+            Terms: [@"mol"]),
+        new NsiItem(
             DisplayName: @"Moya",
             Id: @"moya-d7e9e3",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q62297700", },
@@ -212,6 +218,12 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Santander Consumer Bank", [@"brand:wikidata"] = @"Q875292", [@"operator"] = @"Santander Consumer Bank", [@"operator:wikidata"] = @"Q875292", },
             Terms: [@"santander consumer bank"]),
         new NsiItem(
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-4a82ee",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"operator"] = @"UniCredit", [@"operator:wikidata"] = @"Q45568", },
+            Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
+        new NsiItem(
             DisplayName: @"VeloBank",
             Id: @"velobank-53bcca",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q124312517", },
@@ -325,6 +337,12 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q875292", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Santander Consumer Bank", [@"brand:wikidata"] = @"Q875292", [@"name"] = @"Santander Consumer Bank", },
             Terms: [@"santander consumer bank"]),
+        new NsiItem(
+            DisplayName: @"UniCredit",
+            Id: @"unicredit-d887c4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q45568", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"UniCredit", [@"brand:wikidata"] = @"Q45568", [@"name"] = @"UniCredit", },
+            Terms: [@"banco di sicilia", @"unicredit", @"unicredit banca", @"unicredit bank", @"unicredit s.p.a."]),
         new NsiItem(
             DisplayName: @"VeloBank",
             Id: @"velobank-68054b",
@@ -470,6 +488,12 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"AS 24", [@"brand:wikidata"] = @"Q2819394", [@"name"] = @"AS 24", },
             Terms: [@"as 24"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-edc9f9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
+            Terms: [@"mol", @"mol jetwash", @"mol wash"]),
+        new NsiItem(
             DisplayName: @"Orlen",
             Id: @"orlen-24fec3",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"car_wash", [@"brand:wikidata"] = @"Q971649", },
@@ -486,7 +510,7 @@ public static class NsiRegion_PL
             Id: @"greenway-1cf5d4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q116450281", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"GreenWay", [@"brand:wikidata"] = @"Q116450281", },
-            Terms: [@"greenway"]),
+            Terms: [@"greenway", @"greenway infrastructure"]),
         new NsiItem(
             DisplayName: @"Milence",
             Id: @"milence-1903ef",
@@ -668,6 +692,12 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"Lotos Optima", [@"brand:wikidata"] = @"Q1256909", [@"name"] = @"Lotos Optima", },
             Terms: [@"lotos optima"]),
         new NsiItem(
+            DisplayName: @"MOL",
+            Id: @"mol-f55142",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q549181", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand"] = @"MOL", [@"brand:wikidata"] = @"Q549181", [@"name"] = @"MOL", },
+            Terms: [@"mol"]),
+        new NsiItem(
             DisplayName: @"Moya",
             Id: @"moya-5fd245",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fuel", [@"brand:wikidata"] = @"Q62297700", },
@@ -729,7 +759,7 @@ public static class NsiRegion_PL
             Terms: [@"shane english school", @"shēn eikaiwa", @"シェーン英会話"]),
         new NsiItem(
             DisplayName: @"Allegro One Box",
-            Id: @"allegroonebox-85cd80",
+            Id: @"allegroonebox-ce4e28",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q110738715", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"Allegro One Box", [@"brand:wikidata"] = @"Q110738715", },
             Terms: [@"allegro", @"allegro one box"]),
@@ -753,7 +783,7 @@ public static class NsiRegion_PL
             Terms: [@"dhl box 24/7", @"dhl pop box"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -960,7 +990,7 @@ public static class NsiRegion_PL
             Id: @"greenway-99811b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116450281", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"GreenWay", [@"brand:wikidata"] = @"Q116450281", [@"man_made"] = @"charge_point", },
-            Terms: [@"greenway"]),
+            Terms: [@"greenway", @"greenway infrastructure"]),
         new NsiItem(
             DisplayName: @"Milence",
             Id: @"milence-05685b",
@@ -1094,6 +1124,12 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Borek", [@"brand:wikidata"] = @"Q133856049", [@"name"] = @"Borek", [@"shop"] = @"bakery", },
             Terms: [@"borek"]),
         new NsiItem(
+            DisplayName: @"Dubielak",
+            Id: @"dubielak-839c38",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138197645", [@"shop"] = @"bakery", },
+            AddTags: new Dictionary<string, string> { [@"alt_name"] = @"Bracia Dubielak", [@"brand"] = @"Dubielak", [@"brand:wikidata"] = @"Q138197645", [@"name"] = @"Dubielak", [@"shop"] = @"bakery", },
+            Terms: [@"bracia dubielak", @"dubielak"]),
+        new NsiItem(
             DisplayName: @"Familijna",
             Id: @"familijna-839c38",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q133596647", [@"shop"] = @"bakery", },
@@ -1147,6 +1183,12 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q1558025", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Le Crobag", [@"brand:wikidata"] = @"Q1558025", [@"name"] = @"Le Crobag", [@"shop"] = @"bakery", },
             Terms: [@"le crobag"]),
+        new NsiItem(
+            DisplayName: @"Mistrz Piekarz",
+            Id: @"mistrzpiekarz-839c38",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138412294", [@"shop"] = @"bakery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mistrz Piekarz", [@"brand:wikidata"] = @"Q138412294", [@"name"] = @"Mistrz Piekarz", [@"shop"] = @"bakery", },
+            Terms: [@"mistrz piekarz", @"piekarnia mistrz piekarz"]),
         new NsiItem(
             DisplayName: @"Oskroba",
             Id: @"oskroba-839c38",
@@ -1243,6 +1285,12 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q9396199", [@"shop"] = @"books", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Świat Książki", [@"brand:wikidata"] = @"Q9396199", [@"name"] = @"Świat Książki", [@"shop"] = @"books", },
             Terms: [@"świat książki"]),
+        new NsiItem(
+            DisplayName: @"Dubimex",
+            Id: @"dubimex-436f1d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138197720", [@"shop"] = @"butcher", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dubimex", [@"brand:wikidata"] = @"Q138197720", [@"name"] = @"Dubimex", [@"shop"] = @"butcher", },
+            Terms: [@"dubimex"]),
         new NsiItem(
             DisplayName: @"Gaik",
             Id: @"gaik-436f1d",
@@ -1791,7 +1839,7 @@ public static class NsiRegion_PL
             Terms: [@"stokrotka express"]),
         new NsiItem(
             DisplayName: @"Żabka",
-            Id: @"zabka-f55ead",
+            Id: @"zabka-95f41b",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2589061", [@"shop"] = @"convenience", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Żabka", [@"brand:wikidata"] = @"Q2589061", [@"name"] = @"Żabka", [@"name:pl"] = @"Żabka", [@"name:uk"] = @"Жабка", [@"shop"] = @"convenience", },
             Terms: [@"freshmarket", @"żabka", @"жабка"]),
@@ -2043,7 +2091,7 @@ public static class NsiRegion_PL
             Terms: [@"home&you"]),
         new NsiItem(
             DisplayName: @"Apart",
-            Id: @"apart-0f1493",
+            Id: @"apart-d80787",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11686561", [@"shop"] = @"jewelry", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Apart", [@"brand:wikidata"] = @"Q11686561", [@"name"] = @"Apart", [@"shop"] = @"jewelry", },
             Terms: [@"apart"]),
@@ -2422,8 +2470,8 @@ public static class NsiRegion_PL
         new NsiItem(
             DisplayName: @"Nomi",
             Id: @"nomi-9e6a6c",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11792768", [@"shop"] = @"supermarket", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Nomi", [@"brand:wikidata"] = @"Q11792768", [@"name"] = @"Nomi", [@"shop"] = @"supermarket", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2925147", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Nomi", [@"brand:wikidata"] = @"Q2925147", [@"name"] = @"Nomi", [@"shop"] = @"supermarket", },
             Terms: [@"nomi"]),
         new NsiItem(
             DisplayName: @"POLOmarket",
@@ -3102,7 +3150,7 @@ public static class NsiRegion_PL
             Id: @"pkppolskieliniekolejowe-41b0bd",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator:wikidata"] = @"Q1344677", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"mast", [@"operator"] = @"PKP Polskie Linie Kolejowe", [@"operator:wikidata"] = @"Q1344677", },
-            Terms: [@"pkp polskie linie kolejowe"]),
+            Terms: [@"pkp polskie linie kolejowe", @"pkp polskie linie kolejowe s.a."]),
         new NsiItem(
             DisplayName: @"Play",
             Id: @"play-41b0bd",
@@ -3133,12 +3181,6 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q1163349", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Generalna Dyrekcja Dróg Krajowych i Autostrad", [@"operator:short"] = @"GDDKiA", [@"operator:wikidata"] = @"Q1163349", },
             Terms: [@"gddkia", @"generalna dyrekcja dróg krajowych i autostrad"]),
-        new NsiItem(
-            DisplayName: @"InPost",
-            Id: @"inpost-3409e6",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator:wikidata"] = @"Q3182097", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"InPost", [@"operator:wikidata"] = @"Q3182097", },
-            Terms: [@"inpost"]),
         new NsiItem(
             DisplayName: @"Instytut Meteorologii i Gospodarki Wodnej",
             Id: @"instytutmeteorologiiigospodarkiwodnej-3409e6",
@@ -3288,7 +3330,7 @@ public static class NsiRegion_PL
             Id: @"pkppolskieliniekolejowe-d1bc46",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator:wikidata"] = @"Q1344677", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"PKP Polskie Linie Kolejowe", [@"operator:wikidata"] = @"Q1344677", },
-            Terms: [@"pkp polskie linie kolejowe"]),
+            Terms: [@"pkp polskie linie kolejowe", @"pkp polskie linie kolejowe s.a."]),
         new NsiItem(
             DisplayName: @"Play",
             Id: @"play-d1bc46",
@@ -3360,7 +3402,7 @@ public static class NsiRegion_PL
             Id: @"pkppolskieliniekolejowe-f7e94c",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1344677", [@"power"] = @"catenary_mast", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"PKP Polskie Linie Kolejowe", [@"operator:wikidata"] = @"Q1344677", [@"power"] = @"catenary_mast", },
-            Terms: [@"pkp plk", @"pkp polskie linie kolejowe"]),
+            Terms: [@"pkp plk", @"pkp polskie linie kolejowe", @"pkp polskie linie kolejowe s.a."]),
         new NsiItem(
             DisplayName: @"Aldi (Aldi Nord group)",
             Id: @"aldi-fd3a93",
@@ -3458,6 +3500,12 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Enertrag", [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"line", },
             Terms: [@"enertrag"]),
         new NsiItem(
+            DisplayName: @"KGHM Polska Miedź",
+            Id: @"kghmpolskamiedz-dffc4e",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"KGHM Polska Miedź", [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"line", },
+            Terms: [@"kghm polska miedź"]),
+        new NsiItem(
             DisplayName: @"PGE Dystrybucja",
             Id: @"pgedystrybucja-dffc4e",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q787714", [@"power"] = @"line", },
@@ -3505,6 +3553,12 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"minor_line", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Enertrag", [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"minor_line", },
             Terms: [@"enertrag"]),
+        new NsiItem(
+            DisplayName: @"KGHM Polska Miedź",
+            Id: @"kghmpolskamiedz-8d0004",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"KGHM Polska Miedź", [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"minor_line", },
+            Terms: [@"kghm polska miedź"]),
         new NsiItem(
             DisplayName: @"PGE Dystrybucja",
             Id: @"pgedystrybucja-8d0004",
@@ -3577,6 +3631,12 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"pole", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Enertrag", [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"pole", },
             Terms: [@"enertrag"]),
+        new NsiItem(
+            DisplayName: @"KGHM Polska Miedź",
+            Id: @"kghmpolskamiedz-7d29f7",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"KGHM Polska Miedź", [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"pole", },
+            Terms: [@"kghm polska miedź"]),
         new NsiItem(
             DisplayName: @"PGE Dystrybucja",
             Id: @"pgedystrybucja-7d29f7",
@@ -3673,6 +3733,12 @@ public static class NsiRegion_PL
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"tower", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Enertrag", [@"operator:wikidata"] = @"Q1341596", [@"power"] = @"tower", },
             Terms: [@"enertrag"]),
+        new NsiItem(
+            DisplayName: @"KGHM Polska Miedź",
+            Id: @"kghmpolskamiedz-983018",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"KGHM Polska Miedź", [@"operator:wikidata"] = @"Q1476710", [@"power"] = @"tower", },
+            Terms: [@"kghm polska miedź"]),
         new NsiItem(
             DisplayName: @"PGE Dystrybucja",
             Id: @"pgedystrybucja-983018",
@@ -3786,10 +3852,10 @@ public static class NsiRegion_PL
             Id: @"pkppolskieliniekolejowe-b8385d",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1344677", [@"route"] = @"railway", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"PKP Polskie Linie Kolejowe", [@"operator:wikidata"] = @"Q1344677", [@"route"] = @"railway", [@"type"] = @"route", },
-            Terms: [@"pkp plk", @"pkp polskie linie kolejowe"]),
+            Terms: [@"pkp plk", @"pkp polskie linie kolejowe", @"pkp polskie linie kolejowe s.a."]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
+            Id: @"arriva-b74934",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             Terms: [@"arriva"]),
@@ -3890,11 +3956,11 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"RegioJet", [@"network:short"] = @"RJ", [@"network:wikidata"] = @"Q221186", [@"public_transport"] = @"platform", },
             Terms: [@"regiojet", @"rj"]),
         new NsiItem(
-            DisplayName: @"Zarząd Transportu Metropolitalnego",
-            Id: @"zarzadtransportumetropolitalnego-ad52c2",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q48862619", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Zarząd Transportu Metropolitalnego", [@"network:wikidata"] = @"Q48862619", [@"public_transport"] = @"platform", },
-            Terms: [@"zarząd transportu metropolitalnego"]),
+            DisplayName: @"Transport GZM",
+            Id: @"transportgzm-ad52c2",
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q124678630", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Transport GZM", [@"network:wikidata"] = @"Q124678630", [@"public_transport"] = @"platform", },
+            Terms: [@"transport gzm"]),
         new NsiItem(
             DisplayName: @"Zarząd Transportu Zbiorowego w Rybniku",
             Id: @"zarzadtransportuzbiorowegowrybniku-ad52c2",
@@ -3992,17 +4058,17 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"colour"] = @"purple", [@"network"] = @"Twoje Linie Kolejowe", [@"network:short"] = @"TLK", [@"network:wikidata"] = @"Q9363378", [@"operator"] = @"PKP Intercity", [@"operator:wikidata"] = @"Q590406", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
             Terms: [@"pkp intercity", @"tlk", @"twoje linie kolejowe"]),
         new NsiItem(
+            DisplayName: @"Transport GZM",
+            Id: @"transportgzm-ba7600",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q124678630", [@"railway"] = @"tram_stop", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Transport GZM", [@"network:wikidata"] = @"Q124678630", [@"railway"] = @"tram_stop", },
+            Terms: [@"transport gzm"]),
+        new NsiItem(
             DisplayName: @"Komunikacja Miejska w Krakowie",
             Id: @"komunikacjamiejskawkrakowie-ba7600",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q1784404", [@"railway"] = @"tram_stop", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Komunikacja Miejska w Krakowie", [@"network:wikidata"] = @"Q1784404", [@"operator"] = @"MPK Kraków", [@"operator:wikidata"] = @"Q11780297", [@"railway"] = @"tram_stop", },
             Terms: [@"komunikacja miejska w krakowie", @"mpk kraków"]),
-        new NsiItem(
-            DisplayName: @"Zarząd Transportu Metropolitalnego",
-            Id: @"zarzadtransportumetropolitalnego-ba7600",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q48862619", [@"railway"] = @"tram_stop", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Zarząd Transportu Metropolitalnego", [@"network:wikidata"] = @"Q48862619", [@"operator"] = @"Tramwaje Śląskie", [@"operator:wikidata"] = @"Q9361097", [@"railway"] = @"tram_stop", },
-            Terms: [@"tramwaje śląskie", @"zarząd transportu metropolitalnego"]),
         new NsiItem(
             DisplayName: @"ZDMiKP Bydgoszcz",
             Id: @"zdmikpbydgoszcz-ba7600",
@@ -4017,7 +4083,7 @@ public static class NsiRegion_PL
             Terms: [@"mpk poznań", @"ztm poznań"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
+            Id: @"arriva-d898fa",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"arriva"]),
@@ -4118,11 +4184,11 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"network"] = @"RegioJet", [@"network:short"] = @"RJ", [@"network:wikidata"] = @"Q221186", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"regiojet", @"rj"]),
         new NsiItem(
-            DisplayName: @"Zarząd Transportu Metropolitalnego",
-            Id: @"zarzadtransportumetropolitalnego-9340cc",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q48862619", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Zarząd Transportu Metropolitalnego", [@"network:wikidata"] = @"Q48862619", [@"route"] = @"bus", [@"type"] = @"route", },
-            Terms: [@"zarząd transportu metropolitalnego"]),
+            DisplayName: @"Transport GZM",
+            Id: @"transportgzm-9340cc",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q124678630", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Transport GZM", [@"network:wikidata"] = @"Q124678630", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"transport gzm"]),
         new NsiItem(
             DisplayName: @"Zarząd Transportu Zbiorowego w Rybniku",
             Id: @"zarzadtransportuzbiorowegowrybniku-9340cc",
@@ -4226,11 +4292,11 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"network"] = @"Komunikacja Miejska w Krakowie", [@"network:wikidata"] = @"Q1784404", [@"operator"] = @"MPK Kraków", [@"operator:wikidata"] = @"Q11780297", [@"route"] = @"tram", [@"type"] = @"route", },
             Terms: [@"komunikacja miejska w krakowie", @"mpk kraków"]),
         new NsiItem(
-            DisplayName: @"Zarząd Transportu Metropolitalnego",
-            Id: @"zarzadtransportumetropolitalnego-ba1938",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q48862619", [@"route"] = @"tram", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Zarząd Transportu Metropolitalnego", [@"network:wikidata"] = @"Q48862619", [@"operator"] = @"Tramwaje Śląskie", [@"operator:wikidata"] = @"Q9361097", [@"route"] = @"tram", [@"type"] = @"route", },
-            Terms: [@"tramwaje śląskie", @"zarząd transportu metropolitalnego"]),
+            DisplayName: @"Transport GZM",
+            Id: @"transportgzm-ba1938",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q124678630", [@"route"] = @"tram", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Transport GZM", [@"network:wikidata"] = @"Q124678630", [@"operator"] = @"Tramwaje Śląskie", [@"operator:wikidata"] = @"Q9361097", [@"route"] = @"tram", [@"type"] = @"route", },
+            Terms: [@"tramwaje śląskie", @"transport gzm"]),
         new NsiItem(
             DisplayName: @"ZDMiKP Bydgoszcz",
             Id: @"zdmikpbydgoszcz-ba1938",
@@ -4244,10 +4310,10 @@ public static class NsiRegion_PL
             AddTags: new Dictionary<string, string> { [@"network"] = @"ZTM Poznań", [@"network:wikidata"] = @"Q9387124", [@"operator"] = @"MPK Poznań", [@"operator:wikidata"] = @"Q53430", [@"route"] = @"tram", [@"type"] = @"route", },
             Terms: [@"mpk poznań", @"ztm poznań"]),
         new NsiItem(
-            DisplayName: @"Zarząd Transportu Metropolitalnego",
-            Id: @"zarzadtransportumetropolitalnego-ac5bc5",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q48862619", [@"route"] = @"trolleybus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Zarząd Transportu Metropolitalnego", [@"network:wikidata"] = @"Q48862619", [@"operator"] = @"Tyskie Linie Trolejbusowe", [@"operator:wikidata"] = @"Q130340846", [@"route"] = @"trolleybus", [@"type"] = @"route", },
-            Terms: [@"tyskie linie trolejbusowe", @"zarząd transportu metropolitalnego"]),
+            DisplayName: @"Transport GZM",
+            Id: @"transportgzm-ac5bc5",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q124678630", [@"route"] = @"trolleybus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Transport GZM", [@"network:wikidata"] = @"Q124678630", [@"operator"] = @"Tyskie Linie Trolejbusowe", [@"operator:wikidata"] = @"Q130340846", [@"route"] = @"trolleybus", [@"type"] = @"route", },
+            Terms: [@"transport gzm", @"tyskie linie trolejbusowe"]),
     ];
 }

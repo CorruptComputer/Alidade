@@ -20,6 +20,12 @@ public static class NsiRegion_CZ_10_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"library", [@"operator"] = @"Městská knihovna v Praze", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q9170816", },
             Terms: [@"městská knihovna v praze"]),
         new NsiItem(
+            DisplayName: @"Potex",
+            Id: @"potex-afbb8e",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q138821850", [@"recycling_type"] = @"container", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Potex", [@"operator:wikidata"] = @"Q138821850", [@"recycling_type"] = @"container", [@"recycling:shoes"] = @"yes", [@"recycling:textiles"] = @"yes", [@"recycling:toys"] = @"yes", },
+            Terms: [@"potex"]),
+        new NsiItem(
             DisplayName: @"Pražské služby",
             Id: @"prazskesluzby-16c170",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q12046936", },

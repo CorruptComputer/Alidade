@@ -14,6 +14,12 @@ public static class NsiRegion_CZ_31_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Služby města Český Krumlov",
+            Id: @"sluzbymestaceskykrumlov-9eccc9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q138356486", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Služby města Český Krumlov", [@"operator:wikidata"] = @"Q138356486", },
+            Terms: [@"služby města český krumlov"]),
+        new NsiItem(
             DisplayName: @"MMCB",
             Id: @"magistratmestaceskebudejovice-22e9ee",
             Tags: new Dictionary<string, string> { [@"leisure"] = @"nature_reserve", [@"operator:wikidata"] = @"Q16506", },

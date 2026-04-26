@@ -14,6 +14,12 @@ public static class NsiRegion_JP_09_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"ヨークベニマル",
+            Id: @"yorkbenimaru-52f258",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11346199", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ヨークベニマル", [@"brand:en"] = @"York Benimaru", [@"brand:ja"] = @"ヨークベニマル", [@"brand:wikidata"] = @"Q11346199", [@"name"] = @"ヨークベニマル", [@"name:en"] = @"York Benimaru", [@"name:ja"] = @"ヨークベニマル", [@"shop"] = @"supermarket", },
+            Terms: [@"york benimaru", @"ヨークベニマル"]),
+        new NsiItem(
             DisplayName: @"東武鉄道",
             Id: @"toburailway-a16c32",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1321914", [@"power"] = @"substation", },

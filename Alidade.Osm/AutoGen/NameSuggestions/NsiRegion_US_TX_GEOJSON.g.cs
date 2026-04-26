@@ -128,6 +128,12 @@ public static class NsiRegion_US_TX_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"University Federal Credit Union", [@"brand:wikidata"] = @"Q129523006", [@"operator"] = @"University Federal Credit Union", [@"operator:wikidata"] = @"Q129523006", },
             Terms: [@"university federal credit union"]),
         new NsiItem(
+            DisplayName: @"VeraBank",
+            Id: @"verabank-18eb57",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q139055613", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"VeraBank", [@"brand:wikidata"] = @"Q139055613", [@"operator"] = @"VeraBank", [@"operator:wikidata"] = @"Q139055613", },
+            Terms: [@"verabank"]),
+        new NsiItem(
             DisplayName: @"Amegy Bank",
             Id: @"amegybank-718014",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q4742155", },
@@ -229,6 +235,12 @@ public static class NsiRegion_US_TX_GEOJSON
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q129523006", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"University Federal Credit Union", [@"brand:wikidata"] = @"Q129523006", [@"name"] = @"University Federal Credit Union", [@"short_name"] = @"UFCU", },
             Terms: [@"ufcu", @"university federal credit union"]),
+        new NsiItem(
+            DisplayName: @"VeraBank",
+            Id: @"verabank-718014",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q139055613", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"VeraBank", [@"brand:wikidata"] = @"Q139055613", [@"name"] = @"VeraBank", },
+            Terms: [@"verabank"]),
         new NsiItem(
             DisplayName: @"Ojos Locos Sports Cantina",
             Id: @"ojoslocossportscantina-3b72aa",
@@ -343,12 +355,6 @@ public static class NsiRegion_US_TX_GEOJSON
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q115411660", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"LemonShark Poké", [@"brand:wikidata"] = @"Q115411660", [@"cuisine"] = @"poke", [@"name"] = @"LemonShark Poké.", [@"takeaway"] = @"yes", },
             Terms: [@"lemonshark poké"]),
-        new NsiItem(
-            DisplayName: @"Mendocino Farms",
-            Id: @"mendocinofarms-c19f86",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q110671982", [@"cuisine"] = @"sandwich", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Mendocino Farms", [@"brand:wikidata"] = @"Q110671982", [@"cuisine"] = @"sandwich", [@"name"] = @"Mendocino Farms", [@"takeaway"] = @"yes", },
-            Terms: [@"mendocino farms"]),
         new NsiItem(
             DisplayName: @"Nation's Giant Hamburgers",
             Id: @"nationsgianthamburgers-85e020",
@@ -572,6 +578,12 @@ public static class NsiRegion_US_TX_GEOJSON
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Spec's", [@"brand:wikidata"] = @"Q7574415", [@"name"] = @"Spec's", [@"shop"] = @"alcohol", },
             Terms: [@"spec's"]),
         new NsiItem(
+            DisplayName: @"Twin Liquors",
+            Id: @"twinliquors-a9ed82",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q127691615", [@"shop"] = @"alcohol", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Twin Liquors", [@"brand:wikidata"] = @"Q127691615", [@"name"] = @"Twin Liquors", [@"shop"] = @"alcohol", },
+            Terms: [@"twin liquors"]),
+        new NsiItem(
             DisplayName: @"The Ten Spot",
             Id: @"thetenspot-80a0da",
             Tags: new Dictionary<string, string> { [@"beauty"] = @"nails;spa", [@"brand:wikidata"] = @"Q133255656", [@"shop"] = @"beauty", },
@@ -607,6 +619,12 @@ public static class NsiRegion_US_TX_GEOJSON
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q27877295", [@"shop"] = @"doityourself", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"McCoy's", [@"brand:wikidata"] = @"Q27877295", [@"name"] = @"McCoy's", [@"shop"] = @"doityourself", },
             Terms: [@"McCoy's Building Supply", @"mccoy's"]),
+        new NsiItem(
+            DisplayName: @"Jack Brown Cleaners",
+            Id: @"jackbrowncleaners-a02fa0",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q139054384", [@"shop"] = @"dry_cleaning", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Jack Brown Cleaners", [@"brand:wikidata"] = @"Q139054384", [@"name"] = @"Jack Brown Cleaners", [@"shop"] = @"dry_cleaning", },
+            Terms: [@"jack brown cleaners"]),
         new NsiItem(
             DisplayName: @"Attic Salt",
             Id: @"atticsalt-ae6503",
@@ -760,8 +778,8 @@ public static class NsiRegion_US_TX_GEOJSON
         new NsiItem(
             DisplayName: @"Texas Department of Aging and Disability Services",
             Id: @"texasdepartmentofaginganddisabilityservices-12e3f7",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"operator:wikidata"] = @"Q7707626", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"healthcare"] = @"hospital", [@"operator"] = @"Texas Department of Aging and Disability Services", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q7707626", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"operator:wikidata"] = @"Q7707726", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"healthcare"] = @"hospital", [@"operator"] = @"Texas Department of Aging and Disability Services", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q7707726", },
             Terms: [@"texas department of aging and disability services"]),
         new NsiItem(
             DisplayName: @"Texas Health",

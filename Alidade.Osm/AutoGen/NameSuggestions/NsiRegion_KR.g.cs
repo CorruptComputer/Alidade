@@ -111,7 +111,7 @@ public static class NsiRegion_KR
             Terms: [@"woori bank", @"우리은행"]),
         new NsiItem(
             DisplayName: @"하나은행",
-            Id: @"kebhanabank-cfe76c",
+            Id: @"kebhanabank-a2e321",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q484047", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"하나은행", [@"brand:en"] = @"KEB Hana Bank", [@"brand:ko"] = @"하나은행", [@"brand:wikidata"] = @"Q484047", [@"operator"] = @"하나은행", [@"operator:wikidata"] = @"Q484047", },
             Terms: [@"keb hana bank", @"keb하나은행", @"하나은행"]),
@@ -177,7 +177,7 @@ public static class NsiRegion_KR
             Terms: [@"woori bank", @"우리은행"]),
         new NsiItem(
             DisplayName: @"하나은행",
-            Id: @"kebhanabank-10d607",
+            Id: @"kebhanabank-f6aa18",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q484047", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"하나은행", [@"brand:en"] = @"KEB Hana Bank", [@"brand:ko"] = @"하나은행", [@"brand:wikidata"] = @"Q484047", [@"name"] = @"하나은행", [@"name:en"] = @"KEB Hana Bank", [@"name:ko"] = @"하나은행", },
             Terms: [@"keb hana bank", @"keb하나은행", @"하나은행"]),
@@ -477,7 +477,7 @@ public static class NsiRegion_KR
             Terms: [@"smoothie king"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -639,7 +639,7 @@ public static class NsiRegion_KR
             Terms: [@"bonchon", @"bonchon chicken", @"bonchon fried chicken"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),

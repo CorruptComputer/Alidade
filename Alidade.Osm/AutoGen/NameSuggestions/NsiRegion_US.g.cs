@@ -89,7 +89,7 @@ public static class NsiRegion_US
             DisplayName: @"Clean Energy Fuels",
             Id: @"cleanenergy-647198",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q108462506", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Clean Energy", [@"brand:wikidata"] = @"Q108462506", [@"fuel:biogas"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Clean Energy", [@"brand:wikidata"] = @"Q108462506", },
             Terms: [@"Clean Energy Fuels", @"clean energy"]),
         new NsiItem(
             DisplayName: @"Conoco",
@@ -437,7 +437,7 @@ public static class NsiRegion_US
             DisplayName: @"True Zero",
             Id: @"truezero-647198",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q106320436", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"True Zero", [@"brand:wikidata"] = @"Q106320436", [@"fuel:h70"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"True Zero", [@"brand:wikidata"] = @"Q106320436", },
             Terms: [@"true zero"]),
         new NsiItem(
             DisplayName: @"Turkey Hill",
@@ -778,8 +778,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"First Republic Bank",
             Id: @"firstrepublicbank-93d3a2",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q5453752", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"First Republic Bank", [@"brand:wikidata"] = @"Q5453752", [@"operator"] = @"First Republic Bank", [@"operator:wikidata"] = @"Q5453752", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q192314", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"First Republic Bank", [@"brand:wikidata"] = @"Q192314", [@"operator"] = @"First Republic Bank", [@"operator:wikidata"] = @"Q192314", },
             Terms: [@"first republic bank"]),
         new NsiItem(
             DisplayName: @"First Tech Federal Credit Union",
@@ -991,6 +991,12 @@ public static class NsiRegion_US
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q795486", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Truist", [@"brand:wikidata"] = @"Q795486", [@"operator"] = @"Truist", [@"operator:wikidata"] = @"Q795486", },
             Terms: [@"bb&t", @"suntrust", @"suntrust bank", @"truist", @"truist bank", @"truist financial"]),
+        new NsiItem(
+            DisplayName: @"Trustco Bank",
+            Id: @"trustcobank-93d3a2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q7848087", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Trustco Bank", [@"brand:wikidata"] = @"Q7848087", [@"operator"] = @"Trustco Bank", [@"operator:wikidata"] = @"Q7848087", },
+            Terms: [@"trustco bank"]),
         new NsiItem(
             DisplayName: @"U.S. Bank",
             Id: @"usbank-93d3a2",
@@ -1264,8 +1270,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"First Republic Bank",
             Id: @"firstrepublicbank-ea2e2d",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q5453752", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"First Republic Bank", [@"brand:wikidata"] = @"Q5453752", [@"name"] = @"First Republic Bank", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q192314", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"First Republic Bank", [@"brand:wikidata"] = @"Q192314", [@"name"] = @"First Republic Bank", },
             Terms: [@"first republic bank"]),
         new NsiItem(
             DisplayName: @"First Tech Federal Credit Union",
@@ -1477,6 +1483,12 @@ public static class NsiRegion_US
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q795486", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Truist", [@"brand:wikidata"] = @"Q795486", [@"name"] = @"Truist", },
             Terms: [@"bb&t", @"suntrust", @"suntrust bank", @"truist", @"truist bank", @"truist financial"]),
+        new NsiItem(
+            DisplayName: @"Trustco Bank",
+            Id: @"trustcobank-ea2e2d",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q7848087", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Trustco Bank", [@"brand:wikidata"] = @"Q7848087", [@"name"] = @"Trustco Bank", },
+            Terms: [@"trustco bank"]),
         new NsiItem(
             DisplayName: @"U.S. Bank",
             Id: @"usbank-ea2e2d",
@@ -2049,7 +2061,7 @@ public static class NsiRegion_US
             Terms: [@"blink"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-36ec13",
+            Id: @"bppulse-ac8b5c",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q39057719", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -2786,6 +2798,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Guthrie's", [@"brand:wikidata"] = @"Q5621751", [@"cuisine"] = @"chicken", [@"name"] = @"Guthrie's", [@"takeaway"] = @"yes", },
             Terms: [@"guthrie's"]),
         new NsiItem(
+            DisplayName: @"Guzman y Gomez",
+            Id: @"guzmanygomez-8cc1c5",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q23019759", [@"cuisine"] = @"mexican", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Guzman y Gomez", [@"brand:wikidata"] = @"Q23019759", [@"cuisine"] = @"mexican", [@"name"] = @"Guzman y Gomez", [@"takeaway"] = @"yes", },
+            Terms: [@"guzman y gomez"]),
+        new NsiItem(
             DisplayName: @"Habit Burger & Grill",
             Id: @"habitburgerandgrill-4d2ff4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q18158741", [@"cuisine"] = @"burger", },
@@ -2883,7 +2901,7 @@ public static class NsiRegion_US
             Terms: [@"jamba", @"jamba juice"]),
         new NsiItem(
             DisplayName: @"Jersey Mike's Subs",
-            Id: @"jerseymikessubs-4d2ff4",
+            Id: @"jerseymikessubs-53d9d9",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q6184897", [@"cuisine"] = @"sandwich", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Jersey Mike's Subs", [@"brand:wikidata"] = @"Q6184897", [@"cuisine"] = @"sandwich", [@"name"] = @"Jersey Mike's Subs", [@"short_name"] = @"Jersey Mike's", [@"takeaway"] = @"yes", },
             Terms: [@"jersey mike's", @"jersey mike's subs"]),
@@ -2959,6 +2977,12 @@ public static class NsiRegion_US
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q114108971", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Laredo Taco Company", [@"brand:wikidata"] = @"Q114108971", [@"cuisine"] = @"tex-mex", [@"name"] = @"Laredo Taco Company", [@"takeaway"] = @"yes", },
             Terms: [@"laredo taco company"]),
+        new NsiItem(
+            DisplayName: @"Layne's Chicken Fingers",
+            Id: @"layneschickenfingers-4d2ff4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q138970746", [@"cuisine"] = @"chicken", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Layne's Chicken Fingers", [@"brand:wikidata"] = @"Q138970746", [@"cuisine"] = @"chicken", [@"diet:halal"] = @"only", [@"name"] = @"Layne's Chicken Fingers", [@"takeaway"] = @"yes", },
+            Terms: [@"layne's chicken fingers"]),
         new NsiItem(
             DisplayName: @"Lee's Famous Recipe Chicken",
             Id: @"leesfamousrecipechicken-d2abf0",
@@ -3116,6 +3140,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Pizza Boli's", [@"brand:wikidata"] = @"Q105882930", [@"cuisine"] = @"pizza", [@"name"] = @"Pizza Boli's", [@"takeaway"] = @"yes", },
             Terms: [@"pizza boli's"]),
         new NsiItem(
+            DisplayName: @"Pizza Inn (America)",
+            Id: @"pizzainn-4d2ff4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q4118850", [@"cuisine"] = @"pizza", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Pizza Inn", [@"brand:wikidata"] = @"Q4118850", [@"cuisine"] = @"pizza", [@"name"] = @"Pizza Inn", [@"takeaway"] = @"yes", },
+            Terms: [@"Pizza Inn (America)", @"pizza inn"]),
+        new NsiItem(
             DisplayName: @"Planet Smoothie",
             Id: @"planetsmoothie-4d2ff4",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q7201170", },
@@ -3183,7 +3213,7 @@ public static class NsiRegion_US
             Terms: [@"qdoba", @"qdoba mexican eats", @"qdoba mexican grill"]),
         new NsiItem(
             DisplayName: @"Raising Cane's",
-            Id: @"raisingcanes-4d2ff4",
+            Id: @"raisingcanes-e4cf42",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q7285144", [@"cuisine"] = @"chicken", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Raising Cane's", [@"brand:wikidata"] = @"Q7285144", [@"cuisine"] = @"chicken", [@"name"] = @"Raising Cane's", [@"official_name"] = @"Raising Cane's Chicken Fingers", [@"takeaway"] = @"yes", },
             Terms: [@"raising cane's", @"raising cane's chicken fingers"]),
@@ -3351,7 +3381,7 @@ public static class NsiRegion_US
             Terms: [@"sweetgreen"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -4959,7 +4989,7 @@ public static class NsiRegion_US
             Terms: [@"claim jumper"]),
         new NsiItem(
             DisplayName: @"CoCo Ichibanya",
-            Id: @"cocoichibanya-a00c19",
+            Id: @"cocoichibanya-84891e",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"CoCo Ichibanya", [@"brand:en"] = @"CoCo Ichibanya", [@"brand:ja"] = @"CoCo壱番屋", [@"brand:wikidata"] = @"Q5986105", [@"cuisine"] = @"curry;japanese", [@"name"] = @"CoCo Ichibanya", [@"name:en"] = @"CoCo Ichibanya", [@"name:ja"] = @"CoCo壱番屋", [@"takeaway"] = @"yes", },
             Terms: [@"coco ichibanya", @"coco壱番屋"]),
@@ -5444,6 +5474,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Mellow Mushroom", [@"brand:wikidata"] = @"Q17021360", [@"cuisine"] = @"pizza", [@"name"] = @"Mellow Mushroom", },
             Terms: [@"mellow mushroom"]),
         new NsiItem(
+            DisplayName: @"Mendocino Farms",
+            Id: @"mendocinofarms-96af40",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q110671982", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Mendocino Farms", [@"brand:wikidata"] = @"Q110671982", [@"name"] = @"Mendocino Farms", },
+            Terms: [@"mendocino farms"]),
+        new NsiItem(
             DisplayName: @"Metro Diner",
             Id: @"metrodiner-96af40",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q104870732", },
@@ -5698,8 +5734,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Shi Miao Dao Yunnan Rice Noodle",
             Id: @"shimiaodaoyunnanricenoodle-85c92c",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese", [@"name"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese;noodle", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese;noodle", [@"name"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:en"] = @"Shi Miao Dao Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
             Terms: [@"shi miao dao yunnan rice noodle", @"shiaomaodao yunnan noodles", @"十秒到云南过桥米线"]),
         new NsiItem(
             DisplayName: @"Shoney's",
@@ -5770,8 +5806,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Ten Seconds Yunnan Rice Noodle",
             Id: @"tensecondsyunnanricenoodle-96af40",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Ten Seconds Yunnan Rice Noodle", [@"brand:en"] = @"Ten Seconds Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese", [@"name"] = @"Ten Seconds Yunnan Rice Noodle", [@"name:en"] = @"Ten Seconds Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q119118794", [@"cuisine"] = @"chinese;noodle", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Ten Seconds Yunnan Rice Noodle", [@"brand:en"] = @"Ten Seconds Yunnan Rice Noodle", [@"brand:wikidata"] = @"Q119118794", [@"brand:zh"] = @"十秒到云南过桥米线", [@"cuisine"] = @"chinese;noodle", [@"name"] = @"Ten Seconds Yunnan Rice Noodle", [@"name:en"] = @"Ten Seconds Yunnan Rice Noodle", [@"name:zh"] = @"十秒到云南过桥米线", },
             Terms: [@"ten seconds rice noodle", @"ten seconds yunnan rice noodle", @"十秒到云南过桥米线"]),
         new NsiItem(
             DisplayName: @"Texas Roadhouse",
@@ -5896,8 +5932,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Yunshang Rice Noodle",
             Id: @"yunshangricenoodle-85c92c",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"noodle", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Yunshang Rice Noodle", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"noodle", [@"name"] = @"Yunshang Rice Noodle", [@"name:en"] = @"Yunshang Rice Noodle", [@"name:zh"] = @"云尚过桥米线", [@"name:zh-Hans"] = @"云尚过桥米线", [@"name:zh-Hant"] = @"雲尚過橋米綫", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"chinese;noodle", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"restaurant", [@"brand"] = @"Yunshang Rice Noodle", [@"brand:wikidata"] = @"Q109381268", [@"cuisine"] = @"chinese;noodle", [@"name"] = @"Yunshang Rice Noodle", [@"name:en"] = @"Yunshang Rice Noodle", [@"name:zh"] = @"云尚过桥米线", [@"name:zh-Hans"] = @"云尚过桥米线", [@"name:zh-Hant"] = @"雲尚過橋米綫", },
             Terms: [@"yunshang rice noodle", @"云尚过桥米线", @"雲尚過橋米綫"]),
         new NsiItem(
             DisplayName: @"Zippy's",
@@ -6428,6 +6464,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"brand"] = @"AR Workshop", [@"brand:wikidata"] = @"Q127273132", [@"craft"] = @"handicraft", [@"name"] = @"AR Workshop", },
             Terms: [@"ar workshop"]),
         new NsiItem(
+            DisplayName: @"CertaPro Painters",
+            Id: @"certapropainters-e498ae",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q121338146", [@"craft"] = @"painter", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"CertaPro Painters", [@"brand:wikidata"] = @"Q121338146", [@"craft"] = @"painter", [@"name"] = @"CertaPro Painters", },
+            Terms: [@"certapro painters"]),
+        new NsiItem(
             DisplayName: @"Mr. Rooter",
             Id: @"mrrooter-a0d14d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q6929145", [@"craft"] = @"plumber", },
@@ -6577,6 +6619,12 @@ public static class NsiRegion_US
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7339701", [@"highway"] = @"services", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Roady's", [@"brand:wikidata"] = @"Q7339701", [@"highway"] = @"services", [@"name"] = @"Roady's Truck Stops", },
             Terms: [@"Roady's Truck Stops", @"roady's"]),
+        new NsiItem(
+            DisplayName: @"Sapp Brothers Travel Center",
+            Id: @"sappbrotherstravelcenter-35c0ca",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q137965281", [@"highway"] = @"services", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Sapp Bros.", [@"brand:wikidata"] = @"Q137965281", [@"highway"] = @"services", [@"name"] = @"Sapp Brothers Travel Center", },
+            Terms: [@"Sapp Brothers Travel Center", @"sapp bros."]),
         new NsiItem(
             DisplayName: @"TA",
             Id: @"ta-35c0ca",
@@ -6908,6 +6956,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"brand"] = @"The Exercise Coach", [@"brand:wikidata"] = @"Q121502262", [@"leisure"] = @"fitness_centre", [@"name"] = @"The Exercise Coach", },
             Terms: [@"the exercise coach"]),
         new NsiItem(
+            DisplayName: @"TITLE Boxing Club",
+            Id: @"titleboxingclub-809afb",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126391325", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"TITLE Boxing Club", [@"brand:wikidata"] = @"Q126391325", [@"leisure"] = @"fitness_centre", [@"name"] = @"TITLE Boxing Club", [@"sport"] = @"boxing", },
+            Terms: [@"title boxing club"]),
+        new NsiItem(
             DisplayName: @"UFC Gym",
             Id: @"ufcgym-809afb",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q122511683", [@"leisure"] = @"fitness_centre", },
@@ -7095,7 +7149,7 @@ public static class NsiRegion_US
             Terms: [@"blink"]),
         new NsiItem(
             DisplayName: @"bp pulse",
-            Id: @"bppulse-937d1e",
+            Id: @"bppulse-269202",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
             Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
@@ -7772,6 +7826,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Bakers Delight", [@"brand:wikidata"] = @"Q4849261", [@"name"] = @"Bakers Delight", [@"shop"] = @"bakery", },
             Terms: [@"bakers delight"]),
         new NsiItem(
+            DisplayName: @"Cinnaholic",
+            Id: @"cinnaholic-03cd91",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q48965480", [@"shop"] = @"bakery", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Cinnaholic", [@"brand:wikidata"] = @"Q48965480", [@"name"] = @"Cinnaholic", [@"shop"] = @"bakery", },
+            Terms: [@"cinnaholic"]),
+        new NsiItem(
             DisplayName: @"COBS Bread",
             Id: @"cobsbread-515502",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q116771375", [@"shop"] = @"bakery", },
@@ -7797,7 +7857,7 @@ public static class NsiRegion_US
             Terms: [@"great harvest bread company"]),
         new NsiItem(
             DisplayName: @"Paris Baguette",
-            Id: @"parisbaguette-e1a226",
+            Id: @"parisbaguette-f87f10",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q62605260", [@"shop"] = @"bakery", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Paris Baguette", [@"brand:wikidata"] = @"Q62605260", [@"name"] = @"Paris Baguette", [@"shop"] = @"bakery", },
             Terms: [@"paris baguette", @"paris baguette cafe"]),
@@ -8518,8 +8578,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Service King",
             Id: @"serviceking-878d90",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q7455694", [@"shop"] = @"car_repair", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Service King", [@"brand:wikidata"] = @"Q7455694", [@"name"] = @"Service King", [@"service:vehicle:body_repair"] = @"yes", [@"shop"] = @"car_repair", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q121435028", [@"shop"] = @"car_repair", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Service King", [@"brand:wikidata"] = @"Q121435028", [@"name"] = @"Service King", [@"service:vehicle:body_repair"] = @"yes", [@"shop"] = @"car_repair", },
             Terms: [@"service king", @"service king collision repair"]),
         new NsiItem(
             DisplayName: @"SpeeDee",
@@ -11536,8 +11596,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Sprint",
             Id: @"sprint-ce3e5c",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q301965", [@"shop"] = @"mobile_phone", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Sprint", [@"brand:wikidata"] = @"Q301965", [@"name"] = @"Sprint", [@"shop"] = @"mobile_phone", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3511885", [@"shop"] = @"mobile_phone", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Sprint", [@"brand:wikidata"] = @"Q3511885", [@"name"] = @"Sprint", [@"shop"] = @"mobile_phone", },
             Terms: [@"sprint"]),
         new NsiItem(
             DisplayName: @"T-Mobile US",
@@ -14024,6 +14084,12 @@ public static class NsiRegion_US
             AddTags: new Dictionary<string, string> { [@"brand"] = @"EVEN Hotels", [@"brand:wikidata"] = @"Q5416522", [@"name"] = @"EVEN Hotel", [@"tourism"] = @"hotel", },
             Terms: [@"even hotels"]),
         new NsiItem(
+            DisplayName: @"Everhome Suites",
+            Id: @"everhomesuites-6ac210",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138453101", [@"tourism"] = @"hotel", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Everhome Suites", [@"brand:wikidata"] = @"Q138453101", [@"name"] = @"Everhome Suites", [@"tourism"] = @"hotel", },
+            Terms: [@"everhome suites"]),
+        new NsiItem(
             DisplayName: @"Extended Stay America",
             Id: @"extendedstayamerica-6ac210",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q5421850", [@"tourism"] = @"hotel", },
@@ -14914,8 +14980,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"City CarShare",
             Id: @"citycarshare-ed8a5d",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q5770528", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"City CarShare", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q5770528", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q5554388", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"City CarShare", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q5554388", },
             Terms: [@"city carshare"]),
         new NsiItem(
             DisplayName: @"Enterprise CarShare",
@@ -15292,8 +15358,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"KentuckyOne Health",
             Id: @"kentuckyonehealth-888e5a",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"operator:wikidata"] = @"Q30282191", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"healthcare"] = @"hospital", [@"operator"] = @"KentuckyOne Health", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q30282191", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"operator:wikidata"] = @"Q104834854", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"hospital", [@"healthcare"] = @"hospital", [@"operator"] = @"KentuckyOne Health", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q104834854", },
             Terms: [@"kentuckyone health"]),
         new NsiItem(
             DisplayName: @"Kindred Healthcare",
@@ -16102,8 +16168,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"El Paso Corporation",
             Id: @"elpasocorporation-0a386a",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q1324451", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"El Paso Corporation", [@"operator:wikidata"] = @"Q1324451", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q931032", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"El Paso Corporation", [@"operator:wikidata"] = @"Q931032", },
             Terms: [@"el paso corporation"]),
         new NsiItem(
             DisplayName: @"Enbridge",
@@ -16606,8 +16672,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"El Paso Corporation",
             Id: @"elpasocorporation-cbbbb7",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1324451", [@"pipeline"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"El Paso Corporation", [@"operator:wikidata"] = @"Q1324451", [@"pipeline"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q931032", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"El Paso Corporation", [@"operator:wikidata"] = @"Q931032", [@"pipeline"] = @"substation", },
             Terms: [@"el paso corporation"]),
         new NsiItem(
             DisplayName: @"Enbridge",
@@ -17194,8 +17260,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Progress Energy",
             Id: @"progressenergy-b654b4",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"line", },
             Terms: [@"carolina power & light company", @"progress energy"]),
         new NsiItem(
             DisplayName: @"PSNH",
@@ -17350,8 +17416,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Progress Energy",
             Id: @"progressenergy-8222ce",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"minor_line", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"minor_line", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"minor_line", },
             Terms: [@"carolina power & light company", @"progress energy"]),
         new NsiItem(
             DisplayName: @"PSNH",
@@ -17668,8 +17734,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Progress Energy",
             Id: @"progressenergy-777c2a",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"pole", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"pole", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"pole", },
             Terms: [@"carolina power & light company", @"progress energy"]),
         new NsiItem(
             DisplayName: @"PSNH",
@@ -17890,8 +17956,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Progress Energy",
             Id: @"progressenergy-301545",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"substation", },
             Terms: [@"carolina power & light company", @"progress energy"]),
         new NsiItem(
             DisplayName: @"Tacoma Power",
@@ -18046,8 +18112,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Progress Energy",
             Id: @"progressenergy-bdcff1",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"tower", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"tower", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"tower", },
             Terms: [@"carolina power & light company", @"progress energy"]),
         new NsiItem(
             DisplayName: @"PSNH",
@@ -18268,8 +18334,8 @@ public static class NsiRegion_US
         new NsiItem(
             DisplayName: @"Progress Energy",
             Id: @"progressenergy-9a842a",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q2112219", [@"power"] = @"transformer", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Progress Energy", [@"operator:wikidata"] = @"Q1264404", [@"power"] = @"transformer", },
             Terms: [@"carolina power & light company", @"progress energy"]),
         new NsiItem(
             DisplayName: @"Tacoma Power",

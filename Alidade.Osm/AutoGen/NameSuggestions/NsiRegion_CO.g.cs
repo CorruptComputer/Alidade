@@ -315,7 +315,7 @@ public static class NsiRegion_CO
             Terms: [@"sandwich cubano", @"sándwich qbano"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -433,6 +433,12 @@ public static class NsiRegion_CO
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q16538274", [@"leisure"] = @"fitness_centre", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Bodytech", [@"brand:wikidata"] = @"Q16538274", [@"leisure"] = @"fitness_centre", [@"name"] = @"Bodytech", },
             Terms: [@"boditech", @"bodytech", @"bodytek"]),
+        new NsiItem(
+            DisplayName: @"Fitness24Seven",
+            Id: @"fitness24seven-46465b",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Fitness24Seven", [@"brand:wikidata"] = @"Q61112447", [@"leisure"] = @"fitness_centre", [@"name"] = @"Fitness24Seven", },
+            Terms: [@"fitness24seven"]),
         new NsiItem(
             DisplayName: @"Smart Fit",
             Id: @"smartfit-912e01",

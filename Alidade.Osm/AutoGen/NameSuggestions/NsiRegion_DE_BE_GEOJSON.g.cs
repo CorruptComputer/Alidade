@@ -14,11 +14,23 @@ public static class NsiRegion_DE_BE_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Berliner Volksbank",
+            Id: @"berlinervolksbank-7c4ce9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q821855", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Berliner Volksbank", [@"brand:wikidata"] = @"Q821855", [@"operator"] = @"Berliner Volksbank", [@"operator:wikidata"] = @"Q821855", },
+            Terms: [@"berliner volksbank"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank Berlin",
             Id: @"spardabankberlin-f2a41d",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1656189", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank Berlin", [@"brand:wikidata"] = @"Q1656189", [@"operator"] = @"Sparda-Bank Berlin", [@"operator:wikidata"] = @"Q1656189", },
             Terms: [@"sparda-bank", @"sparda-bank berlin", @"sparda-bank berlin eg"]),
+        new NsiItem(
+            DisplayName: @"Berliner Volksbank",
+            Id: @"berlinervolksbank-6b40f4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q821855", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Berliner Volksbank", [@"brand:wikidata"] = @"Q821855", [@"name"] = @"Berliner Volksbank", },
+            Terms: [@"berliner volksbank"]),
         new NsiItem(
             DisplayName: @"Sparda-Bank Berlin",
             Id: @"spardabankberlin-d82d38",

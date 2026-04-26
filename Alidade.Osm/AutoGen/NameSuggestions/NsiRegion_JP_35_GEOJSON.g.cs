@@ -14,6 +14,18 @@ public static class NsiRegion_JP_35_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"フジ",
+            Id: @"fuji-e0450e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q8963035", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"フジ", [@"brand:en"] = @"Fuji", [@"brand:ja"] = @"フジ", [@"brand:wikidata"] = @"Q8963035", [@"name"] = @"フジ", [@"name:en"] = @"Fuji", [@"name:ja"] = @"フジ", [@"shop"] = @"supermarket", },
+            Terms: [@"fuji", @"フジ"]),
+        new NsiItem(
+            DisplayName: @"フジグラン",
+            Id: @"fujigrand-e0450e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q8963035", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"フジ", [@"brand:en"] = @"Fuji", [@"brand:ja"] = @"フジ", [@"brand:wikidata"] = @"Q8963035", [@"name"] = @"フジグラン", [@"name:en"] = @"Fuji GRAND", [@"name:ja"] = @"フジグラン", [@"shop"] = @"supermarket", },
+            Terms: [@"fuji", @"fuji grand", @"フジ", @"フジグラン"]),
+        new NsiItem(
             DisplayName: @"宇部市",
             Id: @"bfa512-dd5810",
             Tags: new Dictionary<string, string> { [@"education"] = @"school", [@"operator:wikidata"] = @"Q468765", },

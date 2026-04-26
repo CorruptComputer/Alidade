@@ -14,11 +14,35 @@ public static class NsiRegion_DE_BB_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Berliner Volksbank",
+            Id: @"berlinervolksbank-7c4ce9",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q821855", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Berliner Volksbank", [@"brand:wikidata"] = @"Q821855", [@"operator"] = @"Berliner Volksbank", [@"operator:wikidata"] = @"Q821855", },
+            Terms: [@"berliner volksbank"]),
+        new NsiItem(
+            DisplayName: @"Mittelbrandenburgische Sparkasse",
+            Id: @"mittelbrandenburgischesparkasse-41b5a3",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1940058", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Mittelbrandenburgische Sparkasse", [@"brand:wikidata"] = @"Q1940058", [@"operator"] = @"Mittelbrandenburgische Sparkasse", [@"operator:wikidata"] = @"Q1940058", },
+            Terms: [@"mittelbrandenburgische sparkasse"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank Berlin",
             Id: @"spardabankberlin-f2a41d",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1656189", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank Berlin", [@"brand:wikidata"] = @"Q1656189", [@"operator"] = @"Sparda-Bank Berlin", [@"operator:wikidata"] = @"Q1656189", },
             Terms: [@"sparda-bank", @"sparda-bank berlin", @"sparda-bank berlin eg"]),
+        new NsiItem(
+            DisplayName: @"Berliner Volksbank",
+            Id: @"berlinervolksbank-6b40f4",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q821855", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Berliner Volksbank", [@"brand:wikidata"] = @"Q821855", [@"name"] = @"Berliner Volksbank", },
+            Terms: [@"berliner volksbank"]),
+        new NsiItem(
+            DisplayName: @"Mittelbrandenburgische Sparkasse",
+            Id: @"mittelbrandenburgischesparkasse-49b699",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1940058", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Mittelbrandenburgische Sparkasse", [@"brand:wikidata"] = @"Q1940058", [@"name"] = @"Mittelbrandenburgische Sparkasse", },
+            Terms: [@"mittelbrandenburgische sparkasse"]),
         new NsiItem(
             DisplayName: @"Sparda-Bank Berlin",
             Id: @"spardabankberlin-d82d38",
@@ -176,6 +200,12 @@ public static class NsiRegion_DE_BB_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Stadtwerke Neuruppin", [@"operator:short"] = @"SWN", [@"operator:wikidata"] = @"Q133966862", },
             Terms: [@"stadtwerke neuruppin", @"swn"]),
         new NsiItem(
+            DisplayName: @"Energie Brandenburg",
+            Id: @"energiebrandenburg-746834",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q1275156", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Energie Brandenburg", [@"operator:wikidata"] = @"Q1275156", },
+            Terms: [@"emg", @"energie brandenburg", @"energie mark brandenburg", @"spreegas"]),
+        new NsiItem(
             DisplayName: @"LWG Lausitzer Wasser",
             Id: @"lwglausitzerwasser-746834",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q124422219", },
@@ -211,6 +241,12 @@ public static class NsiRegion_DE_BB_GEOJSON
             Tags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator:wikidata"] = @"Q2307681", },
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"surveillance", [@"operator"] = @"Sparkasse Spree-Neiße", [@"operator:wikidata"] = @"Q2307681", },
             Terms: [@"sparkasse spree-neiße"]),
+        new NsiItem(
+            DisplayName: @"Energie Brandenburg",
+            Id: @"energiebrandenburg-6a8892",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1275156", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Energie Brandenburg", [@"operator:wikidata"] = @"Q1275156", [@"pipeline"] = @"substation", },
+            Terms: [@"emg", @"energie brandenburg", @"energie mark brandenburg", @"spreegas"]),
         new NsiItem(
             DisplayName: @"LWG Lausitzer Wasser",
             Id: @"lwglausitzerwasser-6a8892",
@@ -314,6 +350,12 @@ public static class NsiRegion_DE_BB_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"S-Bahn Berlin", [@"operator:wikidata"] = @"Q99654", [@"power"] = @"substation", },
             Terms: [@"s-bahn berlin", @"s-bahn berlin gmbh"]),
         new NsiItem(
+            DisplayName: @"Städtische Betriebswerke Luckenwalde",
+            Id: @"stadtischebetriebswerkeluckenwalde-f7a8ec",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138455977", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Städtische Betriebswerke Luckenwalde", [@"operator:short"] = @"SBL", [@"operator:wikidata"] = @"Q138455977", [@"power"] = @"substation", },
+            Terms: [@"sbl", @"städtische betriebswerke luckenwalde"]),
+        new NsiItem(
             DisplayName: @"Städtische Werke Angermünde",
             Id: @"stadtischewerkeangermunde-f7a8ec",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130392215", [@"power"] = @"substation", },
@@ -403,6 +445,12 @@ public static class NsiRegion_DE_BB_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q99654", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"S-Bahn Berlin", [@"operator:wikidata"] = @"Q99654", [@"power"] = @"transformer", },
             Terms: [@"s-bahn berlin", @"s-bahn berlin gmbh"]),
+        new NsiItem(
+            DisplayName: @"Städtische Betriebswerke Luckenwalde",
+            Id: @"stadtischebetriebswerkeluckenwalde-cec853",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138455977", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Städtische Betriebswerke Luckenwalde", [@"operator:short"] = @"SBL", [@"operator:wikidata"] = @"Q138455977", [@"power"] = @"transformer", },
+            Terms: [@"sbl", @"städtische betriebswerke luckenwalde"]),
         new NsiItem(
             DisplayName: @"Städtische Werke Angermünde",
             Id: @"stadtischewerkeangermunde-cec853",

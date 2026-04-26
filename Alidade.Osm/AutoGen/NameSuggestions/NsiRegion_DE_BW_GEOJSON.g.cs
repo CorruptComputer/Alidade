@@ -80,6 +80,12 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"SWU Stadtwerke Ulm/Neu-Ulm", [@"operator:type"] = @"public", [@"operator:wikidata"] = @"Q2328644", },
             Terms: [@"swu stadtwerke ulm/neu-ulm", @"swu stadtwerke ulm/neu-ulm gmbh"]),
         new NsiItem(
+            DisplayName: @"Badenova",
+            Id: @"badenova-6bc1fb",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q798941", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Badenova", [@"operator:wikidata"] = @"Q798941", },
+            Terms: [@"badenova", @"badenova ag & co. kg"]),
+        new NsiItem(
             DisplayName: @"Energie Calw",
             Id: @"energiecalw-6bc1fb",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q130427211", },
@@ -434,11 +440,41 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"emergency"] = @"siren", [@"operator"] = @"Stadt Heidelberg", [@"operator:wikidata"] = @"Q2966", },
             Terms: [@"stadt heidelberg"]),
         new NsiItem(
+            DisplayName: @"Heidelberger Turnverein 1846 e.V.",
+            Id: @"heidelbergerturnverein1846ev-54bad5",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q832774", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Heidelberger Turnverein 1846 e.V.", [@"operator:wikidata"] = @"Q832774", },
+            Terms: [@"heidelberger turnverein 1846 e.v."]),
+        new NsiItem(
+            DisplayName: @"Karlsruher TV e.V.",
+            Id: @"karlsruhertvev-54bad5",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q106087730", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Karlsruher TV e.V.", [@"operator:wikidata"] = @"Q106087730", },
+            Terms: [@"karlsruher tv e.v."]),
+        new NsiItem(
+            DisplayName: @"SSC Karlsruhe e.V.",
+            Id: @"ssckarlsruheev-54bad5",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q61050562", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"SSC Karlsruhe e.V.", [@"operator:wikidata"] = @"Q61050562", },
+            Terms: [@"ssc karlsruhe e.v."]),
+        new NsiItem(
+            DisplayName: @"Stadt Heidelberg",
+            Id: @"stadtheidelberg-54bad5",
+            Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q2966", },
+            AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Stadt Heidelberg", [@"operator:wikidata"] = @"Q2966", },
+            Terms: [@"stadt heidelberg"]),
+        new NsiItem(
             DisplayName: @"Stadt Karlsruhe",
             Id: @"stadtkarlsruhe-54bad5",
             Tags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator:wikidata"] = @"Q1040", },
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"pitch", [@"operator"] = @"Stadt Karlsruhe", [@"operator:wikidata"] = @"Q1040", },
             Terms: [@"stadt karlsruhe"]),
+        new NsiItem(
+            DisplayName: @"Badenova",
+            Id: @"badenova-f38d07",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q798941", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Badenova", [@"operator:wikidata"] = @"Q798941", },
+            Terms: [@"badenova", @"badenova ag & co. kg"]),
         new NsiItem(
             DisplayName: @"Energie Calw",
             Id: @"energiecalw-f38d07",
@@ -650,6 +686,18 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"monitoring_station", [@"operator"] = @"Stadt Heidelberg", [@"operator:wikidata"] = @"Q2966", },
             Terms: [@"stadt heidelberg"]),
         new NsiItem(
+            DisplayName: @"Badenova Netze",
+            Id: @"badenovanetze-0b5f1c",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q57712950", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+        new NsiItem(
+            DisplayName: @"Badenova Wärmeplus",
+            Id: @"badenovawarmeplus-0b5f1c",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q63110091", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"Badenova Wärmeplus", [@"operator:wikidata"] = @"Q63110091", [@"substance"] = @"hot_water", },
+            Terms: [@"badenova wärmeplus", @"badenova wärmeplus gmbh", @"badenova wärmeplus gmbh & co. kg"]),
+        new NsiItem(
             DisplayName: @"BASF",
             Id: @"basf-de820e",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q9401", },
@@ -740,6 +788,18 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Albtal-Verkehrs-Gesellschaft", [@"operator:short"] = @"AVG", [@"operator:wikidata"] = @"Q896547", },
             Terms: [@"albtal-verkehrs-gesellschaft", @"albtal-verkehrs-gesellschaft mbh", @"avg"]),
         new NsiItem(
+            DisplayName: @"Badenova Netze",
+            Id: @"badenovanetze-c31658",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q57712950", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+        new NsiItem(
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-c31658",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q124480690", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
+        new NsiItem(
             DisplayName: @"EnBW",
             Id: @"enbw-c31658",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q644304", },
@@ -824,12 +884,6 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Thüga AG", [@"operator:wikidata"] = @"Q1727709", },
             Terms: [@"thüga ag"]),
         new NsiItem(
-            DisplayName: @"Überlandwerk Mittelbaden",
-            Id: @"uberlandwerkmittelbaden-c31658",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q124480690", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator"] = @"Überlandwerk Mittelbaden", [@"operator:wikidata"] = @"Q124480690", },
-            Terms: [@"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
-        new NsiItem(
             DisplayName: @"Unsere Grüne Glasfaser",
             Id: @"unseregruneglasfaser-c31658",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"street_cabinet", [@"operator:wikidata"] = @"Q133567450", },
@@ -890,11 +944,29 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"tower", [@"operator"] = @"Südwestrundfunk", [@"operator:wikidata"] = @"Q700133", },
             Terms: [@"südwestrundfunk", @"swr"]),
         new NsiItem(
+            DisplayName: @"Badenova Netze",
+            Id: @"badenovanetze-e7daae",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"water_works", [@"operator:wikidata"] = @"Q57712950", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"water_works", [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+        new NsiItem(
             DisplayName: @"Stadt Karlsruhe",
             Id: @"stadtkarlsruhe-e634f7",
             Tags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator:wikidata"] = @"Q1040", },
             AddTags: new Dictionary<string, string> { [@"office"] = @"government", [@"operator"] = @"Stadt Karlsruhe", [@"operator:wikidata"] = @"Q1040", },
             Terms: [@"stadt karlsruhe"]),
+        new NsiItem(
+            DisplayName: @"Badenova Netze",
+            Id: @"badenovanetze-3970e4",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q57712950", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", [@"pipeline"] = @"substation", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+        new NsiItem(
+            DisplayName: @"Badenova Wärmeplus",
+            Id: @"badenovawarmeplus-3970e4",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q63110091", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Badenova Wärmeplus", [@"operator:wikidata"] = @"Q63110091", [@"pipeline"] = @"substation", [@"substance"] = @"hot_water", },
+            Terms: [@"badenova wärmeplus", @"badenova wärmeplus gmbh", @"badenova wärmeplus gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"BASF",
             Id: @"basf-961a21",
@@ -992,6 +1064,12 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Karlsruher Institut für Technologie", [@"operator:short"] = @"KIT", [@"operator:wikidata"] = @"Q309988", [@"power"] = @"generator", },
             Terms: [@"karlsruher institut für technologie", @"kit"]),
         new NsiItem(
+            DisplayName: @"Neckar AG",
+            Id: @"neckarag-235ee2",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q66133612", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Neckar AG", [@"operator:short"] = @"NAG", [@"operator:wikidata"] = @"Q66133612", [@"power"] = @"generator", },
+            Terms: [@"nag", @"neckar ag"]),
+        new NsiItem(
             DisplayName: @"Stadt Karlsruhe",
             Id: @"stadtkarlsruhe-235ee2",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1040", [@"power"] = @"generator", },
@@ -1009,6 +1087,12 @@ public static class NsiRegion_DE_BW_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q130605046", [@"power"] = @"generator", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Stadtwerke Walldorf", [@"operator:wikidata"] = @"Q130605046", [@"power"] = @"generator", },
             Terms: [@"stadtwerke walldorf", @"stadtwerke walldorf gmbh & co. kg"]),
+        new NsiItem(
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-2bcac7",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"line", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"MVV Netze",
             Id: @"mvvnetze-c34551",
@@ -1040,6 +1124,18 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"TransnetBW", [@"operator:wikidata"] = @"Q1672772", [@"power"] = @"line", },
             Terms: [@"enbw transportnetze ag", @"transnetbw", @"transnetbw gmbh"]),
         new NsiItem(
+            DisplayName: @"Badenova Netze",
+            Id: @"badenovanetze-c11af1",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"minor_line", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+        new NsiItem(
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-c11af1",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"minor_line", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"minor_line", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
+        new NsiItem(
             DisplayName: @"MVV Netze",
             Id: @"mvvnetze-810827",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q128479606", [@"power"] = @"minor_line", },
@@ -1069,6 +1165,12 @@ public static class NsiRegion_DE_BW_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1672772", [@"power"] = @"minor_line", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"TransnetBW", [@"operator:wikidata"] = @"Q1672772", [@"power"] = @"minor_line", },
             Terms: [@"enbw transportnetze ag", @"transnetbw", @"transnetbw gmbh"]),
+        new NsiItem(
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-9f3684",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"pole", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"pole", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"MVV Netze",
             Id: @"mvvnetze-03ae2b",
@@ -1112,17 +1214,17 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Albwerk", [@"operator:wikidata"] = @"Q113464936", [@"power"] = @"substation", },
             Terms: [@"albwerk", @"albwerk energieversorgung"]),
         new NsiItem(
-            DisplayName: @"badenovaNETZE",
+            DisplayName: @"Badenova Netze",
             Id: @"badenovanetze-dda049",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"badenovaNETZE", [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"substation", },
-            Terms: [@"badenovanetze", @"badenovanetze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"substation", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
         new NsiItem(
-            DisplayName: @"E-Werk Mittelbaden",
-            Id: @"ewerkmittelbaden-dda049",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q15110012", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Mittelbaden", [@"operator:wikidata"] = @"Q15110012", [@"power"] = @"substation", },
-            Terms: [@"e-werk mittelbaden"]),
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-dda049",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"substation", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"ED Netze",
             Id: @"ednetze-dda049",
@@ -1304,12 +1406,6 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"TransnetBW", [@"operator:wikidata"] = @"Q1672772", [@"power"] = @"substation", },
             Terms: [@"transnetbw", @"transnetbw gmbh"]),
         new NsiItem(
-            DisplayName: @"Überlandwerk Mittelbaden",
-            Id: @"uberlandwerkmittelbaden-dda049",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Überlandwerk Mittelbaden", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"substation", },
-            Terms: [@"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
-        new NsiItem(
             DisplayName: @"Versorgungswerke Heddesheim",
             Id: @"versorgungswerkeheddesheim-dda049",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124486013", [@"power"] = @"substation", },
@@ -1321,6 +1417,12 @@ public static class NsiRegion_DE_BW_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q136027", [@"power"] = @"substation", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"ZEAG Energie", [@"operator:wikidata"] = @"Q136027", [@"power"] = @"substation", },
             Terms: [@"zeag", @"zeag energie"]),
+        new NsiItem(
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-69414f",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"tower", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"tower", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"MVV Netze",
             Id: @"mvvnetze-f47642",
@@ -1364,17 +1466,17 @@ public static class NsiRegion_DE_BW_GEOJSON
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Albwerk", [@"operator:wikidata"] = @"Q113464936", [@"power"] = @"transformer", },
             Terms: [@"albwerk", @"albwerk energieversorgung"]),
         new NsiItem(
-            DisplayName: @"badenovaNETZE",
+            DisplayName: @"Badenova Netze",
             Id: @"badenovanetze-645c81",
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"badenovaNETZE", [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"transformer", },
-            Terms: [@"badenovanetze", @"badenovanetze gmbh", @"bnnetze", @"bnnetze gmbh"]),
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Badenova Netze", [@"operator:wikidata"] = @"Q57712950", [@"power"] = @"transformer", },
+            Terms: [@"badenova", @"badenova ag & co. kg", @"badenova netze", @"badenova netze gmbh", @"bnnetze", @"bnnetze gmbh"]),
         new NsiItem(
-            DisplayName: @"E-Werk Mittelbaden",
-            Id: @"ewerkmittelbaden-645c81",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q15110012", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Mittelbaden", [@"operator:wikidata"] = @"Q15110012", [@"power"] = @"transformer", },
-            Terms: [@"e-werk mittelbaden"]),
+            DisplayName: @"E-Werk Netze",
+            Id: @"ewerknetze-645c81",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"transformer", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"E-Werk Netze", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"transformer", },
+            Terms: [@"e-werk mittelbaden", @"e-werk netze", @"e-werk netze gmbh & co. kg", @"elektrizitätswerk mittelbaden", @"elektrizitätswerk mittelbaden ag & co. kg", @"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"ED Netze",
             Id: @"ednetze-645c81",
@@ -1555,12 +1657,6 @@ public static class NsiRegion_DE_BW_GEOJSON
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1672772", [@"power"] = @"transformer", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"TransnetBW", [@"operator:wikidata"] = @"Q1672772", [@"power"] = @"transformer", },
             Terms: [@"transnetbw", @"transnetbw gmbh"]),
-        new NsiItem(
-            DisplayName: @"Überlandwerk Mittelbaden",
-            Id: @"uberlandwerkmittelbaden-645c81",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"transformer", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"Überlandwerk Mittelbaden", [@"operator:wikidata"] = @"Q124480690", [@"power"] = @"transformer", },
-            Terms: [@"überlandwerk mittelbaden", @"überlandwerk mittelbaden gmbh & co. kg"]),
         new NsiItem(
             DisplayName: @"Versorgungswerke Heddesheim",
             Id: @"versorgungswerkeheddesheim-645c81",

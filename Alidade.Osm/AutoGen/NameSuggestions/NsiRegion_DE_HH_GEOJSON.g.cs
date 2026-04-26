@@ -14,17 +14,35 @@ public static class NsiRegion_DE_HH_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"Hamburger Sparkasse",
+            Id: @"hamburgersparkasse-e71c95",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1573140", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Hamburger Sparkasse", [@"brand:wikidata"] = @"Q1573140", [@"operator"] = @"Hamburger Sparkasse", [@"operator:wikidata"] = @"Q1573140", },
+            Terms: [@"hamburger sparkasse"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank Hamburg",
             Id: @"spardabankhamburg-ff8f99",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q1231375", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"Sparda-Bank Hamburg", [@"brand:wikidata"] = @"Q1231375", [@"operator"] = @"Sparda-Bank Hamburg", [@"operator:wikidata"] = @"Q1231375", },
             Terms: [@"sparda-bank", @"sparda-bank hamburg", @"sparda-bank hamburg eg"]),
         new NsiItem(
+            DisplayName: @"Hamburger Sparkasse",
+            Id: @"hamburgersparkasse-6fe669",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1573140", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Hamburger Sparkasse", [@"brand:wikidata"] = @"Q1573140", [@"name"] = @"Hamburger Sparkasse", [@"short_name"] = @"Haspa", },
+            Terms: [@"hamburger sparkasse", @"haspa"]),
+        new NsiItem(
             DisplayName: @"Sparda-Bank Hamburg",
             Id: @"spardabankhamburg-b869bd",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q1231375", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"Sparda-Bank Hamburg", [@"brand:wikidata"] = @"Q1231375", [@"name"] = @"Sparda-Bank Hamburg", },
             Terms: [@"sparda-bank", @"sparda-bank hamburg", @"sparda-bank hamburg eg"]),
+        new NsiItem(
+            DisplayName: @"StadtRAD Hamburg",
+            Id: @"stadtradhamburg-a251e2",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand:wikidata"] = @"Q2326366", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bicycle_rental", [@"brand"] = @"Stadtrad Hamburg", [@"brand:wikidata"] = @"Q2326366", [@"network"] = @"stadtradhamburg", [@"network:wikidata"] = @"Q2326366", [@"operator"] = @"Deutsche Bahn Connect GmbH", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q1152100", },
+            Terms: [@"deutsche bahn connect gmbh", @"stadtrad hamburg"]),
         new NsiItem(
             DisplayName: @"AOK Rheinland/Hamburg",
             Id: @"aokrheinlandhamburg-2c6953",

@@ -65,7 +65,7 @@ public static class NsiRegion_NL
             DisplayName: @"Everfuel",
             Id: @"everfuel-b750b3",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q114905024", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Everfuel", [@"brand:wikidata"] = @"Q114905024", [@"fuel:LH2"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Everfuel", [@"brand:wikidata"] = @"Q114905024", },
             Terms: [@"everfuel"]),
         new NsiItem(
             DisplayName: @"Fieten Olie",
@@ -196,14 +196,14 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"RegioBank",
             Id: @"regiobank-5333ab",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2115864", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"RegioBank", [@"brand:wikidata"] = @"Q2115864", [@"operator"] = @"RegioBank", [@"operator:wikidata"] = @"Q2115864", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2084143", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"RegioBank", [@"brand:wikidata"] = @"Q2084143", [@"operator"] = @"RegioBank", [@"operator:wikidata"] = @"Q2084143", },
             Terms: [@"regiobank"]),
         new NsiItem(
             DisplayName: @"SNS Bank",
             Id: @"snsbank-5333ab",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q135338857", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"SNS Bank", [@"brand:wikidata"] = @"Q135338857", [@"operator"] = @"SNS Bank", [@"operator:wikidata"] = @"Q135338857", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand:wikidata"] = @"Q2084143", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"atm", [@"brand"] = @"SNS Bank", [@"brand:wikidata"] = @"Q2084143", [@"operator"] = @"SNS Bank", [@"operator:wikidata"] = @"Q2084143", },
             Terms: [@"sns bank"]),
         new NsiItem(
             DisplayName: @"ABN AMRO",
@@ -262,14 +262,14 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"RegioBank",
             Id: @"regiobank-fb21a8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q2115864", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"RegioBank", [@"brand:wikidata"] = @"Q2115864", [@"name"] = @"RegioBank", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q2084143", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"RegioBank", [@"brand:wikidata"] = @"Q2084143", [@"name"] = @"RegioBank", },
             Terms: [@"regiobank"]),
         new NsiItem(
             DisplayName: @"SNS Bank",
             Id: @"snsbank-fb21a8",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q135338857", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"SNS Bank", [@"brand:wikidata"] = @"Q135338857", [@"name"] = @"SNS Bank", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand:wikidata"] = @"Q2084143", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"bank", [@"brand"] = @"SNS Bank", [@"brand:wikidata"] = @"Q2084143", [@"name"] = @"SNS Bank", },
             Terms: [@"sns bank"]),
         new NsiItem(
             DisplayName: @"Belushi's",
@@ -392,8 +392,14 @@ public static class NsiRegion_NL
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Agri Go Charge", [@"brand:wikidata"] = @"Q126403386", [@"name"] = @"Agri Go Charge", [@"operator"] = @"Agri Go Charge", [@"operator:wikidata"] = @"Q126403386", },
             Terms: [@"agri go charge", @"agrisnellaad"]),
         new NsiItem(
+            DisplayName: @"bp pulse",
+            Id: @"bppulse-ac8b5c",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q39057719", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
+            Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
+        new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-08a288",
+            Id: @"electra-5e7209",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand:wikidata"] = @"Q128592938", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -621,7 +627,7 @@ public static class NsiRegion_NL
             Terms: [@"sushipoint"]),
         new NsiItem(
             DisplayName: @"Taco Bell",
-            Id: @"tacobell-09585c",
+            Id: @"tacobell-a1c9df",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand:wikidata"] = @"Q752941", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"fast_food", [@"brand"] = @"Taco Bell", [@"brand:wikidata"] = @"Q752941", [@"cuisine"] = @"tex-mex", [@"name"] = @"Taco Bell", [@"takeaway"] = @"yes", },
             Terms: [@"taco bell"]),
@@ -825,7 +831,7 @@ public static class NsiRegion_NL
             Terms: [@"DHL Pakketautomaat", @"dhl"]),
         new NsiItem(
             DisplayName: @"DPD Pickup Station",
-            Id: @"dpdpickupstation-db785e",
+            Id: @"dpdpickupstation-5c8577",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand:wikidata"] = @"Q114273730", },
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"parcel_locker", [@"brand"] = @"DPD Pickup Station", [@"brand:wikidata"] = @"Q114273730", },
             Terms: [@"dpd pickup station"]),
@@ -1016,14 +1022,38 @@ public static class NsiRegion_NL
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Snap Fitness", [@"brand:wikidata"] = @"Q7547254", [@"leisure"] = @"fitness_centre", [@"name"] = @"Snap Fitness", },
             Terms: [@"snap fitness"]),
         new NsiItem(
+            DisplayName: @"SportCity",
+            Id: @"sportcity-d4f0dd",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q131984002", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"SportCity", [@"brand:wikidata"] = @"Q131984002", [@"leisure"] = @"fitness_centre", [@"name"] = @"SportCity", },
+            Terms: [@"sportcity"]),
+        new NsiItem(
+            DisplayName: @"TrainMore",
+            Id: @"trainmore-d4f0dd",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138297498", [@"leisure"] = @"fitness_centre", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"TrainMore", [@"brand:wikidata"] = @"Q138297498", [@"leisure"] = @"fitness_centre", [@"name"] = @"TrainMore", },
+            Terms: [@"trainmore"]),
+        new NsiItem(
+            DisplayName: @"Monkey Town",
+            Id: @"monkeytown-f9368f",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426657", [@"leisure"] = @"indoor_play", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Monkey Town", [@"brand:wikidata"] = @"Q138426657", [@"fee"] = @"yes", [@"leisure"] = @"indoor_play", [@"name"] = @"Monkey Town", },
+            Terms: [@"monkey town"]),
+        new NsiItem(
             DisplayName: @"Agri Go Charge",
             Id: @"agrigocharge-50b225",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q126403386", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Agri Go Charge", [@"brand:wikidata"] = @"Q126403386", [@"man_made"] = @"charge_point", [@"operator"] = @"Agri Go Charge", [@"operator:wikidata"] = @"Q126403386", },
             Terms: [@"agri go charge", @"agrisnellaad"]),
         new NsiItem(
+            DisplayName: @"bp pulse",
+            Id: @"bppulse-269202",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"bp pulse", [@"brand:wikidata"] = @"Q39057719", [@"man_made"] = @"charge_point", [@"operator"] = @"bp pulse", [@"operator:wikidata"] = @"Q39057719", },
+            Terms: [@"bp chargemaster", @"bp pulse", @"chargemaster"]),
+        new NsiItem(
             DisplayName: @"Electra",
-            Id: @"electra-2f347f",
+            Id: @"electra-179400",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Electra", [@"brand:wikidata"] = @"Q128592938", [@"man_made"] = @"charge_point", [@"operator"] = @"Electra", [@"operator:wikidata"] = @"Q128592938", },
             Terms: [@"electra"]),
@@ -1232,6 +1262,12 @@ public static class NsiRegion_NL
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Fietswereld", [@"brand:wikidata"] = @"Q116172680", [@"name"] = @"Fietswereld", [@"shop"] = @"bicycle", },
             Terms: [@"fietswereld"]),
         new NsiItem(
+            DisplayName: @"Mantel",
+            Id: @"mantel-a0a74d",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138028950", [@"shop"] = @"bicycle", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Mantel", [@"brand:wikidata"] = @"Q138028950", [@"name"] = @"Mantel", [@"shop"] = @"bicycle", },
+            Terms: [@"mantel"]),
+        new NsiItem(
             DisplayName: @"Profile",
             Id: @"profile-a0a74d",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q124339994", [@"shop"] = @"bicycle", },
@@ -1246,8 +1282,8 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"AKO",
             Id: @"ako-1267b5",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q2159963", [@"shop"] = @"books", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"AKO", [@"brand:wikidata"] = @"Q2159963", [@"name"] = @"AKO", [@"shop"] = @"books", },
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q3317555", [@"shop"] = @"books", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"AKO", [@"brand:wikidata"] = @"Q3317555", [@"name"] = @"AKO", [@"shop"] = @"books", },
             Terms: [@"ako"]),
         new NsiItem(
             DisplayName: @"Boekenvoordeel",
@@ -1382,6 +1418,12 @@ public static class NsiRegion_NL
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Carpetright", [@"brand:wikidata"] = @"Q5045782", [@"name"] = @"Carpetright", [@"shop"] = @"carpet", },
             Terms: [@"carpetright"]),
         new NsiItem(
+            DisplayName: @"Zuivelhoeve",
+            Id: @"zuivelhoeve-cd1743",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q106581549", [@"shop"] = @"cheese", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Zuivelhoeve", [@"brand:wikidata"] = @"Q106581549", [@"name"] = @"Zuivelhoeve", [@"shop"] = @"cheese", },
+            Terms: [@"zuivelhoeve"]),
+        new NsiItem(
             DisplayName: @"DA",
             Id: @"da-994f1e",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q4899756", [@"shop"] = @"chemist", },
@@ -1407,7 +1449,7 @@ public static class NsiRegion_NL
             Terms: [@"kruidvat"]),
         new NsiItem(
             DisplayName: @"Normal",
-            Id: @"normal-57f5e2",
+            Id: @"normal-bae2a7",
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q19562429", [@"shop"] = @"chemist", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Normal", [@"brand:wikidata"] = @"Q19562429", [@"name"] = @"Normal", [@"shop"] = @"chemist", },
             Terms: [@"normal"]),
@@ -1747,12 +1789,6 @@ public static class NsiRegion_NL
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q106581278", [@"shop"] = @"craft", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"pipoos", [@"brand:wikidata"] = @"Q106581278", [@"name"] = @"pipoos", [@"shop"] = @"craft", },
             Terms: [@"pipoos"]),
-        new NsiItem(
-            DisplayName: @"Zuivelhoeve",
-            Id: @"zuivelhoeve-32e1e2",
-            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q106581549", [@"shop"] = @"dairy", },
-            AddTags: new Dictionary<string, string> { [@"brand"] = @"Zuivelhoeve", [@"brand:wikidata"] = @"Q106581549", [@"name"] = @"Zuivelhoeve", [@"shop"] = @"dairy", },
-            Terms: [@"zuivelhoeve"]),
         new NsiItem(
             DisplayName: @"Oil & Vinegar",
             Id: @"oilandvinegar-0e839f",
@@ -3010,15 +3046,9 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"Share Now",
             Id: @"sharenow-663d52",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q62021602", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q62021602", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator:wikidata"] = @"Q131572664", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"car_sharing", [@"operator"] = @"Share Now", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q131572664", },
             Terms: [@"share now"]),
-        new NsiItem(
-            DisplayName: @"Agrisnellaad",
-            Id: @"agrisnellaad-fa6152",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator:wikidata"] = @"Q126403386", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"charging_station", [@"operator"] = @"Agrisnellaad", [@"operator:wikidata"] = @"Q126403386", },
-            Terms: [@"agrisnellaad"]),
         new NsiItem(
             DisplayName: @"Airbus",
             Id: @"airbus-ed052c",
@@ -3712,8 +3742,8 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"Roteb",
             Id: @"roteb-fcd61b",
-            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q2300888", },
-            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Roteb", [@"operator:wikidata"] = @"Q2300888", },
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator:wikidata"] = @"Q133810292", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"recycling", [@"operator"] = @"Roteb", [@"operator:wikidata"] = @"Q133810292", },
             Terms: [@"roteb"]),
         new NsiItem(
             DisplayName: @"ROVA",
@@ -3890,6 +3920,12 @@ public static class NsiRegion_NL
             AddTags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"operator"] = @"Alliade", [@"operator:type"] = @"private", [@"operator:wikidata"] = @"Q123696221", },
             Terms: [@"alliade"]),
         new NsiItem(
+            DisplayName: @"Careyn",
+            Id: @"careyn-627b49",
+            Tags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"operator:wikidata"] = @"Q1824558", },
+            AddTags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"operator"] = @"Careyn", [@"operator:wikidata"] = @"Q1824558", },
+            Terms: [@"careyn"]),
+        new NsiItem(
             DisplayName: @"Centraal Orgaan opvang Asielzoekers",
             Id: @"centraalorgaanopvangasielzoekers-627b49",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"social_facility", [@"operator:wikidata"] = @"Q2115828", },
@@ -4057,12 +4093,6 @@ public static class NsiRegion_NL
             Tags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator:wikidata"] = @"Q7510564", },
             AddTags: new Dictionary<string, string> { [@"leisure"] = @"park", [@"operator"] = @"Staatsbosbeheer", [@"operator:type"] = @"government", [@"operator:wikidata"] = @"Q7510564", },
             Terms: [@"staatsbosbeheer"]),
-        new NsiItem(
-            DisplayName: @"Agrisnellaad",
-            Id: @"agrisnellaad-a00d8a",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator:wikidata"] = @"Q126403386", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"charge_point", [@"operator"] = @"Agrisnellaad", [@"operator:wikidata"] = @"Q126403386", },
-            Terms: [@"agrisnellaad"]),
         new NsiItem(
             DisplayName: @"Airbus",
             Id: @"airbus-e0c4bb",
@@ -4276,8 +4306,8 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"DSM",
             Id: @"dsm-f82a4b",
-            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q902650", },
-            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"DSM", [@"operator:wikidata"] = @"Q902650", },
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator:wikidata"] = @"Q120091633", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"pipeline", [@"operator"] = @"DSM", [@"operator:wikidata"] = @"Q120091633", },
             Terms: [@"dsm"]),
         new NsiItem(
             DisplayName: @"Evides Waterbedrijf",
@@ -4454,6 +4484,12 @@ public static class NsiRegion_NL
             AddTags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator"] = @"Hoogheemraadschap Hollands Noorderkwartier", [@"operator:wikidata"] = @"Q4469762", },
             Terms: [@"hoogheemraadschap hollands noorderkwartier"]),
         new NsiItem(
+            DisplayName: @"Hoogheemraadschap van Rijnland",
+            Id: @"hoogheemraadschapvanrijnland-addada",
+            Tags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator:wikidata"] = @"Q2619632", },
+            AddTags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator"] = @"Hoogheemraadschap van Rijnland", [@"operator:wikidata"] = @"Q2619632", },
+            Terms: [@"hoogheemraadschap van rijnland"]),
+        new NsiItem(
             DisplayName: @"Waterschap Hollandse Delta",
             Id: @"waterschaphollandsedelta-addada",
             Tags: new Dictionary<string, string> { [@"man_made"] = @"wastewater_plant", [@"operator:wikidata"] = @"Q3079910", },
@@ -4522,8 +4558,8 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"DSM",
             Id: @"dsm-983549",
-            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q902650", [@"pipeline"] = @"substation", },
-            AddTags: new Dictionary<string, string> { [@"operator"] = @"DSM", [@"operator:wikidata"] = @"Q902650", [@"pipeline"] = @"substation", },
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q120091633", [@"pipeline"] = @"substation", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"DSM", [@"operator:wikidata"] = @"Q120091633", [@"pipeline"] = @"substation", },
             Terms: [@"dsm"]),
         new NsiItem(
             DisplayName: @"Evides Waterbedrijf",
@@ -4615,6 +4651,12 @@ public static class NsiRegion_NL
             Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q1241260", [@"power"] = @"generator", },
             AddTags: new Dictionary<string, string> { [@"operator"] = @"Ørsted", [@"operator:wikidata"] = @"Q1241260", [@"power"] = @"generator", },
             Terms: [@"ørsted"]),
+        new NsiItem(
+            DisplayName: @"Pure Energie",
+            Id: @"pureenergie-7c4044",
+            Tags: new Dictionary<string, string> { [@"operator:wikidata"] = @"Q138356702", [@"power"] = @"generator", },
+            AddTags: new Dictionary<string, string> { [@"operator"] = @"Pure Energie", [@"operator:wikidata"] = @"Q138356702", [@"power"] = @"generator", },
+            Terms: [@"pure energie", @"pure energy"]),
         new NsiItem(
             DisplayName: @"Trianel",
             Id: @"trianel-0e2731",
@@ -4947,7 +4989,7 @@ public static class NsiRegion_NL
             Terms: [@"arnhem-nijmegen", @"hermes"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-a2667a",
+            Id: @"arriva-b74934",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"public_transport"] = @"platform", },
             Terms: [@"arriva"]),
@@ -5080,8 +5122,8 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"Stadsvervoer Amsterdam",
             Id: @"stadsvervoeramsterdam-0af83a",
-            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q108742702", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Stadsvervoer Amsterdam", [@"network:wikidata"] = @"Q108742702", [@"operator"] = @"GVB", [@"operator:wikidata"] = @"Q1808041", [@"public_transport"] = @"platform", },
+            Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q137608588", [@"public_transport"] = @"platform", },
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Stadsvervoer Amsterdam", [@"network:wikidata"] = @"Q137608588", [@"operator"] = @"GVB", [@"operator:wikidata"] = @"Q1808041", [@"public_transport"] = @"platform", },
             Terms: [@"gvb", @"stadsvervoer amsterdam"]),
         new NsiItem(
             DisplayName: @"Twente",
@@ -5325,7 +5367,7 @@ public static class NsiRegion_NL
             Terms: [@"arnhem-nijmegen", @"hermes"]),
         new NsiItem(
             DisplayName: @"Arriva",
-            Id: @"arriva-c62c26",
+            Id: @"arriva-d898fa",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Arriva", [@"network:wikidata"] = @"Q680991", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"arriva"]),
@@ -5458,8 +5500,8 @@ public static class NsiRegion_NL
         new NsiItem(
             DisplayName: @"Stadsvervoer Amsterdam",
             Id: @"stadsvervoeramsterdam-2f3200",
-            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q108742702", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"Stadsvervoer Amsterdam", [@"network:wikidata"] = @"Q108742702", [@"operator"] = @"GVB", [@"operator:wikidata"] = @"Q1808041", [@"route"] = @"bus", [@"type"] = @"route", },
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q137608588", [@"route"] = @"bus", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Stadsvervoer Amsterdam", [@"network:wikidata"] = @"Q137608588", [@"operator"] = @"GVB", [@"operator:wikidata"] = @"Q1808041", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"gvb", @"stadsvervoer amsterdam"]),
         new NsiItem(
             DisplayName: @"Twente",

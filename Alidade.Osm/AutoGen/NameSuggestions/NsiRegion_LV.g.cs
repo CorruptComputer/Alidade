@@ -29,7 +29,7 @@ public static class NsiRegion_LV
             DisplayName: @"Latvijas Propāna Gāze",
             Id: @"latvijaspropanagaze-bac13d",
             Tags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand:wikidata"] = @"Q104427357", },
-            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Latvijas Propāna Gāze", [@"brand:wikidata"] = @"Q104427357", [@"fuel:lpg"] = @"yes", },
+            AddTags: new Dictionary<string, string> { [@"advertising"] = @"totem", [@"brand"] = @"Latvijas Propāna Gāze", [@"brand:wikidata"] = @"Q104427357", },
             Terms: [@"latvijas propāna gāze", @"lpg"]),
         new NsiItem(
             DisplayName: @"Viada",
@@ -235,6 +235,12 @@ public static class NsiRegion_LV
             Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q50378897", [@"shop"] = @"alcohol", },
             AddTags: new Dictionary<string, string> { [@"brand"] = @"Vynoteka", [@"brand:wikidata"] = @"Q50378897", [@"name"] = @"Vynoteka", [@"shop"] = @"alcohol", },
             Terms: [@"vynoteka"]),
+        new NsiItem(
+            DisplayName: @"Dormeo",
+            Id: @"dormeo-17f69e",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q138426815", [@"shop"] = @"bed", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Dormeo", [@"brand:wikidata"] = @"Q138426815", [@"name"] = @"Dormeo", [@"shop"] = @"bed", },
+            Terms: [@"dormeo", @"dormeo home"]),
         new NsiItem(
             DisplayName: @"Forevers",
             Id: @"forevers-00a516",

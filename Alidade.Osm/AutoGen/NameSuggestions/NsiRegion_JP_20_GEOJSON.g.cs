@@ -14,6 +14,24 @@ public static class NsiRegion_JP_20_GEOJSON
     public static IReadOnlyList<NsiItem> Items { get; } =
     [
         new NsiItem(
+            DisplayName: @"ツルヤ",
+            Id: @"tsuruya-a888b6",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11318832", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"ツルヤ", [@"brand:en"] = @"Tsuruya", [@"brand:ja"] = @"ツルヤ", [@"brand:wikidata"] = @"Q11318832", [@"name"] = @"ツルヤ", [@"name:en"] = @"Tsuruya", [@"name:ja"] = @"ツルヤ", [@"shop"] = @"supermarket", },
+            Terms: [@"tsuruya", @"ツルヤ"]),
+        new NsiItem(
+            DisplayName: @"デリシア",
+            Id: @"delicia-7ef8c9",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q11283878", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"Delicia", [@"brand:en"] = @"Delicia", [@"brand:ja"] = @"デリシア", [@"brand:wikidata"] = @"Q11283878", [@"name"] = @"デリシア", [@"name:en"] = @"Delicia", [@"name:ja"] = @"デリシア", [@"operator"] = @"デリシア", [@"operator:en"] = @"Delicia", [@"operator:ja"] = @"デリシア", [@"shop"] = @"supermarket", },
+            Terms: [@"delicia", @"デリシア"]),
+        new NsiItem(
+            DisplayName: @"ユーパレット",
+            Id: @"youpalette-7ef8c9",
+            Tags: new Dictionary<string, string> { [@"brand:wikidata"] = @"Q105687460", [@"shop"] = @"supermarket", },
+            AddTags: new Dictionary<string, string> { [@"brand"] = @"業務スーパー", [@"brand:en"] = @"Gyomu Super", [@"brand:ja"] = @"業務スーパー", [@"brand:wikidata"] = @"Q105687460", [@"name"] = @"ユーパレット", [@"name:en"] = @"YOU Palette", [@"name:ja"] = @"ユーパレット", [@"operator"] = @"デリシア", [@"operator:en"] = @"Delicia", [@"operator:ja"] = @"デリシア", [@"operator:wikidata"] = @"Q11283878", [@"shop"] = @"supermarket", },
+            Terms: [@"delicia", @"gyomu super", @"you palette", @"デリシア", @"ユーパレット", @"業務スーパー"]),
+        new NsiItem(
             DisplayName: @"青木村",
             Id: @"8c34a6-58f221",
             Tags: new Dictionary<string, string> { [@"amenity"] = @"community_centre", [@"operator:wikidata"] = @"Q615719", },

@@ -63,10 +63,10 @@ public static class NsiRegion_CZ_71_GEOJSON
             Terms: [@"městská policie šumperk"]),
         new NsiItem(
             DisplayName: @"IDSOK",
-            Id: @"idsok-e27fcc",
+            Id: @"integrovanydopravnisystemolomouckehokraje-88d718",
             Tags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"network:wikidata"] = @"Q12021688", [@"public_transport"] = @"platform", },
-            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"public_transport"] = @"platform", },
-            Terms: [@"idsok"]),
+            AddTags: new Dictionary<string, string> { [@"bus"] = @"yes", [@"highway"] = @"bus_stop", [@"network"] = @"Integrovaný dopravní systém Olomouckého kraje", [@"network:short"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"public_transport"] = @"platform", },
+            Terms: [@"idsok", @"integrovaný dopravní systém olomouckého kraje"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-8ac7e1",
@@ -81,6 +81,18 @@ public static class NsiRegion_CZ_71_GEOJSON
             Terms: [@"odis"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
+            Id: @"integrovanadopravazlinskehokraje-2741b9",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"halt", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaná doprava Zlínského kraje", [@"network:short"] = @"IDZK", [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"halt", [@"train"] = @"yes", },
+            Terms: [@"IDZK (Česko)", @"idzk", @"integrovaná doprava zlínského kraje"]),
+        new NsiItem(
+            DisplayName: @"IDSOK",
+            Id: @"integrovanydopravnisystemolomouckehokraje-34635c",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"railway"] = @"station", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaný dopravní systém Olomouckého kraje", [@"network:short"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
+            Terms: [@"idsok", @"integrovaný dopravní systém olomouckého kraje"]),
+        new NsiItem(
+            DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-b03030",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12027635", [@"railway"] = @"station", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaná doprava Zlínského kraje", [@"network:short"] = @"IDZK", [@"network:wikidata"] = @"Q12027635", [@"public_transport"] = @"station", [@"railway"] = @"station", [@"train"] = @"yes", },
@@ -93,10 +105,10 @@ public static class NsiRegion_CZ_71_GEOJSON
             Terms: [@"odis"]),
         new NsiItem(
             DisplayName: @"IDSOK",
-            Id: @"idsok-4c0bb9",
+            Id: @"idsok-c65600",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"railway"] = @"tram_stop", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"railway"] = @"tram_stop", },
-            Terms: [@"idsok"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"operator"] = @"Dopravní podnik města Olomouce", [@"operator:short"] = @"DPMO", [@"operator:wikidata"] = @"Q11822108", [@"railway"] = @"tram_stop", },
+            Terms: [@"dopravní podnik města olomouce", @"dpmo", @"idsok"]),
         new NsiItem(
             DisplayName: @"ODIS",
             Id: @"odis-afff60",
@@ -105,10 +117,10 @@ public static class NsiRegion_CZ_71_GEOJSON
             Terms: [@"dopravní podnik ostrava", @"dpo", @"odis"]),
         new NsiItem(
             DisplayName: @"IDSOK",
-            Id: @"idsok-f85345",
+            Id: @"integrovanydopravnisystemolomouckehokraje-655c18",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"route"] = @"bus", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"route"] = @"bus", [@"type"] = @"route", },
-            Terms: [@"idsok"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaný dopravní systém Olomouckého kraje", [@"network:short"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"route"] = @"bus", [@"type"] = @"route", },
+            Terms: [@"idsok", @"integrovaný dopravní systém olomouckého kraje"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-028705",
@@ -121,6 +133,12 @@ public static class NsiRegion_CZ_71_GEOJSON
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12043044", [@"route"] = @"bus", [@"type"] = @"route", },
             AddTags: new Dictionary<string, string> { [@"network"] = @"ODIS", [@"network:wikidata"] = @"Q12043044", [@"route"] = @"bus", [@"type"] = @"route", },
             Terms: [@"odis"]),
+        new NsiItem(
+            DisplayName: @"IDSOK",
+            Id: @"integrovanydopravnisystemolomouckehokraje-eb732a",
+            Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"route"] = @"train", [@"type"] = @"route", },
+            AddTags: new Dictionary<string, string> { [@"network"] = @"Integrovaný dopravní systém Olomouckého kraje", [@"network:short"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"route"] = @"train", [@"type"] = @"route", },
+            Terms: [@"idsok", @"integrovaný dopravní systém olomouckého kraje"]),
         new NsiItem(
             DisplayName: @"IDZK (Česko)",
             Id: @"integrovanadopravazlinskehokraje-e2fb0f",
@@ -135,10 +153,10 @@ public static class NsiRegion_CZ_71_GEOJSON
             Terms: [@"odis"]),
         new NsiItem(
             DisplayName: @"IDSOK",
-            Id: @"idsok-96e584",
+            Id: @"idsok-8d4088",
             Tags: new Dictionary<string, string> { [@"network:wikidata"] = @"Q12021688", [@"route"] = @"tram", [@"type"] = @"route", },
-            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"route"] = @"tram", [@"type"] = @"route", },
-            Terms: [@"idsok"]),
+            AddTags: new Dictionary<string, string> { [@"network"] = @"IDSOK", [@"network:wikidata"] = @"Q12021688", [@"operator"] = @"Dopravní podnik města Olomouce", [@"operator:short"] = @"DPMO", [@"operator:wikidata"] = @"Q11822108", [@"route"] = @"tram", [@"type"] = @"route", },
+            Terms: [@"dopravní podnik města olomouce", @"dpmo", @"idsok"]),
         new NsiItem(
             DisplayName: @"ODIS",
             Id: @"odis-ad1f04",
