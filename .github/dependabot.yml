@@ -25,3 +25,11 @@ updates:
       Pipeline:
         patterns:
           - "*"
+  - package-ecosystem: "github-actions"
+    directory: "/.github/actions/setup-env"
+    schedule:
+      interval: "daily"
+    groups:
+      PipelineEnv:
+        patterns:
+          - "*"
