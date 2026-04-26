@@ -29,6 +29,8 @@ public sealed class ValidationService : IAsyncDisposable
         new GeometryMismatchValidator(),
         new TagLengthValidator(),
         new DeprecatedTagValidator(),
+        new UntaggedWayValidator(),
+        new UntaggedNodeValidator(),
         // Info
         new SuspiciousNameValidator(),
     ];

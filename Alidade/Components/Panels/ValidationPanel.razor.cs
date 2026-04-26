@@ -16,7 +16,7 @@ public partial class ValidationPanel(
         validationState.StateChanged += OnStateChanged;
     }
 
-    private void OnStateChanged(object? sender, EventArgs e) => StateHasChanged();
+    private void OnStateChanged(object? sender, EventArgs e) => _ = InvokeAsync(StateHasChanged);
 
     private void Close()
         => _ = mediator.Send(new Handlers.Validation.ToggleValidationPanel.Command());

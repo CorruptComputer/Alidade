@@ -34,7 +34,7 @@ public partial class Toolbar(
         validationState.StateChanged += OnStateChanged;
     }
 
-    private void OnStateChanged(object? sender, EventArgs e) => StateHasChanged();
+    private void OnStateChanged(object? sender, EventArgs e) => _ = InvokeAsync(StateHasChanged);
 
     private void SetTool(ActiveTools tool)
         => _ = mediator.Send(new Handlers.Tool.SetActiveTool.Command(tool));

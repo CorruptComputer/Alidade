@@ -1,9 +1,7 @@
-using Microsoft.AspNetCore.Components;
-
 namespace Alidade.Handlers.Validation;
 
 /// <inheritdoc />
-public class ValidationResults(ValidationStateService validationState, Dispatcher dispatcher) : INotificationHandler<ValidationResults.Notification>
+public class ValidationResults(ValidationStateService validationState) : INotificationHandler<ValidationResults.Notification>
 {
     /// <summary>
     ///   Replaces the issue list with the results of a completed validation pass.
@@ -11,10 +9,13 @@ public class ValidationResults(ValidationStateService validationState, Dispatche
     public record Notification(IReadOnlyList<ValidationIssue> Issues) : NotificationBase;
 
     /// <inheritdoc />
-    public async Task Handle(Notification notification, CancellationToken cancellationToken)
-        => await dispatcher.InvokeAsync(() => validationState.SetState(validationState.State with
+    public Task Handle(Notification notification, CancellationToken cancellationToken)
+    {
+        validationState.SetState(validationState.State with
         {
             Issues = [.. notification.Issues],
             IsRunning = false
-        }));
+        });
+        return Task.CompletedTask;
+    }
 }
