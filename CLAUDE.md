@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Alidade is a browser-based OpenStreetMap editor built on Blazor WebAssembly (C#). It targets experienced OSM contributors and aims for feature parity with iD. The UI is rendered via MapLibre GL JS through a JS interop boundary; all application logic lives in C#. Key external data sources are `id-tagging-schema` (presets) and `name-suggestion-index`, both embedded at build time by `Alidade.OsmGen`.
+Alidade is a browser-based OpenStreetMap editor built on Blazor WebAssembly (C#). It targets experienced OSM contributors and aims for feature parity with iD. The UI is rendered via MapLibre GL JS through a JS interop boundary; all application logic lives in C#. Key external data sources are `id-tagging-schema` (presets), `name-suggestion-index`, and `editor-layer-index` (imagery layers), all embedded at build time by `Alidade.OsmGen`.
 
 ---
 
@@ -68,7 +68,7 @@ Singleton state services are distributed across projects based on where their mo
 Each project owns an Autofac module that registers its own services:
 - `Alidade.Core/AlidadeCoreModule.cs` — registers `SettingsStateService`
 - `Alidade.Map/AlidadeMapModule.cs` — registers `MapInteropService` and map-specific services
-- `Alidade.Osm/AlidadeOsmModule.cs` — registers `EditBufferStateService`, OSM API services, `PresetService`, `NsiService`
+- `Alidade.Osm/AlidadeOsmModule.cs` — registers `EditBufferStateService`, `OsmCacheService`, OSM API services, `PresetService`, `NsiService`
 - `Alidade/AlidadeModule.cs` — registers app services and state services; loads the above sub-modules; also registers all Questy handlers by scanning `Alidade`, `Alidade.Map`, and `Alidade.Osm` assemblies
 
 Use constructor injection throughout. State services are singletons; application services are instance-per-lifetime-scope.
@@ -142,7 +142,7 @@ See [CODE_STYLE.md](CODE_STYLE.md) for the full rules. The most commonly violate
 Release builds execute `git describe --long --always --dirty --exclude=* --abbrev=8` via a `SetSourceRevisionId` MSBuild target in `Directory.Build.props` to embed an 8-character commit hash as the version suffix. Debug builds use the suffix `"develop"`.
 
 **MapLibre is copied, not re-bundled**
-`Alidade.Map.csproj` copies MapLibre JS, CSS, and worker files from node_modules verbatim to `Alidade.Map/wwwroot/assets/lib/maplibre-gl/` via a `CopyMapLibre` MSBuild target. Do not run them through esbuild, webpack, or any other bundler — doing so would strip the `window.maplibregl` UMD global that `map-interop.js` depends on.
+`Alidade.Map.csproj` copies MapLibre JS, CSS, and license files from node_modules verbatim to `Alidade.Map/wwwroot/assets/lib/maplibre-gl/` via a `CopyMapLibre` MSBuild target. Do not run them through esbuild, webpack, or any other bundler — doing so would strip the `window.maplibregl` UMD global that `map-interop.js` depends on.
 
 **OsmGen generates three datasets**
 `Alidade.OsmGen` produces compiled C# for three data sources, not just two:

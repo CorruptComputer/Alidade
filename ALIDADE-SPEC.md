@@ -220,6 +220,8 @@ Errors block upload and must be resolved first; warnings are surfaced to the use
 | Tag value exceeds 255 character OSM limit | |
 | Impossible oneway (highway with oneway tag forming a routing island - no way in or out) | |
 | Deprecated tags | Shows migration suggestion from `id-tagging-schema` |
+| Untagged standalone node (locally edited, not a vertex of any way) | |
+| Untagged way (locally edited, not a relation member; `area=yes`-only counts as untagged) | |
 
 #### Info
 
@@ -231,7 +233,7 @@ Errors block upload and must be resolved first; warnings are surfaced to the use
 
 The following iD validators are omitted from Alidade as not applicable or out of scope:
 
-- **Untagged node in way** - nodes that are only geometry (no tags) are perfectly valid and extremely common; flagging them creates noise
+- **Untagged node in way** (way-vertex nodes) - nodes that serve only as geometry vertices are perfectly valid and extremely common; flagging them creates noise. Note: untagged *standalone* nodes (not vertices of any way) *are* flagged as a warning.
 - **Private data** (`phone`, `email`, `website` on personal features) - paternalistic for a power-user editor
 - **Help request** - iD-specific UI affordance, not relevant
 - **MapRules** - iD-specific hosted task management integration
@@ -532,8 +534,11 @@ Commit the regenerated files in `Alidade.Osm/AutoGen/TaggingSchemas/`, `Alidade.
 │       └── assets/js/             # indexeddb-interop.js, auth-interop.js
 ├── Alidade.Osm/                   # OSM domain models, API services, OSM-specific handlers, and validators
 │   ├── Handlers/
-│   │   ├── Editing/               # OSM element mutation handlers (CreateNode, MoveNode, DeleteWay, UpdateTags, etc.)
-│   │   └── Parsing/               # FetchBbox, ParseOsmXml, UploadChangeset, etc.
+│   │   ├── Changeset/             # BuildChangesets, CloseChangeset, CreateChangeset, UploadChangeset
+│   │   ├── Editing/               # OSM element mutation handlers (CreateNode, MoveNode, DeleteWay, FetchBbox, FetchElement, etc.)
+│   │   ├── Parsing/               # BuildOsmChangeXml, ParseDiffResult, ParseNotesJson, ParseOsmXml
+│   │   ├── Tagging/               # BulkUpdateTags, MergePresetTags, UpdateTags
+│   │   └── Tools/                 # Gridify and Square algorithm handlers
 │   ├── Models/
 │   │   ├── EditBuffer/            # EditBufferState, ConflictItem
 │   │   ├── Validation/            # ValidationIssue, ValidationSeverities
