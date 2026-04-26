@@ -1,3 +1,4 @@
+using NetTopologySuite.Features;
 using NetTopologySuite.Geometries;
 
 namespace Alidade.Osm.Services;
@@ -13,6 +14,8 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
     private readonly Dictionary<long, OsmNode> _nodes = [];
     private readonly Dictionary<long, OsmWay> _ways = [];
     private readonly Dictionary<long, OsmRelation> _relations = [];
+    private readonly Dictionary<long, Feature> _nodeFeatures = [];
+    private readonly Dictionary<long, Feature> _wayFeatures = [];
 
     private readonly GeometryFactory _geomFactory = geomFactory;
 
@@ -46,11 +49,17 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
         foreach (OsmNode n in data.Nodes)
         {
             _nodes[n.Id] = n;
+            _nodeFeatures[n.Id] = n.ToFeature(_geomFactory);
         }
 
         foreach (OsmWay w in data.Ways)
         {
             _ways[w.Id] = w;
+            Feature? f = w.ToFeature(_nodes, _geomFactory);
+            if (f is not null)
+            {
+                _wayFeatures[w.Id] = f;
+            }
         }
 
         foreach (OsmRelation r in data.Relations)
@@ -109,11 +118,19 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
     }
 
     /// <inheritdoc />
+    public Feature? GetCachedNodeFeature(long id) => _nodeFeatures.GetValueOrDefault(id);
+
+    /// <inheritdoc />
+    public Feature? GetCachedWayFeature(long id) => _wayFeatures.GetValueOrDefault(id);
+
+    /// <inheritdoc />
     public void Clear()
     {
         _cachedArea = null;
         _nodes.Clear();
+        _nodeFeatures.Clear();
         _ways.Clear();
+        _wayFeatures.Clear();
         _relations.Clear();
     }
 

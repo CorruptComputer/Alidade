@@ -282,28 +282,33 @@ public class EditBufferService : IDisposable
             }
         }
 
-        List<Feature> nodes = [];
+        FeatureCollection nodes = [];
         foreach (OsmNode n in liveNodes.Values)
         {
-            Feature f = n.ToFeature(_geomFactory);
+            Feature f = _osmCache.GetCachedNodeFeature(n.Id) ?? n.ToFeature(_geomFactory);
             bool hasTags = n.Tags.Count > 0;
             bool isJunction = nodeWayCount.GetValueOrDefault(n.Id) >= 2;
             (string fill, string stroke) = (hasTags, isJunction) switch
             {
-                (true,  true)  => ("#4cc", "#2aa"), // tagged junction: medium cyan
-                (true,  false) => ("#9ef", "#3bb"), // tagged standalone: light cyan
-                (false, true)  => ("#ccc", "#888"), // untagged junction: gray
-                _              => ("#fff", "#555")  // untagged standalone: white
+                (true, true) => ("#4cc", "#2aa"), // tagged junction: medium cyan
+                (true, false) => ("#9ef", "#3bb"), // tagged standalone: light cyan
+                (false, true) => ("#ccc", "#888"), // untagged junction: gray
+                _ => ("#fff", "#555") // untagged standalone: white
             };
+
             bool isWayNode = nodeWayCount.ContainsKey(n.Id);
             bool forceShow = selectedWayNodeIds.Contains(n.Id);
-            f.Attributes["fill"]   = fill;
+
+            f.Attributes["fill"] = fill;
             f.Attributes["stroke"] = stroke;
-            f.Attributes.Add("show", (hasTags || isJunction || !isWayNode || forceShow) ? "yes" : "no");
+            f.Attributes["show"] = (hasTags || isJunction || !isWayNode || forceShow)
+                ? "yes"
+                : "no";
+
             nodes.Add(f);
         }
 
-        List<Feature> ways = [];
+        FeatureCollection ways = [];
         foreach (OsmWay w in state.Ways.Values)
         {
             if (state.EditStates.GetValueOrDefault(w.Ref) == EditState.Deleted)
@@ -311,7 +316,7 @@ public class EditBufferService : IDisposable
                 continue;
             }
 
-            Feature? f = w.ToFeature(liveNodes, _geomFactory);
+            Feature? f = _osmCache.GetCachedWayFeature(w.Id) ?? w.ToFeature(liveNodes, _geomFactory);
             if (f is not null)
             {
                 ways.Add(f);
@@ -330,21 +335,21 @@ public class EditBufferService : IDisposable
 
         if (includeSelected)
         {
-            List<Feature> selectedFeatures = [];
-            List<Feature> vertexFeatures = [];
+            FeatureCollection selectedFeatures = [];
+            FeatureCollection vertexFeatures = [];
 
             foreach (OsmElementRef elemRef in sel.Selected)
             {
                 switch (elemRef.Type)
                 {
                     case OsmElementTypes.Node when buf.Nodes.TryGetValue(elemRef.Id, out OsmNode? n):
-                        selectedFeatures.Add(n.ToFeature(_geomFactory));
+                        selectedFeatures.Add(_osmCache.GetCachedNodeFeature(n.Id) ?? n.ToFeature(_geomFactory));
                         break;
 
                     case OsmElementTypes.Way when buf.Ways.TryGetValue(elemRef.Id, out OsmWay? w)
                         && buf.EditStates.GetValueOrDefault(w.Ref) != EditState.Deleted:
                         {
-                            Feature? wayFeature = w.ToFeature(liveNodes, _geomFactory);
+                            Feature? wayFeature = _osmCache.GetCachedWayFeature(w.Id) ?? w.ToFeature(liveNodes, _geomFactory);
                             if (wayFeature is not null)
                             {
                                 selectedFeatures.Add(wayFeature);
@@ -353,9 +358,21 @@ public class EditBufferService : IDisposable
                             HashSet<long> seen = [];
                             foreach (long nodeId in w.NodeIds)
                             {
-                                if (!seen.Add(nodeId)) continue;
-                                if (!buf.Nodes.TryGetValue(nodeId, out OsmNode? vn)) continue;
-                                if (buf.EditStates.GetValueOrDefault(vn.Ref) == EditState.Deleted) continue;
+                                if (!seen.Add(nodeId))
+                                {
+                                    continue;
+                                }
+
+                                if (!buf.Nodes.TryGetValue(nodeId, out OsmNode? vn))
+                                {
+                                    continue;
+                                }
+
+                                if (buf.EditStates.GetValueOrDefault(vn.Ref) == EditState.Deleted)
+                                {
+                                    continue;
+                                }
+
                                 Feature vf = vn.ToFeature(_geomFactory);
                                 vf.Attributes.Add("vertex", "yes");
                                 vertexFeatures.Add(vf);
@@ -369,8 +386,11 @@ public class EditBufferService : IDisposable
                             {
                                 if (buf.Ways.TryGetValue(member.Ref, out OsmWay? mw))
                                 {
-                                    Feature? mf = mw.ToFeature(liveNodes, _geomFactory);
-                                    if (mf is not null) selectedFeatures.Add(mf);
+                                    Feature? mf = _osmCache.GetCachedWayFeature(mw.Id) ?? mw.ToFeature(liveNodes, _geomFactory);
+                                    if (mf is not null)
+                                    {
+                                        selectedFeatures.Add(mf);
+                                    }
                                 }
                             }
                             break;
@@ -382,7 +402,7 @@ public class EditBufferService : IDisposable
             await SetSourceAsync("osm-vertices", vertexFeatures);
         }
 
-        List<Feature> hoverFeatures = [];
+        FeatureCollection hoverFeatures = [];
         // Use the live hover state rather than the snapshot to avoid restoring a hover
         // that was cleared by a concurrent push while PushGeoJsonAsync was awaited.
         OsmElementRef? currentHovered = _selectionState.State.Hovered;
@@ -391,15 +411,16 @@ public class EditBufferService : IDisposable
             switch (currentHovered.Type)
             {
                 case OsmElementTypes.Node when buf.Nodes.TryGetValue(currentHovered.Id, out OsmNode? hn):
-                    hoverFeatures.Add(hn.ToFeature(_geomFactory));
+                    hoverFeatures.Add(_osmCache.GetCachedNodeFeature(hn.Id) ?? hn.ToFeature(_geomFactory));
                     break;
                 case OsmElementTypes.Way when buf.Ways.TryGetValue(currentHovered.Id, out OsmWay? hw):
                     {
-                        Feature? hf = hw.ToFeature(liveNodes, _geomFactory);
+                        Feature? hf = _osmCache.GetCachedWayFeature(hw.Id) ?? hw.ToFeature(liveNodes, _geomFactory);
                         if (hf is not null)
                         {
                             hoverFeatures.Add(hf);
                         }
+
                         break;
                     }
                 default:
@@ -411,27 +432,10 @@ public class EditBufferService : IDisposable
         await SetSourceAsync("osm-hover", hoverFeatures);
     }
 
-    private async Task SetSourceAsync(string sourceId, IReadOnlyList<IFeature> features)
+    private async Task SetSourceAsync(string sourceId, FeatureCollection featureCollection)
     {
-        if (features.Count == 0)
-        {
-            await _mediator.Send(new SetSourceData.Command(sourceId, "{\"type\":\"FeatureCollection\",\"features\":[]}"));
-            return;
-        }
-
-        System.Text.StringBuilder sb = new();
-        sb.Append("{\"type\":\"FeatureCollection\",\"features\":[");
-        for (int i = 0; i < features.Count; i++)
-        {
-            if (i > 0)
-            {
-                sb.Append(',');
-            }
-            sb.Append(JsonSerializer.Serialize(features[i], _geoJsonOptions));
-        }
-        sb.Append("]}");
-
-        await _mediator.Send(new SetSourceData.Command(sourceId, sb.ToString()));
+        string geoJson = JsonSerializer.Serialize(featureCollection, _geoJsonOptions);
+        await _mediator.Send(new SetSourceData.Command(sourceId, geoJson));
     }
 
     #endregion

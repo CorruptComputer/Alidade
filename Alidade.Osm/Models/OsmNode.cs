@@ -50,7 +50,8 @@ public sealed record OsmNode(
             { "version", Version },
             { "editState", (int)EditState.Fetched },
             { "fill", "#fff" },
-            { "stroke", "#555" }
+            { "stroke", "#555" },
+            { "show", "no" }
         };
 
         foreach ((string k, string v) in Tags)

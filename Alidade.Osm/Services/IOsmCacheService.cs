@@ -1,3 +1,5 @@
+using NetTopologySuite.Features;
+
 namespace Alidade.Osm.Services;
 
 /// <summary>
@@ -40,6 +42,23 @@ public interface IOsmCacheService
     ///   This is intentional during development to surface missing-cache bugs early.
     /// </exception>
     public OsmCacheData GetGeometryFromBbox(CacheBounds bounds);
+
+    /// <summary>
+    ///   Returns the cached NTS <see cref="Feature"/> for the given node ID,
+    ///   or null when the node was not fetched from the OSM API this session
+    ///   (e.g. locally created or edited nodes live only in the edit buffer).
+    /// </summary>
+    /// <param name="id">The node ID to look up.</param>
+    /// <returns>The cached <see cref="Feature"/>, or null if not present.</returns>
+    public Feature? GetCachedNodeFeature(long id);
+
+    /// <summary>
+    ///   Returns the cached NTS <see cref="Feature"/> for the given way ID,
+    ///   or null when the way was not fetched from the OSM API this session.
+    /// </summary>
+    /// <param name="id">The way ID to look up.</param>
+    /// <returns>The cached <see cref="Feature"/>, or null if not present.</returns>
+    public Feature? GetCachedWayFeature(long id);
 
     /// <summary>
     ///   Resets the cache to its initial empty state, discarding all cached geometry and elements.
