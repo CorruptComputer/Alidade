@@ -1,4 +1,3 @@
-using Alidade.Core.Consts;
 using Autofac;
 using NetTopologySuite.Geometries;
 

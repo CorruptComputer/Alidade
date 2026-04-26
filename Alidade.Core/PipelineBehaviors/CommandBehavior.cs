@@ -8,5 +8,5 @@ public sealed class CommandBehavior<TRequest>(ILogger<CommandBehavior<TRequest>>
     protected override bool GetResult(CommandResult response) => response.Success;
 
     /// <inheritdoc />
-    protected override CommandResult GetGenericFailedResponse() => CommandResult.Fail();
+    protected override CommandResult GetGenericFailedResponse(string? failReason = null) => CommandResult.Fail(failReason);
 }

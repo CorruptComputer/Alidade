@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization;
-
 namespace Alidade.Core.Models.CQRS.Response;
 
 /// <summary>
@@ -25,6 +23,11 @@ public sealed record QueryResult<TResult> : ResultBase
         Success = false,
         FailReason = failureReason
     };
+
+    /// <summary>
+    ///   Creates a success response, used to work around a C# limitation with interfaces.
+    /// </summary>
+    public static QueryResult<TResult> Pass(TResult result) => result;
 #pragma warning restore CA1000
 
     /// <summary>
@@ -47,9 +50,17 @@ public sealed record QueryResult<TResult> : ResultBase
     {
         if (result is null)
         {
-            return new() { Success = false, FailReason = "Result is null" };
+            return new()
+            {
+                Success = false,
+                FailReason = "Result is null"
+            };
         }
 
-        return new() { Success = true, Result = result };
+        return new()
+        {
+            Success = true,
+            Result = result
+        };
     }
 }

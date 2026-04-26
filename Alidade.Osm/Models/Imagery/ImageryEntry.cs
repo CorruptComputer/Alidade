@@ -1,7 +1,5 @@
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
-using Alidade.Core.Consts;
-using NetTopologySuite;
 using NetTopologySuite.Geometries;
 
 namespace Alidade.Osm.Models.Imagery;

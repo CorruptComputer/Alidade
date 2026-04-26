@@ -1,7 +1,4 @@
 using System.Text.Json;
-using Alidade.Core.Models.CQRS.Response;
-using Alidade.Osm.Models;
-using Questy;
 
 namespace Alidade.Osm.Handlers.Parsing;
 

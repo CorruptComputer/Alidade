@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization;
-
 namespace Alidade.Core.Models.CQRS.Response;
 
 /// <summary>

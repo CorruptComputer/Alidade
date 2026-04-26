@@ -1,4 +1,3 @@
-using Alidade.Osm.Handlers.Editing;
 using Alidade.Osm.Handlers.Tagging;
 using Alidade.Osm.Models.Tagging;
 using Microsoft.AspNetCore.Components;

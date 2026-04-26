@@ -8,5 +8,5 @@ public sealed class QueryBehavior<TRequest, TValue>(ILogger<QueryBehavior<TReque
     protected override bool GetResult(QueryResult<TValue> response) => response.Success;
 
     /// <inheritdoc />
-    protected override QueryResult<TValue> GetGenericFailedResponse() => QueryResult<TValue>.Fail();
+    protected override QueryResult<TValue> GetGenericFailedResponse(string? failReason = null) => QueryResult<TValue>.Fail(failReason);
 }

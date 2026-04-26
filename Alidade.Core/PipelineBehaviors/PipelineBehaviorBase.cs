@@ -16,7 +16,7 @@ public abstract class PipelineBehaviorBase<TRequest, TResponse>(ILogger<Pipeline
     /// <summary>
     ///   Generates a failure response for the given type.
     /// </summary>
-    protected abstract TResponse GetGenericFailedResponse();
+    protected abstract TResponse GetGenericFailedResponse(string? failReason = null);
 
     /// <inheritdoc />
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
@@ -38,12 +38,17 @@ public abstract class PipelineBehaviorBase<TRequest, TResponse>(ILogger<Pipeline
         {
             response = await next(cancellationToken);
         }
+        catch (OperationCanceledException)
+        {
+            logger.LogInformation("Request cancelled [{TypeName}]", typeof(TRequest).FullName);
+            return GetGenericFailedResponse("Operation cancelled.");
+        }
         catch (Exception e)
         {
             logger.LogError(e, "Uncaught Exception [{RequestName}] | ExceptionMessage = {Message}",
                 typeof(TRequest).FullName, e.Message);
             exception = e;
-            response = GetGenericFailedResponse();
+            response = GetGenericFailedResponse($"Uncaught exception from: {typeof(TRequest).FullName}");
         }
 
         bool success = GetResult(response);

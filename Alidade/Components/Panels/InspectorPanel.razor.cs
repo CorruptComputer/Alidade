@@ -5,7 +5,6 @@ using Alidade.Osm.Models.Tagging;
 using Microsoft.AspNetCore.Components.Web;
 using Alidade.Handlers.Map;
 using Alidade.Handlers.Selection;
-using Alidade.Osm.Handlers.Editing;
 using Alidade.Osm.Handlers.Tagging;
 
 namespace Alidade.Components.Panels;

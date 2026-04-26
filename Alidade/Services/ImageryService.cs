@@ -1,4 +1,3 @@
-using Alidade.Core.Consts;
 using Alidade.Osm.ImageryLayers;
 using Alidade.Osm.Models.Imagery;
 using NetTopologySuite.Geometries;

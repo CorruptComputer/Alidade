@@ -6,7 +6,7 @@ using Alidade.Handlers.Validation;
 namespace Alidade.Handlers.Map.MapNotifications;
 
 /// <inheritdoc />
-public sealed class KeyPressedHandler(SettingsStateService settingsState, SelectionStateService selectionState, ISender sender)
+public sealed class KeyPressedHandler(SettingsStateService settingsState, SelectionStateService selectionState, IMediator sender)
     : INotificationHandler<KeyPressed.Notification>
 {
     /// <inheritdoc />
@@ -46,7 +46,7 @@ public sealed class KeyPressedHandler(SettingsStateService settingsState, Select
                 await sender.Send(new DeleteSelected.Command(selectionState.State.Selected), cancellationToken);
                 break;
             case KeyBindingActions.Orthogonalize:
-                await sender.Send(new Orthogonalize.Command(), cancellationToken);
+                await sender.Publish(new Square.Notification(), cancellationToken);
                 break;
             case KeyBindingActions.Circularize:
                 await sender.Send(new Circularize.Command(), cancellationToken);

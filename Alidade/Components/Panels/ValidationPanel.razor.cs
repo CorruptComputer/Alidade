@@ -30,7 +30,7 @@ public partial class ValidationPanel(
         switch (issue.Code)
         {
             case "unsquare_building" when issue.Target is { Type: OsmElementTypes.Way }:
-                _ = mediator.Send(new Handlers.Tool.Orthogonalize.Command());
+                _ = mediator.Publish(new Handlers.Tool.Square.Notification());
                 break;
         }
     }

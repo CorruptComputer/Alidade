@@ -28,6 +28,10 @@ public sealed class NotificationBehavior<TNotification>(INotificationHandler<TNo
         {
             await inner.Handle(notification, cancellationToken);
         }
+        catch (OperationCanceledException)
+        {
+            logger.LogInformation("Request cancelled [{TypeName}]", typeof(TNotification).FullName);
+        }
         catch (Exception e)
         {
             logger.LogError(e, "Uncaught Exception [{NotificationName}] | ExceptionMessage = {Message}",

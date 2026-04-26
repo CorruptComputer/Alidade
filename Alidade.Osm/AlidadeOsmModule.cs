@@ -1,4 +1,3 @@
-using Alidade.Osm.Services;
 using Autofac;
 
 namespace Alidade.Osm;

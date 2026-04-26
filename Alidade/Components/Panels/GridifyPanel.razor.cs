@@ -95,7 +95,7 @@ public partial class GridifyPanel(
         {
             if (_state.WayId != single.Id)
             {
-                (double colRot, double rowRot) = GeometryService.ComputeGridifyRotations(
+                (double colRot, double rowRot) = GridifyAlgorithm.ComputeGridifyRotations(
                     single.Id,
                     editBufferState.State.Ways,
                     editBufferState.State.Nodes);

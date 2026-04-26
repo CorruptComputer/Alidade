@@ -1,5 +1,4 @@
 using Alidade.Core.Services;
-using Alidade.Osm.Models;
 
 namespace Alidade.Osm.Services;
 
