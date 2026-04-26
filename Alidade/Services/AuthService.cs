@@ -128,7 +128,7 @@ public class AuthService(
             }
 
             OsmUserInfo user = authState.State.User!;
-            StoredAccount newAccount = new(user.UserName, user.UserId, user.AvatarUrl, token);
+            StoredAccount newAccount = new(user.UserName, user.UserId, token);
 
             List<StoredAccount> accounts = await storage.GetStoredAccountsAsync(endpoint);
             accounts.RemoveAll(a => a.UserId == newAccount.UserId);

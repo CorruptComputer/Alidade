@@ -76,9 +76,6 @@ public class OsmOAuthClient(HttpClient http)
 
         return new OsmUserInfo(
             user.GetProperty("display_name").GetString() ?? string.Empty,
-            user.TryGetProperty("img", out JsonElement img)
-                ? img.GetProperty("href").GetString()
-                : null,
             user.GetProperty("id").GetInt64());
     }
 

@@ -6,6 +6,5 @@ namespace Alidade.Osm.Models.Api.Auth;
 /// </summary>
 /// <param name="Username">The user's OSM display name.</param>
 /// <param name="UserId">The numeric OSM user ID.</param>
-/// <param name="AvatarUrl">The URL of the user's avatar image, if set.</param>
 /// <param name="Token">The OAuth 2.0 bearer token for this account.</param>
-public record StoredAccount(string Username, long UserId, string? AvatarUrl, string Token);
+public record StoredAccount(string Username, long UserId, string Token);

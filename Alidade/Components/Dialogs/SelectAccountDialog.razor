@@ -8,24 +8,10 @@
                 {
                     bool isActive = authState.State.User?.UserId == account.UserId;
                     <button class="account-row @(isActive ? "account-row-active" : null)"
-                            @onclick="() => Select(account)"
-                            disabled="@isActive">
-                        @if (account.AvatarUrl is not null)
-                        {
-                            <img class="account-avatar" src="@account.AvatarUrl" alt="" />
-                        }
-                        else
-                        {
-                            <div class="account-avatar account-avatar-placeholder">
-                                @account.Username[0]
-                            </div>
-                        }
+                            @onclick="() => Select(account)" disabled="@isActive">
                         <span class="account-name">@account.Username</span>
-                        @if (isActive)
-                        {
-                            <span class="account-active-badge">Active</span>
-                        }
                     </button>
+                    <br />
                 }
             </div>
         </ChildContent>

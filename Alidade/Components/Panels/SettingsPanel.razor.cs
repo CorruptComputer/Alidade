@@ -60,8 +60,17 @@ public partial class SettingsPanel(
         }
     }
 
-    private void OpenAccountSwitcher()
-        => _ = mediator.Send(new OpenAccountSwitcher.Command());
+    private void OnAccountButtonClicked()
+    {
+        if (authState.State.IsLoggedIn)
+        {
+            _ = mediator.Send(new OpenAccountSwitcher.Command());
+        }
+        else
+        {
+            _ = mediator.Send(new BeginLogin.Command());
+        }
+    }
 
     #endregion
 

@@ -20,18 +20,14 @@
                         </option>
                     }
                 </select>
-                <button class="account-switcher-btn" @onclick="OpenAccountSwitcher" title="Switch account">
+                <button class="account-switcher-btn" @onclick="OnAccountButtonClicked">
                     @if (authState.State.IsLoggedIn)
                     {
-                        @if (authState.State.User!.AvatarUrl is string avatarUrl)
-                        {
-                            <img class="account-switcher-avatar" src="@avatarUrl" alt="" />
-                        }
-                        <span>@authState.State.User!.UserName</span>
+                        <span>Switch account</span>
                     }
                     else
                     {
-                        <span>Login</span>
+                        <span>Log in</span>
                     }
                 </button>
             </div>
