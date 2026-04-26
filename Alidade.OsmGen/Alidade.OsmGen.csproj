@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <!-- Run npm install before building so generators can read node_modules -->
-    <RunNpmInstall Condition="'$(RunNpmInstall)' == ''">true</RunNpmInstall>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +11,6 @@
   <!-- npm install when package.json or package-lock.json changes -->
   <Target Name="NpmInstall"
           BeforeTargets="Build"
-          Condition="'$(RunNpmInstall)' == 'true'"
           Inputs="package.json"
           Outputs="node_modules/.package-lock.json">
     <Exec Command="npm install" WorkingDirectory="$(MSBuildProjectDirectory)" />

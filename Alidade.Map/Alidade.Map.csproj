@@ -8,7 +8,10 @@
     <ProjectReference Include="..\Alidade.Core\Alidade.Core.csproj" />
   </ItemGroup>
 
-  <Target Name="NpmInstallMap" BeforeTargets="Build" Condition="!Exists('$(MSBuildThisFileDirectory)node_modules')">
+  <Target Name="NpmInstallMap"
+          BeforeTargets="Build"
+          Inputs="package.json"
+          Outputs="node_modules/.package-lock.json">
     <Exec Command="npm install" WorkingDirectory="$(MSBuildThisFileDirectory)" />
   </Target>
 
