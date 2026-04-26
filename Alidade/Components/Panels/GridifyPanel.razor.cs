@@ -1,5 +1,4 @@
 using System.Globalization;
-using System.Text.Json;
 using Alidade.Handlers.Map;
 using Alidade.Map.Handlers;
 using Alidade.Osm.Handlers.Tools.Gridify;
@@ -23,7 +22,6 @@ public partial class GridifyPanel(
     MapStateService mapState,
     SelectionStateService selectionState,
     EditBufferStateService editBufferState,
-    JsonSerializerOptions geoJsonOptions,
     GeometryFactory geomFactory,
     IJSRuntime js) : IDisposable
 {
@@ -222,15 +220,12 @@ public partial class GridifyPanel(
             }
         }
 
-        string json = JsonSerializer.Serialize(fc, geoJsonOptions);
-        await mediator.Send(new SetSourceData.Command("osm-gridify-preview", json));
+        await mediator.Send(new SetSourceData.Command("osm-gridify-preview", fc));
     }
 
     private async Task ClearPreviewAsync()
     {
-        FeatureCollection empty = [];
-        string json = JsonSerializer.Serialize(empty, geoJsonOptions);
-        await mediator.Send(new SetSourceData.Command("osm-gridify-preview", json));
+        await mediator.Send(new SetSourceData.Command("osm-gridify-preview", []));
     }
 
     private async Task ApplyAsync()

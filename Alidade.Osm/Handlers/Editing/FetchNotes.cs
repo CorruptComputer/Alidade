@@ -18,11 +18,11 @@ public class FetchNotes(IOsmNotesService osmNotes, ISender sender) : IRequestHan
     /// <inheritdoc />
     public async Task<QueryResult<OsmNote[]>> Handle(Query request, CancellationToken cancellationToken)
     {
-        string json = await osmNotes.FetchNotesAsync(
+        await using Stream stream = await osmNotes.FetchNotesAsync(
             request.West, request.South, request.East, request.North, cancellationToken);
 
         QueryResult<IList<OsmNote>> parseResult =
-            await sender.Send(new ParseNotesJson.Query(json), cancellationToken);
+            await sender.Send(new ParseNotesJson.Query(stream), cancellationToken);
 
         if (!parseResult.Success || parseResult.Result is null)
         {

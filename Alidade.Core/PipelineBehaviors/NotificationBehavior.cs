@@ -53,8 +53,8 @@ public sealed class NotificationBehavior<TNotification>(INotificationHandler<TNo
 
             if (exception is not null)
             {
-                logger.LogDebug("Uncaught Exception [{TypeName}] | Exception = {ExceptionMessage} | TNotification = {NotificationBody} | Elapsed = {ElapsedMilliseconds}ms",
-                    typeof(TNotification).FullName, exception.Message, notification.ToString(), stopwatch.ElapsedMilliseconds);
+                logger.LogDebug("Uncaught Exception [{TypeName}] | Elapsed = {ElapsedMilliseconds}ms | Exception = {ExceptionMessage} | TNotification = {NotificationBody}",
+                    typeof(TNotification).FullName, stopwatch.ElapsedMilliseconds, exception.Message, notification.ToString());
 
                 if (Debugger.IsAttached)
                 {
@@ -63,8 +63,8 @@ public sealed class NotificationBehavior<TNotification>(INotificationHandler<TNo
             }
             else
             {
-                logger.LogDebug("Succeeded [{TypeName}] | TNotification = {NotificationBody} | Elapsed = {ElapsedMilliseconds}ms",
-                    typeof(TNotification).FullName, notification.ToString(), stopwatch.ElapsedMilliseconds);
+                logger.LogDebug("Succeeded [{TypeName}] | Elapsed = {ElapsedMilliseconds}ms | TNotification = {NotificationBody}",
+                    typeof(TNotification).FullName, stopwatch.ElapsedMilliseconds, notification.ToString());
             }
         }
     }

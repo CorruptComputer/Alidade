@@ -58,8 +58,8 @@ public abstract class PipelineBehaviorBase<TRequest, TResponse>(ILogger<Pipeline
             stopwatch.Stop();
             if (exception is not null)
             {
-                logger.LogDebug("Uncaught Exception [{TypeName}] | Exception = {ExceptionMessage} | TRequest = {RequestBody} | Elapsed = {ElapsedMilliseconds}ms",
-                    typeof(TRequest).FullName, exception.Message, request.ToString(), stopwatch.ElapsedMilliseconds);
+                logger.LogDebug("Uncaught Exception [{TypeName}] | Elapsed = {ElapsedMilliseconds}ms | Exception = {ExceptionMessage} | TRequest = {RequestBody}",
+                    typeof(TRequest).FullName, stopwatch.ElapsedMilliseconds, exception.Message, request.ToString());
                 if (Debugger.IsAttached)
                 {
                     Debugger.Break();
@@ -67,13 +67,13 @@ public abstract class PipelineBehaviorBase<TRequest, TResponse>(ILogger<Pipeline
             }
             else if (success)
             {
-                logger.LogDebug("Succeeded [{TypeName}] | TRequest = {RequestBody} | Elapsed = {ElapsedMilliseconds}ms",
-                    typeof(TRequest).FullName, request.ToString(), stopwatch.ElapsedMilliseconds);
+                logger.LogDebug("Succeeded [{TypeName}] | Elapsed = {ElapsedMilliseconds}ms | TRequest = {RequestBody}",
+                    typeof(TRequest).FullName, stopwatch.ElapsedMilliseconds, request.ToString());
             }
             else
             {
-                logger.LogDebug("Failed [{TypeName}] | TRequest = {RequestBody} | Elapsed = {ElapsedMilliseconds}ms",
-                    typeof(TRequest).FullName, request.ToString(), stopwatch.ElapsedMilliseconds);
+                logger.LogDebug("Failed [{TypeName}] | Elapsed = {ElapsedMilliseconds}ms | TRequest = {RequestBody}",
+                    typeof(TRequest).FullName, stopwatch.ElapsedMilliseconds, request.ToString());
             }
         }
 

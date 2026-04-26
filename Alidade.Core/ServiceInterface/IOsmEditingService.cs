@@ -7,15 +7,16 @@ namespace Alidade.Core.ServiceInterface;
 public interface IOsmEditingService
 {
     /// <summary>
-    ///   Fetches the raw OSM XML for all elements within the specified bounding box.
+    ///   Fetches the OSM XML for all elements within the specified bounding box as a stream.
+    ///   The caller is responsible for disposing the returned stream.
     /// </summary>
     /// <param name="west">Western longitude bound.</param>
     /// <param name="south">Southern latitude bound.</param>
     /// <param name="east">Eastern longitude bound.</param>
     /// <param name="north">Northern latitude bound.</param>
     /// <param name="ct">Optional cancellation token.</param>
-    /// <returns>The raw OSM XML string returned by the map endpoint.</returns>
-    public Task<string> FetchBboxAsync(double west, double south, double east, double north,
+    /// <returns>A stream over the OSM XML response body.</returns>
+    public Task<Stream> FetchBboxAsync(double west, double south, double east, double north,
         CancellationToken ct = default);
 
     /// <summary>

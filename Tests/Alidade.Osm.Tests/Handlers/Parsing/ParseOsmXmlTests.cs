@@ -1,3 +1,4 @@
+using System.Text;
 using Alidade.Core.Models.CQRS.Response;
 using Alidade.Osm.Handlers.Parsing;
 using Alidade.Osm.Models;
@@ -14,7 +15,7 @@ public class ParseOsmXmlTests(OsmMediatorFixture fixture) : IClassFixture<OsmMed
     {
         using ILifetimeScope scope = fixture.Container.BeginLifetimeScope();
         ISender sender = scope.Resolve<ISender>();
-        return sender.Send(new ParseOsmXml.Query(xml));
+        return sender.Send(new ParseOsmXml.Query(new MemoryStream(Encoding.UTF8.GetBytes(xml))));
     }
 
     [Fact]

@@ -12,6 +12,7 @@ namespace Alidade.Map;
 public sealed class MapInteropService(IJSRuntime js, IMediator mediator) : IAsyncDisposable
 {
     private DotNetObjectReference<MapInteropService>? _dotnetRef;
+    private readonly Dictionary<string, string> _lastSourceData = [];
 
     /// <summary>
     ///   Initializes the MapLibre map inside the specified container and registers this
@@ -21,16 +22,26 @@ public sealed class MapInteropService(IJSRuntime js, IMediator mediator) : IAsyn
     public async ValueTask InitializeAsync(string containerId)
     {
         _dotnetRef = DotNetObjectReference.Create(this);
+        _lastSourceData.Clear();
         await js.InvokeVoidAsync("mapInterop.initialize", containerId, null, _dotnetRef);
     }
 
     /// <summary>
-    ///   Replaces the GeoJSON data for the named MapLibre source.
+    ///   Replaces the GeoJSON data for the named MapLibre source. Skips the JS interop call
+    ///   when the serialized payload is identical to what was last sent for that source.
     /// </summary>
     /// <param name="sourceId">The MapLibre source ID (e.g. <c>"osm-nodes"</c>).</param>
     /// <param name="geojsonJson">A serialized GeoJSON FeatureCollection string.</param>
     public ValueTask SetSourceDataAsync(string sourceId, string geojsonJson)
-        => js.InvokeVoidAsync("mapInterop.setSourceData", sourceId, geojsonJson);
+    {
+        if (_lastSourceData.TryGetValue(sourceId, out string? prev) && prev == geojsonJson)
+        {
+            return ValueTask.CompletedTask;
+        }
+
+        _lastSourceData[sourceId] = geojsonJson;
+        return js.InvokeVoidAsync("mapInterop.setSourceData", sourceId, geojsonJson);
+    }
 
     /// <summary>
     ///   Animates the viewport to the given coordinates at the specified zoom level.

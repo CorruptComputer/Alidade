@@ -1,3 +1,4 @@
+using System.Text;
 using Alidade.Core.Models.CQRS.Response;
 using Alidade.Osm.Handlers.Editing;
 using Alidade.Osm.Models.Editing;
@@ -36,7 +37,7 @@ public class FetchBboxTests(OsmMediatorFixture fixture) : IClassFixture<OsmMedia
     {
         IOsmEditingService service = Substitute.For<IOsmEditingService>();
         service.FetchBboxAsync(default, default, default, default)
-               .ReturnsForAnyArgs(Task.FromResult(ValidOsmXml));
+               .ReturnsForAnyArgs(Task.FromResult<Stream>(new MemoryStream(Encoding.UTF8.GetBytes(ValidOsmXml))));
 
         QueryResult<FetchBboxResult> result = await Send(service);
 
@@ -52,7 +53,7 @@ public class FetchBboxTests(OsmMediatorFixture fixture) : IClassFixture<OsmMedia
     {
         IOsmEditingService service = Substitute.For<IOsmEditingService>();
         service.FetchBboxAsync(default, default, default, default)
-               .ReturnsForAnyArgs(Task.FromResult("""<osm version="0.6"></osm>"""));
+               .ReturnsForAnyArgs(Task.FromResult<Stream>(new MemoryStream(Encoding.UTF8.GetBytes("""<osm version="0.6"></osm>"""))));
 
         QueryResult<FetchBboxResult> result = await Send(service);
 
@@ -67,7 +68,7 @@ public class FetchBboxTests(OsmMediatorFixture fixture) : IClassFixture<OsmMedia
     {
         IOsmEditingService service = Substitute.For<IOsmEditingService>();
         service.FetchBboxAsync(default, default, default, default)
-               .ReturnsForAnyArgs(Task.FromResult("not xml"));
+               .ReturnsForAnyArgs(Task.FromResult<Stream>(new MemoryStream(Encoding.UTF8.GetBytes("not xml"))));
 
         QueryResult<FetchBboxResult> result = await Send(service);
 

@@ -61,6 +61,14 @@ public interface IOsmCacheService
     public Feature? GetCachedWayFeature(long id);
 
     /// <summary>
+    ///   Returns all cached notes whose coordinates fall within <paramref name="bounds"/>.
+    ///   Returns whatever is available — does not throw if the area is only partially cached.
+    /// </summary>
+    /// <param name="bounds">The geographic bounding box to retrieve notes for.</param>
+    /// <returns>The cached notes within <paramref name="bounds"/>.</returns>
+    public IReadOnlyList<OsmNote> GetNotesFromBbox(CacheBounds bounds);
+
+    /// <summary>
     ///   Resets the cache to its initial empty state, discarding all cached geometry and elements.
     /// </summary>
     public void Clear();

@@ -6,15 +6,20 @@ namespace Alidade.Osm.Handlers.Parsing;
 public class ParseNotesJson : IRequestHandler<ParseNotesJson.Query, QueryResult<IList<OsmNote>>>
 {
     /// <summary>
-    ///   Parses the given GeoJSON string into a list of notes.
+    ///   Parses a GeoJSON notes response from <paramref name="Stream"/> into a list of notes.
+    ///   The caller retains ownership of the stream and is responsible for disposing it.
     /// </summary>
-    /// <param name="Json">The raw GeoJSON FeatureCollection string from the notes endpoint.</param>
-    public record Query(string Json) : IRequest<QueryResult<IList<OsmNote>>>;
+    /// <param name="Stream">A readable stream positioned at the start of the GeoJSON response.</param>
+    public record Query(Stream Stream) : IRequest<QueryResult<IList<OsmNote>>>
+    {
+        /// <inheritdoc />
+        public override string ToString() => "ParseNotesJson: streaming";
+    }
 
     /// <inheritdoc />
-    public Task<QueryResult<IList<OsmNote>>> Handle(Query request, CancellationToken cancellationToken)
+    public async Task<QueryResult<IList<OsmNote>>> Handle(Query request, CancellationToken cancellationToken)
     {
-        using JsonDocument doc = JsonDocument.Parse(request.Json);
+        using JsonDocument doc = await JsonDocument.ParseAsync(request.Stream, cancellationToken: cancellationToken);
         JsonElement features = doc.RootElement.GetProperty("features");
         List<OsmNote> notes = [];
 
@@ -38,6 +43,6 @@ public class ParseNotesJson : IRequestHandler<ParseNotesJson.Query, QueryResult<
                                                     c.GetProperty("text").GetString() ?? string.Empty))]));
         }
 
-        return Task.FromResult<QueryResult<IList<OsmNote>>>(notes);
+        return notes;
     }
 }

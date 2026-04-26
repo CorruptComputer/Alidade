@@ -1,10 +1,8 @@
-using System.Text.Json;
 using Autofac;
 using Alidade.Core;
 using Alidade.Interop;
 using Alidade.Map;
 using Alidade.Osm;
-using NetTopologySuite.IO.Converters;
 using Questy.Autofac;
 using Questy.Autofac.Builder;
 using Alidade.Core.PipelineBehaviors;
@@ -49,11 +47,6 @@ public class AlidadeModule(string baseAddress) : Module
         builder.RegisterType<ImageryService>().AsSelf().InstancePerLifetimeScope();
         builder.RegisterType<SettingsService>().AsSelf().InstancePerLifetimeScope();
 
-        // NTS GeoJSON serialization options, used when pushing FeatureCollections to MapLibre
-        builder.RegisterInstance(new JsonSerializerOptions
-        {
-            Converters = { new GeoJsonConverterFactory() }
-        }).AsSelf().SingleInstance();
 
         // Scan this assembly, Alidade.Map, and Alidade.Osm for Questy handlers
         QuestyConfigurationBuilder questyConfig = QuestyConfigurationBuilder

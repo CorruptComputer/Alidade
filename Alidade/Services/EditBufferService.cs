@@ -1,6 +1,7 @@
-using System.Text.Json;
+using Alidade.Core.Models.CQRS.Response;
 using Alidade.Map.Handlers;
 using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Models;
 using Alidade.Osm.Models.Editing;
 using NetTopologySuite.Features;
 using NetTopologySuite.Geometries;
@@ -18,10 +19,10 @@ public class EditBufferService : IDisposable
 {
     private const double MinFetchZoom = 17.0;
     private const double EvictionMultiplier = 2.0;
+    private const double FetchPaddingMultiplier = 1.2;
     private readonly IMediator _mediator;
     private readonly NsiService _nsi;
     private readonly IndexedDBService _storage;
-    private readonly JsonSerializerOptions _geoJsonOptions;
     private readonly EditBufferStateService _editState;
     private readonly MapStateService _mapState;
     private readonly SelectionStateService _selectionState;
@@ -34,12 +35,10 @@ public class EditBufferService : IDisposable
     private CancellationTokenSource? _saveCts;
     private bool _hadDirtyState;
 
-    // GeoJSON push debouncing
-    private int _geoJsonPushSeq;
-
     // Selection push debouncing and delta tracking
     private int _selectionPushSeq;
     private ImmutableHashSet<OsmElementRef> _lastPushedSelected = [];
+    private ImmutableHashSet<long> _lastPushedWayIds = [];
     private bool _selectedNeedsRepush;
 
     // Fetch cancellation
@@ -52,7 +51,6 @@ public class EditBufferService : IDisposable
         IMediator mediator,
         NsiService nsi,
         IndexedDBService storage,
-        JsonSerializerOptions geoJsonOptions,
         GeometryFactory geomFactory,
         EditBufferStateService editState,
         MapStateService mapState,
@@ -64,7 +62,6 @@ public class EditBufferService : IDisposable
         _mediator = mediator;
         _nsi = nsi;
         _storage = storage;
-        _geoJsonOptions = geoJsonOptions;
         _geomFactory = geomFactory;
         _editState = editState;
         _mapState = mapState;
@@ -85,7 +82,6 @@ public class EditBufferService : IDisposable
 
     private void OnEditBufferChanged(object? sender, EventArgs e)
     {
-        _ = _mediator.Publish(new GeoJsonPushRequested.Notification(_editState.State, ++_geoJsonPushSeq));
         _selectedNeedsRepush = true;
         RequestSelectionPush();
         _validation?.ScheduleValidation(_editState.State);
@@ -131,17 +127,6 @@ public class EditBufferService : IDisposable
         _ = _mediator.Publish(new SelectionPushRequested.Notification(seq));
     }
 
-    internal async Task RunPushGeoJsonNotificationAsync(EditBufferState state, int seq)
-    {
-        await Task.Yield();
-        if (_geoJsonPushSeq != seq)
-        {
-            return;
-        }
-
-        await RunPushGeoJsonAsync(state);
-    }
-
     internal async Task RunSelectionPushAsync(int seq)
     {
         await Task.Yield();
@@ -159,12 +144,27 @@ public class EditBufferService : IDisposable
         _selectedNeedsRepush = false;
         _lastPushedSelected = selSnap.Selected;
 
+        HashSet<long> modifiedNodeIds = [.. bufSnap.EditStates
+            .Where(kv => kv.Key.Type == OsmElementTypes.Node && kv.Value != EditState.Fetched)
+            .Select(kv => kv.Key.Id)];
+
         if (includeSelected)
         {
-            await RunPushGeoJsonAsync(bufSnap);
+            ImmutableHashSet<long> newWayIds = selSnap.Selected
+                .Where(r => r.Type == OsmElementTypes.Way)
+                .Select(r => r.Id)
+                .ToImmutableHashSet();
+
+            bool waySelectionChanged = !newWayIds.SetEquals(_lastPushedWayIds);
+            _lastPushedWayIds = newWayIds;
+
+            if (needsRepush || waySelectionChanged)
+            {
+                await RunPushGeoJsonAsync(bufSnap, modifiedNodeIds);
+            }
         }
 
-        await PushSelectionAsync(selSnap, bufSnap, includeSelected);
+        await PushSelectionAsync(selSnap, bufSnap, includeSelected, modifiedNodeIds);
     }
 
     #region State mutation
@@ -185,32 +185,43 @@ public class EditBufferService : IDisposable
         ImmutableDictionary<long, OsmRelation> relDict = state.Relations;
         ImmutableDictionary<OsmElementRef, EditState> editStates = state.EditStates;
 
+        List<KeyValuePair<long, OsmNode>> nodeUpdates = [];
+        List<KeyValuePair<OsmElementRef, EditState>> nodeEditStateUpdates = [];
         foreach (OsmNode node in nodes)
         {
             if (!editStates.TryGetValue(node.Ref, out EditState es) || es == EditState.Fetched)
             {
-                nodeDict = nodeDict.SetItem(node.Id, node);
-                editStates = editStates.SetItem(node.Ref, EditState.Fetched);
+                nodeUpdates.Add(new KeyValuePair<long, OsmNode>(node.Id, node));
+                nodeEditStateUpdates.Add(new KeyValuePair<OsmElementRef, EditState>(node.Ref, EditState.Fetched));
             }
         }
 
+        List<KeyValuePair<long, OsmWay>> wayUpdates = [];
+        List<KeyValuePair<OsmElementRef, EditState>> wayEditStateUpdates = [];
         foreach (OsmWay way in ways)
         {
             if (!editStates.TryGetValue(way.Ref, out EditState es) || es == EditState.Fetched)
             {
-                wayDict = wayDict.SetItem(way.Id, way);
-                editStates = editStates.SetItem(way.Ref, EditState.Fetched);
+                wayUpdates.Add(new KeyValuePair<long, OsmWay>(way.Id, way));
+                wayEditStateUpdates.Add(new KeyValuePair<OsmElementRef, EditState>(way.Ref, EditState.Fetched));
             }
         }
 
+        List<KeyValuePair<long, OsmRelation>> relUpdates = [];
+        List<KeyValuePair<OsmElementRef, EditState>> relEditStateUpdates = [];
         foreach (OsmRelation rel in relations)
         {
             if (!editStates.TryGetValue(rel.Ref, out EditState es) || es == EditState.Fetched)
             {
-                relDict = relDict.SetItem(rel.Id, rel);
-                editStates = editStates.SetItem(rel.Ref, EditState.Fetched);
+                relUpdates.Add(new KeyValuePair<long, OsmRelation>(rel.Id, rel));
+                relEditStateUpdates.Add(new KeyValuePair<OsmElementRef, EditState>(rel.Ref, EditState.Fetched));
             }
         }
+
+        nodeDict = nodeDict.SetItems(nodeUpdates);
+        wayDict = wayDict.SetItems(wayUpdates);
+        relDict = relDict.SetItems(relUpdates);
+        editStates = editStates.SetItems([.. nodeEditStateUpdates, .. wayEditStateUpdates, .. relEditStateUpdates]);
 
         _editState.SetState(state with { Nodes = nodeDict, Ways = wayDict, Relations = relDict, EditStates = editStates });
     }
@@ -240,7 +251,7 @@ public class EditBufferService : IDisposable
 
     #region GeoJSON push
 
-    internal async Task RunPushGeoJsonAsync(EditBufferState state)
+    internal async Task RunPushGeoJsonAsync(EditBufferState state, HashSet<long> modifiedNodeIds)
     {
         IReadOnlyDictionary<long, OsmNode> liveNodes = state.Nodes
             .Where(kv => state.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Deleted)
@@ -285,7 +296,7 @@ public class EditBufferService : IDisposable
         FeatureCollection nodes = [];
         foreach (OsmNode n in liveNodes.Values)
         {
-            Feature f = _osmCache.GetCachedNodeFeature(n.Id) ?? n.ToFeature(_geomFactory);
+            Feature f = NodeFeatureForPush(n, state);
             bool hasTags = n.Tags.Count > 0;
             bool isJunction = nodeWayCount.GetValueOrDefault(n.Id) >= 2;
             (string fill, string stroke) = (hasTags, isJunction) switch
@@ -316,7 +327,7 @@ public class EditBufferService : IDisposable
                 continue;
             }
 
-            Feature? f = _osmCache.GetCachedWayFeature(w.Id) ?? w.ToFeature(liveNodes, _geomFactory);
+            Feature? f = WayFeatureForPush(w, state, liveNodes, modifiedNodeIds);
             if (f is not null)
             {
                 ways.Add(f);
@@ -327,7 +338,7 @@ public class EditBufferService : IDisposable
         await SetSourceAsync("osm-ways", ways);
     }
 
-    private async Task PushSelectionAsync(SelectionState sel, EditBufferState buf, bool includeSelected)
+    private async Task PushSelectionAsync(SelectionState sel, EditBufferState buf, bool includeSelected, HashSet<long> modifiedNodeIds)
     {
         IReadOnlyDictionary<long, OsmNode> liveNodes = buf.Nodes
             .Where(kv => buf.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Deleted)
@@ -343,13 +354,13 @@ public class EditBufferService : IDisposable
                 switch (elemRef.Type)
                 {
                     case OsmElementTypes.Node when buf.Nodes.TryGetValue(elemRef.Id, out OsmNode? n):
-                        selectedFeatures.Add(_osmCache.GetCachedNodeFeature(n.Id) ?? n.ToFeature(_geomFactory));
+                        selectedFeatures.Add(NodeFeatureForPush(n, buf));
                         break;
 
                     case OsmElementTypes.Way when buf.Ways.TryGetValue(elemRef.Id, out OsmWay? w)
                         && buf.EditStates.GetValueOrDefault(w.Ref) != EditState.Deleted:
                         {
-                            Feature? wayFeature = _osmCache.GetCachedWayFeature(w.Id) ?? w.ToFeature(liveNodes, _geomFactory);
+                            Feature? wayFeature = WayFeatureForPush(w, buf, liveNodes, modifiedNodeIds);
                             if (wayFeature is not null)
                             {
                                 selectedFeatures.Add(wayFeature);
@@ -386,7 +397,7 @@ public class EditBufferService : IDisposable
                             {
                                 if (buf.Ways.TryGetValue(member.Ref, out OsmWay? mw))
                                 {
-                                    Feature? mf = _osmCache.GetCachedWayFeature(mw.Id) ?? mw.ToFeature(liveNodes, _geomFactory);
+                                    Feature? mf = WayFeatureForPush(mw, buf, liveNodes, modifiedNodeIds);
                                     if (mf is not null)
                                     {
                                         selectedFeatures.Add(mf);
@@ -411,11 +422,11 @@ public class EditBufferService : IDisposable
             switch (currentHovered.Type)
             {
                 case OsmElementTypes.Node when buf.Nodes.TryGetValue(currentHovered.Id, out OsmNode? hn):
-                    hoverFeatures.Add(_osmCache.GetCachedNodeFeature(hn.Id) ?? hn.ToFeature(_geomFactory));
+                    hoverFeatures.Add(NodeFeatureForPush(hn, buf));
                     break;
                 case OsmElementTypes.Way when buf.Ways.TryGetValue(currentHovered.Id, out OsmWay? hw):
                     {
-                        Feature? hf = _osmCache.GetCachedWayFeature(hw.Id) ?? hw.ToFeature(liveNodes, _geomFactory);
+                        Feature? hf = WayFeatureForPush(hw, buf, liveNodes, modifiedNodeIds);
                         if (hf is not null)
                         {
                             hoverFeatures.Add(hf);
@@ -432,15 +443,60 @@ public class EditBufferService : IDisposable
         await SetSourceAsync("osm-hover", hoverFeatures);
     }
 
-    private async Task SetSourceAsync(string sourceId, FeatureCollection featureCollection)
+    private Task SetSourceAsync(string sourceId, FeatureCollection featureCollection)
+        => _mediator.Send(new SetSourceData.Command(sourceId, featureCollection));
+
+    // Only use the pre-cached Feature when the element is unmodified. Modified nodes/ways
+    // have stale geometry in the cache (the position from the original API fetch), so they
+    // must always be recomputed from current edit buffer state.
+    private Feature NodeFeatureForPush(OsmNode n, EditBufferState state)
     {
-        string geoJson = JsonSerializer.Serialize(featureCollection, _geoJsonOptions);
-        await _mediator.Send(new SetSourceData.Command(sourceId, geoJson));
+        bool useCache = state.EditStates.TryGetValue(n.Ref, out EditState es) && es == EditState.Fetched;
+        return (useCache ? _osmCache.GetCachedNodeFeature(n.Id) : null) ?? n.ToFeature(_geomFactory);
+    }
+
+    private Feature? WayFeatureForPush(OsmWay w, EditBufferState state, IReadOnlyDictionary<long, OsmNode> liveNodes, HashSet<long> modifiedNodeIds)
+    {
+        bool useCache = state.EditStates.TryGetValue(w.Ref, out EditState wes) && wes == EditState.Fetched
+            && !w.NodeIds.Any(modifiedNodeIds.Contains);
+        return (useCache ? _osmCache.GetCachedWayFeature(w.Id) : null) ?? w.ToFeature(liveNodes, _geomFactory);
+    }
+
+    private async Task PushNotesAsync(CacheBounds bounds)
+    {
+        IReadOnlyList<OsmNote> notes = _osmCache.GetNotesFromBbox(bounds);
+        FeatureCollection fc = new();
+        foreach (OsmNote note in notes)
+        {
+            AttributesTable attrs = new();
+            attrs.Add("id", note.Id);
+            attrs.Add("status", note.Status);
+            OsmNoteComment? firstComment = note.Comments.FirstOrDefault();
+            if (firstComment is not null)
+            {
+                attrs.Add("text", firstComment.Text);
+            }
+
+            fc.Add(new Feature(_geomFactory.CreatePoint(new Coordinate(note.Lon, note.Lat)), attrs));
+        }
+
+        await SetSourceAsync("osm-notes", fc);
     }
 
     #endregion
 
     #region Data fetch
+
+    private static CacheBounds ExpandBbox(CacheBounds bounds)
+    {
+        double latPad = (bounds.North - bounds.South) * (FetchPaddingMultiplier - 1.0) / 2.0;
+        double lonPad = (bounds.East - bounds.West) * (FetchPaddingMultiplier - 1.0) / 2.0;
+
+        return new CacheBounds(
+            bounds.West - lonPad, bounds.South - latPad,
+            bounds.East + lonPad, bounds.North + latPad);
+    }
+
     private void EvictOutOfViewportData(MapBounds bounds)
     {
         EditBufferState state = _editState.State;
@@ -598,19 +654,34 @@ public class EditBufferService : IDisposable
         {
             CacheBounds cacheBounds = new(bounds.West, bounds.South, bounds.East, bounds.North);
             List<CacheBounds> missBboxes = _osmCache.GetGeometryMissBboxes(cacheBounds);
+
+            List<Task<(CacheBounds Expanded, FetchBboxResult? Geo, OsmNote[] Notes)>> fetchTasks = [.. missBboxes
+                .Select(async miss =>
+                {
+                    CacheBounds expanded = ExpandBbox(miss);
+                    Task<QueryResult<FetchBboxResult>> geoTask = mediator.Send(
+                        new FetchBbox.Query(expanded.West, expanded.South, expanded.East, expanded.North), ct);
+                    Task<QueryResult<OsmNote[]>> notesTask = mediator.Send(
+                        new FetchNotes.Query(expanded.West, expanded.South, expanded.East, expanded.North), ct);
+
+                    await Task.WhenAll(geoTask, notesTask);
+                    FetchBboxResult? geo = geoTask.Result;
+                    OsmNote[]? fetchedNotes = notesTask.Result;
+                    return (expanded, geo, fetchedNotes ?? []);
+                })];
+
+            (CacheBounds Expanded, FetchBboxResult? Geo, OsmNote[] Notes)[] fetched = await Task.WhenAll(fetchTasks);
             bool allSucceeded = true;
 
-            foreach (CacheBounds miss in missBboxes)
+            foreach ((CacheBounds expanded, FetchBboxResult? geo, OsmNote[] notes) in fetched)
             {
-                FetchBboxResult? fetched = await mediator.Send(
-                    new FetchBbox.Query(miss.West, miss.South, miss.East, miss.North), ct);
-
-                if (fetched is not null)
+                if (geo is not null)
                 {
-                    _osmCache.AddToCache(miss, new OsmCacheData(
-                        (IReadOnlyList<OsmNode>)fetched.Nodes,
-                        (IReadOnlyList<OsmWay>)fetched.Ways,
-                        (IReadOnlyList<OsmRelation>)fetched.Relations));
+                    _osmCache.AddToCache(expanded, new OsmCacheData(
+                        (IReadOnlyList<OsmNode>)geo.Nodes,
+                        (IReadOnlyList<OsmWay>)geo.Ways,
+                        (IReadOnlyList<OsmRelation>)geo.Relations,
+                        notes));
                 }
                 else
                 {
@@ -625,6 +696,7 @@ public class EditBufferService : IDisposable
             {
                 OsmCacheData viewportData = _osmCache.GetGeometryFromBbox(cacheBounds);
                 MergeFetchedData(viewportData.Nodes, viewportData.Ways, viewportData.Relations);
+                await PushNotesAsync(cacheBounds);
             }
         }
         catch (OperationCanceledException)

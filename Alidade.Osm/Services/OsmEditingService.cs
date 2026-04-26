@@ -20,11 +20,11 @@ internal sealed class OsmEditingService(HttpClient http, IOsmApiContext context)
     #region Bounding box
 
     /// <inheritdoc />
-    public async Task<string> FetchBboxAsync(double west, double south, double east, double north,
+    public Task<Stream> FetchBboxAsync(double west, double south, double east, double north,
         CancellationToken ct = default)
     {
         string url = $"{ApiBase}/map?bbox={west:F7},{south:F7},{east:F7},{north:F7}";
-        return await http.GetStringAsync(url, ct);
+        return http.GetStreamAsync(url, ct);
     }
 
     #endregion

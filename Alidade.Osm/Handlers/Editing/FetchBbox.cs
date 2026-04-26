@@ -20,9 +20,9 @@ public class FetchBbox(IOsmEditingService osm, ISender sender) : IRequestHandler
     /// <inheritdoc />
     public async Task<QueryResult<FetchBboxResult>> Handle(Query request, CancellationToken cancellationToken)
     {
-        string xml = await osm.FetchBboxAsync(request.West, request.South, request.East, request.North, cancellationToken);
+        await using Stream stream = await osm.FetchBboxAsync(request.West, request.South, request.East, request.North, cancellationToken);
 
-        QueryResult<ParseOsmXmlResult> parseResult = await sender.Send(new ParseOsmXml.Query(xml), cancellationToken);
+        QueryResult<ParseOsmXmlResult> parseResult = await sender.Send(new ParseOsmXml.Query(stream), cancellationToken);
         if (!parseResult.Success || parseResult.Result is null)
         {
             return QueryResult<FetchBboxResult>.Fail(parseResult.FailReason);

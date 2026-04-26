@@ -1,4 +1,4 @@
-using System.Xml.Linq;
+using System.Xml;
 using Alidade.Osm.Models.Parsing;
 
 namespace Alidade.Osm.Handlers.Parsing;
@@ -7,62 +7,176 @@ namespace Alidade.Osm.Handlers.Parsing;
 public class ParseOsmXml : IRequestHandler<ParseOsmXml.Query, QueryResult<ParseOsmXmlResult>>
 {
     /// <summary>
-    ///   Parses the given OSM XML string into typed element collections.
+    ///   Parses OSM XML from <paramref name="Stream"/> into typed element collections.
+    ///   The caller retains ownership of the stream and is responsible for disposing it.
     /// </summary>
-    /// <param name="Xml">The raw OSM XML string returned by the map endpoint.</param>
-    public record Query(string Xml) : IRequest<QueryResult<ParseOsmXmlResult>>;
-
-    /// <inheritdoc />
-    public Task<QueryResult<ParseOsmXmlResult>> Handle(Query request, CancellationToken cancellationToken)
+    /// <param name="Stream">A readable stream positioned at the start of the OSM XML response.</param>
+    public record Query(Stream Stream) : IRequest<QueryResult<ParseOsmXmlResult>>
     {
-        XDocument doc = XDocument.Parse(request.Xml);
-        XElement root = doc.Root!;
-
-        List<OsmNode> nodes = [.. root.Elements("node").Select(ParseNode)];
-        List<OsmWay> ways = [.. root.Elements("way").Select(ParseWay)];
-        List<OsmRelation> relations = [.. root.Elements("relation").Select(ParseRelation)];
-
-        return Task.FromResult<QueryResult<ParseOsmXmlResult>>(new ParseOsmXmlResult(nodes, ways, relations));
+        /// <inheritdoc />
+        public override string ToString() => "ParseOsmXml: streaming";
     }
 
-    private static OsmNode ParseNode(XElement el)
-        => new(long.Parse(el.Attribute("id")!.Value),
-               int.Parse(el.Attribute("version")?.Value ?? "1"),
-               el.Attribute("changeset") is { } cs ? int.Parse(cs.Value) : null,
-               el.Attribute("user")?.Value,
-               el.Attribute("timestamp") is { } ts ? DateTimeOffset.Parse(ts.Value) : null,
-               double.Parse(el.Attribute("lat")!.Value),
-               double.Parse(el.Attribute("lon")!.Value),
-               ParseTags(el));
+    /// <inheritdoc />
+    public async Task<QueryResult<ParseOsmXmlResult>> Handle(Query request, CancellationToken cancellationToken)
+    {
+        try
+        {
+            // BrowserHttpReadStream (WASM) only supports async reads, but XmlReader.Create(Stream)
+            // performs a synchronous read during encoding detection. Buffer the response bytes
+            // into a MemoryStream first — this also avoids the UTF-16 string allocation that
+            // GetStringAsync + StringReader would incur.
+            using MemoryStream buffer = new();
+            await request.Stream.CopyToAsync(buffer, cancellationToken);
+            buffer.Position = 0;
 
-    private static OsmWay ParseWay(XElement el)
-        => new(long.Parse(el.Attribute("id")!.Value),
-               int.Parse(el.Attribute("version")?.Value ?? "1"),
-               el.Attribute("changeset") is { } cs ? int.Parse(cs.Value) : null,
-               el.Attribute("user")?.Value,
-               el.Attribute("timestamp") is { } ts ? DateTimeOffset.Parse(ts.Value) : null,
-               [.. el.Elements("nd").Select(nd => long.Parse(nd.Attribute("ref")!.Value))],
-               ParseTags(el));
+            List<OsmNode> nodes = [];
+            List<OsmWay> ways = [];
+            List<OsmRelation> relations = [];
 
-    private static OsmRelation ParseRelation(XElement el)
-        => new(long.Parse(el.Attribute("id")!.Value),
-               int.Parse(el.Attribute("version")?.Value ?? "1"),
-               el.Attribute("changeset") is { } cs ? int.Parse(cs.Value) : null,
-               el.Attribute("user")?.Value,
-               el.Attribute("timestamp") is { } ts ? DateTimeOffset.Parse(ts.Value) : null,
-               [.. el.Elements("member").Select(
-                        m => new OsmMember(m.Attribute("type")!.Value switch
-                                           {
-                                               "node" => OsmElementTypes.Node,
-                                               "way" => OsmElementTypes.Way,
-                                               _ => OsmElementTypes.Relation
-                                           },
-                                           long.Parse(m.Attribute("ref")!.Value),
-                                           m.Attribute("role")?.Value ?? string.Empty))
-                ],
-               ParseTags(el));
+            using XmlReader reader = XmlReader.Create(buffer,
+                new XmlReaderSettings { IgnoreWhitespace = true, IgnoreComments = true });
 
-    private static Dictionary<string, string> ParseTags(XElement el)
-        => el.Elements("tag").ToDictionary(t => t.Attribute("k")!.Value,
-                                           t => t.Attribute("v")!.Value);
+            while (reader.Read())
+            {
+                if (reader.NodeType != XmlNodeType.Element)
+                {
+                    continue;
+                }
+
+                switch (reader.Name)
+                {
+                    case "node":
+                        nodes.Add(ReadNode(reader));
+                        break;
+
+                    case "way":
+                        ways.Add(ReadWay(reader));
+                        break;
+
+                    case "relation":
+                        relations.Add(ReadRelation(reader));
+                        break;
+                }
+            }
+
+            return new ParseOsmXmlResult(nodes, ways, relations);
+        }
+        catch (XmlException ex)
+        {
+            return QueryResult<ParseOsmXmlResult>.Fail(ex.Message);
+        }
+    }
+
+    private static OsmNode ReadNode(XmlReader r)
+    {
+        long id = long.Parse(r.GetAttribute("id")!);
+        int version = int.Parse(r.GetAttribute("version") ?? "1");
+        int? changeset = r.GetAttribute("changeset") is { } cs ? int.Parse(cs) : null;
+        string? user = r.GetAttribute("user");
+        DateTimeOffset? timestamp = r.GetAttribute("timestamp") is { } ts ? DateTimeOffset.Parse(ts) : null;
+        double lat = double.Parse(r.GetAttribute("lat")!);
+        double lon = double.Parse(r.GetAttribute("lon")!);
+
+        Dictionary<string, string> tags = [];
+        if (!r.IsEmptyElement)
+        {
+            while (r.Read())
+            {
+                if (r.NodeType == XmlNodeType.EndElement)
+                {
+                    break;
+                }
+
+                if (r.NodeType == XmlNodeType.Element && r.Name == "tag")
+                {
+                    tags[r.GetAttribute("k")!] = r.GetAttribute("v")!;
+                }
+            }
+        }
+
+        return new OsmNode(id, version, changeset, user, timestamp, lat, lon, tags);
+    }
+
+    private static OsmWay ReadWay(XmlReader r)
+    {
+        long id = long.Parse(r.GetAttribute("id")!);
+        int version = int.Parse(r.GetAttribute("version") ?? "1");
+        int? changeset = r.GetAttribute("changeset") is { } cs ? int.Parse(cs) : null;
+        string? user = r.GetAttribute("user");
+        DateTimeOffset? timestamp = r.GetAttribute("timestamp") is { } ts ? DateTimeOffset.Parse(ts) : null;
+
+        List<long> nodeRefs = [];
+        Dictionary<string, string> tags = [];
+        if (!r.IsEmptyElement)
+        {
+            while (r.Read())
+            {
+                if (r.NodeType == XmlNodeType.EndElement)
+                {
+                    break;
+                }
+
+                if (r.NodeType != XmlNodeType.Element)
+                {
+                    continue;
+                }
+
+                if (r.Name == "nd")
+                {
+                    nodeRefs.Add(long.Parse(r.GetAttribute("ref")!));
+                }
+                else if (r.Name == "tag")
+                {
+                    tags[r.GetAttribute("k")!] = r.GetAttribute("v")!;
+                }
+            }
+        }
+
+        return new OsmWay(id, version, changeset, user, timestamp, [.. nodeRefs], tags);
+    }
+
+    private static OsmRelation ReadRelation(XmlReader r)
+    {
+        long id = long.Parse(r.GetAttribute("id")!);
+        int version = int.Parse(r.GetAttribute("version") ?? "1");
+        int? changeset = r.GetAttribute("changeset") is { } cs ? int.Parse(cs) : null;
+        string? user = r.GetAttribute("user");
+        DateTimeOffset? timestamp = r.GetAttribute("timestamp") is { } ts ? DateTimeOffset.Parse(ts) : null;
+
+        List<OsmMember> members = [];
+        Dictionary<string, string> tags = [];
+        if (!r.IsEmptyElement)
+        {
+            while (r.Read())
+            {
+                if (r.NodeType == XmlNodeType.EndElement)
+                {
+                    break;
+                }
+
+                if (r.NodeType != XmlNodeType.Element)
+                {
+                    continue;
+                }
+
+                if (r.Name == "member")
+                {
+                    OsmElementTypes type = r.GetAttribute("type") switch
+                    {
+                        "node" => OsmElementTypes.Node,
+                        "way" => OsmElementTypes.Way,
+                        _ => OsmElementTypes.Relation
+                    };
+                    members.Add(new OsmMember(type, long.Parse(r.GetAttribute("ref")!), r.GetAttribute("role") ?? string.Empty));
+                }
+                else if (r.Name == "tag")
+                {
+                    tags[r.GetAttribute("k")!] = r.GetAttribute("v")!;
+                }
+            }
+        }
+
+        return new OsmRelation(id, version, changeset, user, timestamp, [.. members], tags);
+    }
 }

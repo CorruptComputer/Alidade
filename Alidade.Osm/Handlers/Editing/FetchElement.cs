@@ -1,3 +1,4 @@
+using System.Text;
 using Alidade.Osm.Handlers.Parsing;
 using Alidade.Osm.Models.Editing;
 using Alidade.Osm.Models.Parsing;
@@ -36,7 +37,8 @@ public class FetchElement(IOsmEditingService osm, ISender sender)
             return QueryResult<FetchElementResult>.Fail(ex.Message);
         }
 
-        QueryResult<ParseOsmXmlResult> parseResult = await sender.Send(new ParseOsmXml.Query(xml), cancellationToken);
+        QueryResult<ParseOsmXmlResult> parseResult = await sender.Send(
+            new ParseOsmXml.Query(new MemoryStream(Encoding.UTF8.GetBytes(xml))), cancellationToken);
         if (!parseResult.Success || parseResult.Result is null)
         {
             return QueryResult<FetchElementResult>.Fail(parseResult.FailReason);

@@ -7,14 +7,15 @@ namespace Alidade.Core.ServiceInterface;
 public interface IOsmNotesService
 {
     /// <summary>
-    ///   Fetches the raw GeoJSON string for notes within the specified bounding box.
+    ///   Fetches the GeoJSON for notes within the specified bounding box as a stream.
+    ///   The caller is responsible for disposing the returned stream.
     /// </summary>
     /// <param name="west">Western longitude bound.</param>
     /// <param name="south">Southern latitude bound.</param>
     /// <param name="east">Eastern longitude bound.</param>
     /// <param name="north">Northern latitude bound.</param>
     /// <param name="ct">Optional cancellation token.</param>
-    /// <returns>The raw GeoJSON FeatureCollection string from the notes endpoint.</returns>
-    public Task<string> FetchNotesAsync(double west, double south, double east, double north,
+    /// <returns>A stream over the GeoJSON response body.</returns>
+    public Task<Stream> FetchNotesAsync(double west, double south, double east, double north,
         CancellationToken ct = default);
 }

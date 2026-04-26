@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Alidade.Map.Handlers;
 using NetTopologySuite.Features;
 using NetTopologySuite.Geometries;
@@ -6,7 +5,7 @@ using NetTopologySuite.Geometries;
 namespace Alidade.Handlers.Map;
 
 /// <inheritdoc />
-public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediator mediator, JsonSerializerOptions geoJsonOptions, GeometryFactory geomFactory)
+public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediator mediator, GeometryFactory geomFactory)
     : INotificationHandler<DrawPreviewPushRequested.Notification>
 {
     /// <summary>
@@ -41,7 +40,6 @@ public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediat
             fc.Add(new Feature(geomFactory.CreatePoint(new Coordinate(lon, lat)), attrs));
         }
 
-        string json = JsonSerializer.Serialize(fc, geoJsonOptions);
-        await mediator.Send(new SetSourceData.Command("osm-draw-preview", json));
+        await mediator.Send(new SetSourceData.Command("osm-draw-preview", fc));
     }
 }

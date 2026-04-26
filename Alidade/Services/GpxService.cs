@@ -1,5 +1,4 @@
 using System.Globalization;
-using System.Text.Json;
 using System.Xml.Linq;
 using Alidade.Map.Handlers;
 using NetTopologySuite.Features;
@@ -17,11 +16,8 @@ namespace Alidade.Services;
 ///   Initializes the service with its mediator and JSON serialization dependencies.
 /// </remarks>
 /// <param name="mediator">The mediator used to dispatch map source data commands.</param>
-/// <param name="geoJsonOptions">
-///   JSON serializer options that include the NTS <c>GeoJsonConverterFactory</c>.
-/// </param>
 /// <param name="geomFactory">The WGS 84 geometry factory used to construct NTS geometries.</param>
-public sealed class GpxService(IMediator mediator, JsonSerializerOptions geoJsonOptions, GeometryFactory geomFactory)
+public sealed class GpxService(IMediator mediator, GeometryFactory geomFactory)
 {
     private readonly Dictionary<string, List<Feature>> _layers = [];
 
@@ -68,8 +64,7 @@ public sealed class GpxService(IMediator mediator, JsonSerializerOptions geoJson
             }
         }
 
-        string json = JsonSerializer.Serialize(fc, geoJsonOptions);
-        await mediator.Send(new SetSourceData.Command("osm-gpx", json));
+        await mediator.Send(new SetSourceData.Command("osm-gpx", fc));
     }
 
     private List<Feature> ParseGpx(Stream stream)

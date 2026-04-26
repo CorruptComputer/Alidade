@@ -1,19 +1,30 @@
+using System.Text.Json;
+using NetTopologySuite.Features;
+
 namespace Alidade.Map.Handlers;
 
 /// <inheritdoc />
-public class SetSourceData(MapInteropService map) : IRequestHandler<SetSourceData.Command, CommandResult>
+public sealed class SetSourceData(MapInteropService map, JsonSerializerOptions geoJsonOptions)
+    : IRequestHandler<SetSourceData.Command, CommandResult>
 {
     /// <summary>
-    ///   Replaces the GeoJSON data for a named MapLibre source.
+    ///   Serializes <paramref name="Features"/> to GeoJSON and replaces the data for a named
+    ///   MapLibre source. Serialization is performed inside the handler so it is captured by
+    ///   pipeline timing.
     /// </summary>
     /// <param name="SourceId">The MapLibre source ID (e.g. <c>"osm-nodes"</c>).</param>
-    /// <param name="GeoJson">A serialized GeoJSON FeatureCollection string.</param>
-    public record Command(string SourceId, string GeoJson) : IRequest<CommandResult>;
+    /// <param name="Features">The feature collection to publish as GeoJSON.</param>
+    public record Command(string SourceId, FeatureCollection Features) : IRequest<CommandResult>
+    {
+        /// <inheritdoc />
+        public override string ToString() => $"SetSourceData: {SourceId} ({Features.Count} features)";
+    }
 
     /// <inheritdoc />
     public async Task<CommandResult> Handle(Command request, CancellationToken cancellationToken)
     {
-        await map.SetSourceDataAsync(request.SourceId, request.GeoJson);
+        string json = JsonSerializer.Serialize(request.Features, geoJsonOptions);
+        await map.SetSourceDataAsync(request.SourceId, json);
         return CommandResult.Pass();
     }
 }

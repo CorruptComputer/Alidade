@@ -17,6 +17,8 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
     private readonly Dictionary<long, Feature> _nodeFeatures = [];
     private readonly Dictionary<long, Feature> _wayFeatures = [];
 
+    private readonly Dictionary<long, OsmNote> _notes = [];
+
     private readonly GeometryFactory _geomFactory = geomFactory;
 
     /// <inheritdoc />
@@ -42,9 +44,17 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
     public void AddToCache(CacheBounds bounds, OsmCacheData data)
     {
         Geometry newGeom = BoundsToGeometry(bounds);
-        _cachedArea = _cachedArea is null
-            ? newGeom
-            : _cachedArea.Union(newGeom);
+        if (_cachedArea is null)
+        {
+            _cachedArea = newGeom;
+        }
+        else
+        {
+            Geometry union = _cachedArea.Union(newGeom);
+            // Buffer(0) normalises degenerate GeometryCollection results that NTS can
+            // produce when two rectangles share only a corner or a near-zero-width edge.
+            _cachedArea = union is GeometryCollection ? union.Buffer(0) : union;
+        }
 
         foreach (OsmNode n in data.Nodes)
         {
@@ -65,6 +75,11 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
         foreach (OsmRelation r in data.Relations)
         {
             _relations[r.Id] = r;
+        }
+
+        foreach (OsmNote n in data.Notes)
+        {
+            _notes[n.Id] = n;
         }
     }
 
@@ -114,8 +129,16 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
                 || (m.Type == OsmElementTypes.Way && wayIds.Contains(m.Ref)))
             )];
 
-        return new OsmCacheData(allNodes, ways, relations);
+        return new OsmCacheData(allNodes, ways, relations, []);
     }
+
+    /// <inheritdoc />
+    public IReadOnlyList<OsmNote> GetNotesFromBbox(CacheBounds bounds)
+        => [.. _notes.Values
+            .Where(n => n.Lat >= bounds.South
+                        && n.Lat <= bounds.North
+                        && n.Lon >= bounds.West
+                        && n.Lon <= bounds.East)];
 
     /// <inheritdoc />
     public Feature? GetCachedNodeFeature(long id) => _nodeFeatures.GetValueOrDefault(id);
@@ -132,6 +155,7 @@ internal sealed class OsmCacheService(GeometryFactory geomFactory) : IOsmCacheSe
         _ways.Clear();
         _wayFeatures.Clear();
         _relations.Clear();
+        _notes.Clear();
     }
 
     private Geometry BoundsToGeometry(CacheBounds b)
