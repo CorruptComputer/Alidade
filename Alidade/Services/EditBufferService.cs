@@ -94,9 +94,13 @@ public class EditBufferService : IDisposable
 
         if (bounds is not null)
         {
-            _fetchCts.Cancel();
-            _fetchCts.Dispose();
+            CancellationTokenSource oldCts = _fetchCts;
             _fetchCts = new CancellationTokenSource();
+            _ = Task.Run(() =>
+            {
+                oldCts.Cancel();
+                oldCts.Dispose();
+            });
 
             EvictOutOfViewportData(bounds);
 
