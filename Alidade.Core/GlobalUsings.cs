@@ -1,4 +1,5 @@
 global using Alidade.Core.Consts;
+global using Alidade.Core.Models;
 global using Alidade.Core.Enums;
 global using Alidade.Core.Models.CQRS.Request;
 global using Alidade.Core.Models.CQRS.Response;

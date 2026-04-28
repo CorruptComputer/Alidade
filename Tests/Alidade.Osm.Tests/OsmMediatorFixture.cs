@@ -1,4 +1,5 @@
 using Alidade.Core.PipelineBehaviors;
+using Alidade.Osm.Handlers.Api.Editing;
 using Alidade.Osm.Handlers.Editing;
 using Autofac;
 using Microsoft.Extensions.Logging;
@@ -23,7 +24,7 @@ public sealed class OsmMediatorFixture : IDisposable
         ContainerBuilder builder = new();
 
         QuestyConfigurationBuilder questyConfig = QuestyConfigurationBuilder
-            .Create(typeof(FetchBbox).Assembly)
+            .Create(typeof(AlidadeOsmModule).Assembly)
             .WithAllOpenGenericHandlerTypesRegistered()
             .WithCustomPipelineBehaviors([
                 typeof(CommandBehavior<>),

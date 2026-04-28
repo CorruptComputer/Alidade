@@ -1,4 +1,3 @@
-
 namespace Alidade.Osm.Services;
 
 /// <summary>
@@ -11,10 +10,9 @@ namespace Alidade.Osm.Services;
 internal sealed class OsmNotesService(HttpClient http, IOsmApiContext context) : IOsmNotesService
 {
     /// <inheritdoc />
-    public Task<Stream> FetchNotesAsync(double west, double south, double east, double north,
-        CancellationToken ct = default)
+    public Task<Stream> FetchNotesAsync(Bbox bbox, CancellationToken cancellationToken)
     {
-        string url = $"{context.ApiBase}/notes.json?bbox={west:F7},{south:F7},{east:F7},{north:F7}&limit=200";
-        return http.GetStreamAsync(url, ct);
+        string url = $"{context.ApiBase}/notes.json?bbox={bbox.NorthWest.X:F7},{bbox.SouthEast.Y:F7},{bbox.SouthEast.X:F7},{bbox.NorthWest.Y:F7}&limit=200";
+        return http.GetStreamAsync(url, cancellationToken);
     }
 }

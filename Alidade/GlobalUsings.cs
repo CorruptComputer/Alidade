@@ -13,6 +13,7 @@ global using Alidade.Services;
 global using Alidade.Services.State;
 
 global using Alidade.Core.Consts;
+global using Alidade.Core.Models;
 global using Alidade.Core.Enums;
 global using Alidade.Core.Models.CQRS;
 global using Alidade.Core.Models.CQRS.Request;

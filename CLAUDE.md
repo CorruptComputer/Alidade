@@ -115,7 +115,9 @@ See [CODE_STYLE.md](CODE_STYLE.md) for the full rules. The most commonly violate
 - **Immutability** — use `init` or `readonly` for members that don't change after construction; use `required` for must-initialize members.
 - **Expression-bodied members** — preferred; place `=>` on a new line for methods.
 - **Multi-line boolean conditions** — place operators (`&&`, `||`) at the start of the continuation line.
+- **No alignment padding** — use a single space after commas and around operators; never add extra spaces to vertically align tokens across lines.
 - **One class per file** — filename must match class name.
+- **Descriptive names** — prefer full names over abbreviations (e.g. `cancellationToken` not `ct`, `response` not `resp`).
 - **Enums are plural.**
 - **Prefer returning failure states over throwing exceptions.**
 - **Nullable** — annotations are required; don't suppress with `!` without a comment explaining why.

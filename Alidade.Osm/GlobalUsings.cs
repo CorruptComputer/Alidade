@@ -1,5 +1,6 @@
 global using System.Collections.Immutable;
 global using Alidade.Core.Enums;
+global using Alidade.Core.Models;
 global using Alidade.Core.Models.CQRS;
 global using Alidade.Core.Models.CQRS.Response;
 global using Alidade.Core.ServiceInterface;

@@ -217,6 +217,37 @@ public static readonly IReadOnlySet<string> Names
     = new HashSet<string> { "Alice", "Bob" };
 ```
 
+#### Alignment Padding
+Do not add extra spaces to vertically align tokens across lines. Use a single space after commas and around operators.
+
+No:
+```csharp
+new Foo(
+    [.. a.Nodes,     .. b.Nodes],
+    [.. a.Ways,      .. b.Ways],
+    [.. a.Relations, .. b.Relations]);
+
+SomeObject obj = new()
+{
+    ShortName  = "x",
+    LongerName = "y",
+};
+```
+
+Yes:
+```csharp
+new Foo(
+    [.. a.Nodes, .. b.Nodes],
+    [.. a.Ways, .. b.Ways],
+    [.. a.Relations, .. b.Relations]);
+
+SomeObject obj = new()
+{
+    ShortName = "x",
+    LongerName = "y",
+};
+```
+
 #### Strings
 When concatenating strings, prefer string interpolation instead of the `+` operator.
 
@@ -250,6 +281,23 @@ public class Something<T> { }
 
 // File: SomethingElse.cs
 public class SomethingElse : Something<Foo> { }
+```
+
+#### Descriptive Names
+Prefer full, descriptive names over abbreviations or single-letter identifiers.
+
+No:
+```csharp
+CancellationToken ct
+HttpResponseMessage resp
+Dictionary<string, string> dict
+```
+
+Yes:
+```csharp
+CancellationToken cancellationToken
+HttpResponseMessage response
+Dictionary<string, string> tags
 ```
 
 #### Enums

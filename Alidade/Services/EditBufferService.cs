@@ -1,5 +1,6 @@
 using Alidade.Core.Models.CQRS.Response;
 using Alidade.Map.Handlers;
+using Alidade.Osm.Handlers.Api.Editing;
 using Alidade.Osm.Handlers.Editing;
 using Alidade.Osm.Models;
 using Alidade.Osm.Models.Editing;
@@ -663,10 +664,11 @@ public class EditBufferService : IDisposable
                 .Select(async miss =>
                 {
                     CacheBounds expanded = ExpandBbox(miss);
-                    Task<QueryResult<FetchBboxResult>> geoTask = mediator.Send(
-                        new FetchBbox.Query(expanded.West, expanded.South, expanded.East, expanded.North), ct);
-                    Task<QueryResult<OsmNote[]>> notesTask = mediator.Send(
-                        new FetchNotes.Query(expanded.West, expanded.South, expanded.East, expanded.North), ct);
+                    Bbox bbox = new(
+                        new NetTopologySuite.Geometries.Coordinate(expanded.West, expanded.North),
+                        new NetTopologySuite.Geometries.Coordinate(expanded.East, expanded.South));
+                    Task<QueryResult<FetchBboxResult>> geoTask = mediator.Send(new FetchBbox.Query(bbox), ct);
+                    Task<QueryResult<OsmNote[]>> notesTask = mediator.Send(new FetchNotes.Query(bbox), ct);
 
                     await Task.WhenAll(geoTask, notesTask);
                     FetchBboxResult? geo = geoTask.Result;
