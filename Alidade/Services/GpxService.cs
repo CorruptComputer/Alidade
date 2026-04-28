@@ -64,7 +64,7 @@ public sealed class GpxService(IMediator mediator, GeometryFactory geomFactory)
             }
         }
 
-        await mediator.Send(new SetSourceData.Command("osm-gpx", fc));
+        await mediator.Send(new SetSourceData.Command(MapSourceNames.Gpx, fc));
     }
 
     private List<Feature> ParseGpx(Stream stream)

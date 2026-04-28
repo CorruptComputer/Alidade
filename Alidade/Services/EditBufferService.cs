@@ -338,8 +338,8 @@ public class EditBufferService : IDisposable
             }
         }
 
-        await SetSourceAsync("osm-nodes", nodes);
-        await SetSourceAsync("osm-ways", ways);
+        await SetSourceAsync(MapSourceNames.Nodes, nodes);
+        await SetSourceAsync(MapSourceNames.Ways, ways);
     }
 
     private async Task PushSelectionAsync(SelectionState sel, EditBufferState buf, bool includeSelected, HashSet<long> modifiedNodeIds)
@@ -413,8 +413,8 @@ public class EditBufferService : IDisposable
                 }
             }
 
-            await SetSourceAsync("osm-selected", selectedFeatures);
-            await SetSourceAsync("osm-vertices", vertexFeatures);
+            await SetSourceAsync(MapSourceNames.Selected, selectedFeatures);
+            await SetSourceAsync(MapSourceNames.Vertices, vertexFeatures);
         }
 
         FeatureCollection hoverFeatures = [];
@@ -444,7 +444,7 @@ public class EditBufferService : IDisposable
             }
         }
 
-        await SetSourceAsync("osm-hover", hoverFeatures);
+        await SetSourceAsync(MapSourceNames.Hover, hoverFeatures);
     }
 
     private Task SetSourceAsync(string sourceId, FeatureCollection featureCollection)
@@ -484,7 +484,7 @@ public class EditBufferService : IDisposable
             fc.Add(new Feature(_geomFactory.CreatePoint(new Coordinate(note.Lon, note.Lat)), attrs));
         }
 
-        await SetSourceAsync("osm-notes", fc);
+        await SetSourceAsync(MapSourceNames.Notes, fc);
     }
 
     #endregion

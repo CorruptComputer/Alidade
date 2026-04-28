@@ -49,7 +49,7 @@ public sealed class KeyPressedHandler(SettingsStateService settingsState, Select
                 await sender.Publish(new Square.Notification(), cancellationToken);
                 break;
             case KeyBindingActions.Circularize:
-                await sender.Send(new Circularize.Command(), cancellationToken);
+                await sender.Send(new ToggleCircularizeDialog.Command(), cancellationToken);
                 break;
             case KeyBindingActions.Upload:
                 await sender.Send(new ToggleUploadDialog.Command(), cancellationToken);

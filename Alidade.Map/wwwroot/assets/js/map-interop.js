@@ -266,7 +266,7 @@ window.mapInterop = (() => {
         'osm-selected', 'osm-hover', 'osm-vertices',
         'osm-notes', 'osm-gpx',
         'osm-draw-preview',
-        'osm-gridify-preview',
+        'osm-preview',
         'osm-invalid',
         'osm-snap-segments'
     ];
@@ -522,15 +522,30 @@ window.mapInterop = (() => {
             paint: { 'line-color': '#c00', 'line-width': 2 }
         });
 
-        // Gridify preview: orange dashed grid overlay shown while the gridify dialog is open
+        // Tool preview: orange dashed outline shared by gridify, circularize, and similar panels
         map.addLayer({
-            id: 'layer-gridify-preview-line',
+            id: 'layer-preview-line',
             type: 'line',
-            source: 'osm-gridify-preview',
+            source: 'osm-preview',
+            filter: ['==', ['geometry-type'], 'LineString'],
             paint: {
                 'line-color': '#ff6600',
                 'line-width': 1.5,
                 'line-dasharray': [4, 3]
+            }
+        });
+
+        // Tool preview: vertex dots at each proposed node position
+        map.addLayer({
+            id: 'layer-preview-circle',
+            type: 'circle',
+            source: 'osm-preview',
+            filter: ['==', ['geometry-type'], 'Point'],
+            paint: {
+                'circle-radius': 4,
+                'circle-color': '#ff6600',
+                'circle-stroke-width': 1,
+                'circle-stroke-color': '#fff'
             }
         });
 

@@ -21,6 +21,7 @@ global using Alidade.Core.Models.Settings;
 global using Alidade.Core.ServiceInterface;
 global using Alidade.Core.Services;
 
+global using Alidade.Map.Consts;
 global using Alidade.Map.Models;
 global using Alidade.Map.Notifications;
 

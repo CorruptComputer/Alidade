@@ -40,6 +40,6 @@ public sealed class DrawPreviewPushRequested(ToolStateService toolState, IMediat
             fc.Add(new Feature(geomFactory.CreatePoint(new Coordinate(lon, lat)), attrs));
         }
 
-        await mediator.Send(new SetSourceData.Command("osm-draw-preview", fc));
+        await mediator.Send(new SetSourceData.Command(MapSourceNames.DrawPreview, fc));
     }
 }

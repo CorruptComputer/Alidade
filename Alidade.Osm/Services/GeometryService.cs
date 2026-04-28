@@ -3,9 +3,9 @@ using NetTopologySuite.Geometries;
 namespace Alidade.Osm.Services;
 
 /// <summary>
-///   Geometric operations: circularization, segment math, and gridify helpers.
+///   Geometric operations: segment math and coordinate projection helpers.
 ///   Works in a local flat-Earth projection (Web Mercator approximation) to preserve
-///   distance relationships. Results are returned as coordinate moves to dispatch as actions.
+///   distance relationships.
 /// </summary>
 public static class GeometryService
 {
@@ -27,57 +27,6 @@ public static class GeometryService
         const double R = 6378137.0;
         double cosLat = Math.Cos(latRef * Math.PI / 180.0);
         return new Coordinate(xy.X / (Math.PI / 180.0 * R * cosLat), xy.Y / (Math.PI / 180.0 * R));
-    }
-    #endregion
-
-    #region Circularization
-    /// <summary>
-    ///   Computes node moves that fit a closed way to its best-fit circle by projecting each
-    ///   node onto the circle defined by the centroid and average radius.
-    ///   Returns the list of (nodeId, oldLat, oldLon, newLat, newLon) moves to dispatch.
-    /// </summary>
-    /// <param name="wayId">The ID of the closed way to circularize.</param>
-    /// <param name="ways">The current way dictionary from the edit buffer.</param>
-    /// <param name="nodes">The current node dictionary from the edit buffer.</param>
-    /// <returns>
-    ///   A list of (NodeId, OldLat, OldLon, NewLat, NewLon) tuples for each node that moves.
-    ///   Returns an empty list when the way cannot be circularized.
-    /// </returns>
-    public static IReadOnlyList<(long NodeId, double OldLat, double OldLon, double NewLat, double NewLon)>
-        Circularize(long wayId, ImmutableDictionary<long, OsmWay> ways,
-            ImmutableDictionary<long, OsmNode> nodes)
-    {
-        if (!ways.TryGetValue(wayId, out OsmWay? way) || !way.IsClosed)
-        {
-            return [];
-        }
-
-        List<long> nodeIds = [.. way.NodeIds.Take(way.NodeIds.Count - 1)];
-        List<OsmNode> nodeList = [.. nodeIds.Where(nodes.ContainsKey).Select(id => nodes[id])];
-        if (nodeList.Count < 3)
-        {
-            return [];
-        }
-
-        double latRef = nodeList.Average(n => n.Lat);
-        List<Coordinate> pts = [.. nodeList.Select(n => Project(new Coordinate(n.Lon, n.Lat), latRef))];
-
-        // Compute centroid and average radius
-        double cx = pts.Average(p => p.X);
-        double cy = pts.Average(p => p.Y);
-        double r = pts.Average(p => Math.Sqrt((p.X - cx) * (p.X - cx) + (p.Y - cy) * (p.Y - cy)));
-
-        List<(long, double, double, double, double)> moves = [];
-        for (int i = 0; i < nodeList.Count; i++)
-        {
-            double angle = Math.Atan2(pts[i].Y - cy, pts[i].X - cx);
-            double newX = cx + r * Math.Cos(angle);
-            double newY = cy + r * Math.Sin(angle);
-            Coordinate latLon = Unproject(new Coordinate(newX, newY), latRef);
-            moves.Add((nodeList[i].Id, nodeList[i].Lat, nodeList[i].Lon, latLon.Y, latLon.X));
-        }
-
-        return moves;
     }
     #endregion
 

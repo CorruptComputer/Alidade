@@ -199,12 +199,12 @@ public partial class GridifyPanel(
             }
         }
 
-        await mediator.Send(new SetSourceData.Command("osm-gridify-preview", fc));
+        await mediator.Send(new SetSourceData.Command(MapSourceNames.Preview, fc));
     }
 
     private async Task ClearPreviewAsync()
     {
-        await mediator.Send(new SetSourceData.Command("osm-gridify-preview", []));
+        await mediator.Send(new SetSourceData.Command(MapSourceNames.Preview, []));
     }
 
     private async Task ApplyAsync()

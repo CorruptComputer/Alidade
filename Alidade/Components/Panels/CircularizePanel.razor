@@ -1,0 +1,30 @@
+<Panel TPanel="CircularizePanel"
+       Visible="@_visible"
+       OnClose="Cancel"
+       Class="panel--left">
+    @if (_state.WayId is null)
+    {
+        <div class="circularize-no-selection">
+            Select a single closed way to circularize.
+        </div>
+        <div class="circularize-actions">
+            <button class="btn-secondary" @onclick="Cancel">Close</button>
+        </div>
+    }
+    else
+    {
+        <div class="circularize-slider-row">
+            <label>Vertices</label>
+            <input type="range"
+                   min="@_minVertices"
+                   max="64"
+                   value="@_state.VertexCount"
+                   @oninput="OnVertexCountInput" />
+            <span class="circularize-count">@_state.VertexCount</span>
+        </div>
+        <div class="circularize-actions">
+            <button class="btn-secondary" @onclick="Cancel">Cancel</button>
+            <button class="btn-primary" @onclick="ApplyAsync">Apply</button>
+        </div>
+    }
+</Panel>
