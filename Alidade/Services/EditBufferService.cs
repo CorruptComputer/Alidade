@@ -12,12 +12,12 @@ namespace Alidade.Services;
 ///   Subscribes to <see cref="EditBufferStateService"/>, <see cref="SelectionStateService"/>,
 ///   and <see cref="MapStateService"/> changes, pushes GeoJSON <see cref="FeatureCollection"/>s
 ///   to MapLibre via Questy map commands, triggers OSM data fetches when the viewport moves
-///   to zoom 17+, and provides the <see cref="ReplaceState"/> and <see cref="MergeFetchedData"/>
+///   to zoom 16+, and provides the <see cref="ReplaceState"/> and <see cref="MergeFetchedData"/>
 ///   operations used by undo/redo and data fetch flows.
 /// </summary>
 public class EditBufferService : IDisposable
 {
-    private const double MinFetchZoom = 17.0;
+    private const double MinFetchZoom = 16.0;
     private const double EvictionMultiplier = 2.0;
     private const double FetchPaddingMultiplier = 1.2;
     private readonly IMediator _mediator;
