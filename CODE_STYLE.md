@@ -104,6 +104,25 @@ Use a traditional constructor only when the constructor body performs logic beyo
 
 ### Formatting
 
+#### Attributes
+Each attribute must appear on its own line, followed by a newline before the declaration it annotates.
+
+No:
+```csharp
+[Parameter] public bool CanPin { get; set; }
+[Required, MaxLength(100)] public string Name { get; set; }
+```
+
+Yes:
+```csharp
+[Parameter]
+public bool CanPin { get; set; }
+
+[Required]
+[MaxLength(100)]
+public string Name { get; set; }
+```
+
 #### Bracing Style
 Braces should be used in nearly all cases, including single-line blocks.
 
@@ -540,12 +559,13 @@ public sealed class ValidationStarted : INotificationHandler<ValidationStarted.N
 ## JavaScript
 
 ### Bracing Style
-Braces are required on all control-flow blocks, even single-line bodies.
+Braces are required on all control-flow blocks, even single-line bodies. The body must always be on its own line — never on the same line as the braces.
 
 No:
 ```js
 if (condition) doSomething();
 for (let i = 0; i < 10; i++) doSomething();
+if (!x) { return; }
 ```
 
 Yes:
@@ -556,6 +576,10 @@ if (condition) {
 
 for (let i = 0; i < 10; i++) {
     doSomething();
+}
+
+if (!x) {
+    return;
 }
 ```
 

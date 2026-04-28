@@ -10,10 +10,14 @@ public record MapState(
     bool SettingsPanelVisible,
     bool GridifyDialogVisible,
     bool CircularizeDialogVisible,
-    ImmutableList<OsmElementRef> PinnedInspectors)
+    ImmutableList<OsmElementRef> PinnedInspectors,
+    bool ContextMenuVisible,
+    double ContextMenuX,
+    double ContextMenuY,
+    OsmElementRef? ContextMenuTargetElement)
 {
     /// <summary>
-    ///   Initializes with no bounds, all panels hidden, and no pinned inspectors.
+    ///   Initializes with no bounds, all panels hidden, no pinned inspectors, and no context menu.
     /// </summary>
-    public MapState() : this(null, false, false, false, false, false, []) { }
+    public MapState() : this(null, false, false, false, false, false, [], false, 0, 0, null) { }
 }

@@ -111,6 +111,7 @@ See [CODE_STYLE.md](CODE_STYLE.md) for the full rules. The most commonly violate
   - `<param>` — for every parameter
   - `<returns>` — for every non-void return
   - `<exception>` — for every exception that can propagate to the caller
+- **Attributes on their own line** — each attribute must be on its own line, followed by a newline before the declaration it annotates.
 - **Braces on all blocks** — no braceless `if`/`for`, even for single-line bodies.
 - **Immutability** — use `init` or `readonly` for members that don't change after construction; use `required` for must-initialize members.
 - **Expression-bodied members** — preferred; place `=>` on a new line for methods.
@@ -123,7 +124,7 @@ See [CODE_STYLE.md](CODE_STYLE.md) for the full rules. The most commonly violate
 - **Nullable** — annotations are required; don't suppress with `!` without a comment explaining why.
 
 **JavaScript** (interop shims only)
-- **Braces on all blocks** — same rule as C#.
+- **Braces on all blocks, body always on its own line** — no braceless `if`/`for`, and never put the body on the same line as the braces: `if (!x) { return; }` is wrong; use a newline after `{`.
 - **`const` over `let`; never `var`** — use `let` only when reassignment is required.
 - **No `console.log`/`console.debug` in committed code** — these are debugging aids only; application logging belongs on the C# side.
 

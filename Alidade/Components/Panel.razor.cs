@@ -1,5 +1,6 @@
 using Alidade.Components.Panels;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 
 namespace Alidade.Components;
@@ -82,6 +83,21 @@ public partial class Panel<TPanel>(IJSRuntime js) where TPanel : IPanel
     /// </summary>
     [Parameter]
     public string? Title { get; set; }
+
+    /// <summary>
+    ///   When set, fires when the user right-clicks the panel header. The browser default context
+    ///   menu is always suppressed on panel headers regardless of whether this is assigned.
+    /// </summary>
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnHeaderContextMenu { get; set; }
+
+    private async Task HandleHeaderContextMenu(MouseEventArgs e)
+    {
+        if (OnHeaderContextMenu.HasDelegate)
+        {
+            await OnHeaderContextMenu.InvokeAsync(e);
+        }
+    }
 
     private string DisplayTitle => Title ?? TPanel.Title;
 

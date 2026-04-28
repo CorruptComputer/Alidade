@@ -143,6 +143,19 @@ public sealed class MapInteropService(IJSRuntime js, IMediator mediator) : IAsyn
         => _ = mediator.Publish(new MapDblClicked.Notification(new MapClickEvent(lat, lon, screenX, screenY, elementId, false)));
 
     /// <summary>
+    ///   Called from JS when the user right-clicks the map canvas.
+    /// </summary>
+    /// <param name="screenX">Right-click X position in CSS pixels.</param>
+    /// <param name="screenY">Right-click Y position in CSS pixels.</param>
+    /// <param name="elementIds">
+    ///   Feature ID strings for all OSM features under the cursor, ordered top-to-bottom.
+    ///   Empty when no feature is under the cursor.
+    /// </param>
+    [JSInvokable]
+    public void OnMapRightClick(double screenX, double screenY, string[] elementIds)
+        => _ = mediator.Publish(new MapRightClicked.Notification(screenX, screenY, elementIds));
+
+    /// <summary>
     ///   Called from JS after a pan or zoom gesture ends.
     /// </summary>
     /// <param name="west">Western longitude bound.</param>

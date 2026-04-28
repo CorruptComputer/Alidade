@@ -1,7 +1,10 @@
 @typeparam TPanel where TPanel : IPanel
 
 <div class="panel @Class @(Visible ? string.Empty : "panel--hidden")" @ref="_panelEl">
-    <div class="panel-header" @ref="_headerEl">
+    <div class="panel-header"
+         @ref="_headerEl"
+         @oncontextmenu="HandleHeaderContextMenu"
+         @oncontextmenu:preventDefault>
         <span class="panel-title">
             @if (PinnedRef is not null)
             {

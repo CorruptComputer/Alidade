@@ -5,6 +5,7 @@
        PinnedRef="PinnedRef"
        OnClose="OnClose"
        OnPin="PinCurrent"
+       OnHeaderContextMenu="OnTitleBarContextMenu"
        Visible="@(_targetRef is not null || IsPinned)"
        Class="@(IsPinned ? "panel--pinned" : null)"
        Title="@_elementLabel">

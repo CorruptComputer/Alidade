@@ -1329,6 +1329,26 @@ window.mapInterop = (() => {
                 ).catch(console.error);
             });
 
+            // Right-click: show the context menu. Pass all OSM element IDs under the cursor
+            // (in paint order, top first) so C# can prefer the currently selected one.
+            map.on('contextmenu', e => {
+                e.preventDefault();
+                if (!dotnetRef)
+                {
+                    return;
+                }
+                const queryLayers = [
+                    'layer-vertices', 'layer-ways-hit', 'layer-nodes', 'layer-notes'
+                ].filter(id => map.getLayer(id));
+                const features = queryLayers.length > 0
+                    ? map.queryRenderedFeatures(e.point, { layers: queryLayers })
+                    : [];
+                const elementIds = features
+                    .map(f => elementIdFromFeature(f))
+                    .filter(id => id !== null);
+                dotnetRef.invokeMethodAsync('OnMapRightClick', e.point.x, e.point.y, elementIds).catch(console.error);
+            });
+
             // Proximity reveal: show normally-hidden way-nodes within PROXIMITY_PX of the cursor
             // by temporarily widening the layer-nodes filter to include their IDs. Runs every
             // mousemove (no debounce) so the reveal feels instant; map.setFilter is cheap.

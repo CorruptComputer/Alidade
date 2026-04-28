@@ -1,0 +1,18 @@
+@if (mapState.State.ContextMenuVisible)
+{
+    @* Transparent backdrop — clicking it closes the menu without taking any action *@
+    <div class="context-menu-backdrop" @onclick="OnBackdropClick"></div>
+
+    <ul class="context-menu"
+        style="left: @(mapState.State.ContextMenuX)px; top: @(mapState.State.ContextMenuY)px">
+        <li>
+            <button class="context-menu-item" @onclick="OnSquare">Square</button>
+        </li>
+        <li>
+            <button class="context-menu-item" @onclick="OnCircularize">Circularize</button>
+        </li>
+        <li>
+            <button class="context-menu-item" @onclick="OnGridify">Gridify</button>
+        </li>
+    </ul>
+}

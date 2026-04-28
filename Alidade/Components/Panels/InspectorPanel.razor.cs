@@ -273,6 +273,16 @@ public partial class InspectorPanel(
         _nsiResults = [];
     }
 
+    private void OnTitleBarContextMenu(MouseEventArgs e)
+    {
+        if (_targetRef is null)
+        {
+            return;
+        }
+
+        _ = mediator.Send(new ShowContextMenu.Command(e.ClientX, e.ClientY, _targetRef));
+    }
+
     private void PinCurrent()
     {
         if (_targetRef is not null)
