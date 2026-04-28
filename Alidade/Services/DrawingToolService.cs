@@ -206,6 +206,38 @@ public class DrawingToolService(
             }
         }
 
+        if (!e.AddToSelection && targetRef.Type == OsmElementTypes.Way)
+        {
+            EditBufferState buf = editBuffer.State;
+            if (buf.Ways.TryGetValue(targetRef.Id, out OsmWay? clickedWay) && clickedWay.Tags.Count == 0)
+            {
+                OsmRelation? singleParent = null;
+                foreach (OsmRelation r in buf.Relations.Values)
+                {
+                    if (!r.Members.Any(m => m.Type == OsmElementTypes.Way && m.Ref == targetRef.Id))
+                    {
+                        continue;
+                    }
+
+                    if (singleParent is not null)
+                    {
+                        singleParent = null;
+                        break;
+                    }
+
+                    singleParent = r;
+                }
+
+                if (singleParent is not null)
+                {
+                    OsmElementRef? current = selectionState.State.SingleSelected;
+                    targetRef = current?.Equals(singleParent.Ref) == true
+                        ? new OsmElementRef(OsmElementTypes.Way, targetRef.Id)
+                        : singleParent.Ref;
+                }
+            }
+        }
+
         await mediator.Send(new Select.Command(targetRef, e.AddToSelection));
     }
 

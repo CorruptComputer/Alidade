@@ -1,18 +1,11 @@
 namespace Alidade.Osm.Validators.Error;
 
 /// <summary>
-///   Reports an error when a member of a role-required relation type (multipolygon,
-///   boundary, route, public_transport, restriction) is missing its role string.
+///   Reports an error when a member of a multipolygon relation is missing its role string.
 /// </summary>
 public class MissingRoleValidator : ValidatorBase
 {
-    private static readonly HashSet<string> _requireRoles = [
-        "multipolygon",
-        "boundary",
-        "route",
-        "public_transport",
-        "restriction"
-    ];
+    private static readonly HashSet<string> _requireRoles = ["multipolygon"];
 
     /// <inheritdoc />
     public override string ValidatorName => "missing_role";

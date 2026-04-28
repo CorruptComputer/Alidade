@@ -2,6 +2,7 @@ using Alidade.Core.Models.CQRS.Response;
 using Alidade.Map.Handlers;
 using Alidade.Osm.Handlers.Api.Editing;
 using Alidade.Osm.Handlers.Editing;
+using Alidade.Osm.Handlers.Geom;
 using Alidade.Osm.Models;
 using Alidade.Osm.Models.Editing;
 using NetTopologySuite.Features;
@@ -262,16 +263,15 @@ public class EditBufferService : IDisposable
             .Where(kv => state.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Deleted)
             .ToDictionary(kv => kv.Key, kv => kv.Value);
 
+        IReadOnlyDictionary<long, OsmWay> liveWays = state.Ways
+            .Where(kv => state.EditStates.GetValueOrDefault(kv.Value.Ref) != EditState.Deleted)
+            .ToDictionary(kv => kv.Key, kv => kv.Value);
+
         // Count how many distinct live ways each node participates in so that
         // junction nodes (shared by 2+ ways) can be styled differently.
         Dictionary<long, int> nodeWayCount = [];
-        foreach (OsmWay w in state.Ways.Values)
+        foreach (OsmWay w in liveWays.Values)
         {
-            if (state.EditStates.GetValueOrDefault(w.Ref) == EditState.Deleted)
-            {
-                continue;
-            }
-
             HashSet<long> seen = [];
             foreach (long nodeId in w.NodeIds)
             {
@@ -324,23 +324,78 @@ public class EditBufferService : IDisposable
             nodes.Add(f);
         }
 
-        FeatureCollection ways = [];
-        foreach (OsmWay w in state.Ways.Values)
+        // Map from way ID → the sole parent multipolygon relation, for inheriting colors
+        // on untagged member ways. Null value means the way belongs to multiple relations.
+        Dictionary<long, OsmRelation?> wayUniqueParent = [];
+        foreach (OsmRelation r in state.Relations.Values)
         {
-            if (state.EditStates.GetValueOrDefault(w.Ref) == EditState.Deleted)
+            if (state.EditStates.GetValueOrDefault(r.Ref) == EditState.Deleted)
             {
                 continue;
             }
 
+            if (!r.Tags.TryGetValue("type", out string? relType) || relType != "multipolygon")
+            {
+                continue;
+            }
+
+            foreach (OsmMember member in r.Members)
+            {
+                if (member.Type != OsmElementTypes.Way)
+                {
+                    continue;
+                }
+
+                if (wayUniqueParent.TryGetValue(member.Ref, out OsmRelation? existing))
+                {
+                    if (existing is not null)
+                    {
+                        wayUniqueParent[member.Ref] = null;
+                    }
+                }
+                else
+                {
+                    wayUniqueParent[member.Ref] = r;
+                }
+            }
+        }
+
+        FeatureCollection ways = [];
+        foreach (OsmWay w in liveWays.Values)
+        {
             Feature? f = WayFeatureForPush(w, state, liveNodes, modifiedNodeIds);
             if (f is not null)
             {
+                if (w.Tags.Count == 0
+                    && wayUniqueParent.TryGetValue(w.Id, out OsmRelation? parent)
+                    && parent is not null)
+                {
+                    f.Attributes["stroke"] = OsmWay.WayStrokeColor(parent.Tags);
+                    f.Attributes["fill"] = OsmWay.WayFillColor(parent.Tags);
+                }
+
                 ways.Add(f);
+            }
+        }
+
+        FeatureCollection relations = [];
+        foreach (OsmRelation r in state.Relations.Values)
+        {
+            if (state.EditStates.GetValueOrDefault(r.Ref) == EditState.Deleted)
+            {
+                continue;
+            }
+
+            Feature? f = await _mediator.Send(new AssembleMultiPolygon.Query(r.Ref));
+            if (f is not null)
+            {
+                relations.Add(f);
             }
         }
 
         await SetSourceAsync(MapSourceNames.Nodes, nodes);
         await SetSourceAsync(MapSourceNames.Ways, ways);
+        await SetSourceAsync(MapSourceNames.Relations, relations);
     }
 
     private async Task PushSelectionAsync(SelectionState sel, EditBufferState buf, bool includeSelected, HashSet<long> modifiedNodeIds)

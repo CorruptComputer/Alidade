@@ -71,6 +71,10 @@ internal sealed class AlidadeGeoJsonConverter : JsonConverter<FeatureCollection>
                 writer.WritePropertyName("coordinates");
                 writer.WriteStartArray();
                 WriteCoordinateArray(writer, poly.ExteriorRing.Coordinates);
+                foreach (Geometry hole in poly.InteriorRings)
+                {
+                    WriteCoordinateArray(writer, hole.Coordinates);
+                }
                 writer.WriteEndArray();
                 break;
 
@@ -83,6 +87,10 @@ internal sealed class AlidadeGeoJsonConverter : JsonConverter<FeatureCollection>
                 {
                     writer.WriteStartArray();
                     WriteCoordinateArray(writer, part.ExteriorRing.Coordinates);
+                    foreach (Geometry hole in part.InteriorRings)
+                    {
+                        WriteCoordinateArray(writer, hole.Coordinates);
+                    }
                     writer.WriteEndArray();
                 }
 

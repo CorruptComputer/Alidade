@@ -136,7 +136,12 @@ public sealed record OsmWay(
         return new Feature(geom, attrs);
     }
 
-    private static string WayStrokeColor(IReadOnlyDictionary<string, string> tags)
+    /// <summary>
+    ///   Returns the stroke color hex string for a way with the given tags.
+    /// </summary>
+    /// <param name="tags">The way's or relation's tag dictionary.</param>
+    /// <returns>A CSS hex color string.</returns>
+    public static string WayStrokeColor(IReadOnlyDictionary<string, string> tags)
     {
         if (tags.TryGetValue("highway", out _))
         {
@@ -196,7 +201,12 @@ public sealed record OsmWay(
         return "0";
     }
 
-    private static string WayFillColor(IReadOnlyDictionary<string, string> tags)
+    /// <summary>
+    ///   Returns the fill color hex string for a way with the given tags.
+    /// </summary>
+    /// <param name="tags">The way's or relation's tag dictionary.</param>
+    /// <returns>A CSS hex color string.</returns>
+    public static string WayFillColor(IReadOnlyDictionary<string, string> tags)
     {
         if (tags.TryGetValue("building", out _))
         {

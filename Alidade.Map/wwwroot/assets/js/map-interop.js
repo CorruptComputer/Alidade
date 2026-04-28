@@ -280,6 +280,17 @@ window.mapInterop = (() => {
     }
 
     function addOsmLayers() {
+        // Relation multipolygon fills (below way fills and strokes)
+        map.addLayer({
+            id: 'layer-relations-fill',
+            type: 'fill',
+            source: 'osm-relations',
+            paint: {
+                'fill-color': ['coalesce', ['get', 'fill'], '#aaa'],
+                'fill-opacity': 0.2
+            }
+        });
+
         // Ways, area fill first (below lines)
         map.addLayer({
             id: 'layer-ways-fill',
