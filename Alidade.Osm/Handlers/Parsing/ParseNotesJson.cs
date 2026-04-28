@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.Json;
 
 namespace Alidade.Osm.Handlers.Parsing;
@@ -33,10 +34,10 @@ public class ParseNotesJson : IRequestHandler<ParseNotesJson.Query, QueryResult<
                 coords[1].GetDouble(),
                 coords[0].GetDouble(),
                 props.GetProperty("status").GetString() ?? "open",
-                DateTimeOffset.Parse(props.GetProperty("date_created").GetString()!),
+                DateTimeOffset.ParseExact(props.GetProperty("date_created").GetString()!, "yyyy-MM-dd HH:mm:ss UTC", CultureInfo.InvariantCulture),
                 [.. props.GetProperty("comments").GetProperty("comments").EnumerateArray()
                     .Select(c => new OsmNoteComment(c.GetProperty("action").GetString() ?? string.Empty,
-                                                    DateTimeOffset.Parse(c.GetProperty("date").GetString()!),
+                                                    DateTimeOffset.ParseExact(c.GetProperty("date").GetString()!, "yyyy-MM-dd HH:mm:ss UTC", CultureInfo.InvariantCulture),
                                                     c.TryGetProperty("user", out JsonElement u)
                                                         ? u.GetString()
                                                         : null,
